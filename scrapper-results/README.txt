@@ -1,0 +1,1 @@
+Rezultat scrappowania.
