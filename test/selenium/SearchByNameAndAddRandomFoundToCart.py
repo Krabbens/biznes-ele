@@ -7,6 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
+# TODO: fix assert, it should check quantity directly in checkout
+# TODO: check if possible to add product (quantity check)
 class SearchByNameAndAddRandomFoundToCart:
     def __init__(self, website_addr, browser):
         self._website_addr = website_addr
@@ -54,7 +56,4 @@ class SearchByNameAndAddRandomFoundToCart:
         formatted_quantity = cart_quantity_element.text[1:-1]
         cart_quantity = int(formatted_quantity)
         assert cart_quantity > 0, "Koszyk nie został zaktualizowany po dodaniu produktu"
-
-    def quitBrowser(self):
-        self._browser.quit()
 
