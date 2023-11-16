@@ -12,8 +12,8 @@ class CheckOrderStatus:
 
     def run(self):
         self._go_to_account()
-
-        pass
+        self._go_to_history()
+        self._go_to_order_details()
 
     def _go_to_account(self):
         WebDriverWait(self._browser, 10).until(
@@ -21,3 +21,17 @@ class CheckOrderStatus:
         )
 
         self._browser.find_element(By.CLASS_NAME, 'account').click()
+
+    def _go_to_history(self):
+        WebDriverWait(self._browser, 10).until(
+            EC.element_to_be_clickable((By.ID, 'history-link'))
+        )
+
+        self._browser.find_element(By.ID, 'history-link').click()
+
+    def _go_to_order_details(self):
+        WebDriverWait(self._browser, 10).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "a[data-link-action=\"view-order-details\"]"))
+        )
+
+        self._browser.find_element(By.CSS_SELECTOR, "a[data-link-action=\"view-order-details\"]").click()
