@@ -36,6 +36,8 @@ if __name__ == '__main__':
     go_to_cart_and_place_order = GoToCartAndPlaceOrder(website_addr, browser)
     go_to_cart_and_place_order.run()
 
+    input("test")
+
     end_time = time.time()
     elapsed_time = end_time - start_time
 

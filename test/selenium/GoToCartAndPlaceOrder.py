@@ -35,6 +35,7 @@ class GoToCartAndPlaceOrder:
 
         self._set_delivery_info()
         self._choose_carrier()
+        self._choose_payment_option()
 
     def _set_delivery_info(self):
         self._browser.find_element(By.ID, 'field-address1').send_keys('TestAddress 10')
@@ -54,3 +55,11 @@ class GoToCartAndPlaceOrder:
             EC.presence_of_element_located((By.ID, 'payment-confirmation'))
         )
 
+    def _choose_payment_option(self):
+        self._browser.find_element(By.ID, 'payment-option-1').click()
+        self._browser.find_element(By.ID, 'conditions_to_approve[terms-and-conditions]').click()
+
+        WebDriverWait(self._browser, 10).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, ".btn.btn-primary.center-block"))
+        )
+        self._browser.find_element(By.CSS_SELECTOR, ".btn.btn-primary.center-block").click()
