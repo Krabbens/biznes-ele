@@ -15,7 +15,8 @@ class Client:
 
     def process_boot(self, _id):
         try:
-            scp = SeleniumScraper("/Users/kuose/Downloads/chromedriver", headless=False)
+            PATH_TO_CHROMEDRIVER = "here insert path to chromedriver"
+            scp = SeleniumScraper(PATH_TO_CHROMEDRIVER, headless=False)
             scp.visit("https://adidas.pl/api/search/product/" + _id)
             js = scp.driver.page_source.split(";\">")[1].split("</pre>")[0]
             parsed = json.loads(js)
