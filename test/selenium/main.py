@@ -1,11 +1,11 @@
 import time
 from selenium import webdriver
 
-from DeleteProductsFromCart import DeleteProductsFromCart
-from GoToCartAndPlaceOrder import GoToCartAndPlaceOrder
-from RegisterNewUser import RegisterNewUser
-from SearchByNameAndAddRandomFoundToCart import SearchByNameAndAddRandomFoundToCart
-from AddRandomFromCategoriesToCart import AddRandomFromCategoriesToCart
+from delete_products_from_cart import DeleteProductsFromCart
+from go_to_cart_and_place_order import GoToCartAndPlaceOrder
+from register_new_user import RegisterNewUser
+from search_by_name_and_add_random_found_to_cart import SearchByNameAndAddRandomFoundToCart
+from add_random_from_categories_to_cart import AddRandomFromCategoriesToCart
 
 website_addr = "http://localhost:8080/"
 all_products = "index.php?id_category=2&controller=category"
@@ -35,6 +35,9 @@ if __name__ == '__main__':
     # 4e,f,g,h
     go_to_cart_and_place_order = GoToCartAndPlaceOrder(website_addr, browser)
     go_to_cart_and_place_order.run()
+
+    check_order_status = checkOrderStatus(website_addr, browser)
+    check_order_status.run()
 
     input("test")
 
