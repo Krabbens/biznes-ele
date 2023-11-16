@@ -64,8 +64,14 @@ class AddRandomFromCategoriesToCart:
             submit_customization = self._browser.find_element(By.NAME, 'submitCustomizedData')
             submit_customization.click()
 
-        available_quantity = self._browser.find_element(By.XPATH, "//span[@data-stock]")
-        available_quantity = available_quantity.get_attribute("data-stock")
+        try:
+            WebDriverWait(self._browser, 0.1).until(
+                EC.presence_of_element_located((By.XPATH, "//span[@data-stock]"))
+            )
+            available_quantity = self._browser.find_element(By.XPATH, "//span[@data-stock]")
+            available_quantity = available_quantity.get_attribute("data-stock")
+        except TimeoutException:
+            available_quantity = 2  # sometimes quantity is not provided (eg selling ebooks)
 
         quantity_box = self._browser.find_element(By.NAME, 'qty')  # prestashop quantity input name = 'qty'
         quantity_box.send_keys(Keys.DELETE)
