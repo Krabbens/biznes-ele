@@ -33,7 +33,7 @@ services:
     networks:
       - prestashop_network
     volumes:
-      - ./psdata:/var/www/html
+      - ./shop:/var/www/html
             
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
