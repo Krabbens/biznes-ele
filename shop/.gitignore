@@ -1,5 +1,5 @@
 # Cache, temp and personal files
-
+/var/cache/
 /.htaccess
 *.log
 npm-debug.log.*
@@ -7,6 +7,8 @@ npm-debug.log.*
 /cache/*
 download/*
 /img/*
+!/img/s/
+!/img/s/5.jpg
 /log/*
 /upload/*
 vendor/*
