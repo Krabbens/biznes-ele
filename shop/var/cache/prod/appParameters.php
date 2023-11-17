@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => 'adidas-mariadb-server',
+    'database_port' => '',
+    'database_name' => 'adidas-mariadb',
+    'database_user' => 'root',
+    'database_password' => 'admin',
+    'database_prefix' => 'ad_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'vI25dxULYTnIxQgjwvAwJpCdNZKxF1BztpfFOSQ2A248ybfyMTvFTj11tFINKGO0',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2023-11-17',
+    'locale' => 'pl-PL',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'JRZDxdetToOkMNv0BRkqZ9M7kAyvxnHRgHQAahpYIY77GmmPtko3Vo3CEYe4QRgQ',
+    'cookie_iv' => 'Mt6mXNFKW793gvOzWoQD35UTh9N9bU7U',
+    'new_cookie_key' => 'def00000122ea38af10482fee58b1941cfa476c02702c7e24a22304a2990e8812b1f68803fc325215b38db47f9dd6f3355fbb419fc6a762813637b5d16243ed84c36925b',
+  ),
+);
