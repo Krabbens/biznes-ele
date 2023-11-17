@@ -1,2 +1,3 @@
 /dbdata/
 /shop/var/cache/
+*.log
