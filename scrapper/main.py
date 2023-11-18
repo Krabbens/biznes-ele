@@ -41,3 +41,6 @@ if __name__ == "__main__":
     client.get_men_accessory()
     client.get_woman_accessory()
     client.get_soccer_boots()
+    client.get_running_boots()
+    client.get_children_boots()
+    client.get_children_accessory()
