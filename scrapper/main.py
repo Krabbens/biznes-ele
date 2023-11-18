@@ -10,9 +10,25 @@ if __name__ == "__main__":
     client = Client(scraper)
 
     categories = {
-        "Men" : ["Boots", "Clothes", "Accessory"],
-        "Women" : ["Boots", "Clothes", "Accessory"],
-        "Sport" : "Soccer"
+        "Mężczyźni": {
+            "Buty": [],
+            "Odzież": [],
+            "Akcesoria": []
+        },
+        "Kobiety": {
+            "Buty": [],
+            "Odzież": [],
+            "Akcesoria": []
+        },
+        "Dzieci": {
+            "Chłopcy buty": [],
+            "Dziewczynki buty": [],
+            "Akcesoria": []
+        },
+        "Sporty": {
+            "Buty bieganie": [],
+            "Buty piłkarskie": [],
+        }
     }
 
     with open('../scrapper-results/categories.json', 'w') as outfile:

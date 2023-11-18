@@ -95,3 +95,12 @@ class Client:
     def get_soccer_boots(self):
         self.get_site("https://www.adidas.pl/buty-pilka_nozna")
     
+    def get_running_boots(self):
+        self.get_site("https://www.adidas.pl/buty-bieganie")
+
+    def get_children_boots(self):
+        self.get_site("https://www.adidas.pl/chlopcy-buty")
+        self.get_site("https://www.adidas.pl/dziewczynki-buty")
+
+    def get_children_accessory(self):
+        self.get_site("https://www.adidas.pl/dzieci-akcesoria")
