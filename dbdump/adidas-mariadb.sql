@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: adidas-mariadb-server:3306
--- Generation Time: Lis 18, 2023 at 04:01 PM
+-- Generation Time: Lis 18, 2023 at 07:54 PM
 -- Wersja serwera: 10.5.22-MariaDB-1:10.5.22+maria~ubu2004
 -- Wersja PHP: 8.2.8
 
@@ -1187,6 +1187,15 @@ CREATE TABLE `ad_admin_filter` (
   `filter` longtext NOT NULL,
   `filter_id` varchar(191) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `ad_admin_filter`
+--
+
+INSERT INTO `ad_admin_filter` (`id`, `employee`, `shop`, `controller`, `action`, `filter`, `filter_id`) VALUES
+(1, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page_category'),
+(2, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page'),
+(3, 1, 1, 'contacts', 'index', '{\"limit\":10,\"orderBy\":\"id_contact\",\"sortOrder\":\"asc\",\"filters\":[]}', '');
 
 -- --------------------------------------------------------
 
@@ -2497,7 +2506,8 @@ INSERT INTO `ad_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `del
 (4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
 (5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
 (6, 1, 1, 0, '', 1, 7, 7, 1, 3, 3, 'dac06b111ff76d51ece3a60bd7191a82', 0, 0, '', 0, 0, '2023-11-17 10:19:31', '2023-11-17 10:19:44', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"ee08f0371eda7c40645cb6d22df2a9f65740c2e2\"}'),
-(7, 1, 1, 2, '{\"8\":\"2,\"}', 1, 8, 8, 1, 4, 4, '42397d7a86c715692d4d271c4c52262c', 0, 0, '', 0, 0, '2023-11-18 16:52:06', '2023-11-18 16:53:00', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"d100cc17bf15b006fd1b2034e4bf9df00241cf6a\"}');
+(7, 1, 1, 2, '{\"8\":\"2,\"}', 1, 8, 8, 1, 4, 4, '42397d7a86c715692d4d271c4c52262c', 0, 0, '', 0, 0, '2023-11-18 16:52:06', '2023-11-18 16:53:00', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"d100cc17bf15b006fd1b2034e4bf9df00241cf6a\"}'),
+(8, 1, 1, 0, '', 1, 0, 0, 1, 0, 5, '', 0, 0, '', 0, 0, '2023-11-18 19:42:05', '2023-11-18 19:42:05', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-addresses-step\":{\"step_is_reachable\":false,\"step_is_complete\":false,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"3fd276d430e426d625ce06c4aa2679526eb74a92\"}');
 
 -- --------------------------------------------------------
 
@@ -2540,7 +2550,8 @@ INSERT INTO `ad_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `
 (4, 16, 3, 1, 29, 0, 1, '0000-00-00 00:00:00'),
 (5, 10, 3, 1, 25, 0, 1, '0000-00-00 00:00:00'),
 (6, 7, 7, 1, 0, 0, 1, '2023-11-17 10:19:31'),
-(7, 2, 8, 1, 9, 0, 1, '2023-11-18 16:52:06');
+(7, 2, 8, 1, 9, 0, 1, '2023-11-18 16:52:06'),
+(8, 2, 0, 1, 9, 0, 1, '2023-11-18 19:42:05');
 
 -- --------------------------------------------------------
 
@@ -2913,10 +2924,9 @@ CREATE TABLE `ad_cms` (
 
 INSERT INTO `ad_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexation`) VALUES
 (1, 1, 0, 1, 0),
-(2, 1, 1, 1, 0),
-(3, 1, 2, 1, 0),
-(4, 1, 3, 1, 0),
-(5, 1, 4, 1, 0);
+(3, 1, 1, 1, 0),
+(4, 1, 2, 1, 0),
+(6, 1, 3, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -3007,11 +3017,10 @@ CREATE TABLE `ad_cms_lang` (
 --
 
 INSERT INTO `ad_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `head_seo_title`, `meta_description`, `meta_keywords`, `content`, `link_rewrite`) VALUES
-(1, 1, 1, 'Delivery', '', 'Our terms and conditions of delivery', 'conditions, delivery, delay, shipment, pack', '<h2>Shipments and returns</h2><h3>Your pack shipment</h3><p>Packages are generally dispatched within 2 days after receipt of payment and are shipped via UPS with tracking and drop-off without signature. If you prefer delivery by UPS Extra with required signature, an additional cost will be applied, so please contact us before choosing this method. Whichever shipment choice you make, we will provide you with a link to track your package online.</p><p>Shipping fees include handling and packing fees as well as postage costs. Handling fees are fixed, whereas transport fees vary according to total weight of the shipment. We advise you to group your items in one order. We cannot group two distinct orders placed separately, and shipping fees will apply to each of them. Your package will be dispatched at your own risk, but special care is taken to protect fragile objects.<br /><br />Boxes are amply sized and your items are well-protected.</p>', 'delivery'),
-(2, 1, 1, 'Legal Notice', '', 'Legal notice', 'notice, legal, credits', '<h2>Legal</h2><h3>Credits</h3><p>Concept and production:</p><p>This Web site was created using <a href=\"http://www.prestashop.com\">PrestaShop</a>&trade; open-source software.</p>', 'legal-notice'),
-(3, 1, 1, 'Terms and conditions of use', '', 'Our terms and conditions of use', 'conditions, terms, use, sell', '<h2>Your terms and conditions of use</h2><h3>Rule 1</h3><p>Here is the rule 1 content</p>\r\n<h3>Rule 2</h3><p>Here is the rule 2 content</p>\r\n<h3>Rule 3</h3><p>Here is the rule 3 content</p>', 'terms-and-conditions-of-use'),
-(4, 1, 1, 'About us', '', 'Learn more about us', 'about us, informations', '<h2>About us</h2>\r\n<h3>Our company</h3><p>Our company</p>\r\n<h3>Our team</h3><p>Our team</p>\r\n<h3>Informations</h3><p>Informations</p>', 'about-us'),
-(5, 1, 1, 'Secure payment', '', 'Our secure payment mean', 'secure payment, ssl, visa, mastercard, paypal', '<h2>Secure payment</h2>\r\n<h3>Our secure payment</h3><p>With SSL</p>\r\n<h3>Using Visa/Mastercard/Paypal</h3><p>About this services</p>', 'secure-payment');
+(1, 1, 1, 'Dostawa', '', 'Nasze zasady dostaw', 'conditions, delivery, delay, shipment, pack', '<h2>Przesyłki i zwroty</h2>\n<h3>Twoja przesyłka w paczce</h3>\n<p>Paczki są zazwyczaj wysyłane w ciągu 2 dni od otrzymania płatności i wysyłane za pośrednictwem firmy UPS ze śledzeniem i doręczeniem bez podpisu. Jeśli wolisz dostawę UPS Extra z wymaganym podpisem, zostanie naliczona dodatkowa opłata, dlatego przed wybraniem tej metody skontaktuj się z nami. Niezależnie od tego, jaką przesyłkę wybierzesz, udostępnimy Ci link umożliwiający śledzenie przesyłki online.</p>\n<p></p>\n<p>Opłaty za wysyłkę obejmują opłaty manipulacyjne i pakowania, a także koszty wysyłki. Opłaty manipulacyjne są stałe, natomiast opłaty transportowe różnią się w zależności od całkowitej wagi przesyłki. Radzimy zgrupować produkty w jednym zamówieniu. Nie możemy zgrupować dwóch odrębnych zamówień złożonych osobno, a opłaty za wysyłkę będą obowiązywać w przypadku każdego z nich. Przesyłkę wysyłasz na własne ryzyko, jednak dokładamy wszelkich starań, aby chronić delikatne przedmioty.</p>\n<p></p>\n<p>Pudełka są dość duże, a Twoje przedmioty są dobrze chronione.</p>', 'dostawa'),
+(3, 1, 1, 'Regulamin firmy', '', 'Nasz regulamin', 'conditions, terms, use, sell', '<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;\"><span><span lang=\"pl\" style=\"font-size:24pt;font-family:AdiHaus;\" xml:lang=\"pl\">Regulamin firmy adidas</span></span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Treść niniejszego Regulaminu składa się z następujących rozdziałów: 1. Wstęp; 2. Warunki zakupu produktów, w tym Warunki dotyczące kart podarunkowych oraz Warunki adidas Hype; 3. Korzystanie z Platformy; 4. Warunki zakupu treści cyfrowych i usług cyfrowych oraz 5. Inne, w tym zasady, warunki lub dokumenty, do których odpowiednie linki zostały umieszczone w tekście (łącznie jako „Regulamin”).</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></p>\n<h2 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">1. WSTĘP</span></h2>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Złożenie zamówienia na wybrany produkt za pośrednictwem witryny</span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"http://www.adidas.pl/\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">www.adidas.pl</span></a></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">, aplikacji adidas („Aplikacja”) lub jakiejkolwiek innej witryny czy aplikacji, na której zamieszczono niniejszy Regulamin (zwanych łącznie „Platformą”), a następnie potwierdzenie przyjęcia takiego zamówienia oznacza zawarcie umowy sprzedaży pomiędzy Tobą a firmą adidas Poland Sp. z o.o., ul. Żwirki i Wigury 18A, 02-092 Warszawa, Polska, wpisaną do rejestru przedsiębiorców Krajowego Rejestru Sądowego, prowadzonego przez Sąd Rejonowy dla m.st. Warszawy w Warszawie, XIX Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS: 0000032095, numer VAT: PL5220000080, która podlega niniejszemu Regulaminowi, a w szczególności Warunkom zakupu produktu określonym poniżej.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Pobranie i instalacja Aplikacji bądź utworzenie konta adidas jest równoznaczne z zawarciem umowy z wyżej wymienionym podmiotem adidas, której postanowienia reguluje niniejszy Regulamin, w szczególności rozdział Korzystanie z platformy (Rozdział 3), o których mowa poniżej. W zakresie, w jakim udostępnienie danych osobowych w celu korzystania z Platformy lub utworzenia konta adidas kwalifikuje się jako płatność zgodnie z obowiązującym prawem, zastosowanie mają również Warunki zakupu treści cyfrowych i usług cyfrowych (Rozdział 4).</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Spółka adidas AG jest spółką matką grupy adidas, do której należy szereg podmiotów powiązanych, między innymi spółka adidas Poland Sp. z o.o. (w dalszej części niniejszego dokumentu „adidas/ my/nas”).</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></p>\n<h2 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2. WARUNKI ZAKUPU PRODUKTÓW, W TYM WARUNKI DOTYCZĄCE KART PODARUNKOWYCH ORAZ WARUNKI ADIDAS HYPE</span></h2>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Przed zamówieniem Produktów on-line za pośrednictwem Platformy prosimy o szczegółowe zapoznanie się z poniższymi Warunkami zakupu.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.1 W JAKICH PRZYPADKACH OBOWIĄZUJĄ NINIEJSZE WARUNKI ZAKUPU?</span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Niniejsze Warunki zakupu mają zastosowanie do całej oferty produktowej i umów dotyczących sprzedaży i dostawy Produktów przez adidas. Oznacza to, że wyrażasz zgodę na niniejsze Warunki zakupu w momencie, gdy (i) zamawiasz jakikolwiek produkt za pośrednictwem Platformy, (ii) zamawiasz jakikolwiek produkt za pośrednictwem dowolnej strony internetowej bezpośrednio połączonej z Platformą lub (iii) akceptujesz ofertę dotyczącą produktu firmy adidas. Odstąpienie od niniejszych Warunków zakupu jest możliwe wyłącznie po uzyskaniu pisemnej zgody firmy adidas.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.2. PRODUKTY</span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">W naszej ofercie znajdują się różne rodzaje produktów. Mogą to być (1) produkty fizyczne w całości zaprojektowane i stworzone przez nas („Produkty standardowe”) oraz (2) produkty fizyczne, które, choć zaprojektowane przez firmę adidas/, mogą zostać spersonalizowane przez Użytkownika poprzez dodanie własnych treści: swojego imienia, nazwiska gracza lub numeru („Produkty personalizowane”) oraz (3) fizyczne i elektroniczne karty podarunkowe, niezależnie od tego, czy takie karty podarunkowe zostały spersonalizowane, jeśli zaoferowano tę funkcję („Karty podarunkowe”), zwane łącznie „Produktami”.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Należy pamiętać, że w przypadku Produktów z limitowanej serii lub limitowanej produkcji mogą obowiązywać dodatkowe ograniczenia, takie jak ograniczona ilość takich Produktów przypadająca na jednego konsumenta. O dodatkowych ograniczeniach poinformujemy Cię za pośrednictwem Platformy.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Wszystkie Produkty prezentowane na Platformie podlegają weryfikacji dostępności. Oznacza to, że pomimo naszych starań w celu zapewnienia, by Platforma pokazywała rzeczywistą dostępność towarów, może się zdarzyć, że Produkt widoczny</span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#404040;\" xml:lang=\"pl\">na Platformie</span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">nie będzie już dostępny w sprzedaży.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Dopuszczalne są niewielkie różnice w kolorze Produktów oraz inne różnice wynikające ze stosowania odmiennych systemów akwizycji obrazu, technologii wyświetlania obrazu lub z innych przyczyn technicznych pozostających poza kontrolą adidas. W zakresie dozwolonym przez mające zastosowanie prawo firma adidas nie ponosi odpowiedzialności za powstawanie tych zmian i rozbieżności.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.3. WYMOGI NIEZBĘDNE DO ZAWARCIA UMOWY Z FIRMĄ ADIDAS</span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Musisz mieć ukończone 16 lat, aby móc kupować Produkty za pośrednictwem Platformy.</span></p>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Zamówienia za pośrednictwem Platformy mogą składać wyłącznie konsumenci, a nie dystrybutorzy/sprzedawcy.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Składając zamówienie lub wysyłając zapytanie, jednocześnie zaświadczasz, że wszelkie podane w nich informacje są prawidłowe i kompletne. </span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.4 W JAKI SPOSÓB ZAWIERAMY UMOWĘ Z UŻYTKOWNIKIEM?</span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Poniższe zasady mają zastosowanie do wszystkich rodzajów Produktów. Wszelkie treści dostępne na Platformie są jedynie zaproszeniem do zakupu. Jednocześnie zgadzasz się, by Twoje zamówienie stanowiło ofertę zgodnie z przepisami obowiązującego prawa zakupu Produktów nim wymienionych.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Wszystkie zamówienia składane przez Ciebie muszą zostać przez nas zaakceptowane. W zakresie dozwolonym przepisami mającego zastosowanie prawa przysługuje nam prawo uprzedniej weryfikacji zamówienia w każdej chwili lub odmowy jego realizacji bez podania przyczyny i bez ponoszenia z tego tytułu odpowiedzialności wobec Ciebie ani jakichkolwiek osób trzecich. Jeśli nie potwierdzimy zamówienia niezwłocznie, uznaje się, że zostało ono odrzucone.</span></p>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Zastrzegamy sobie prawo do odmowy przyjęcia Twojego zamówienia. Przypadki, kiedy zamówienie może nie zostać przyjęte, są następujące:</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">a.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli Produkty są prezentowane na Platformie, ale są (już) niedostępne;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">b.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli nie jesteśmy w stanie uzyskać autoryzacji płatności;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">c.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">              </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli do zamawianego Produktu mają zastosowanie ograniczenia wysyłki;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">d.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli prezentacja Produktu na Platformie zawiera (oczywisty) błąd, taki jak nieprawidłowa cena, niewłaściwy opis lub zdjęcie;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">e.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli nie jesteśmy w stanie przetworzyć Twojego zamówienia z przyczyn technicznych;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">f.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">              </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli wiemy lub mamy uzasadnione przypuszczenia, że zamówienie zostało złożone za pośrednictwem lub z pomocą innego oprogramowania, robota, pełzacza, pająka lub wszelkich innych zautomatyzowanych środków lub urządzeń.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">W przypadku, gdy nie zaakceptujemy (części) Twojego zamówienia, mamy prawo do anulowania (części) Twojego zamówienia bez ponoszenia odpowiedzialności wobec Ciebie lub jakichkolwiek osób trzecich w zakresie dozwolonym przepisami prawa właściwego.</span><span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">W przypadku anulowania zwrócimy Ci wszystkie koszty poniesione przez Ciebie z tytułu anulowanego zamówienia lub jego części.</span></span></p>\n<p class=\"TreA\" style=\"margin:0px 0px 5pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Po złożeniu przez Ciebie zamówienia wyślemy Ci wiadomość e-mail z potwierdzeniem wpływu zamówienia oraz jego numerem. W wiadomości tej znajdą się również wyszczególnione Produkty, których dotyczy Twoja oferta zakupu, oraz informacje dotyczące dostawy. W zależności od wybranego przez Ciebie sposobu dostawy, prześlemy Ci następnie kolejną wiadomość e-mail z potwierdzeniem przyjęcia zamówienia do realizacji i dostawy (tj. jedną z wiadomości e-mail wskazanych w punktach a. – c. poniżej), co będzie równoznaczne z zawarciem umowy pomiędzy Tobą a firmą adidas. Innymi słowy, zawarcie umowy sprzedaży Produktów między Tobą a firmą adidas nie będzie miało miejsca, dopóki nie otrzymasz:</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">a.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">wiadomości e-mail z potwierdzeniem wysyłki Produktów z magazynu; lub</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">b.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">wiadomości e-mail z potwierdzeniem, że Produkty są gotowe do odbioru, jeśli została wybrana opcja odbioru Produktów biurze przewoźnika lub też Produkty zostały złożone w miejscu, z którego mogą zostać odebrane; lub</span></p>\n<p class=\"MsoListParagraph\" style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">c.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">              </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">wiadomości e-mail z potwierdzeniem, że Produkty są gotowe do odbioru w wybranym sklepie adidas, jeżeli opcja odbioru Produktów, opłaconych uprzednio za pośrednictwem Platformy, ze sklepu stacjonarnego firmy adidas (Kliknij &amp; Odbierz) była dostępna na Platformie i została przez Ciebie wybrana.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Należy pamiętać, że funkcja Kliknij &amp; Odbierz (jeśli ma zastosowanie), dostępna na Platformie na obszarze Twojego kraju, może nie zawierać opcji składania zamówień i płatności za Produkty za pośrednictwem Platformy (zgodnie z pkt. 2.4.c), tylko daje Ci możliwość rezerwacji w lokalnym sklepie firmy adidas wybranego Produktu, za który następnie należy zapłacić na miejscu. Opcja rezerwacji Kliknij &amp; Odbierz ma zastosowanie wyłącznie do wybranych sklepów firmy adidas, wskazanych podczas realizacji transakcji na Platformie. Kupując zarezerwowany Produkt, umowę kupna zawierasz z wybranym przez siebie lokalnym sklepem (sprzedawcą detalicznym) firmy adidas. Oznacza to, że dany Produkt można zwrócić tylko w tym samym sklepie, w którym został on zakupiony, z zastrzeżeniem regulaminu zwrotów obowiązującego w tym sklepie. Dlatego poniższe punkty 2.13, 2.14 i 2.15 nie mają zastosowania w wyżej wymienionym przypadku, ponieważ odnoszą się one jedynie do zwrotu Produktów zakupionych za pośrednictwem Platformy.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.5 ZASTRZEŻENIE PRAWA WŁASNOŚCI</span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Wszystkie Produkty pozostają własnością firmy adidas do momentu uregulowania wszystkich kwot należnych firmie adidas z tytułu wszelkich umów całości, w tym kosztów częściowej, wcześniejszej lub późniejszej dostawy. Nie możesz sprzedawać, zbywać ani obciążać Produktów przed nabyciem do nich pełni praw własności.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.6 KONSERWACJA PRODUKTÓW</span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Zwracamy uwagę na instrukcje prania i konserwacji umieszczone na etykietach Produktów. Firma adidas nie ponosi odpowiedzialności za jakiekolwiek szkody wynikające z niewłaściwego obchodzenia się z Produktami przez konsumenta, w tym będące skutkiem postępowania niezgodnego z instrukcją. Ocena, czy dane uszkodzenie Produktu wynika z niewłaściwego obchodzenia się z Produktem, jest każdorazowo przedmiotem wnikliwej analizy okoliczności danego przypadku oraz reklamowanego produktu.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.7 ANULOWANIE ZAMÓWIENIA</span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Bez uszczerbku dla Twojego prawa do odstąpienia, istnieje możliwość — w ściśle określonych okolicznościach — anulowania Twojego zamówienia Produktów standardowych. Więcej informacji znajdziesz w zakładce</span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"https://www.adidas.pl/pomoc/zamawianie/czy-moge-anulowac-zamowienie-zlozone-online\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span class=\"Hyperlink0\"><span lang=\"pl\" style=\"font-size:10pt;\" xml:lang=\"pl\">Pomoc</span></span></a></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">dostępnej na Platformie.</span></span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.8 CENA</span></span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Podane ceny zawierają podatek VAT. Ceny podane są w złotówkach (PLN). Firma adidas zastrzega sobie prawo do zmiany cen przed złożeniem przez Ciebie zamówienia.</span></span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Zastrzegamy sobie prawo do zmiany, ograniczenia lub zakończenia wszelkich ofert specjalnych i zniżek, z którego możemy skorzystać w dowolnym momencie przed złożeniem przez Ciebie zamówienia.</span></span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Możemy naliczać koszty dostawy. Koszty dostawy zmieniają się w zależności od Produktu i metody dostawy. Dodatkowe informacje znajdziesz w punkcie 2.12 lub w sekcji </span></span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"https://www.adidas.pl/pomoc/dostawa/jaki-jest-czas-oraz-koszt-dostawy\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span class=\"Hyperlink0\"><span lang=\"pl\" style=\"font-size:10pt;\" xml:lang=\"pl\">Dostawa</span></span></a></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> w zakładce Pomoc dostępnej na Platformie. Wszelkie koszty dostawy zostaną wyszczególnione oddzielnie i dodane do całkowitej kwoty zamówienia.</span></span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.9 METODY PŁATNOŚCI</span></span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Sprawdź zakładkę Pomoc dostępną na Platformie, aby dowiedzieć się, jakie </span></span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"https://www.adidas.pl/pomoc/placenie/jakie-sa-metody-platnosci\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span class=\"Hyperlink1\"><span lang=\"pl\" style=\"font-size:10pt;\" xml:lang=\"pl\">metody płatności</span></span></a></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">są obecnie dostępne.</span></span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Firma</span></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">adidas zastrzega sobie prawo do prowadzenia indywidualnej oceny wiarygodności kredytowej zgodnie z Informacją o polityce</span></span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"http://www.adidas.pl/help-topics-privacy_policy.html\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span class=\"Hyperlink1\"><span lang=\"pl\" style=\"font-size:10pt;\" xml:lang=\"pl\">prywatności</span></span></a></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">firmy adidas. W zależności od wyników tej oceny firma adidas zastrzega sobie prawo do odmowy akceptacji niektórych metod płatności.</span></span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.10 FAKTUROWANIE</span></span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:18.4px;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;line-height:15.3333px;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Wszystkie zakupy zostaną udokumentowane fakturami VAT, a firma adidas zastrzega sobie prawo do wydania lub udostępnienia faktur w formie elektronicznej, na co wyrażasz zgodę.</span></span></p>\n<p><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;line-height:15.3333px;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></span></p>', 'regulamin-firmy'),
+(4, 1, 1, 'O nas', '', 'Naucz się o nas', 'about us, informations', '<h2>O nas</h2>\n<h3>Nasza firma</h3>\n<p>Zaczęliśmy w łazience i podbiliśmy świat. W międzyczasie zdobywaliśmy ważne bramki i czasami mieliśmy problemy z ich osiągnięciem. Zrobiliśmy wszystko, co w naszej mocy, aby było jak najlepiej. Poprawiliśmy się i rozwinęliśmy. Patrzymy w przyszłość, zawsze pamiętając, skąd pochodzimy. To jest nasza historia.Our team</p>\n<h3>Nasz zespół</h3>\n<p>Wierzymy, że kluczem do sukcesu firmy są nasi ludzie. Ich wyniki, dobre samopoczucie i rozwój osobisty mają znaczący wpływ na pożądanie marki, satysfakcję konsumentów, a ostatecznie na nasze wyniki finansowe. Nasza strategia kadrowa składa się z trzech kluczowych filarów: przywództwa, doskonalenia i wydajności, a wszystkie one opierają się na zasadach „Różnorodność, równość i włączenie społeczne” („DEI”).</p>', 'o-nas'),
+(6, 1, 1, 'Zwroty', '', '', '', '<h2 class=\"gl-heading title___1no5t withhtml___2vPJM gl-heading--m\" style=\"margin:0px;padding:0px;width:520.828px;background-color:#ffffff;\"><strong>JAK DOKONAĆ ZWROTU?</strong></h2>\n<p><strong></strong></p>\n<div class=\"summary___1BV7e withhtml___2vPJM gl-fetched-content gl-body--l\" style=\"margin:0px;width:520.828px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;background-color:#ffffff;\">\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\">Wszystko, co zwracasz, powinno być w dobrym stanie. Upewnij się, że żadne etykiety i metki nie zostały odcięte. Zapakuj wszystkie produkty do ich oryginalnych opakowań.</p>\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\"></p>\n<p class=\"gl-vspace-bpall-medium\" style=\"padding:0px;margin:0px 0px 0px;\"><strong><span style=\"font-family:inherit;font-size:inherit;line-height:inherit;\">Pocztą</span></strong></p>\n<p class=\"gl-vspace\" style=\"padding:0px;margin:0px 0px 0px;\">Rozpocznij zwrot na stronie internetowej lub w aplikacji i postępuj zgodnie z instrukcjami. Wszystkie potrzebne informacje otrzymasz przed oddaniem przesyłki do punktu nadawczego.</p>\n<p class=\"gl-vspace\" style=\"padding:0px;margin:0px 0px 0px;\"></p>\n<h2 class=\"gl-heading title___1no5t withhtml___2vPJM gl-heading--m\" style=\"margin:0px;padding:0px;width:520.828px;\"><strong>REFUNDACJA</strong></h2>\n<div class=\"summary___1BV7e withhtml___2vPJM gl-fetched-content gl-body--l\" style=\"margin:0px;width:520.828px;\">\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\">Po otrzymaniu przesyłki w jednym z naszych magazynów i zatwierdzeniu jej nieuszkodzonego stanu, rozpoczniemy proces zwrotu pieniędzy.</p>\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\">Jeśli wybrano e-kartę podarunkową jako metodę zwrotu pieniędzy, otrzymasz ją pocztą elektroniczną natychmiast po zatwierdzeniu zwrotu.</p>\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\">Czy chcesz otrzymać zwrot pieniędzy zgodnie z wybraną przez Ciebie metodą płatności? W zależności od banku – może upłynąć do 14 dni roboczych, zanim zobaczysz kwotę na swoim koncie.</p>\n</div>\n<p class=\"gl-vspace\" style=\"padding:0px;margin:0px 0px 0px;\"></p>\n</div>', 'zwroty');
 
 -- --------------------------------------------------------
 
@@ -3063,10 +3072,9 @@ CREATE TABLE `ad_cms_shop` (
 
 INSERT INTO `ad_cms_shop` (`id_cms`, `id_shop`) VALUES
 (1, 1),
-(2, 1),
 (3, 1),
 (4, 1),
-(5, 1);
+(6, 1);
 
 -- --------------------------------------------------------
 
@@ -3603,7 +3611,7 @@ INSERT INTO `ad_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (316, 1, 'sale70.png', '2023-11-17 09:28:08'),
 (317, 1, '', '2023-11-17 09:28:08'),
 (318, 1, '', '2023-11-17 09:28:08'),
-(327, 1, 'Udostępnione przez Ciebie dane osobowe są wykorzystywane w celu udzielania odpowiedzi na zapytania, przetwarzania zamówień lub umożliwiania dostępu do konkretnych informacji. Przysługuje Ci prawo do modyfikowania oraz usuwania wszelkich danych osobowych zamieszczonych na stronie „Moje konto”.', '2023-11-17 09:28:08'),
+(327, 1, '<p>Aby zoptymalizować i ulepszyć korzystanie z naszej strony, przetwarzamy dane osobowe zgodnie z naszą Informacją o Prywatności. To pozwala nam na przedstawianie informacji dopasowanych indywidualnie do poszczególnych osób, w tym informacji o produktach i ofertach dostępnych w danym regionie czy mieście.</p>', '2023-11-18 18:49:27'),
 (329, 1, 'Możesz zrezygnować w każdej chwili. W tym celu należy odnaleźć szczegóły w naszej informacji prawnej.', '2023-11-17 09:28:08'),
 (365, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-17 09:28:44'),
 (367, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-17 09:28:44'),
@@ -3636,7 +3644,9 @@ INSERT INTO `ad_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (3, 1, 1, 3, 1, 2886860801, '2023-11-17 10:03:27', ''),
 (4, 1, 1, 4, 1, 3232252161, '2023-11-17 13:29:43', ''),
 (5, 1, 1, 4, 1, 3232252161, '2023-11-18 16:33:21', ''),
-(6, 1, 1, 5, 2, 3232252161, '2023-11-18 16:53:07', 'http://localhost:8080/zam%C3%B3wienie');
+(6, 1, 1, 5, 2, 3232252161, '2023-11-18 16:53:07', 'http://localhost:8080/zam%C3%B3wienie'),
+(7, 1, 1, 5, 1, 3232252161, '2023-11-18 19:41:55', ''),
+(8, 1, 1, 5, 3, 3232252161, '2023-11-18 20:26:17', '');
 
 -- --------------------------------------------------------
 
@@ -3705,7 +3715,73 @@ INSERT INTO `ad_connections_source` (`id_connections_source`, `id_connections`, 
 (32, 5, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:52:54'),
 (33, 5, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:53:01'),
 (34, 6, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/potwierdzenie-zamowienia?id_cart=7&id_module=35&id_order=6&key=42397d7a86c715692d4d271c4c52262c', '', '2023-11-18 16:53:07'),
-(35, 6, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/logowanie?back=history', '', '2023-11-18 17:01:14');
+(35, 6, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/logowanie?back=history', '', '2023-11-18 17:01:14'),
+(36, 7, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 19:42:03'),
+(37, 7, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/koszyk?action=show', '', '2023-11-18 19:42:08'),
+(38, 7, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 19:42:12'),
+(39, 7, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 19:46:21'),
+(40, 7, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 19:48:12'),
+(41, 7, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/content/3-terms-and-conditions-of-use?content_only=1', '', '2023-11-18 19:48:22'),
+(42, 7, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/kontakt', '', '2023-11-18 19:50:01'),
+(43, 7, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2023-11-18 19:50:34'),
+(44, 7, 'http://localhost:8080/kontakt', 'localhost:8080/nowe-produkty', '', '2023-11-18 19:50:38'),
+(45, 7, 'http://localhost:8080/kontakt', 'localhost:8080/najczesciej-kupowane', '', '2023-11-18 19:50:38'),
+(46, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/1-delivery', '', '2023-11-18 19:50:40'),
+(47, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 19:50:51'),
+(48, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/1-delivery', '', '2023-11-18 19:50:55'),
+(49, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/2-legal-notice', '', '2023-11-18 19:51:09'),
+(50, 7, 'http://localhost:8080/kontakt', 'localhost:8080/logowanie?back=identity', '', '2023-11-18 19:52:16'),
+(51, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/2-legal-notice', '', '2023-11-18 19:53:16'),
+(52, 7, 'http://localhost:8080/content/2-legal-notice', 'localhost:8080/', '', '2023-11-18 19:53:51'),
+(53, 7, 'http://localhost:8080/', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 19:53:56'),
+(54, 7, 'http://localhost:8080/', 'localhost:8080/content/4-about-us', '', '2023-11-18 19:53:56'),
+(55, 7, 'http://localhost:8080/', 'localhost:8080/content/5-secure-payment', '', '2023-11-18 19:54:01'),
+(56, 7, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2023-11-18 19:54:02'),
+(57, 7, 'http://localhost:8080/', 'localhost:8080/Mapa%20strony', '', '2023-11-18 19:54:02'),
+(58, 7, 'http://localhost:8080/', 'localhost:8080/nasze-sklepy', '', '2023-11-18 19:54:03'),
+(59, 7, 'http://localhost:8080/', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 19:55:48'),
+(60, 7, 'http://localhost:8080/', 'localhost:8080/content/4-about-us', '', '2023-11-18 19:58:34'),
+(61, 7, 'http://localhost:8080/content/2-legal-notice', 'localhost:8080/', '', '2023-11-18 19:58:56'),
+(62, 7, 'http://localhost:8080/', 'localhost:8080/Mapa%20strony', '', '2023-11-18 19:59:01'),
+(63, 7, 'http://localhost:8080/', 'localhost:8080/nasze-sklepy', '', '2023-11-18 19:59:02'),
+(64, 7, 'http://localhost:8080/content/2-legal-notice', 'localhost:8080/', '', '2023-11-18 20:01:25'),
+(65, 7, 'http://localhost:8080/', 'localhost:8080/6-accessories', '', '2023-11-18 20:01:40'),
+(66, 7, 'http://localhost:8080/6-accessories', 'localhost:8080/3-clothes', '', '2023-11-18 20:01:44'),
+(67, 7, 'http://localhost:8080/3-clothes', 'localhost:8080/najczesciej-kupowane', '', '2023-11-18 20:01:50'),
+(68, 8, 'http://localhost:8080/', 'localhost:8080/content/1-delivery', '', '2023-11-18 20:30:33'),
+(69, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:31:25'),
+(70, 8, 'http://localhost:8080/content/1-delivery', 'localhost:8080/', '', '2023-11-18 20:32:52'),
+(71, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:04'),
+(72, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:22'),
+(73, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:25'),
+(74, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:28'),
+(75, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:50'),
+(76, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:35:52'),
+(77, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:36:01'),
+(78, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:37:04'),
+(79, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:37:05'),
+(80, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 20:37:05'),
+(81, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:38:35'),
+(82, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:39:15'),
+(83, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:42:46'),
+(84, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:42:56'),
+(85, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-18 20:42:56'),
+(86, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:42:56'),
+(87, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-18 20:45:42'),
+(88, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/index.php?controller=404', '', '2023-11-18 20:45:42'),
+(89, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:46:06'),
+(90, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/4-about-us', '', '2023-11-18 20:46:10'),
+(91, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:46:13'),
+(92, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:46:33'),
+(93, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/kontakt', '', '2023-11-18 20:47:00'),
+(94, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:47:13'),
+(95, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:48:50'),
+(96, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:53:53'),
+(97, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:53:56'),
+(98, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-18 20:53:57'),
+(99, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/4-o-nas', '', '2023-11-18 20:54:04'),
+(100, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:54:05'),
+(101, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/kontakt', '', '2023-11-18 20:54:05');
 
 -- --------------------------------------------------------
 
@@ -6716,7 +6792,7 @@ CREATE TABLE `ad_info_lang` (
 --
 
 INSERT INTO `ad_info_lang` (`id_info`, `id_shop`, `id_lang`, `text`) VALUES
-(1, 1, 1, '<h2>Custom Text Block</h2>\n<p><strong class=\"dark\">Lorem ipsum dolor sit amet conse ctetu</strong></p>\n<p>Sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>');
+(1, 1, 1, '<h2>TWÓJ SPORT, TWÓJ SKLEP SPORTOWY</h2>\n<p>Nasze kolekcje zacierają granice między ekskluzywną modą a doskonałymi osiągami, jak choćby nasza kolekcja odzieży treningowej – zaprojektowana tak, aby wspaniale prezentować się zarówno na siłowni, jak i poza nią. Albo niektóre produkty, które można również nosić jako odzież sportową. Nasze życie wciąż się zmienia. Staje się coraz bardziej różnorodne. Projektując, adidas bierze to pod uwagę.</p>');
 
 -- --------------------------------------------------------
 
@@ -7195,7 +7271,7 @@ CREATE TABLE `ad_link_block` (
 
 INSERT INTO `ad_link_block` (`id_link_block`, `id_hook`, `position`, `content`) VALUES
 (1, 41, 0, '{\"cms\":[false],\"product\":[\"prices-drop\",\"new-products\",\"best-sales\"],\"static\":[false]}'),
-(2, 41, 1, '{\"cms\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"product\":[false],\"static\":[\"contact\",\"sitemap\",\"stores\"]}');
+(2, 41, 1, '{\"cms\":{\"0\":\"1\",\"2\":\"3\",\"3\":\"4\",\"5\":\"6\"},\"static\":[\"contact\"],\"product\":[false],\"category\":[false]}');
 
 -- --------------------------------------------------------
 
@@ -7498,7 +7574,10 @@ INSERT INTO `ad_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (231, 1, 0, 'Protect vendor folder in module ps_cashondelivery', '', 0, 1, NULL, 1, 0, 1, '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
 (232, 3, 0, 'Swift Error: Expected response code 220 but got an empty response', '', 0, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06'),
 (233, 3, 0, 'Swift Error: Expected response code 220 but got an empty response', '', 0, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06'),
-(234, 1, 0, 'Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 'Cart', 7, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06');
+(234, 1, 0, 'Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 'Cart', 7, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06'),
+(235, 1, 0, 'usunięcie Store', 'Store', 1, 1, NULL, 1, 0, 1, '2023-11-18 20:29:38', '2023-11-18 20:29:38'),
+(236, 1, 0, 'usunięcie Store', 'Store', 2, 1, NULL, 1, 0, 1, '2023-11-18 20:29:42', '2023-11-18 20:29:42'),
+(237, 1, 0, 'usunięcie Store', 'Store', 4, 1, NULL, 1, 0, 1, '2023-11-18 20:29:45', '2023-11-18 20:29:45');
 
 -- --------------------------------------------------------
 
@@ -8345,7 +8424,11 @@ CREATE TABLE `ad_module_history` (
 --
 
 INSERT INTO `ad_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `date_upd`) VALUES
-(1, 1, 35, '2023-11-18 16:37:30', '2023-11-18 16:37:30');
+(1, 1, 35, '2023-11-18 16:37:30', '2023-11-18 16:37:30'),
+(2, 1, 60, '2023-11-18 19:43:39', '2023-11-18 20:31:35'),
+(3, 1, 21, '2023-11-18 19:48:40', '2023-11-18 19:48:40'),
+(4, 1, 2, '2023-11-18 19:50:10', '2023-11-18 19:50:10'),
+(5, 1, 15, '2023-11-18 19:50:19', '2023-11-18 19:50:19');
 
 -- --------------------------------------------------------
 
@@ -9049,7 +9132,8 @@ CREATE TABLE `ad_page` (
 
 INSERT INTO `ad_page` (`id_page`, `id_page_type`, `id_object`) VALUES
 (1, 1, NULL),
-(2, 2, NULL);
+(2, 2, NULL),
+(3, 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -9082,6 +9166,7 @@ CREATE TABLE `ad_page_type` (
 --
 
 INSERT INTO `ad_page_type` (`id_page_type`, `name`) VALUES
+(3, 'cms'),
 (1, 'index'),
 (2, 'orderconfirmation');
 
@@ -10046,9 +10131,9 @@ CREATE TABLE `ad_psreassurance` (
 --
 
 INSERT INTO `ad_psreassurance` (`id_psreassurance`, `icon`, `custom_icon`, `status`, `position`, `type_link`, `id_cms`, `date_add`, `date_upd`) VALUES
-(1, '/modules/blockreassurance/views/img/reassurance/pack2/security.svg', NULL, 1, 1, NULL, NULL, '2023-11-17 08:28:56', NULL),
-(2, '/modules/blockreassurance/views/img/reassurance/pack2/carrier.svg', NULL, 1, 2, NULL, NULL, '2023-11-17 08:28:56', NULL),
-(3, '/modules/blockreassurance/views/img/reassurance/pack2/parcel.svg', NULL, 1, 3, NULL, NULL, '2023-11-17 08:28:56', NULL);
+(1, '/modules/blockreassurance/views/img/reassurance/pack2/security.svg', '', 1, 1, 1, 3, '2023-11-18 20:32:04', '2023-11-18 20:32:04'),
+(2, '/modules/blockreassurance/views/img/reassurance/pack2/carrier.svg', '', 1, 2, 1, 1, '2023-11-18 20:31:53', '2023-11-18 20:31:53'),
+(3, '/modules/blockreassurance/views/img/reassurance/pack2/parcel.svg', '', 1, 3, 1, 6, '2023-11-18 20:35:46', '2023-11-18 20:35:46');
 
 -- --------------------------------------------------------
 
@@ -10069,9 +10154,9 @@ CREATE TABLE `ad_psreassurance_lang` (
 --
 
 INSERT INTO `ad_psreassurance_lang` (`id_psreassurance`, `id_lang`, `title`, `description`, `link`) VALUES
-(1, 1, 'Polityka bezpieczeństwa', '(edytuj w module Customer Reassurance)', ''),
-(2, 1, 'Zasady dostawy', '(edytuj w module Customer Reassurance)', ''),
-(3, 1, 'Zasady zwrotu', '(edytuj w module Customer Reassurance)', '');
+(1, 1, 'Polityka prywatności', '', 'http://localhost:8080/content/3-terms-and-conditions-of-use'),
+(2, 1, 'Dostawa', '', 'http://localhost:8080/content/1-dostawa'),
+(3, 1, 'Zwroty', '', 'http://localhost:8080/content/6-zwroty');
 
 -- --------------------------------------------------------
 
@@ -12076,10 +12161,7 @@ CREATE TABLE `ad_store` (
 --
 
 INSERT INTO `ad_store` (`id_store`, `id_country`, `id_state`, `city`, `postcode`, `latitude`, `longitude`, `phone`, `fax`, `email`, `active`, `date_add`, `date_upd`) VALUES
-(1, 21, 12, 'Miami', '33135', 25.76500500, -80.24379700, '', '', '', 1, '2023-11-17 09:29:11', '2023-11-17 09:29:11'),
-(2, 21, 12, 'Miami', '33304', 26.13793600, -80.13943500, '', '', '', 1, '2023-11-17 09:29:11', '2023-11-17 09:29:11'),
 (3, 21, 12, 'Miami', '33026', 26.00998700, -80.29447200, '', '', '', 1, '2023-11-17 09:29:11', '2023-11-17 09:29:11'),
-(4, 21, 12, 'Miami', '33133', 25.73629600, -80.24479700, '', '', '', 1, '2023-11-17 09:29:11', '2023-11-17 09:29:11'),
 (5, 21, 12, 'Miami', '33181', 25.88674000, -80.16329200, '', '', '', 1, '2023-11-17 09:29:11', '2023-11-17 09:29:11');
 
 -- --------------------------------------------------------
@@ -12103,10 +12185,7 @@ CREATE TABLE `ad_store_lang` (
 --
 
 INSERT INTO `ad_store_lang` (`id_store`, `id_lang`, `name`, `address1`, `address2`, `hours`, `note`) VALUES
-(1, 1, 'Dade County', '3030 SW 8th St Miami', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', ''),
-(2, 1, 'E Fort Lauderdale', '1000 Northeast 4th Ave Fort Lauderdale', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', ''),
 (3, 1, 'Pembroke Pines', '11001 Pines Blvd Pembroke Pines', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', ''),
-(4, 1, 'Coconut Grove', '2999 SW 32nd Avenue', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', ''),
 (5, 1, 'N Miami/Biscayne', '12055 Biscayne Blvd', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', '');
 
 -- --------------------------------------------------------
@@ -12125,10 +12204,7 @@ CREATE TABLE `ad_store_shop` (
 --
 
 INSERT INTO `ad_store_shop` (`id_store`, `id_shop`) VALUES
-(1, 1),
-(2, 1),
 (3, 1),
-(4, 1),
 (5, 1);
 
 -- --------------------------------------------------------
@@ -15817,7 +15893,7 @@ ALTER TABLE `ad_address`
 -- AUTO_INCREMENT for table `ad_admin_filter`
 --
 ALTER TABLE `ad_admin_filter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ad_alias`
@@ -15877,7 +15953,7 @@ ALTER TABLE `ad_carrier`
 -- AUTO_INCREMENT for table `ad_cart`
 --
 ALTER TABLE `ad_cart`
-  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ad_cart_rule`
@@ -15907,7 +15983,7 @@ ALTER TABLE `ad_category`
 -- AUTO_INCREMENT for table `ad_cms`
 --
 ALTER TABLE `ad_cms`
-  MODIFY `id_cms` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_cms` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ad_cms_category`
@@ -15943,13 +16019,13 @@ ALTER TABLE `ad_configuration_kpi`
 -- AUTO_INCREMENT for table `ad_connections`
 --
 ALTER TABLE `ad_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ad_connections_source`
 --
 ALTER TABLE `ad_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT for table `ad_contact`
@@ -16171,7 +16247,7 @@ ALTER TABLE `ad_link_block_shop`
 -- AUTO_INCREMENT for table `ad_log`
 --
 ALTER TABLE `ad_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=235;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=238;
 
 --
 -- AUTO_INCREMENT for table `ad_mail`
@@ -16213,7 +16289,7 @@ ALTER TABLE `ad_module`
 -- AUTO_INCREMENT for table `ad_module_history`
 --
 ALTER TABLE `ad_module_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ad_module_preference`
@@ -16303,7 +16379,7 @@ ALTER TABLE `ad_order_state`
 -- AUTO_INCREMENT for table `ad_page`
 --
 ALTER TABLE `ad_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ad_pagenotfound`
@@ -16315,7 +16391,7 @@ ALTER TABLE `ad_pagenotfound`
 -- AUTO_INCREMENT for table `ad_page_type`
 --
 ALTER TABLE `ad_page_type`
-  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ad_product`
