@@ -36,6 +36,12 @@ class Client:
                 }
             }
 
+            scp.visit("https://adidas.pl/api/product-list/" + _id)
+            js = scp.driver.page_source.split(";\">")[1].split("</pre>")[0]
+            parsed = json.loads(js)
+            new_dict[_id]["description"] = parsed[0]['product_description']['text']
+            new_dict[_id]["attribute-list"] = parsed[0]['attribute_list']
+
             return new_dict
         except:
             return {}
@@ -58,17 +64,16 @@ class Client:
             for card in boots_cards:
                 try:
                     _id = card.find_element(By.CLASS_NAME, Definitions.CLASS_HOCKEYCARD).get_attribute('href').split("/")[-1].split(".html")[0]
-                    boots[_id] = {
-                        "category": card.find_element(By.CLASS_NAME, Definitions.CLASS_CARD_CATEGORY).get_attribute('innerHTML')
-                    }
+                    boots[_id] = {}
                 except:
                     print("error")
             # for every id in parallel
-            with concurrent.futures.ThreadPoolExecutor(max_workers=12) as executor:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=48) as executor:
                 futures = [executor.submit(self.process_boot, _id) for _id in boots.keys()]
                 concurrent.futures.wait(futures)
                 results = [future.result() for future in futures]
                 for result in results:
+                    print(result)
                     boots.update(result)
         
         with open("../scrapper-results/" + site.split("/")[-1] + '.json', 'w') as outfile:

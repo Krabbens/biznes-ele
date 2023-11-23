@@ -12,21 +12,21 @@ if __name__ == "__main__":
     categories = {
         "Mężczyźni": {
             "Buty": [],
-            "Odzież": [],
+            "Ubrania": [],
             "Akcesoria": []
         },
         "Kobiety": {
             "Buty": [],
-            "Odzież": [],
+            "Ubrania": [],
             "Akcesoria": []
         },
         "Dzieci": {
-            "Chłopcy buty": [],
-            "Dziewczynki buty": [],
+            "Buty dla chłopców": [],
+            "Buty dla dziewczynek": [],
             "Akcesoria": []
         },
-        "Sporty": {
-            "Buty bieganie": [],
+        "Sport": {
+            "Buty biegowe": [],
             "Buty piłkarskie": [],
         }
     }
