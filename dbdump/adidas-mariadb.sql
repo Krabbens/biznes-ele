@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: adidas-mariadb-server:3306
--- Generation Time: Lis 18, 2023 at 07:54 PM
--- Wersja serwera: 10.5.22-MariaDB-1:10.5.22+maria~ubu2004
+-- Generation Time: Lis 23, 2023 at 02:28 AM
+-- Wersja serwera: 10.5.23-MariaDB-1:10.5.23+maria~ubu2004
 -- Wersja PHP: 8.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -905,14 +905,12 @@ CREATE TABLE `ad_address` (
 --
 
 INSERT INTO `ad_address` (`id_address`, `id_country`, `id_state`, `id_customer`, `id_manufacturer`, `id_supplier`, `id_warehouse`, `alias`, `company`, `lastname`, `firstname`, `address1`, `address2`, `postcode`, `city`, `other`, `phone`, `phone_mobile`, `vat_number`, `dni`, `date_add`, `date_upd`, `active`, `deleted`) VALUES
-(1, 14, 0, 1, 0, 0, 0, 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', '', '00000', 'Anonymous', '', '0000000000', '0000000000', '0000', '0000', '2023-11-17 09:28:45', '2023-11-17 09:28:45', 1, 0),
-(2, 8, 0, 2, 0, 0, 0, 'Mon adresse', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '75002', 'Paris ', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(3, 21, 35, 0, 0, 1, 0, 'supplier', 'Fashion', 'supplier', 'supplier', '767 Fifth Ave.', '', '10153', 'New York', '', '(212) 336-1440', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(4, 21, 35, 0, 1, 0, 0, 'manufacturer', 'Fashion', 'manufacturer', 'manufacturer', '767 Fifth Ave.', '', '10154', 'New York', '', '(212) 336-1666', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(5, 21, 12, 2, 0, 0, 0, 'My address', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '33133', 'Miami', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(6, 8, 0, 0, 0, 2, 0, 'accessories_supplier', 'Accessories and Co', 'accessories', 'accessories', '42 Avenue Maréchal Soult', '', '64990', 'Bayonne', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(7, 14, 0, 3, 0, 0, 0, 'Mój adres', '', 'd', 'd', 'd12', '', '11-123', 'd', '', '', '', '', '', '2023-11-17 10:19:44', '2023-11-17 10:19:44', 1, 0),
-(8, 14, 0, 4, 0, 0, 0, 'Mój adres', 'asadasda', 'Małecki', 'Szymon', 'asdasd', '', '06-545', 'dasdas', '', '', '', '', '', '2023-11-18 16:52:53', '2023-11-18 16:52:53', 1, 0);
+(1, 14, 0, 1, 0, 0, 0, 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', '', '00000', 'Anonymous', '', '0000000000', '0000000000', '0000', '0000', '2023-11-20 19:42:20', '2023-11-20 19:42:20', 1, 0),
+(2, 8, 0, 2, 0, 0, 0, 'Mon adresse', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '75002', 'Paris ', '', '0102030405', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0),
+(3, 21, 35, 0, 0, 1, 0, 'supplier', 'Fashion', 'supplier', 'supplier', '767 Fifth Ave.', '', '10153', 'New York', '', '(212) 336-1440', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0),
+(4, 21, 35, 0, 1, 0, 0, 'manufacturer', 'Fashion', 'manufacturer', 'manufacturer', '767 Fifth Ave.', '', '10154', 'New York', '', '(212) 336-1666', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0),
+(5, 21, 12, 2, 0, 0, 0, 'My address', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '33133', 'Miami', '', '0102030405', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0),
+(6, 8, 0, 0, 0, 2, 0, 'accessories_supplier', 'Accessories and Co', 'accessories', 'accessories', '42 Avenue Maréchal Soult', '', '64990', 'Bayonne', '', '0102030405', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1193,9 +1191,8 @@ CREATE TABLE `ad_admin_filter` (
 --
 
 INSERT INTO `ad_admin_filter` (`id`, `employee`, `shop`, `controller`, `action`, `filter`, `filter_id`) VALUES
-(1, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page_category'),
-(2, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page'),
-(3, 1, 1, 'contacts', 'index', '{\"limit\":10,\"orderBy\":\"id_contact\",\"sortOrder\":\"asc\",\"filters\":[]}', '');
+(1, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_category_parent\":\"2\"}}', 'category'),
+(2, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_order\",\"sortOrder\":\"DESC\",\"filters\":[]}', 'order');
 
 -- --------------------------------------------------------
 
@@ -1531,14 +1528,18 @@ INSERT INTO `ad_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (548, 'ROLE_MOD_MODULE_PS_BANNER_DELETE'),
 (546, 'ROLE_MOD_MODULE_PS_BANNER_READ'),
 (547, 'ROLE_MOD_MODULE_PS_BANNER_UPDATE'),
-(829, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_CREATE'),
-(832, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_DELETE'),
-(830, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_READ'),
-(831, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_UPDATE'),
 (549, 'ROLE_MOD_MODULE_PS_CATEGORYTREE_CREATE'),
 (552, 'ROLE_MOD_MODULE_PS_CATEGORYTREE_DELETE'),
 (550, 'ROLE_MOD_MODULE_PS_CATEGORYTREE_READ'),
 (551, 'ROLE_MOD_MODULE_PS_CATEGORYTREE_UPDATE'),
+(765, 'ROLE_MOD_MODULE_PS_CHECKOUT_CREATE'),
+(768, 'ROLE_MOD_MODULE_PS_CHECKOUT_DELETE'),
+(766, 'ROLE_MOD_MODULE_PS_CHECKOUT_READ'),
+(767, 'ROLE_MOD_MODULE_PS_CHECKOUT_UPDATE'),
+(553, 'ROLE_MOD_MODULE_PS_CHECKPAYMENT_CREATE'),
+(556, 'ROLE_MOD_MODULE_PS_CHECKPAYMENT_DELETE'),
+(554, 'ROLE_MOD_MODULE_PS_CHECKPAYMENT_READ'),
+(555, 'ROLE_MOD_MODULE_PS_CHECKPAYMENT_UPDATE'),
 (557, 'ROLE_MOD_MODULE_PS_CONTACTINFO_CREATE'),
 (560, 'ROLE_MOD_MODULE_PS_CONTACTINFO_DELETE'),
 (558, 'ROLE_MOD_MODULE_PS_CONTACTINFO_READ'),
@@ -1727,6 +1728,10 @@ INSERT INTO `ad_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (20, 'ROLE_MOD_TAB_ADMINADVANCEDPARAMETERS_DELETE'),
 (18, 'ROLE_MOD_TAB_ADMINADVANCEDPARAMETERS_READ'),
 (19, 'ROLE_MOD_TAB_ADMINADVANCEDPARAMETERS_UPDATE'),
+(769, 'ROLE_MOD_TAB_ADMINAJAXPRESTASHOPCHECKOUT_CREATE'),
+(772, 'ROLE_MOD_TAB_ADMINAJAXPRESTASHOPCHECKOUT_DELETE'),
+(770, 'ROLE_MOD_TAB_ADMINAJAXPRESTASHOPCHECKOUT_READ'),
+(771, 'ROLE_MOD_TAB_ADMINAJAXPRESTASHOPCHECKOUT_UPDATE'),
 (797, 'ROLE_MOD_TAB_ADMINAJAXPSFACEBOOK_CREATE'),
 (800, 'ROLE_MOD_TAB_ADMINAJAXPSFACEBOOK_DELETE'),
 (798, 'ROLE_MOD_TAB_ADMINAJAXPSFACEBOOK_READ'),
@@ -2063,6 +2068,10 @@ INSERT INTO `ad_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (292, 'ROLE_MOD_TAB_ADMINPAYMENT_DELETE'),
 (290, 'ROLE_MOD_TAB_ADMINPAYMENT_READ'),
 (291, 'ROLE_MOD_TAB_ADMINPAYMENT_UPDATE'),
+(773, 'ROLE_MOD_TAB_ADMINPAYPALONBOARDINGPRESTASHOPCHECKOUT_CREATE'),
+(776, 'ROLE_MOD_TAB_ADMINPAYPALONBOARDINGPRESTASHOPCHECKOUT_DELETE'),
+(774, 'ROLE_MOD_TAB_ADMINPAYPALONBOARDINGPRESTASHOPCHECKOUT_READ'),
+(775, 'ROLE_MOD_TAB_ADMINPAYPALONBOARDINGPRESTASHOPCHECKOUT_UPDATE'),
 (297, 'ROLE_MOD_TAB_ADMINPERFORMANCE_CREATE'),
 (300, 'ROLE_MOD_TAB_ADMINPERFORMANCE_DELETE'),
 (298, 'ROLE_MOD_TAB_ADMINPERFORMANCE_READ'),
@@ -2338,7 +2347,9 @@ INSERT INTO `ad_carrier` (`id_carrier`, `id_reference`, `id_tax_rules_group`, `n
 (2, 2, 0, 'My carrier', '', 1, 0, 1, 0, 0, 0, 0, 0, '', 0, 1, 0, 0, 0, 0.000000, 0),
 (3, 3, 0, 'My cheap carrier', '', 0, 0, 1, 0, 0, 0, 0, 0, '', 2, 2, 0, 0, 0, 0.000000, 0),
 (4, 4, 0, 'My light carrier', '', 0, 0, 1, 0, 0, 0, 0, 0, '', 1, 3, 0, 0, 0, 0.000000, 0),
-(5, 5, 0, 'Widzisz mnie?', '', 1, 0, 1, 0, 0, 1, 0, 0, '', 1, 4, 0, 0, 0, 0.000000, 0);
+(5, 5, 0, 'DHL', '', 1, 1, 0, 0, 0, 0, 0, 0, '', 2, 4, 350, 350, 350, 50.000000, 0),
+(6, 5, 0, 'DHL', '', 1, 0, 0, 0, 0, 0, 0, 0, '', 2, 4, 350, 350, 350, 50.000000, 0),
+(7, 7, 0, 'UPS', '', 1, 0, 0, 0, 0, 0, 0, 0, '', 2, 5, 300, 300, 300, 50.000000, 0);
 
 -- --------------------------------------------------------
 
@@ -2370,7 +2381,13 @@ INSERT INTO `ad_carrier_group` (`id_carrier`, `id_group`) VALUES
 (4, 3),
 (5, 1),
 (5, 2),
-(5, 3);
+(5, 3),
+(6, 1),
+(6, 2),
+(6, 3),
+(7, 1),
+(7, 2),
+(7, 3);
 
 -- --------------------------------------------------------
 
@@ -2394,7 +2411,9 @@ INSERT INTO `ad_carrier_lang` (`id_carrier`, `id_shop`, `id_lang`, `delay`) VALU
 (2, 1, 1, 'Dostawa następnego dnia!'),
 (3, 1, 1, 'Buy more to pay less!'),
 (4, 1, 1, 'The lighter the cheaper!'),
-(5, 1, 1, '100dni');
+(5, 1, 1, '10 dni'),
+(6, 1, 1, '10 dni'),
+(7, 1, 1, '15 dni');
 
 -- --------------------------------------------------------
 
@@ -2416,7 +2435,9 @@ INSERT INTO `ad_carrier_shop` (`id_carrier`, `id_shop`) VALUES
 (2, 1),
 (3, 1),
 (4, 1),
-(5, 1);
+(5, 1),
+(6, 1),
+(7, 1);
 
 -- --------------------------------------------------------
 
@@ -2439,7 +2460,9 @@ INSERT INTO `ad_carrier_tax_rules_group_shop` (`id_carrier`, `id_tax_rules_group
 (2, 1, 1),
 (3, 1, 1),
 (4, 1, 1),
-(5, 1, 1);
+(5, 1, 1),
+(6, 1, 1),
+(7, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2464,7 +2487,30 @@ INSERT INTO `ad_carrier_zone` (`id_carrier`, `id_zone`) VALUES
 (3, 2),
 (4, 1),
 (4, 2),
-(5, 1);
+(5, 1),
+(5, 2),
+(5, 3),
+(5, 4),
+(5, 5),
+(5, 6),
+(5, 7),
+(5, 8),
+(6, 1),
+(6, 2),
+(6, 3),
+(6, 4),
+(6, 5),
+(6, 6),
+(6, 7),
+(6, 8),
+(7, 1),
+(7, 2),
+(7, 3),
+(7, 4),
+(7, 5),
+(7, 6),
+(7, 7),
+(7, 8);
 
 -- --------------------------------------------------------
 
@@ -2500,14 +2546,11 @@ CREATE TABLE `ad_cart` (
 --
 
 INSERT INTO `ad_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `delivery_option`, `id_lang`, `id_address_delivery`, `id_address_invoice`, `id_currency`, `id_customer`, `id_guest`, `secure_key`, `recyclable`, `gift`, `gift_message`, `mobile_theme`, `allow_seperated_package`, `date_add`, `date_upd`, `checkout_session_data`) VALUES
-(1, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
-(2, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
-(3, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
-(4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
-(5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
-(6, 1, 1, 0, '', 1, 7, 7, 1, 3, 3, 'dac06b111ff76d51ece3a60bd7191a82', 0, 0, '', 0, 0, '2023-11-17 10:19:31', '2023-11-17 10:19:44', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"ee08f0371eda7c40645cb6d22df2a9f65740c2e2\"}'),
-(7, 1, 1, 2, '{\"8\":\"2,\"}', 1, 8, 8, 1, 4, 4, '42397d7a86c715692d4d271c4c52262c', 0, 0, '', 0, 0, '2023-11-18 16:52:06', '2023-11-18 16:53:00', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"d100cc17bf15b006fd1b2034e4bf9df00241cf6a\"}'),
-(8, 1, 1, 0, '', 1, 0, 0, 1, 0, 5, '', 0, 0, '', 0, 0, '2023-11-18 19:42:05', '2023-11-18 19:42:05', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-addresses-step\":{\"step_is_reachable\":false,\"step_is_complete\":false,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"3fd276d430e426d625ce06c4aa2679526eb74a92\"}');
+(1, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL),
+(2, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL),
+(3, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL),
+(4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL),
+(5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -2548,10 +2591,7 @@ INSERT INTO `ad_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `
 (2, 8, 3, 1, 0, 0, 1, '0000-00-00 00:00:00'),
 (3, 16, 3, 1, 28, 0, 1, '0000-00-00 00:00:00'),
 (4, 16, 3, 1, 29, 0, 1, '0000-00-00 00:00:00'),
-(5, 10, 3, 1, 25, 0, 1, '0000-00-00 00:00:00'),
-(6, 7, 7, 1, 0, 0, 1, '2023-11-17 10:19:31'),
-(7, 2, 8, 1, 9, 0, 1, '2023-11-18 16:52:06'),
-(8, 2, 0, 1, 9, 0, 1, '2023-11-18 19:42:05');
+(5, 10, 3, 1, 25, 0, 1, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -2722,15 +2762,30 @@ CREATE TABLE `ad_category` (
 --
 
 INSERT INTO `ad_category` (`id_category`, `id_parent`, `id_shop_default`, `level_depth`, `nleft`, `nright`, `active`, `date_add`, `date_upd`, `position`, `is_root_category`) VALUES
-(1, 0, 1, 0, 1, 18, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0, 0),
-(2, 1, 1, 1, 2, 17, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0, 1),
-(3, 2, 1, 2, 3, 8, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 0),
-(4, 3, 1, 3, 4, 5, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 0),
-(5, 3, 1, 3, 6, 7, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(6, 2, 1, 2, 9, 14, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(7, 6, 1, 3, 10, 11, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 0),
-(8, 6, 1, 3, 12, 13, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(9, 2, 1, 2, 15, 16, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 2, 0);
+(1, 0, 1, 0, 1, 48, 1, '2023-11-20 19:41:36', '2023-11-20 19:41:36', 0, 0),
+(2, 1, 1, 1, 2, 47, 1, '2023-11-20 19:41:36', '2023-11-20 19:41:36', 0, 1),
+(3, 2, 1, 2, 3, 8, 0, '2023-11-20 19:42:36', '2023-11-23 02:46:45', 0, 0),
+(4, 3, 1, 3, 4, 5, 1, '2023-11-20 19:42:36', '2023-11-20 19:42:36', 0, 0),
+(5, 3, 1, 3, 6, 7, 1, '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0),
+(6, 2, 1, 2, 9, 14, 0, '2023-11-20 19:42:36', '2023-11-23 02:46:45', 1, 0),
+(7, 6, 1, 3, 10, 11, 1, '2023-11-20 19:42:36', '2023-11-20 19:42:36', 0, 0),
+(8, 6, 1, 3, 12, 13, 1, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 1, 0),
+(9, 2, 1, 2, 15, 16, 0, '2023-11-20 19:42:37', '2023-11-23 02:46:46', 2, 0),
+(10, 2, 1, 2, 17, 24, 1, '2023-11-23 02:47:00', '2023-11-23 02:47:00', 3, 0),
+(11, 2, 1, 2, 25, 32, 1, '2023-11-23 02:47:05', '2023-11-23 02:47:05', 4, 0),
+(12, 2, 1, 2, 33, 40, 1, '2023-11-23 02:47:09', '2023-11-23 02:47:09', 5, 0),
+(13, 2, 1, 2, 41, 46, 1, '2023-11-23 02:47:15', '2023-11-23 02:47:15', 6, 0),
+(14, 10, 1, 3, 18, 19, 1, '2023-11-23 02:48:03', '2023-11-23 02:48:03', 0, 0),
+(15, 10, 1, 3, 20, 21, 1, '2023-11-23 02:48:12', '2023-11-23 02:51:20', 1, 0),
+(16, 10, 1, 3, 22, 23, 1, '2023-11-23 02:48:21', '2023-11-23 02:48:21', 2, 0),
+(17, 11, 1, 3, 26, 27, 1, '2023-11-23 02:48:39', '2023-11-23 02:48:39', 0, 0),
+(18, 11, 1, 3, 28, 29, 1, '2023-11-23 02:48:44', '2023-11-23 02:51:29', 1, 0),
+(19, 11, 1, 3, 30, 31, 1, '2023-11-23 02:48:50', '2023-11-23 02:48:50', 2, 0),
+(20, 12, 1, 3, 34, 35, 1, '2023-11-23 02:49:15', '2023-11-23 02:52:19', 0, 0),
+(21, 12, 1, 3, 36, 37, 1, '2023-11-23 02:49:24', '2023-11-23 02:52:24', 1, 0),
+(22, 12, 1, 3, 38, 39, 1, '2023-11-23 02:49:31', '2023-11-23 02:49:31', 2, 0),
+(23, 13, 1, 3, 42, 43, 1, '2023-11-23 02:49:50', '2023-11-23 02:50:36', 0, 0),
+(24, 13, 1, 3, 44, 45, 1, '2023-11-23 02:50:01', '2023-11-23 02:50:43', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -2772,7 +2827,52 @@ INSERT INTO `ad_category_group` (`id_category`, `id_group`) VALUES
 (8, 3),
 (9, 1),
 (9, 2),
-(9, 3);
+(9, 3),
+(10, 1),
+(10, 2),
+(10, 3),
+(11, 1),
+(11, 2),
+(11, 3),
+(12, 1),
+(12, 2),
+(12, 3),
+(13, 1),
+(13, 2),
+(13, 3),
+(14, 1),
+(14, 2),
+(14, 3),
+(15, 1),
+(15, 2),
+(15, 3),
+(16, 1),
+(16, 2),
+(16, 3),
+(17, 1),
+(17, 2),
+(17, 3),
+(18, 1),
+(18, 2),
+(18, 3),
+(19, 1),
+(19, 2),
+(19, 3),
+(20, 1),
+(20, 2),
+(20, 3),
+(21, 1),
+(21, 2),
+(21, 3),
+(22, 1),
+(22, 2),
+(22, 3),
+(23, 1),
+(23, 2),
+(23, 3),
+(24, 1),
+(24, 2),
+(24, 3);
 
 -- --------------------------------------------------------
 
@@ -2805,7 +2905,22 @@ INSERT INTO `ad_category_lang` (`id_category`, `id_shop`, `id_lang`, `name`, `de
 (6, 1, 1, 'Produkty powiązane', '<p>Items and accessories for your desk, kitchen or living room. Make your house a home with our eye-catching designs. </p>', 'accessories', '', '', ''),
 (7, 1, 1, 'Stationery', '<p>Notebooks, agendas, office accessories and more. Everything you need to combine the pleasant and the useful, either at work or at home. </p>', 'stationery', '', '', ''),
 (8, 1, 1, 'Home Accessories', '<p>Details matter! Liven up your interior with our selection of home accessories. </p>', 'home-accessories', '', '', ''),
-(9, 1, 1, 'Art', '<p>Framed poster and vector images, all you need to give personality to your walls or bring your creative projects to life.</p>', 'art', '', '', '');
+(9, 1, 1, 'Art', '<p>Framed poster and vector images, all you need to give personality to your walls or bring your creative projects to life.</p>', 'art', '', '', ''),
+(10, 1, 1, 'Mężczyźni', '', 'mezczyzni', '', '', ''),
+(11, 1, 1, 'Kobiety', '', 'kobiety', '', '', ''),
+(12, 1, 1, 'Dzieci', '', 'dzieci', '', '', ''),
+(13, 1, 1, 'Sport', '', 'sport', '', '', ''),
+(14, 1, 1, 'Ubrania', '', 'ubrania', '', '', ''),
+(15, 1, 1, 'Buty', '', 'buty', '', '', ''),
+(16, 1, 1, 'Akcesoria', '', 'akcesoria', '', '', ''),
+(17, 1, 1, 'Ubrania', '', 'ubrania', '', '', ''),
+(18, 1, 1, 'Buty', '', 'buty', '', '', ''),
+(19, 1, 1, 'Akcesoria', '', 'akcesoria', '', '', ''),
+(20, 1, 1, 'Buty dla chłopców', '', 'buty-dla-chlopcow', '', '', ''),
+(21, 1, 1, 'Buty dla dziewczynek', '', 'buty-dla-dziewczynek', '', '', ''),
+(22, 1, 1, 'Akcesoria', '', 'akcesoria', '', '', ''),
+(23, 1, 1, 'Buty piłkarskie', '', 'buty-pilkarskie', '', '', ''),
+(24, 1, 1, 'Buty biegowe', '', 'buty-biegowe', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2902,7 +3017,22 @@ INSERT INTO `ad_category_shop` (`id_category`, `id_shop`, `position`) VALUES
 (6, 1, 1),
 (7, 1, 0),
 (8, 1, 1),
-(9, 1, 2);
+(9, 1, 2),
+(10, 1, 3),
+(11, 1, 4),
+(12, 1, 5),
+(13, 1, 6),
+(14, 1, 0),
+(15, 1, 1),
+(16, 1, 2),
+(17, 1, 0),
+(18, 1, 1),
+(19, 1, 2),
+(20, 1, 0),
+(21, 1, 1),
+(22, 1, 2),
+(23, 1, 0),
+(24, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2924,9 +3054,10 @@ CREATE TABLE `ad_cms` (
 
 INSERT INTO `ad_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexation`) VALUES
 (1, 1, 0, 1, 0),
-(3, 1, 1, 1, 0),
-(4, 1, 2, 1, 0),
-(6, 1, 3, 1, 0);
+(2, 1, 1, 1, 0),
+(3, 1, 2, 1, 0),
+(4, 1, 3, 1, 0),
+(5, 1, 4, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -2949,7 +3080,7 @@ CREATE TABLE `ad_cms_category` (
 --
 
 INSERT INTO `ad_cms_category` (`id_cms_category`, `id_parent`, `level_depth`, `active`, `date_add`, `date_upd`, `position`) VALUES
-(1, 0, 1, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0);
+(1, 0, 1, 1, '2023-11-20 19:41:36', '2023-11-20 19:41:36', 0);
 
 -- --------------------------------------------------------
 
@@ -3017,10 +3148,11 @@ CREATE TABLE `ad_cms_lang` (
 --
 
 INSERT INTO `ad_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `head_seo_title`, `meta_description`, `meta_keywords`, `content`, `link_rewrite`) VALUES
-(1, 1, 1, 'Dostawa', '', 'Nasze zasady dostaw', 'conditions, delivery, delay, shipment, pack', '<h2>Przesyłki i zwroty</h2>\n<h3>Twoja przesyłka w paczce</h3>\n<p>Paczki są zazwyczaj wysyłane w ciągu 2 dni od otrzymania płatności i wysyłane za pośrednictwem firmy UPS ze śledzeniem i doręczeniem bez podpisu. Jeśli wolisz dostawę UPS Extra z wymaganym podpisem, zostanie naliczona dodatkowa opłata, dlatego przed wybraniem tej metody skontaktuj się z nami. Niezależnie od tego, jaką przesyłkę wybierzesz, udostępnimy Ci link umożliwiający śledzenie przesyłki online.</p>\n<p></p>\n<p>Opłaty za wysyłkę obejmują opłaty manipulacyjne i pakowania, a także koszty wysyłki. Opłaty manipulacyjne są stałe, natomiast opłaty transportowe różnią się w zależności od całkowitej wagi przesyłki. Radzimy zgrupować produkty w jednym zamówieniu. Nie możemy zgrupować dwóch odrębnych zamówień złożonych osobno, a opłaty za wysyłkę będą obowiązywać w przypadku każdego z nich. Przesyłkę wysyłasz na własne ryzyko, jednak dokładamy wszelkich starań, aby chronić delikatne przedmioty.</p>\n<p></p>\n<p>Pudełka są dość duże, a Twoje przedmioty są dobrze chronione.</p>', 'dostawa'),
-(3, 1, 1, 'Regulamin firmy', '', 'Nasz regulamin', 'conditions, terms, use, sell', '<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;\"><span><span lang=\"pl\" style=\"font-size:24pt;font-family:AdiHaus;\" xml:lang=\"pl\">Regulamin firmy adidas</span></span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Treść niniejszego Regulaminu składa się z następujących rozdziałów: 1. Wstęp; 2. Warunki zakupu produktów, w tym Warunki dotyczące kart podarunkowych oraz Warunki adidas Hype; 3. Korzystanie z Platformy; 4. Warunki zakupu treści cyfrowych i usług cyfrowych oraz 5. Inne, w tym zasady, warunki lub dokumenty, do których odpowiednie linki zostały umieszczone w tekście (łącznie jako „Regulamin”).</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></p>\n<h2 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">1. WSTĘP</span></h2>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Złożenie zamówienia na wybrany produkt za pośrednictwem witryny</span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"http://www.adidas.pl/\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">www.adidas.pl</span></a></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">, aplikacji adidas („Aplikacja”) lub jakiejkolwiek innej witryny czy aplikacji, na której zamieszczono niniejszy Regulamin (zwanych łącznie „Platformą”), a następnie potwierdzenie przyjęcia takiego zamówienia oznacza zawarcie umowy sprzedaży pomiędzy Tobą a firmą adidas Poland Sp. z o.o., ul. Żwirki i Wigury 18A, 02-092 Warszawa, Polska, wpisaną do rejestru przedsiębiorców Krajowego Rejestru Sądowego, prowadzonego przez Sąd Rejonowy dla m.st. Warszawy w Warszawie, XIX Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS: 0000032095, numer VAT: PL5220000080, która podlega niniejszemu Regulaminowi, a w szczególności Warunkom zakupu produktu określonym poniżej.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Pobranie i instalacja Aplikacji bądź utworzenie konta adidas jest równoznaczne z zawarciem umowy z wyżej wymienionym podmiotem adidas, której postanowienia reguluje niniejszy Regulamin, w szczególności rozdział Korzystanie z platformy (Rozdział 3), o których mowa poniżej. W zakresie, w jakim udostępnienie danych osobowych w celu korzystania z Platformy lub utworzenia konta adidas kwalifikuje się jako płatność zgodnie z obowiązującym prawem, zastosowanie mają również Warunki zakupu treści cyfrowych i usług cyfrowych (Rozdział 4).</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Spółka adidas AG jest spółką matką grupy adidas, do której należy szereg podmiotów powiązanych, między innymi spółka adidas Poland Sp. z o.o. (w dalszej części niniejszego dokumentu „adidas/ my/nas”).</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></p>\n<h2 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2. WARUNKI ZAKUPU PRODUKTÓW, W TYM WARUNKI DOTYCZĄCE KART PODARUNKOWYCH ORAZ WARUNKI ADIDAS HYPE</span></h2>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Przed zamówieniem Produktów on-line za pośrednictwem Platformy prosimy o szczegółowe zapoznanie się z poniższymi Warunkami zakupu.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.1 W JAKICH PRZYPADKACH OBOWIĄZUJĄ NINIEJSZE WARUNKI ZAKUPU?</span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Niniejsze Warunki zakupu mają zastosowanie do całej oferty produktowej i umów dotyczących sprzedaży i dostawy Produktów przez adidas. Oznacza to, że wyrażasz zgodę na niniejsze Warunki zakupu w momencie, gdy (i) zamawiasz jakikolwiek produkt za pośrednictwem Platformy, (ii) zamawiasz jakikolwiek produkt za pośrednictwem dowolnej strony internetowej bezpośrednio połączonej z Platformą lub (iii) akceptujesz ofertę dotyczącą produktu firmy adidas. Odstąpienie od niniejszych Warunków zakupu jest możliwe wyłącznie po uzyskaniu pisemnej zgody firmy adidas.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.2. PRODUKTY</span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">W naszej ofercie znajdują się różne rodzaje produktów. Mogą to być (1) produkty fizyczne w całości zaprojektowane i stworzone przez nas („Produkty standardowe”) oraz (2) produkty fizyczne, które, choć zaprojektowane przez firmę adidas/, mogą zostać spersonalizowane przez Użytkownika poprzez dodanie własnych treści: swojego imienia, nazwiska gracza lub numeru („Produkty personalizowane”) oraz (3) fizyczne i elektroniczne karty podarunkowe, niezależnie od tego, czy takie karty podarunkowe zostały spersonalizowane, jeśli zaoferowano tę funkcję („Karty podarunkowe”), zwane łącznie „Produktami”.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Należy pamiętać, że w przypadku Produktów z limitowanej serii lub limitowanej produkcji mogą obowiązywać dodatkowe ograniczenia, takie jak ograniczona ilość takich Produktów przypadająca na jednego konsumenta. O dodatkowych ograniczeniach poinformujemy Cię za pośrednictwem Platformy.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Wszystkie Produkty prezentowane na Platformie podlegają weryfikacji dostępności. Oznacza to, że pomimo naszych starań w celu zapewnienia, by Platforma pokazywała rzeczywistą dostępność towarów, może się zdarzyć, że Produkt widoczny</span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#404040;\" xml:lang=\"pl\">na Platformie</span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">nie będzie już dostępny w sprzedaży.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Dopuszczalne są niewielkie różnice w kolorze Produktów oraz inne różnice wynikające ze stosowania odmiennych systemów akwizycji obrazu, technologii wyświetlania obrazu lub z innych przyczyn technicznych pozostających poza kontrolą adidas. W zakresie dozwolonym przez mające zastosowanie prawo firma adidas nie ponosi odpowiedzialności za powstawanie tych zmian i rozbieżności.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.3. WYMOGI NIEZBĘDNE DO ZAWARCIA UMOWY Z FIRMĄ ADIDAS</span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Musisz mieć ukończone 16 lat, aby móc kupować Produkty za pośrednictwem Platformy.</span></p>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Zamówienia za pośrednictwem Platformy mogą składać wyłącznie konsumenci, a nie dystrybutorzy/sprzedawcy.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Składając zamówienie lub wysyłając zapytanie, jednocześnie zaświadczasz, że wszelkie podane w nich informacje są prawidłowe i kompletne. </span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.4 W JAKI SPOSÓB ZAWIERAMY UMOWĘ Z UŻYTKOWNIKIEM?</span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Poniższe zasady mają zastosowanie do wszystkich rodzajów Produktów. Wszelkie treści dostępne na Platformie są jedynie zaproszeniem do zakupu. Jednocześnie zgadzasz się, by Twoje zamówienie stanowiło ofertę zgodnie z przepisami obowiązującego prawa zakupu Produktów nim wymienionych.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Wszystkie zamówienia składane przez Ciebie muszą zostać przez nas zaakceptowane. W zakresie dozwolonym przepisami mającego zastosowanie prawa przysługuje nam prawo uprzedniej weryfikacji zamówienia w każdej chwili lub odmowy jego realizacji bez podania przyczyny i bez ponoszenia z tego tytułu odpowiedzialności wobec Ciebie ani jakichkolwiek osób trzecich. Jeśli nie potwierdzimy zamówienia niezwłocznie, uznaje się, że zostało ono odrzucone.</span></p>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Zastrzegamy sobie prawo do odmowy przyjęcia Twojego zamówienia. Przypadki, kiedy zamówienie może nie zostać przyjęte, są następujące:</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">a.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli Produkty są prezentowane na Platformie, ale są (już) niedostępne;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">b.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli nie jesteśmy w stanie uzyskać autoryzacji płatności;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">c.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">              </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli do zamawianego Produktu mają zastosowanie ograniczenia wysyłki;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">d.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli prezentacja Produktu na Platformie zawiera (oczywisty) błąd, taki jak nieprawidłowa cena, niewłaściwy opis lub zdjęcie;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">e.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli nie jesteśmy w stanie przetworzyć Twojego zamówienia z przyczyn technicznych;</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">f.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">              </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">jeśli wiemy lub mamy uzasadnione przypuszczenia, że zamówienie zostało złożone za pośrednictwem lub z pomocą innego oprogramowania, robota, pełzacza, pająka lub wszelkich innych zautomatyzowanych środków lub urządzeń.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">W przypadku, gdy nie zaakceptujemy (części) Twojego zamówienia, mamy prawo do anulowania (części) Twojego zamówienia bez ponoszenia odpowiedzialności wobec Ciebie lub jakichkolwiek osób trzecich w zakresie dozwolonym przepisami prawa właściwego.</span><span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">W przypadku anulowania zwrócimy Ci wszystkie koszty poniesione przez Ciebie z tytułu anulowanego zamówienia lub jego części.</span></span></p>\n<p class=\"TreA\" style=\"margin:0px 0px 5pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Po złożeniu przez Ciebie zamówienia wyślemy Ci wiadomość e-mail z potwierdzeniem wpływu zamówienia oraz jego numerem. W wiadomości tej znajdą się również wyszczególnione Produkty, których dotyczy Twoja oferta zakupu, oraz informacje dotyczące dostawy. W zależności od wybranego przez Ciebie sposobu dostawy, prześlemy Ci następnie kolejną wiadomość e-mail z potwierdzeniem przyjęcia zamówienia do realizacji i dostawy (tj. jedną z wiadomości e-mail wskazanych w punktach a. – c. poniżej), co będzie równoznaczne z zawarciem umowy pomiędzy Tobą a firmą adidas. Innymi słowy, zawarcie umowy sprzedaży Produktów między Tobą a firmą adidas nie będzie miało miejsca, dopóki nie otrzymasz:</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">a.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">wiadomości e-mail z potwierdzeniem wysyłki Produktów z magazynu; lub</span></p>\n<p class=\"TreA\" style=\"margin:5pt 0in;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">b.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">             </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">wiadomości e-mail z potwierdzeniem, że Produkty są gotowe do odbioru, jeśli została wybrana opcja odbioru Produktów biurze przewoźnika lub też Produkty zostały złożone w miejscu, z którego mogą zostać odebrane; lub</span></p>\n<p class=\"MsoListParagraph\" style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;text-indent:0in;background:#ffffff;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;\" xml:lang=\"pl\">c.<span style=\"font-size:7pt;line-height:normal;font-family:\'Times New Roman\';\">              </span></span><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">wiadomości e-mail z potwierdzeniem, że Produkty są gotowe do odbioru w wybranym sklepie adidas, jeżeli opcja odbioru Produktów, opłaconych uprzednio za pośrednictwem Platformy, ze sklepu stacjonarnego firmy adidas (Kliknij &amp; Odbierz) była dostępna na Platformie i została przez Ciebie wybrana.</span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Należy pamiętać, że funkcja Kliknij &amp; Odbierz (jeśli ma zastosowanie), dostępna na Platformie na obszarze Twojego kraju, może nie zawierać opcji składania zamówień i płatności za Produkty za pośrednictwem Platformy (zgodnie z pkt. 2.4.c), tylko daje Ci możliwość rezerwacji w lokalnym sklepie firmy adidas wybranego Produktu, za który następnie należy zapłacić na miejscu. Opcja rezerwacji Kliknij &amp; Odbierz ma zastosowanie wyłącznie do wybranych sklepów firmy adidas, wskazanych podczas realizacji transakcji na Platformie. Kupując zarezerwowany Produkt, umowę kupna zawierasz z wybranym przez siebie lokalnym sklepem (sprzedawcą detalicznym) firmy adidas. Oznacza to, że dany Produkt można zwrócić tylko w tym samym sklepie, w którym został on zakupiony, z zastrzeżeniem regulaminu zwrotów obowiązującego w tym sklepie. Dlatego poniższe punkty 2.13, 2.14 i 2.15 nie mają zastosowania w wyżej wymienionym przypadku, ponieważ odnoszą się one jedynie do zwrotu Produktów zakupionych za pośrednictwem Platformy.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.5 ZASTRZEŻENIE PRAWA WŁASNOŚCI</span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Wszystkie Produkty pozostają własnością firmy adidas do momentu uregulowania wszystkich kwot należnych firmie adidas z tytułu wszelkich umów całości, w tym kosztów częściowej, wcześniejszej lub późniejszej dostawy. Nie możesz sprzedawać, zbywać ani obciążać Produktów przed nabyciem do nich pełni praw własności.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.6 KONSERWACJA PRODUKTÓW</span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Zwracamy uwagę na instrukcje prania i konserwacji umieszczone na etykietach Produktów. Firma adidas nie ponosi odpowiedzialności za jakiekolwiek szkody wynikające z niewłaściwego obchodzenia się z Produktami przez konsumenta, w tym będące skutkiem postępowania niezgodnego z instrukcją. Ocena, czy dane uszkodzenie Produktu wynika z niewłaściwego obchodzenia się z Produktem, jest każdorazowo przedmiotem wnikliwej analizy okoliczności danego przypadku oraz reklamowanego produktu.</span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.7 ANULOWANIE ZAMÓWIENIA</span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Bez uszczerbku dla Twojego prawa do odstąpienia, istnieje możliwość — w ściśle określonych okolicznościach — anulowania Twojego zamówienia Produktów standardowych. Więcej informacji znajdziesz w zakładce</span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"https://www.adidas.pl/pomoc/zamawianie/czy-moge-anulowac-zamowienie-zlozone-online\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span class=\"Hyperlink0\"><span lang=\"pl\" style=\"font-size:10pt;\" xml:lang=\"pl\">Pomoc</span></span></a></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">dostępnej na Platformie.</span></span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.8 CENA</span></span></h3>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Podane ceny zawierają podatek VAT. Ceny podane są w złotówkach (PLN). Firma adidas zastrzega sobie prawo do zmiany cen przed złożeniem przez Ciebie zamówienia.</span></span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Zastrzegamy sobie prawo do zmiany, ograniczenia lub zakończenia wszelkich ofert specjalnych i zniżek, z którego możemy skorzystać w dowolnym momencie przed złożeniem przez Ciebie zamówienia.</span></span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Możemy naliczać koszty dostawy. Koszty dostawy zmieniają się w zależności od Produktu i metody dostawy. Dodatkowe informacje znajdziesz w punkcie 2.12 lub w sekcji </span></span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"https://www.adidas.pl/pomoc/dostawa/jaki-jest-czas-oraz-koszt-dostawy\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span class=\"Hyperlink0\"><span lang=\"pl\" style=\"font-size:10pt;\" xml:lang=\"pl\">Dostawa</span></span></a></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> w zakładce Pomoc dostępnej na Platformie. Wszelkie koszty dostawy zostaną wyszczególnione oddzielnie i dodane do całkowitej kwoty zamówienia.</span></span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.9 METODY PŁATNOŚCI</span></span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Sprawdź zakładkę Pomoc dostępną na Platformie, aby dowiedzieć się, jakie </span></span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"https://www.adidas.pl/pomoc/placenie/jakie-sa-metody-platnosci\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span class=\"Hyperlink1\"><span lang=\"pl\" style=\"font-size:10pt;\" xml:lang=\"pl\">metody płatności</span></span></a></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">są obecnie dostępne.</span></span></p>\n<p style=\"margin:0px;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:15.6pt;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Firma</span></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">adidas zastrzega sobie prawo do prowadzenia indywidualnej oceny wiarygodności kredytowej zgodnie z Informacją o polityce</span></span><span lang=\"nl\" xml:lang=\"nl\"><a href=\"http://www.adidas.pl/help-topics-privacy_policy.html\" style=\"padding-left:1px;padding-right:1px;vertical-align:bottom;\"><span class=\"Hyperlink1\"><span lang=\"pl\" style=\"font-size:10pt;\" xml:lang=\"pl\">prywatności</span></span></a></span><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">firmy adidas. W zależności od wyników tej oceny firma adidas zastrzega sobie prawo do odmowy akceptacji niektórych metod płatności.</span></span></p>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></span></h3>\n<h3 style=\"margin:0px;padding:0px;background:#ffffff;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">2.10 FAKTUROWANIE</span></span></h3>\n<p style=\"margin:0px 0px 12pt;padding:0px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;font-size:16px;background:#ffffff;line-height:18.4px;\"><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;line-height:15.3333px;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\">Wszystkie zakupy zostaną udokumentowane fakturami VAT, a firma adidas zastrzega sobie prawo do wydania lub udostępnienia faktur w formie elektronicznej, na co wyrażasz zgodę.</span></span></p>\n<p><span class=\"Brak\"><span lang=\"pl\" style=\"font-size:10pt;line-height:15.3333px;font-family:AdiHaus;color:#333333;\" xml:lang=\"pl\"> </span></span></p>', 'regulamin-firmy'),
-(4, 1, 1, 'O nas', '', 'Naucz się o nas', 'about us, informations', '<h2>O nas</h2>\n<h3>Nasza firma</h3>\n<p>Zaczęliśmy w łazience i podbiliśmy świat. W międzyczasie zdobywaliśmy ważne bramki i czasami mieliśmy problemy z ich osiągnięciem. Zrobiliśmy wszystko, co w naszej mocy, aby było jak najlepiej. Poprawiliśmy się i rozwinęliśmy. Patrzymy w przyszłość, zawsze pamiętając, skąd pochodzimy. To jest nasza historia.Our team</p>\n<h3>Nasz zespół</h3>\n<p>Wierzymy, że kluczem do sukcesu firmy są nasi ludzie. Ich wyniki, dobre samopoczucie i rozwój osobisty mają znaczący wpływ na pożądanie marki, satysfakcję konsumentów, a ostatecznie na nasze wyniki finansowe. Nasza strategia kadrowa składa się z trzech kluczowych filarów: przywództwa, doskonalenia i wydajności, a wszystkie one opierają się na zasadach „Różnorodność, równość i włączenie społeczne” („DEI”).</p>', 'o-nas'),
-(6, 1, 1, 'Zwroty', '', '', '', '<h2 class=\"gl-heading title___1no5t withhtml___2vPJM gl-heading--m\" style=\"margin:0px;padding:0px;width:520.828px;background-color:#ffffff;\"><strong>JAK DOKONAĆ ZWROTU?</strong></h2>\n<p><strong></strong></p>\n<div class=\"summary___1BV7e withhtml___2vPJM gl-fetched-content gl-body--l\" style=\"margin:0px;width:520.828px;font-family:AdihausDIN, Helvetica, Arial, sans-serif;background-color:#ffffff;\">\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\">Wszystko, co zwracasz, powinno być w dobrym stanie. Upewnij się, że żadne etykiety i metki nie zostały odcięte. Zapakuj wszystkie produkty do ich oryginalnych opakowań.</p>\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\"></p>\n<p class=\"gl-vspace-bpall-medium\" style=\"padding:0px;margin:0px 0px 0px;\"><strong><span style=\"font-family:inherit;font-size:inherit;line-height:inherit;\">Pocztą</span></strong></p>\n<p class=\"gl-vspace\" style=\"padding:0px;margin:0px 0px 0px;\">Rozpocznij zwrot na stronie internetowej lub w aplikacji i postępuj zgodnie z instrukcjami. Wszystkie potrzebne informacje otrzymasz przed oddaniem przesyłki do punktu nadawczego.</p>\n<p class=\"gl-vspace\" style=\"padding:0px;margin:0px 0px 0px;\"></p>\n<h2 class=\"gl-heading title___1no5t withhtml___2vPJM gl-heading--m\" style=\"margin:0px;padding:0px;width:520.828px;\"><strong>REFUNDACJA</strong></h2>\n<div class=\"summary___1BV7e withhtml___2vPJM gl-fetched-content gl-body--l\" style=\"margin:0px;width:520.828px;\">\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\">Po otrzymaniu przesyłki w jednym z naszych magazynów i zatwierdzeniu jej nieuszkodzonego stanu, rozpoczniemy proces zwrotu pieniędzy.</p>\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\">Jeśli wybrano e-kartę podarunkową jako metodę zwrotu pieniędzy, otrzymasz ją pocztą elektroniczną natychmiast po zatwierdzeniu zwrotu.</p>\n<p class=\"gl-vspace-bpall-small\" style=\"padding:0px;margin:0px 0px 0px;\">Czy chcesz otrzymać zwrot pieniędzy zgodnie z wybraną przez Ciebie metodą płatności? W zależności od banku – może upłynąć do 14 dni roboczych, zanim zobaczysz kwotę na swoim koncie.</p>\n</div>\n<p class=\"gl-vspace\" style=\"padding:0px;margin:0px 0px 0px;\"></p>\n</div>', 'zwroty');
+(1, 1, 1, 'Delivery', '', 'Our terms and conditions of delivery', 'conditions, delivery, delay, shipment, pack', '<h2>Shipments and returns</h2><h3>Your pack shipment</h3><p>Packages are generally dispatched within 2 days after receipt of payment and are shipped via UPS with tracking and drop-off without signature. If you prefer delivery by UPS Extra with required signature, an additional cost will be applied, so please contact us before choosing this method. Whichever shipment choice you make, we will provide you with a link to track your package online.</p><p>Shipping fees include handling and packing fees as well as postage costs. Handling fees are fixed, whereas transport fees vary according to total weight of the shipment. We advise you to group your items in one order. We cannot group two distinct orders placed separately, and shipping fees will apply to each of them. Your package will be dispatched at your own risk, but special care is taken to protect fragile objects.<br /><br />Boxes are amply sized and your items are well-protected.</p>', 'delivery'),
+(2, 1, 1, 'Legal Notice', '', 'Legal notice', 'notice, legal, credits', '<h2>Legal</h2><h3>Credits</h3><p>Concept and production:</p><p>This Web site was created using <a href=\"http://www.prestashop.com\">PrestaShop</a>&trade; open-source software.</p>', 'legal-notice'),
+(3, 1, 1, 'Terms and conditions of use', '', 'Our terms and conditions of use', 'conditions, terms, use, sell', '<h2>Your terms and conditions of use</h2><h3>Rule 1</h3><p>Here is the rule 1 content</p>\r\n<h3>Rule 2</h3><p>Here is the rule 2 content</p>\r\n<h3>Rule 3</h3><p>Here is the rule 3 content</p>', 'terms-and-conditions-of-use'),
+(4, 1, 1, 'About us', '', 'Learn more about us', 'about us, informations', '<h2>About us</h2>\r\n<h3>Our company</h3><p>Our company</p>\r\n<h3>Our team</h3><p>Our team</p>\r\n<h3>Informations</h3><p>Informations</p>', 'about-us'),
+(5, 1, 1, 'Secure payment', '', 'Our secure payment mean', 'secure payment, ssl, visa, mastercard, paypal', '<h2>Secure payment</h2>\r\n<h3>Our secure payment</h3><p>With SSL</p>\r\n<h3>Using Visa/Mastercard/Paypal</h3><p>About this services</p>', 'secure-payment');
 
 -- --------------------------------------------------------
 
@@ -3072,9 +3204,10 @@ CREATE TABLE `ad_cms_shop` (
 
 INSERT INTO `ad_cms_shop` (`id_cms`, `id_shop`) VALUES
 (1, 1),
+(2, 1),
 (3, 1),
 (4, 1),
-(6, 1);
+(5, 1);
 
 -- --------------------------------------------------------
 
@@ -3097,14 +3230,14 @@ CREATE TABLE `ad_configuration` (
 --
 
 INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, `name`, `value`, `date_add`, `date_upd`) VALUES
-(1, NULL, NULL, 'PS_LANG_DEFAULT', '1', '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(2, NULL, NULL, 'PS_VERSION_DB', '1.7.8.10', '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(3, NULL, NULL, 'PS_INSTALL_VERSION', '1.7.8.10', '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(4, NULL, NULL, 'PS_CARRIER_DEFAULT', '1', '2023-11-17 09:28:03', '2023-11-17 09:28:03'),
-(5, NULL, NULL, 'PS_GROUP_FEATURE_ACTIVE', '1', '2023-11-17 09:28:03', '2023-11-17 09:28:03'),
+(1, NULL, NULL, 'PS_LANG_DEFAULT', '1', '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(2, NULL, NULL, 'PS_VERSION_DB', '1.7.8.10', '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(3, NULL, NULL, 'PS_INSTALL_VERSION', '1.7.8.10', '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(4, NULL, NULL, 'PS_CARRIER_DEFAULT', '1', '2023-11-20 19:41:36', '2023-11-20 19:41:36'),
+(5, NULL, NULL, 'PS_GROUP_FEATURE_ACTIVE', '1', '2023-11-20 19:41:36', '2023-11-20 19:41:36'),
 (6, NULL, NULL, 'PS_CURRENCY_DEFAULT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(7, NULL, NULL, 'PS_COUNTRY_DEFAULT', '14', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
-(8, NULL, NULL, 'PS_REWRITING_SETTINGS', '1', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
+(7, NULL, NULL, 'PS_COUNTRY_DEFAULT', '14', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
+(8, NULL, NULL, 'PS_REWRITING_SETTINGS', '1', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
 (9, NULL, NULL, 'PS_ORDER_OUT_OF_STOCK', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (10, NULL, NULL, 'PS_LAST_QTIES', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (11, NULL, NULL, 'PS_CONDITIONS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3161,7 +3294,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (62, NULL, NULL, 'PS_SEARCH_WEIGHT_ATTRIBUTE', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (63, NULL, NULL, 'PS_SEARCH_WEIGHT_FEATURE', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (64, NULL, NULL, 'PS_SEARCH_AJAX', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(65, NULL, NULL, 'PS_TIMEZONE', 'Europe/Warsaw', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
+(65, NULL, NULL, 'PS_TIMEZONE', 'Europe/Warsaw', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
 (66, NULL, NULL, 'PS_THEME_V11', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (67, NULL, NULL, 'PRESTASTORE_LIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (68, NULL, NULL, 'PS_TIN_ACTIVE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3186,8 +3319,8 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (87, NULL, NULL, 'PS_SMARTY_FORCE_COMPILE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (88, NULL, NULL, 'PS_DISTANCE_UNIT', 'km', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (89, NULL, NULL, 'PS_STORES_DISPLAY_CMS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(90, NULL, NULL, 'SHOP_LOGO_WIDTH', '100', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
-(91, NULL, NULL, 'SHOP_LOGO_HEIGHT', '28', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
+(90, NULL, NULL, 'SHOP_LOGO_WIDTH', '100', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
+(91, NULL, NULL, 'SHOP_LOGO_HEIGHT', '28', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
 (92, NULL, NULL, 'EDITORIAL_IMAGE_WIDTH', '530', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (93, NULL, NULL, 'EDITORIAL_IMAGE_HEIGHT', '228', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (94, NULL, NULL, 'PS_STATSDATA_CUSTOMER_PAGESVIEWS', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3196,8 +3329,8 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (97, NULL, NULL, 'PS_GEOLOCATION_ENABLED', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (98, NULL, NULL, 'PS_ALLOWED_COUNTRIES', 'AF;ZA;AX;AL;DZ;DE;AD;AO;AI;AQ;AG;AN;SA;AR;AM;AW;AU;AT;AZ;BS;BH;BD;BB;BY;BE;BZ;BJ;BM;BT;BO;BA;BW;BV;BR;BN;BG;BF;MM;BI;KY;KH;CM;CA;CV;CF;CL;CN;CX;CY;CC;CO;KM;CG;CD;CK;KR;KP;CR;CI;HR;CU;DK;DJ;DM;EG;IE;SV;AE;EC;ER;ES;EE;ET;FK;FO;FJ;FI;FR;GA;GM;GE;GS;GH;GI;GR;GD;GL;GP;GU;GT;GG;GN;GQ;GW;GY;GF;HT;HM;HN;HK;HU;IM;MU;VG;VI;IN;ID;IR;IQ;IS;IL;IT;JM;JP;JE;JO;KZ;KE;KG;KI;KW;LA;LS;LV;LB;LR;LY;LI;LT;LU;MO;MK;MG;MY;MW;MV;ML;MT;MP;MA;MH;MQ;MR;YT;MX;FM;MD;MC;MN;ME;MS;MZ;NA;NR;NP;NI;NE;NG;NU;NF;NO;NC;NZ;IO;OM;UG;UZ;PK;PW;PS;PA;PG;PY;NL;PE;PH;PN;PL;PF;PR;PT;QA;DO;CZ;RE;RO;GB;RU;RW;EH;BL;KN;SM;MF;PM;VA;VC;LC;SB;WS;AS;ST;SN;RS;SC;SL;SG;SK;SI;SO;SD;LK;SE;CH;SR;SJ;SZ;SY;TJ;TW;TZ;TD;TF;TH;TL;TG;TK;TO;TT;TN;TM;TC;TR;TV;UA;UY;US;VU;VE;VN;WF;YE;ZM;ZW', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (99, NULL, NULL, 'PS_GEOLOCATION_BEHAVIOR', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(100, NULL, NULL, 'PS_LOCALE_LANGUAGE', 'pl', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
-(101, NULL, NULL, 'PS_LOCALE_COUNTRY', 'pl', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
+(100, NULL, NULL, 'PS_LOCALE_LANGUAGE', 'pl', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
+(101, NULL, NULL, 'PS_LOCALE_COUNTRY', 'pl', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
 (102, NULL, NULL, 'PS_ATTACHMENT_MAXIMUM_SIZE', '8', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (103, NULL, NULL, 'PS_SMARTY_CACHE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (104, NULL, NULL, 'PS_DIMENSION_UNIT', 'cm', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3229,7 +3362,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (130, NULL, NULL, 'PS_OS_OUTOFSTOCK_UNPAID', '12', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (131, NULL, NULL, 'PS_OS_COD_VALIDATION', '13', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (132, NULL, NULL, 'PS_LEGACY_IMAGES', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(133, NULL, NULL, 'PS_IMAGE_QUALITY', 'png', '0000-00-00 00:00:00', '2023-11-17 09:28:54'),
+(133, NULL, NULL, 'PS_IMAGE_QUALITY', 'png', '0000-00-00 00:00:00', '2023-11-20 19:42:26'),
 (134, NULL, NULL, 'PS_PNG_QUALITY', '7', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (135, NULL, NULL, 'PS_JPEG_QUALITY', '90', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (136, NULL, NULL, 'PS_COOKIE_LIFETIME_FO', '480', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3241,10 +3374,10 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (142, NULL, NULL, 'PS_FEATURE_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (143, NULL, NULL, 'PS_COMBINATION_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (144, NULL, NULL, 'PS_SPECIFIC_PRICE_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(145, NULL, NULL, 'PS_VIRTUAL_PROD_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2023-11-17 09:29:10'),
+(145, NULL, NULL, 'PS_VIRTUAL_PROD_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2023-11-20 19:42:37'),
 (146, NULL, NULL, 'PS_CUSTOMIZATION_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (147, NULL, NULL, 'PS_CART_RULE_FEATURE_ACTIVE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(148, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2023-11-17 09:29:10'),
+(148, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2023-11-20 19:42:38'),
 (149, NULL, NULL, 'PS_ALIAS_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (150, NULL, NULL, 'PS_TAX_ADDRESS_TYPE', 'id_address_delivery', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (151, NULL, NULL, 'PS_SHOP_DEFAULT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3307,11 +3440,11 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (208, NULL, NULL, 'BLOCKADVERT_LINK', 'https://www.prestashop.com', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (209, NULL, NULL, 'BLOCKSTORE_IMG', 'store.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (210, NULL, NULL, 'BLOCKADVERT_IMG_EXT', 'jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(211, NULL, NULL, 'MOD_BLOCKTOPMENU_ITEMS', 'CAT3,CAT6,CAT9', '0000-00-00 00:00:00', '2023-11-17 09:28:10'),
+(211, NULL, NULL, 'MOD_BLOCKTOPMENU_ITEMS', 'CAT3,CAT6,CAT9,CAT10,CAT11,CAT12,CAT13', '0000-00-00 00:00:00', '2023-11-23 03:00:43'),
 (212, NULL, NULL, 'MOD_BLOCKTOPMENU_SEARCH', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(213, NULL, NULL, 'BLOCKSOCIAL_FACEBOOK', NULL, '0000-00-00 00:00:00', '2023-11-17 09:28:11'),
-(214, NULL, NULL, 'BLOCKSOCIAL_TWITTER', NULL, '0000-00-00 00:00:00', '2023-11-17 09:28:11'),
-(215, NULL, NULL, 'BLOCKSOCIAL_RSS', NULL, '0000-00-00 00:00:00', '2023-11-17 09:28:11'),
+(213, NULL, NULL, 'BLOCKSOCIAL_FACEBOOK', NULL, '0000-00-00 00:00:00', '2023-11-20 19:41:44'),
+(214, NULL, NULL, 'BLOCKSOCIAL_TWITTER', NULL, '0000-00-00 00:00:00', '2023-11-20 19:41:44'),
+(215, NULL, NULL, 'BLOCKSOCIAL_RSS', NULL, '0000-00-00 00:00:00', '2023-11-20 19:41:44'),
 (216, NULL, NULL, 'BLOCKCONTACTINFOS_COMPANY', 'Your company', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (217, NULL, NULL, 'BLOCKCONTACTINFOS_ADDRESS', 'Address line 1\nCity\nCountry', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (218, NULL, NULL, 'BLOCKCONTACTINFOS_PHONE', '0123-456-789', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3326,16 +3459,16 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (227, NULL, NULL, 'UPGRADER_BACKUPFILES_FILENAME', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (228, NULL, NULL, 'BLOCKREINSURANCE_NBBLOCKS', '5', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (229, NULL, NULL, 'HOMESLIDER_WIDTH', '535', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(230, NULL, NULL, 'HOMESLIDER_SPEED', '5000', '0000-00-00 00:00:00', '2023-11-17 09:28:09'),
+(230, NULL, NULL, 'HOMESLIDER_SPEED', '5000', '0000-00-00 00:00:00', '2023-11-20 19:41:43'),
 (231, NULL, NULL, 'HOMESLIDER_PAUSE', '7700', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (232, NULL, NULL, 'HOMESLIDER_LOOP', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (233, NULL, NULL, 'PS_BASE_DISTANCE_UNIT', 'm', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(234, NULL, NULL, 'PS_SHOP_DOMAIN', 'localhost:8080', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
-(235, NULL, NULL, 'PS_SHOP_DOMAIN_SSL', 'localhost:8080', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
-(236, NULL, NULL, 'PS_SHOP_NAME', 'Adidas', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
-(237, NULL, NULL, 'PS_SHOP_EMAIL', 'test@test.com', '0000-00-00 00:00:00', '2023-11-17 09:28:05'),
+(234, NULL, NULL, 'PS_SHOP_DOMAIN', 'localhost:8080', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
+(235, NULL, NULL, 'PS_SHOP_DOMAIN_SSL', 'localhost:8080', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
+(236, NULL, NULL, 'PS_SHOP_NAME', 'Adidas', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
+(237, NULL, NULL, 'PS_SHOP_EMAIL', 'test@test.com', '0000-00-00 00:00:00', '2023-11-20 19:41:38'),
 (238, NULL, NULL, 'PS_MAIL_METHOD', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(239, NULL, NULL, 'PS_SHOP_ACTIVITY', '9', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
+(239, NULL, NULL, 'PS_SHOP_ACTIVITY', '9', '0000-00-00 00:00:00', '2023-11-20 19:41:37'),
 (240, NULL, NULL, 'PS_LOGO', 'logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (241, NULL, NULL, 'PS_FAVICON', 'favicon.ico', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (242, NULL, NULL, 'PS_STORES_ICON', 'logo_stores.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3348,7 +3481,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (249, NULL, NULL, 'PS_MAIL_SMTP_ENCRYPTION', 'off', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (250, NULL, NULL, 'PS_MAIL_SMTP_PORT', '25', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (251, NULL, NULL, 'PS_MAIL_COLOR', '#db3484', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(252, NULL, NULL, 'NW_SALT', 'oEnR08nPzcUq9riU', '0000-00-00 00:00:00', '2023-11-17 09:28:08'),
+(252, NULL, NULL, 'NW_SALT', 'LWkvK42Tm8VQyM9C', '0000-00-00 00:00:00', '2023-11-20 19:41:42'),
 (253, NULL, NULL, 'PS_PAYMENT_LOGO_CMS_ID', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (254, NULL, NULL, 'HOME_FEATURED_NBR', '8', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (255, NULL, NULL, 'SEK_MIN_OCCURENCES', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3385,127 +3518,133 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (286, NULL, NULL, 'PS_CATALOG_MODE_WITH_PRICES', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (287, NULL, NULL, 'PS_MAIL_THEME', 'modern', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (288, NULL, NULL, 'PS_ORDER_PRODUCTS_NB_PER_PAGE', '8', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(289, NULL, NULL, 'PS_LOGS_EMAIL_RECEIVERS', 'test@test.com', '0000-00-00 00:00:00', '2023-11-17 09:28:05'),
+(289, NULL, NULL, 'PS_LOGS_EMAIL_RECEIVERS', 'test@test.com', '0000-00-00 00:00:00', '2023-11-20 19:41:38'),
 (290, NULL, NULL, 'PS_SHOW_LABEL_OOS_LISTING_PAGES', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (291, NULL, NULL, 'ADDONS_API_MODULE_CHANNEL', 'stable', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(292, NULL, NULL, 'PS_SSL_ENABLED_EVERYWHERE', '0', '2023-11-17 09:28:03', '2023-11-17 09:28:03'),
-(293, NULL, NULL, 'blockwishlist_WishlistPageName', NULL, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(294, NULL, NULL, 'blockwishlist_WishlistDefaultTitle', NULL, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(295, NULL, NULL, 'blockwishlist_CreateButtonLabel', NULL, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(296, NULL, NULL, 'DASHACTIVITY_CART_ACTIVE', '30', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(297, NULL, NULL, 'DASHACTIVITY_CART_ABANDONED_MIN', '24', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(298, NULL, NULL, 'DASHACTIVITY_CART_ABANDONED_MAX', '48', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(299, NULL, NULL, 'DASHACTIVITY_VISITOR_ONLINE', '30', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(300, NULL, NULL, 'PS_DASHGOALS_CURRENT_YEAR', '2023', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(301, NULL, NULL, 'DASHPRODUCT_NBR_SHOW_LAST_ORDER', '10', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(302, NULL, NULL, 'DASHPRODUCT_NBR_SHOW_BEST_SELLER', '10', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(303, NULL, NULL, 'DASHPRODUCT_NBR_SHOW_MOST_VIEWED', '10', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(304, NULL, NULL, 'DASHPRODUCT_NBR_SHOW_TOP_SEARCH', '10', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(305, NULL, NULL, 'GSITEMAP_PRIORITY_HOME', '1', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(306, NULL, NULL, 'GSITEMAP_PRIORITY_PRODUCT', '0.9', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(307, NULL, NULL, 'GSITEMAP_PRIORITY_CATEGORY', '0.8', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(308, NULL, NULL, 'GSITEMAP_PRIORITY_CMS', '0.7', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(309, NULL, NULL, 'GSITEMAP_FREQUENCY', 'weekly', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(310, NULL, NULL, 'PRODUCT_COMMENTS_MINIMAL_TIME', '30', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(311, NULL, NULL, 'PRODUCT_COMMENTS_ALLOW_GUESTS', '0', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(312, NULL, NULL, 'PRODUCT_COMMENTS_USEFULNESS', '1', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(313, NULL, NULL, 'PRODUCT_COMMENTS_COMMENTS_PER_PAGE', '5', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(314, NULL, NULL, 'PRODUCT_COMMENTS_ANONYMISATION', '0', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(315, NULL, NULL, 'PRODUCT_COMMENTS_MODERATE', '1', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(316, NULL, NULL, 'BANNER_IMG', NULL, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(317, NULL, NULL, 'BANNER_LINK', NULL, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(318, NULL, NULL, 'BANNER_DESC', NULL, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(319, NULL, NULL, 'BLOCK_CATEG_ROOT_CATEGORY', '1', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(320, NULL, NULL, 'CONF_PS_CHECKPAYMENT_FIXED', '0.2', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(321, NULL, NULL, 'CONF_PS_CHECKPAYMENT_VAR', '2', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(322, NULL, NULL, 'CONF_PS_CHECKPAYMENT_FIXED_FOREIGN', '0.2', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(323, NULL, NULL, 'CONF_PS_CHECKPAYMENT_VAR_FOREIGN', '2', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(324, NULL, NULL, 'PS_CONTACT_INFO_DISPLAY_EMAIL', '1', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(325, NULL, NULL, 'CROSSSELLING_DISPLAY_PRICE', '1', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(326, NULL, NULL, 'CROSSSELLING_NBR', '8', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(327, NULL, NULL, 'CUSTPRIV_MSG_AUTH', NULL, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(328, NULL, NULL, 'PS_NEWSLETTER_RAND', '1018778886634922089', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(329, NULL, NULL, 'NW_CONDITIONS', NULL, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(338, NULL, NULL, 'PS_USE_JQUERY_UI_SLIDER', '1', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(339, NULL, NULL, 'PS_LAYERED_DEFAULT_CATEGORY_TEMPLATE', '0', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(341, NULL, NULL, 'CHECKBOX_ORDER', '1', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(342, NULL, NULL, 'CHECKBOX_CUSTOMER', '1', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(343, NULL, NULL, 'CHECKBOX_MESSAGE', '1', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(344, NULL, NULL, 'BACKGROUND_COLOR_FAVICONBO', '#DF0067', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(345, NULL, NULL, 'TEXT_COLOR_FAVICONBO', '#FFFFFF', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(346, NULL, NULL, 'HOME_FEATURED_CAT', '2', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(347, NULL, NULL, 'HOMESLIDER_PAUSE_ON_HOVER', '1', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(348, NULL, NULL, 'HOMESLIDER_WRAP', '1', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(349, NULL, NULL, 'PS_SC_TWITTER', '1', '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
-(350, NULL, NULL, 'PS_SC_FACEBOOK', '1', '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
-(351, NULL, NULL, 'PS_SC_PINTEREST', '1', '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
-(352, NULL, NULL, 'BLOCKSOCIAL_YOUTUBE', NULL, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(353, NULL, NULL, 'BLOCKSOCIAL_PINTEREST', NULL, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(354, NULL, NULL, 'BLOCKSOCIAL_VIMEO', NULL, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(355, NULL, NULL, 'BLOCKSOCIAL_INSTAGRAM', NULL, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(356, NULL, NULL, 'BLOCKSOCIAL_LINKEDIN', NULL, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(357, NULL, NULL, 'BLOCKSOCIAL_TIKTOK', NULL, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(358, NULL, NULL, 'BLOCKSOCIAL_DISCORD', NULL, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(359, NULL, NULL, 'BANK_WIRE_PAYMENT_INVITE', '1', '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(360, NULL, NULL, 'CONF_PS_WIREPAYMENT_FIXED', '0.2', '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(361, NULL, NULL, 'CONF_PS_WIREPAYMENT_VAR', '2', '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(362, NULL, NULL, 'CONF_PS_WIREPAYMENT_FIXED_FOREIGN', '0.2', '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(363, NULL, NULL, 'CONF_PS_WIREPAYMENT_VAR_FOREIGN', '2', '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(364, NULL, NULL, 'PSGDPR_CREATION_FORM_SWITCH', '1', '2023-11-17 09:28:44', '2023-11-17 09:28:44'),
-(365, NULL, NULL, 'PSGDPR_CREATION_FORM', NULL, '2023-11-17 09:28:44', '2023-11-17 09:28:44'),
-(366, NULL, NULL, 'PSGDPR_CUSTOMER_FORM_SWITCH', '1', '2023-11-17 09:28:44', '2023-11-17 09:28:44'),
-(367, NULL, NULL, 'PSGDPR_CUSTOMER_FORM', NULL, '2023-11-17 09:28:44', '2023-11-17 09:28:44'),
-(368, NULL, NULL, 'PSGDPR_ANONYMOUS_CUSTOMER', '1', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(369, NULL, NULL, 'PSGDPR_ANONYMOUS_ADDRESS', '1', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(370, NULL, NULL, 'PS_MBO_SHOP_ADMIN_UUID', 'b1e5895d-9daf-4e51-b1d8-eddc73b57c48', '2023-11-17 09:28:45', '2023-11-18 16:50:06'),
-(371, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED', '0.2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(372, NULL, NULL, 'CONF_PS_CHECKOUT_VAR', '2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(373, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED_FOREIGN', '0.2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(374, NULL, NULL, 'CONF_PS_CHECKOUT_VAR_FOREIGN', '2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(390, NULL, NULL, 'PS_CHECKOUT_STATE_COMPLETED', '2', '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
-(391, NULL, NULL, 'PS_CHECKOUT_STATE_CANCELED', '6', '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
-(392, NULL, NULL, 'PS_CHECKOUT_STATE_ERROR', '8', '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
-(393, NULL, NULL, 'PS_CHECKOUT_STATE_REFUNDED', '7', '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
-(394, NULL, NULL, 'PS_CHECKOUT_STATE_PENDING', '14', '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
-(395, NULL, NULL, 'PS_CHECKOUT_STATE_PARTIALLY_REFUNDED', '15', '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
-(396, NULL, NULL, 'PS_CHECKOUT_STATE_PARTIALLY_PAID', '16', '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
-(397, NULL, NULL, 'PS_CHECKOUT_STATE_AUTHORIZED', '17', '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
-(398, NULL, NULL, '0', 'PS_FACEBOOK_PIXEL_ID', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(399, NULL, NULL, '1', 'PS_FACEBOOK_ACCESS_TOKEN', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(400, NULL, NULL, '2', 'PS_FACEBOOK_PROFILES', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(401, NULL, NULL, '3', 'PS_FACEBOOK_PAGES', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(402, NULL, NULL, '4', 'PS_FACEBOOK_BUSINESS_MANAGER_ID', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(403, NULL, NULL, '5', 'PS_FACEBOOK_AD_ACCOUNT_ID', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(404, NULL, NULL, '6', 'PS_FACEBOOK_CATALOG_ID', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(405, NULL, NULL, '7', 'PS_FACEBOOK_EXTERNAL_BUSINESS_ID', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(406, NULL, NULL, '8', 'PS_FACEBOOK_PIXEL_ENABLED', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(407, NULL, NULL, '9', 'PS_FACEBOOK_PRODUCT_SYNC_FIRST_START', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(408, NULL, NULL, '10', 'PS_FACEBOOK_PRODUCT_SYNC_ON', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(409, NULL, NULL, 'PSR_HOOK_HEADER', '0', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
-(410, NULL, NULL, 'PSR_HOOK_FOOTER', '0', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
-(411, NULL, NULL, 'PSR_HOOK_PRODUCT', '1', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
-(412, NULL, NULL, 'PSR_HOOK_CHECKOUT', '1', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
-(413, NULL, NULL, 'PSR_ICON_COLOR', '#F19D76', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
-(414, NULL, NULL, 'PSR_TEXT_COLOR', '#000000', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
-(415, NULL, NULL, 'PS_LAYERED_CACHE_ENABLED', '1', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
-(416, NULL, NULL, 'PS_LAYERED_SHOW_QTIES', '1', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
-(417, NULL, NULL, 'PS_LAYERED_FULL_TREE', '1', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
-(418, NULL, NULL, 'PS_LAYERED_FILTER_PRICE_USETAX', '1', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
-(419, NULL, NULL, 'PS_LAYERED_FILTER_CATEGORY_DEPTH', '1', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
-(420, NULL, NULL, 'PS_LAYERED_FILTER_PRICE_ROUNDING', '1', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
-(421, NULL, NULL, 'PS_LAYERED_FILTER_SHOW_OUT_OF_STOCK_LAST', '0', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
-(422, NULL, NULL, 'PS_LAYERED_FILTER_BY_DEFAULT_CATEGORY', '0', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
-(423, NULL, NULL, 'PS_LAYERED_INDEXED', '1', '2023-11-17 09:29:13', '2023-11-17 09:29:13'),
-(424, NULL, NULL, 'ONBOARDINGV2_SHUT_DOWN', '1', '2023-11-17 10:04:13', '2023-11-17 10:04:13'),
-(425, NULL, NULL, 'BANK_WIRE_DETAILS', 'PL 93 1610 1032 3800 8084 0358 2393', '2023-11-18 16:38:01', '2023-11-18 16:38:01'),
-(426, NULL, NULL, 'BANK_WIRE_OWNER', 'Szymon Małecki', '2023-11-18 16:38:01', '2023-11-18 16:38:01'),
-(427, NULL, NULL, 'BANK_WIRE_ADDRESS', 'SGB-Bank SA O. w Ostrowie Wielkopolskim', '2023-11-18 16:38:01', '2023-11-18 16:38:01'),
-(428, NULL, NULL, 'BANK_WIRE_RESERVATION_DAYS', NULL, '2023-11-18 16:38:01', '2023-11-18 16:38:01'),
-(429, NULL, NULL, 'BANK_WIRE_CUSTOM_TEXT', NULL, '2023-11-18 16:38:01', '2023-11-18 16:38:01'),
-(430, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED', '0.2', '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
-(431, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR', '2', '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
-(432, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED_FOREIGN', '0.2', '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
-(433, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR_FOREIGN', '2', '2023-11-18 16:50:13', '2023-11-18 16:50:13');
+(292, NULL, NULL, 'PS_SSL_ENABLED_EVERYWHERE', '0', '2023-11-20 19:41:37', '2023-11-20 19:41:37'),
+(293, NULL, NULL, 'blockwishlist_WishlistPageName', NULL, '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(294, NULL, NULL, 'blockwishlist_WishlistDefaultTitle', NULL, '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(295, NULL, NULL, 'blockwishlist_CreateButtonLabel', NULL, '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(296, NULL, NULL, 'DASHACTIVITY_CART_ACTIVE', '30', '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(297, NULL, NULL, 'DASHACTIVITY_CART_ABANDONED_MIN', '24', '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(298, NULL, NULL, 'DASHACTIVITY_CART_ABANDONED_MAX', '48', '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(299, NULL, NULL, 'DASHACTIVITY_VISITOR_ONLINE', '30', '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(300, NULL, NULL, 'PS_DASHGOALS_CURRENT_YEAR', '2023', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(301, NULL, NULL, 'DASHPRODUCT_NBR_SHOW_LAST_ORDER', '10', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(302, NULL, NULL, 'DASHPRODUCT_NBR_SHOW_BEST_SELLER', '10', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(303, NULL, NULL, 'DASHPRODUCT_NBR_SHOW_MOST_VIEWED', '10', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(304, NULL, NULL, 'DASHPRODUCT_NBR_SHOW_TOP_SEARCH', '10', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(305, NULL, NULL, 'GSITEMAP_PRIORITY_HOME', '1', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(306, NULL, NULL, 'GSITEMAP_PRIORITY_PRODUCT', '0.9', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(307, NULL, NULL, 'GSITEMAP_PRIORITY_CATEGORY', '0.8', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(308, NULL, NULL, 'GSITEMAP_PRIORITY_CMS', '0.7', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(309, NULL, NULL, 'GSITEMAP_FREQUENCY', 'weekly', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(310, NULL, NULL, 'PRODUCT_COMMENTS_MINIMAL_TIME', '30', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(311, NULL, NULL, 'PRODUCT_COMMENTS_ALLOW_GUESTS', '0', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(312, NULL, NULL, 'PRODUCT_COMMENTS_USEFULNESS', '1', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(313, NULL, NULL, 'PRODUCT_COMMENTS_COMMENTS_PER_PAGE', '5', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(314, NULL, NULL, 'PRODUCT_COMMENTS_ANONYMISATION', '0', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(315, NULL, NULL, 'PRODUCT_COMMENTS_MODERATE', '1', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(316, NULL, NULL, 'BANNER_IMG', NULL, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(317, NULL, NULL, 'BANNER_LINK', NULL, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(318, NULL, NULL, 'BANNER_DESC', NULL, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(319, NULL, NULL, 'BLOCK_CATEG_ROOT_CATEGORY', '1', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(320, NULL, NULL, 'CONF_PS_CHECKPAYMENT_FIXED', '0.2', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(321, NULL, NULL, 'CONF_PS_CHECKPAYMENT_VAR', '2', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(322, NULL, NULL, 'CONF_PS_CHECKPAYMENT_FIXED_FOREIGN', '0.2', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(323, NULL, NULL, 'CONF_PS_CHECKPAYMENT_VAR_FOREIGN', '2', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(324, NULL, NULL, 'PS_CONTACT_INFO_DISPLAY_EMAIL', '1', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(325, NULL, NULL, 'CROSSSELLING_DISPLAY_PRICE', '1', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(326, NULL, NULL, 'CROSSSELLING_NBR', '8', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(327, NULL, NULL, 'CUSTPRIV_MSG_AUTH', NULL, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(328, NULL, NULL, 'PS_NEWSLETTER_RAND', '21369751061718809083', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(329, NULL, NULL, 'NW_CONDITIONS', NULL, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(338, NULL, NULL, 'PS_USE_JQUERY_UI_SLIDER', '1', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(339, NULL, NULL, 'PS_LAYERED_DEFAULT_CATEGORY_TEMPLATE', '0', '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(341, NULL, NULL, 'CHECKBOX_ORDER', '1', '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(342, NULL, NULL, 'CHECKBOX_CUSTOMER', '1', '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(343, NULL, NULL, 'CHECKBOX_MESSAGE', '1', '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(344, NULL, NULL, 'BACKGROUND_COLOR_FAVICONBO', '#DF0067', '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(345, NULL, NULL, 'TEXT_COLOR_FAVICONBO', '#FFFFFF', '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(346, NULL, NULL, 'HOME_FEATURED_CAT', '2', '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(347, NULL, NULL, 'HOMESLIDER_PAUSE_ON_HOVER', '1', '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(348, NULL, NULL, 'HOMESLIDER_WRAP', '1', '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(349, NULL, NULL, 'PS_SC_TWITTER', '1', '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(350, NULL, NULL, 'PS_SC_FACEBOOK', '1', '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(351, NULL, NULL, 'PS_SC_PINTEREST', '1', '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(352, NULL, NULL, 'BLOCKSOCIAL_YOUTUBE', NULL, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(353, NULL, NULL, 'BLOCKSOCIAL_PINTEREST', NULL, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(354, NULL, NULL, 'BLOCKSOCIAL_VIMEO', NULL, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(355, NULL, NULL, 'BLOCKSOCIAL_INSTAGRAM', NULL, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(356, NULL, NULL, 'BLOCKSOCIAL_LINKEDIN', NULL, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(357, NULL, NULL, 'BLOCKSOCIAL_TIKTOK', NULL, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(358, NULL, NULL, 'BLOCKSOCIAL_DISCORD', NULL, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(359, NULL, NULL, 'BANK_WIRE_PAYMENT_INVITE', '1', '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(360, NULL, NULL, 'CONF_PS_WIREPAYMENT_FIXED', '0.2', '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(361, NULL, NULL, 'CONF_PS_WIREPAYMENT_VAR', '2', '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(362, NULL, NULL, 'CONF_PS_WIREPAYMENT_FIXED_FOREIGN', '0.2', '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(363, NULL, NULL, 'CONF_PS_WIREPAYMENT_VAR_FOREIGN', '2', '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(364, NULL, NULL, 'PSGDPR_CREATION_FORM_SWITCH', '1', '2023-11-20 19:42:20', '2023-11-20 19:42:20'),
+(365, NULL, NULL, 'PSGDPR_CREATION_FORM', NULL, '2023-11-20 19:42:20', '2023-11-20 19:42:20'),
+(366, NULL, NULL, 'PSGDPR_CUSTOMER_FORM_SWITCH', '1', '2023-11-20 19:42:20', '2023-11-20 19:42:20'),
+(367, NULL, NULL, 'PSGDPR_CUSTOMER_FORM', NULL, '2023-11-20 19:42:20', '2023-11-20 19:42:20'),
+(368, NULL, NULL, 'PSGDPR_ANONYMOUS_CUSTOMER', '1', '2023-11-20 19:42:20', '2023-11-20 19:42:20'),
+(369, NULL, NULL, 'PSGDPR_ANONYMOUS_ADDRESS', '1', '2023-11-20 19:42:20', '2023-11-20 19:42:20'),
+(370, NULL, NULL, 'PS_MBO_SHOP_ADMIN_UUID', 'ff1a0ca0-0ef0-4974-9038-5f71db2c8908', '2023-11-20 19:42:21', '2023-11-23 02:53:44'),
+(371, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED', '0.2', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(372, NULL, NULL, 'CONF_PS_CHECKOUT_VAR', '2', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(373, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED_FOREIGN', '0.2', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(374, NULL, NULL, 'CONF_PS_CHECKOUT_VAR_FOREIGN', '2', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(375, NULL, NULL, 'PS_CHECKOUT_INTENT', 'CAPTURE', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(376, NULL, NULL, 'PS_CHECKOUT_MODE', 'LIVE', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(377, NULL, NULL, 'PS_CHECKOUT_PAYPAL_ID_MERCHANT', NULL, '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(378, NULL, NULL, 'PS_CHECKOUT_PAYPAL_EMAIL_MERCHANT', NULL, '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(379, NULL, NULL, 'PS_CHECKOUT_PAYPAL_EMAIL_STATUS', NULL, '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(380, NULL, NULL, 'PS_CHECKOUT_PAYPAL_PAYMENT_STATUS', NULL, '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(381, NULL, NULL, 'PS_CHECKOUT_CARD_PAYMENT_STATUS', NULL, '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(382, NULL, NULL, 'PS_CHECKOUT_CARD_PAYMENT_ENABLED', '1', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(383, NULL, NULL, 'PS_CHECKOUT_LOGGER_MAX_FILES', '15', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(384, NULL, NULL, 'PS_CHECKOUT_LOGGER_LEVEL', '400', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(385, NULL, NULL, 'PS_CHECKOUT_LOGGER_HTTP', '0', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(386, NULL, NULL, 'PS_CHECKOUT_LOGGER_HTTP_FORMAT', 'DEBUG', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(387, NULL, NULL, 'PS_CHECKOUT_INTEGRATION_DATE', '2022-14-06', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(388, NULL, NULL, 'PS_CHECKOUT_WEBHOOK_SECRET', NULL, '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(389, NULL, NULL, 'PS_CHECKOUT_LIABILITY_SHIFT_REQ', '0', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(390, NULL, NULL, 'PS_CHECKOUT_STATE_COMPLETED', '2', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(391, NULL, NULL, 'PS_CHECKOUT_STATE_CANCELED', '6', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(392, NULL, NULL, 'PS_CHECKOUT_STATE_ERROR', '8', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(393, NULL, NULL, 'PS_CHECKOUT_STATE_REFUNDED', '7', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(394, NULL, NULL, 'PS_CHECKOUT_STATE_PENDING', '14', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(395, NULL, NULL, 'PS_CHECKOUT_STATE_PARTIALLY_REFUNDED', '15', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(396, NULL, NULL, 'PS_CHECKOUT_STATE_PARTIALLY_PAID', '16', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(397, NULL, NULL, 'PS_CHECKOUT_STATE_AUTHORIZED', '17', '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(398, NULL, NULL, '0', 'PS_FACEBOOK_PIXEL_ID', '2023-11-20 19:42:22', '2023-11-20 19:42:22'),
+(399, NULL, NULL, '1', 'PS_FACEBOOK_ACCESS_TOKEN', '2023-11-20 19:42:22', '2023-11-20 19:42:22'),
+(400, NULL, NULL, '2', 'PS_FACEBOOK_PROFILES', '2023-11-20 19:42:22', '2023-11-20 19:42:22'),
+(401, NULL, NULL, '3', 'PS_FACEBOOK_PAGES', '2023-11-20 19:42:23', '2023-11-20 19:42:23'),
+(402, NULL, NULL, '4', 'PS_FACEBOOK_BUSINESS_MANAGER_ID', '2023-11-20 19:42:23', '2023-11-20 19:42:23'),
+(403, NULL, NULL, '5', 'PS_FACEBOOK_AD_ACCOUNT_ID', '2023-11-20 19:42:23', '2023-11-20 19:42:23'),
+(404, NULL, NULL, '6', 'PS_FACEBOOK_CATALOG_ID', '2023-11-20 19:42:23', '2023-11-20 19:42:23'),
+(405, NULL, NULL, '7', 'PS_FACEBOOK_EXTERNAL_BUSINESS_ID', '2023-11-20 19:42:23', '2023-11-20 19:42:23'),
+(406, NULL, NULL, '8', 'PS_FACEBOOK_PIXEL_ENABLED', '2023-11-20 19:42:23', '2023-11-20 19:42:23'),
+(407, NULL, NULL, '9', 'PS_FACEBOOK_PRODUCT_SYNC_FIRST_START', '2023-11-20 19:42:23', '2023-11-20 19:42:23'),
+(408, NULL, NULL, '10', 'PS_FACEBOOK_PRODUCT_SYNC_ON', '2023-11-20 19:42:23', '2023-11-20 19:42:23'),
+(409, NULL, NULL, 'PSR_HOOK_HEADER', '0', '2023-11-20 19:42:27', '2023-11-20 19:42:27'),
+(410, NULL, NULL, 'PSR_HOOK_FOOTER', '0', '2023-11-20 19:42:27', '2023-11-20 19:42:27'),
+(411, NULL, NULL, 'PSR_HOOK_PRODUCT', '1', '2023-11-20 19:42:27', '2023-11-20 19:42:27'),
+(412, NULL, NULL, 'PSR_HOOK_CHECKOUT', '1', '2023-11-20 19:42:27', '2023-11-20 19:42:27'),
+(413, NULL, NULL, 'PSR_ICON_COLOR', '#F19D76', '2023-11-20 19:42:27', '2023-11-20 19:42:27'),
+(414, NULL, NULL, 'PSR_TEXT_COLOR', '#000000', '2023-11-20 19:42:27', '2023-11-20 19:42:27'),
+(415, NULL, NULL, 'PS_LAYERED_CACHE_ENABLED', '1', '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(416, NULL, NULL, 'PS_LAYERED_SHOW_QTIES', '1', '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(417, NULL, NULL, 'PS_LAYERED_FULL_TREE', '1', '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(418, NULL, NULL, 'PS_LAYERED_FILTER_PRICE_USETAX', '1', '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(419, NULL, NULL, 'PS_LAYERED_FILTER_CATEGORY_DEPTH', '1', '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(420, NULL, NULL, 'PS_LAYERED_FILTER_PRICE_ROUNDING', '1', '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(421, NULL, NULL, 'PS_LAYERED_FILTER_SHOW_OUT_OF_STOCK_LAST', '0', '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(422, NULL, NULL, 'PS_LAYERED_FILTER_BY_DEFAULT_CATEGORY', '0', '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(423, NULL, NULL, 'PS_LAYERED_INDEXED', '1', '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(424, NULL, NULL, 'ONBOARDINGV2_SHUT_DOWN', '1', '2023-11-23 02:46:18', '2023-11-23 02:46:18');
 
 -- --------------------------------------------------------
 
@@ -3528,42 +3667,58 @@ CREATE TABLE `ad_configuration_kpi` (
 --
 
 INSERT INTO `ad_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id_shop`, `name`, `value`, `date_add`, `date_upd`) VALUES
-(1, NULL, NULL, 'DASHGOALS_TRAFFIC_01_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(2, NULL, NULL, 'DASHGOALS_CONVERSION_01_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(3, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_01_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(4, NULL, NULL, 'DASHGOALS_TRAFFIC_02_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(5, NULL, NULL, 'DASHGOALS_CONVERSION_02_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(6, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_02_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(7, NULL, NULL, 'DASHGOALS_TRAFFIC_03_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(8, NULL, NULL, 'DASHGOALS_CONVERSION_03_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(9, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_03_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(10, NULL, NULL, 'DASHGOALS_TRAFFIC_04_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(11, NULL, NULL, 'DASHGOALS_CONVERSION_04_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(12, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_04_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(13, NULL, NULL, 'DASHGOALS_TRAFFIC_05_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(14, NULL, NULL, 'DASHGOALS_CONVERSION_05_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(15, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_05_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(16, NULL, NULL, 'DASHGOALS_TRAFFIC_06_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(17, NULL, NULL, 'DASHGOALS_CONVERSION_06_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(18, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_06_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(19, NULL, NULL, 'DASHGOALS_TRAFFIC_07_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(20, NULL, NULL, 'DASHGOALS_CONVERSION_07_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(21, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_07_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(22, NULL, NULL, 'DASHGOALS_TRAFFIC_08_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(23, NULL, NULL, 'DASHGOALS_CONVERSION_08_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(24, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_08_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(25, NULL, NULL, 'DASHGOALS_TRAFFIC_09_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(26, NULL, NULL, 'DASHGOALS_CONVERSION_09_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(27, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_09_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(28, NULL, NULL, 'DASHGOALS_TRAFFIC_10_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(29, NULL, NULL, 'DASHGOALS_CONVERSION_10_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(30, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_10_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(31, NULL, NULL, 'DASHGOALS_TRAFFIC_11_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(32, NULL, NULL, 'DASHGOALS_CONVERSION_11_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(33, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_11_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(34, NULL, NULL, 'DASHGOALS_TRAFFIC_12_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(35, NULL, NULL, 'DASHGOALS_CONVERSION_12_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07');
+(1, NULL, NULL, 'DASHGOALS_TRAFFIC_01_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(2, NULL, NULL, 'DASHGOALS_CONVERSION_01_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(3, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_01_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(4, NULL, NULL, 'DASHGOALS_TRAFFIC_02_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(5, NULL, NULL, 'DASHGOALS_CONVERSION_02_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(6, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_02_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(7, NULL, NULL, 'DASHGOALS_TRAFFIC_03_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(8, NULL, NULL, 'DASHGOALS_CONVERSION_03_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(9, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_03_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(10, NULL, NULL, 'DASHGOALS_TRAFFIC_04_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(11, NULL, NULL, 'DASHGOALS_CONVERSION_04_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(12, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_04_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(13, NULL, NULL, 'DASHGOALS_TRAFFIC_05_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(14, NULL, NULL, 'DASHGOALS_CONVERSION_05_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(15, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_05_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(16, NULL, NULL, 'DASHGOALS_TRAFFIC_06_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(17, NULL, NULL, 'DASHGOALS_CONVERSION_06_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(18, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_06_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(19, NULL, NULL, 'DASHGOALS_TRAFFIC_07_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(20, NULL, NULL, 'DASHGOALS_CONVERSION_07_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(21, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_07_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(22, NULL, NULL, 'DASHGOALS_TRAFFIC_08_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(23, NULL, NULL, 'DASHGOALS_CONVERSION_08_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(24, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_08_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(25, NULL, NULL, 'DASHGOALS_TRAFFIC_09_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(26, NULL, NULL, 'DASHGOALS_CONVERSION_09_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(27, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_09_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(28, NULL, NULL, 'DASHGOALS_TRAFFIC_10_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(29, NULL, NULL, 'DASHGOALS_CONVERSION_10_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(30, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_10_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(31, NULL, NULL, 'DASHGOALS_TRAFFIC_11_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(32, NULL, NULL, 'DASHGOALS_CONVERSION_11_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(33, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_11_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(34, NULL, NULL, 'DASHGOALS_TRAFFIC_12_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(35, NULL, NULL, 'DASHGOALS_CONVERSION_12_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(37, NULL, NULL, 'EMPTY_CATEGORIES', '0', '2023-11-23 02:46:29', '2023-11-23 02:46:29'),
+(38, NULL, NULL, 'EMPTY_CATEGORIES_EXPIRE', '1700711189', '2023-11-23 02:46:29', '2023-11-23 02:46:29'),
+(39, NULL, NULL, 'TOP_CATEGORY', NULL, '2023-11-23 02:46:29', '2023-11-23 02:46:29'),
+(40, NULL, NULL, 'TOP_CATEGORY_EXPIRE', NULL, '2023-11-23 02:46:29', '2023-11-23 02:46:29'),
+(41, NULL, NULL, 'PRODUCTS_PER_CATEGORY', '2', '2023-11-23 02:46:29', '2023-11-23 02:46:29'),
+(42, NULL, NULL, 'PRODUCTS_PER_CATEGORY_EXPIRE', '1700707589', '2023-11-23 02:46:29', '2023-11-23 02:46:29'),
+(43, NULL, NULL, 'DISABLED_CATEGORIES', '0', '2023-11-23 02:46:29', '2023-11-23 02:46:29'),
+(44, NULL, NULL, 'DISABLED_CATEGORIES_EXPIRE', '1700711189', '2023-11-23 02:46:29', '2023-11-23 02:46:29'),
+(45, NULL, NULL, 'ABANDONED_CARTS', '0', '2023-11-23 02:56:38', '2023-11-23 02:56:38'),
+(46, NULL, NULL, 'ABANDONED_CARTS_EXPIRE', '1700708198', '2023-11-23 02:56:38', '2023-11-23 02:56:38'),
+(47, NULL, NULL, 'CONVERSION_RATE', '0%', '2023-11-23 02:56:38', '2023-11-23 02:56:38'),
+(48, NULL, NULL, 'CONVERSION_RATE_EXPIRE', '1700780400', '2023-11-23 02:56:38', '2023-11-23 02:56:38'),
+(49, NULL, NULL, 'NETPROFIT_VISIT', '0,00 zł', '2023-11-23 02:56:38', '2023-11-23 02:56:38'),
+(50, NULL, NULL, 'NETPROFIT_VISIT_EXPIRE', '1700780400', '2023-11-23 02:56:38', '2023-11-23 02:56:38'),
+(51, NULL, NULL, 'AVG_ORDER_VALUE', '0,00 zł', '2023-11-23 02:56:39', '2023-11-23 02:56:39'),
+(52, NULL, NULL, 'AVG_ORDER_VALUE_EXPIRE', '1700780400', '2023-11-23 02:56:39', '2023-11-23 02:56:39');
 
 -- --------------------------------------------------------
 
@@ -3577,6 +3732,14 @@ CREATE TABLE `ad_configuration_kpi_lang` (
   `value` text DEFAULT NULL,
   `date_upd` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ad_configuration_kpi_lang`
+--
+
+INSERT INTO `ad_configuration_kpi_lang` (`id_configuration_kpi`, `id_lang`, `value`, `date_upd`) VALUES
+(39, 1, 'Stationery', '2023-11-23 02:46:29'),
+(40, 1, '1700790389', '2023-11-23 02:46:29');
 
 -- --------------------------------------------------------
 
@@ -3605,17 +3768,16 @@ INSERT INTO `ad_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (283, 1, '', NULL),
 (284, 1, '', NULL),
 (285, 1, 'Obecnie brak na stanie', NULL),
-(293, 1, 'Moje listy życzeń', '2023-11-17 09:28:07'),
-(294, 1, 'Moja lista życzeń', '2023-11-17 09:28:07'),
-(295, 1, 'Utwórz nową listę', '2023-11-17 09:28:07'),
-(316, 1, 'sale70.png', '2023-11-17 09:28:08'),
-(317, 1, '', '2023-11-17 09:28:08'),
-(318, 1, '', '2023-11-17 09:28:08'),
-(327, 1, '<p>Aby zoptymalizować i ulepszyć korzystanie z naszej strony, przetwarzamy dane osobowe zgodnie z naszą Informacją o Prywatności. To pozwala nam na przedstawianie informacji dopasowanych indywidualnie do poszczególnych osób, w tym informacji o produktach i ofertach dostępnych w danym regionie czy mieście.</p>', '2023-11-18 18:49:27'),
-(329, 1, 'Możesz zrezygnować w każdej chwili. W tym celu należy odnaleźć szczegóły w naszej informacji prawnej.', '2023-11-17 09:28:08'),
-(365, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-17 09:28:44'),
-(367, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-17 09:28:44'),
-(429, 1, '', '2023-11-18 16:38:01');
+(293, 1, 'Moje listy życzeń', '2023-11-20 19:41:40'),
+(294, 1, 'Moja lista życzeń', '2023-11-20 19:41:40'),
+(295, 1, 'Utwórz nową listę', '2023-11-20 19:41:40'),
+(316, 1, 'sale70.png', '2023-11-20 19:41:41'),
+(317, 1, '', '2023-11-20 19:41:41'),
+(318, 1, '', '2023-11-20 19:41:41'),
+(327, 1, 'Udostępnione przez Ciebie dane osobowe są wykorzystywane w celu udzielania odpowiedzi na zapytania, przetwarzania zamówień lub umożliwiania dostępu do konkretnych informacji. Przysługuje Ci prawo do modyfikowania oraz usuwania wszelkich danych osobowych zamieszczonych na stronie „Moje konto”.', '2023-11-20 19:41:42'),
+(329, 1, 'Możesz zrezygnować w każdej chwili. W tym celu należy odnaleźć szczegóły w naszej informacji prawnej.', '2023-11-20 19:41:42'),
+(365, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-20 19:42:20'),
+(367, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-20 19:42:20');
 
 -- --------------------------------------------------------
 
@@ -3639,14 +3801,8 @@ CREATE TABLE `ad_connections` (
 --
 
 INSERT INTO `ad_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_guest`, `id_page`, `ip_address`, `date_add`, `http_referer`) VALUES
-(1, 1, 1, 1, 1, 2130706433, '2023-11-17 09:29:10', 'https://www.prestashop.com'),
-(2, 1, 1, 3, 1, 2886860801, '2023-11-17 09:29:24', ''),
-(3, 1, 1, 3, 1, 2886860801, '2023-11-17 10:03:27', ''),
-(4, 1, 1, 4, 1, 3232252161, '2023-11-17 13:29:43', ''),
-(5, 1, 1, 4, 1, 3232252161, '2023-11-18 16:33:21', ''),
-(6, 1, 1, 5, 2, 3232252161, '2023-11-18 16:53:07', 'http://localhost:8080/zam%C3%B3wienie'),
-(7, 1, 1, 5, 1, 3232252161, '2023-11-18 19:41:55', ''),
-(8, 1, 1, 5, 3, 3232252161, '2023-11-18 20:26:17', '');
+(1, 1, 1, 1, 1, 2130706433, '2023-11-20 19:42:37', 'https://www.prestashop.com'),
+(2, 1, 1, 3, 1, 2886926337, '2023-11-23 02:45:06', '');
 
 -- --------------------------------------------------------
 
@@ -3681,107 +3837,8 @@ CREATE TABLE `ad_connections_source` (
 --
 
 INSERT INTO `ad_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
-(1, 2, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-17 09:29:27'),
-(2, 3, 'http://localhost:8080/', 'localhost:8080/logowanie?back=my-account', '', '2023-11-17 10:19:19'),
-(3, 3, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/6-accessories', '', '2023-11-17 10:19:28'),
-(4, 3, 'http://localhost:8080/6-accessories', 'localhost:8080/8-home-accessories', '', '2023-11-17 10:19:29'),
-(5, 3, 'http://localhost:8080/8-home-accessories', 'localhost:8080/home-accessories/7-mug-the-adventure-begins.html', '', '2023-11-17 10:19:30'),
-(6, 3, 'http://localhost:8080/home-accessories/7-mug-the-adventure-begins.html', 'localhost:8080/koszyk?action=show', '', '2023-11-17 10:19:32'),
-(7, 3, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-17 10:19:33'),
-(8, 3, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-17 10:19:39'),
-(9, 3, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-17 10:19:45'),
-(10, 4, 'http://localhost:8080/', 'localhost:8080/4-men', '', '2023-11-17 13:30:40'),
-(11, 4, 'http://localhost:8080/', 'localhost:8080/4-men', '', '2023-11-17 13:30:45'),
-(12, 4, 'http://localhost:8080/4-men', 'localhost:8080/8-home-accessories', '', '2023-11-17 13:31:00'),
-(13, 4, 'http://localhost:8080/4-men', 'localhost:8080/8-home-accessories', '', '2023-11-17 13:31:07'),
-(14, 4, 'http://localhost:8080/8-home-accessories', 'localhost:8080/kontakt', '', '2023-11-17 13:31:38'),
-(15, 4, 'http://localhost:8080/kontakt', 'localhost:8080/logowanie?back=my-account', '', '2023-11-17 13:31:40'),
-(16, 4, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/6-accessories', '', '2023-11-17 13:31:43'),
-(17, 4, 'http://localhost:8080/6-accessories', 'localhost:8080/7-stationery', '', '2023-11-17 13:31:46'),
-(18, 4, 'http://localhost:8080/6-accessories', 'localhost:8080/7-stationery', '', '2023-11-17 13:31:56'),
-(19, 4, 'http://localhost:8080/7-stationery?q=Dost%C4%99pno%C5%9B%C4%87-Dost%C4%99pny', 'localhost:8080/9-art', '', '2023-11-17 13:32:03'),
-(20, 4, 'http://localhost:8080/9-art', 'localhost:8080/6-accessories', '', '2023-11-17 13:32:05'),
-(21, 4, 'http://localhost:8080/9-art', 'localhost:8080/6-accessories', '', '2023-11-17 13:34:04'),
-(22, 4, 'http://localhost:8080/6-accessories', 'localhost:8080/7-stationery', '', '2023-11-17 13:34:05'),
-(23, 4, 'http://localhost:8080/7-stationery', 'localhost:8080/stationery/16-28-mountain-fox-notebook.html', '', '2023-11-17 13:34:08'),
-(24, 4, 'http://localhost:8080/stationery/16-28-mountain-fox-notebook.html', 'localhost:8080/3-clothes', '', '2023-11-17 13:34:10'),
-(25, 4, 'http://localhost:8080/3-clothes', 'localhost:8080/', '', '2023-11-17 13:34:11'),
-(26, 4, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-17 13:34:13'),
-(27, 4, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-17 13:48:34'),
-(28, 5, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 16:51:16'),
-(29, 5, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/koszyk?action=show', '', '2023-11-18 16:52:24'),
-(30, 5, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:52:32'),
-(31, 5, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:52:45'),
-(32, 5, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:52:54'),
-(33, 5, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:53:01'),
-(34, 6, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/potwierdzenie-zamowienia?id_cart=7&id_module=35&id_order=6&key=42397d7a86c715692d4d271c4c52262c', '', '2023-11-18 16:53:07'),
-(35, 6, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/logowanie?back=history', '', '2023-11-18 17:01:14'),
-(36, 7, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 19:42:03'),
-(37, 7, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/koszyk?action=show', '', '2023-11-18 19:42:08'),
-(38, 7, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 19:42:12'),
-(39, 7, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 19:46:21'),
-(40, 7, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 19:48:12'),
-(41, 7, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/content/3-terms-and-conditions-of-use?content_only=1', '', '2023-11-18 19:48:22'),
-(42, 7, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/kontakt', '', '2023-11-18 19:50:01'),
-(43, 7, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2023-11-18 19:50:34'),
-(44, 7, 'http://localhost:8080/kontakt', 'localhost:8080/nowe-produkty', '', '2023-11-18 19:50:38'),
-(45, 7, 'http://localhost:8080/kontakt', 'localhost:8080/najczesciej-kupowane', '', '2023-11-18 19:50:38'),
-(46, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/1-delivery', '', '2023-11-18 19:50:40'),
-(47, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 19:50:51'),
-(48, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/1-delivery', '', '2023-11-18 19:50:55'),
-(49, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/2-legal-notice', '', '2023-11-18 19:51:09'),
-(50, 7, 'http://localhost:8080/kontakt', 'localhost:8080/logowanie?back=identity', '', '2023-11-18 19:52:16'),
-(51, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/2-legal-notice', '', '2023-11-18 19:53:16'),
-(52, 7, 'http://localhost:8080/content/2-legal-notice', 'localhost:8080/', '', '2023-11-18 19:53:51'),
-(53, 7, 'http://localhost:8080/', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 19:53:56'),
-(54, 7, 'http://localhost:8080/', 'localhost:8080/content/4-about-us', '', '2023-11-18 19:53:56'),
-(55, 7, 'http://localhost:8080/', 'localhost:8080/content/5-secure-payment', '', '2023-11-18 19:54:01'),
-(56, 7, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2023-11-18 19:54:02'),
-(57, 7, 'http://localhost:8080/', 'localhost:8080/Mapa%20strony', '', '2023-11-18 19:54:02'),
-(58, 7, 'http://localhost:8080/', 'localhost:8080/nasze-sklepy', '', '2023-11-18 19:54:03'),
-(59, 7, 'http://localhost:8080/', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 19:55:48'),
-(60, 7, 'http://localhost:8080/', 'localhost:8080/content/4-about-us', '', '2023-11-18 19:58:34'),
-(61, 7, 'http://localhost:8080/content/2-legal-notice', 'localhost:8080/', '', '2023-11-18 19:58:56'),
-(62, 7, 'http://localhost:8080/', 'localhost:8080/Mapa%20strony', '', '2023-11-18 19:59:01'),
-(63, 7, 'http://localhost:8080/', 'localhost:8080/nasze-sklepy', '', '2023-11-18 19:59:02'),
-(64, 7, 'http://localhost:8080/content/2-legal-notice', 'localhost:8080/', '', '2023-11-18 20:01:25'),
-(65, 7, 'http://localhost:8080/', 'localhost:8080/6-accessories', '', '2023-11-18 20:01:40'),
-(66, 7, 'http://localhost:8080/6-accessories', 'localhost:8080/3-clothes', '', '2023-11-18 20:01:44'),
-(67, 7, 'http://localhost:8080/3-clothes', 'localhost:8080/najczesciej-kupowane', '', '2023-11-18 20:01:50'),
-(68, 8, 'http://localhost:8080/', 'localhost:8080/content/1-delivery', '', '2023-11-18 20:30:33'),
-(69, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:31:25'),
-(70, 8, 'http://localhost:8080/content/1-delivery', 'localhost:8080/', '', '2023-11-18 20:32:52'),
-(71, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:04'),
-(72, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:22'),
-(73, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:25'),
-(74, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:28'),
-(75, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:50'),
-(76, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:35:52'),
-(77, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:36:01'),
-(78, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:37:04'),
-(79, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:37:05'),
-(80, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 20:37:05'),
-(81, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:38:35'),
-(82, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:39:15'),
-(83, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:42:46'),
-(84, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:42:56'),
-(85, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-18 20:42:56'),
-(86, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:42:56'),
-(87, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-18 20:45:42'),
-(88, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/index.php?controller=404', '', '2023-11-18 20:45:42'),
-(89, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:46:06'),
-(90, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/4-about-us', '', '2023-11-18 20:46:10'),
-(91, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:46:13'),
-(92, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:46:33'),
-(93, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/kontakt', '', '2023-11-18 20:47:00'),
-(94, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:47:13'),
-(95, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:48:50'),
-(96, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:53:53'),
-(97, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:53:56'),
-(98, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-18 20:53:57'),
-(99, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/4-o-nas', '', '2023-11-18 20:54:04'),
-(100, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:54:05'),
-(101, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/kontakt', '', '2023-11-18 20:54:05');
+(1, 2, 'http://localhost:8080/admin4444/index.php/sell/catalog/categories/2?_token=r3wvJQbee7MI9t2XbhjiN_8Y0W7BRbi-DM1kQRX2kIA', 'localhost:8080/', '', '2023-11-23 02:52:38'),
+(2, 2, 'http://localhost:8080/admin4444/index.php/sell/catalog/categories/2?_token=r3wvJQbee7MI9t2XbhjiN_8Y0W7BRbi-DM1kQRX2kIA', 'localhost:8080/', '', '2023-11-23 03:00:45');
 
 -- --------------------------------------------------------
 
@@ -4741,10 +4798,8 @@ CREATE TABLE `ad_customer` (
 --
 
 INSERT INTO `ad_customer` (`id_customer`, `id_shop_group`, `id_shop`, `id_gender`, `id_default_group`, `id_lang`, `id_risk`, `company`, `siret`, `ape`, `firstname`, `lastname`, `email`, `passwd`, `last_passwd_gen`, `birthday`, `newsletter`, `ip_registration_newsletter`, `newsletter_date_add`, `optin`, `website`, `outstanding_allow_amount`, `show_public_prices`, `max_payment_days`, `secure_key`, `note`, `active`, `is_guest`, `deleted`, `date_add`, `date_upd`, `reset_password_token`, `reset_password_validity`) VALUES
-(1, 1, 1, 1, 3, 1, 0, '', '', '', 'Anonymous', 'Anonymous', 'anonymous@psgdpr.com', '$2y$10$4fYar5G0eB0nV6MAw/U1xeobQB/xFYo4bYaApcIBDdf2jeW7TBlMi', '2023-11-17 03:28:45', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '85779532f1c2b733c19a837b1ed1900b', '', 0, 0, 0, '2023-11-17 09:28:45', '2023-11-17 09:28:45', '', '0000-00-00 00:00:00'),
-(2, 1, 1, 1, 3, 1, 0, '', '', '', 'John', 'DOE', 'pub@prestashop.com', '64cf9e6d26da4cce4b28989d3691dde4', '2023-11-17 03:29:09', '1970-01-15', 1, '', '2013-12-13 08:19:15', 1, '', 0.000000, 0, 0, 'e1d14b4acca8fb8b91d072872ff1fea9', '', 1, 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', '', '0000-00-00 00:00:00'),
-(3, 1, 1, 0, 2, 1, 0, '', '', '', 'd', 'd', 'd@wpl.pl', '$2y$10$bDcv2qcopj1KuCw8vg8AD.EbRUL7paqosZ5kKyupXX2Vs0yGfO1zC', '2023-11-17 04:19:39', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, 'dac06b111ff76d51ece3a60bd7191a82', '', 1, 1, 0, '2023-11-17 10:19:39', '2023-11-17 10:19:39', '', '0000-00-00 00:00:00'),
-(4, 1, 1, 1, 2, 1, 0, '', '', '', 'Szymon', 'Małecki', 'szymal514324764@wp.pl', '$2y$10$1NT5yS/C0ZwFbevL97m3QusiJpK5UaXTzAsd3WnRMiITDfECGp9xm', '2023-11-18 10:52:44', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '42397d7a86c715692d4d271c4c52262c', '', 1, 1, 0, '2023-11-18 16:52:44', '2023-11-18 16:52:44', '', '0000-00-00 00:00:00');
+(1, 1, 1, 1, 3, 1, 0, '', '', '', 'Anonymous', 'Anonymous', 'anonymous@psgdpr.com', '$2y$10$6SlkGM9Sp6NVqVfKKWcLe.kB3OZXwv/OpJwzKZ.RFeQZRip5Q5GMa', '2023-11-20 13:42:20', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '713a504096fba91fc30010cff11115dd', '', 0, 0, 0, '2023-11-20 19:42:20', '2023-11-20 19:42:20', '', '0000-00-00 00:00:00'),
+(2, 1, 1, 1, 3, 1, 0, '', '', '', 'John', 'DOE', 'pub@prestashop.com', 'f16d43f030c34d62a0a52b3230912a74', '2023-11-20 13:42:36', '1970-01-15', 1, '', '2013-12-13 08:19:15', 1, '', 0.000000, 0, 0, 'ddf8897f191a9de868227164b8b55197', '', 1, 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -4763,9 +4818,7 @@ CREATE TABLE `ad_customer_group` (
 
 INSERT INTO `ad_customer_group` (`id_customer`, `id_group`) VALUES
 (1, 3),
-(2, 3),
-(3, 2),
-(4, 2);
+(2, 3);
 
 -- --------------------------------------------------------
 
@@ -4808,13 +4861,6 @@ CREATE TABLE `ad_customer_session` (
   `id_customer` int(10) UNSIGNED DEFAULT NULL,
   `token` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `ad_customer_session`
---
-
-INSERT INTO `ad_customer_session` (`id_customer_session`, `id_customer`, `token`) VALUES
-(1, 3, '8acc7dfd6d29370a86acbf8c0b00228fa2cb8539');
 
 -- --------------------------------------------------------
 
@@ -4962,7 +5008,55 @@ INSERT INTO `ad_delivery` (`id_delivery`, `id_shop`, `id_shop_group`, `id_carrie
 (13, NULL, NULL, 4, 0, 3, 1, 2.000000),
 (14, NULL, NULL, 4, 0, 3, 2, 3.000000),
 (15, NULL, NULL, 4, 0, 4, 1, 5.000000),
-(16, NULL, NULL, 4, 0, 4, 2, 6.000000);
+(16, NULL, NULL, 4, 0, 4, 2, 6.000000),
+(25, NULL, NULL, 5, 5, NULL, 4, 50.000000),
+(26, NULL, NULL, 5, 5, NULL, 3, 50.000000),
+(27, NULL, NULL, 5, 5, NULL, 8, 50.000000),
+(28, NULL, NULL, 5, 5, NULL, 1, 50.000000),
+(29, NULL, NULL, 5, 5, NULL, 7, 50.000000),
+(30, NULL, NULL, 5, 5, NULL, 2, 50.000000),
+(31, NULL, NULL, 5, 5, NULL, 5, 50.000000),
+(32, NULL, NULL, 5, 5, NULL, 6, 50.000000),
+(41, NULL, NULL, 5, 6, NULL, 4, 0.000000),
+(42, NULL, NULL, 5, 6, NULL, 3, 0.000000),
+(43, NULL, NULL, 5, 6, NULL, 8, 0.000000),
+(44, NULL, NULL, 5, 6, NULL, 1, 0.000000),
+(45, NULL, NULL, 5, 6, NULL, 7, 0.000000),
+(46, NULL, NULL, 5, 6, NULL, 2, 0.000000),
+(47, NULL, NULL, 5, 6, NULL, 5, 0.000000),
+(48, NULL, NULL, 5, 6, NULL, 6, 0.000000),
+(57, NULL, NULL, 6, 7, NULL, 4, 50.000000),
+(58, NULL, NULL, 6, 7, NULL, 3, 50.000000),
+(59, NULL, NULL, 6, 7, NULL, 8, 50.000000),
+(60, NULL, NULL, 6, 7, NULL, 1, 50.000000),
+(61, NULL, NULL, 6, 7, NULL, 7, 50.000000),
+(62, NULL, NULL, 6, 7, NULL, 2, 50.000000),
+(63, NULL, NULL, 6, 7, NULL, 5, 50.000000),
+(64, NULL, NULL, 6, 7, NULL, 6, 50.000000),
+(73, NULL, NULL, 6, 8, NULL, 4, 0.000000),
+(74, NULL, NULL, 6, 8, NULL, 3, 0.000000),
+(75, NULL, NULL, 6, 8, NULL, 8, 0.000000),
+(76, NULL, NULL, 6, 8, NULL, 1, 0.000000),
+(77, NULL, NULL, 6, 8, NULL, 7, 0.000000),
+(78, NULL, NULL, 6, 8, NULL, 2, 0.000000),
+(79, NULL, NULL, 6, 8, NULL, 5, 0.000000),
+(80, NULL, NULL, 6, 8, NULL, 6, 0.000000),
+(89, NULL, NULL, 7, 9, NULL, 4, 45.000000),
+(90, NULL, NULL, 7, 9, NULL, 3, 45.000000),
+(91, NULL, NULL, 7, 9, NULL, 8, 45.000000),
+(92, NULL, NULL, 7, 9, NULL, 1, 45.000000),
+(93, NULL, NULL, 7, 9, NULL, 7, 45.000000),
+(94, NULL, NULL, 7, 9, NULL, 2, 45.000000),
+(95, NULL, NULL, 7, 9, NULL, 5, 45.000000),
+(96, NULL, NULL, 7, 9, NULL, 6, 45.000000),
+(105, NULL, NULL, 7, 10, NULL, 4, 0.000000),
+(106, NULL, NULL, 7, 10, NULL, 3, 0.000000),
+(107, NULL, NULL, 7, 10, NULL, 8, 0.000000),
+(108, NULL, NULL, 7, 10, NULL, 1, 0.000000),
+(109, NULL, NULL, 7, 10, NULL, 7, 0.000000),
+(110, NULL, NULL, 7, 10, NULL, 2, 0.000000),
+(111, NULL, NULL, 7, 10, NULL, 5, 0.000000),
+(112, NULL, NULL, 7, 10, NULL, 6, 0.000000);
 
 -- --------------------------------------------------------
 
@@ -5025,7 +5119,7 @@ CREATE TABLE `ad_employee` (
 --
 
 INSERT INTO `ad_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
-(1, 1, 1, 'Test', 'Test', 'test@test.com', '$2y$10$qsD9LCfAYKaz7/6eppoU/.MoidieTkwkbw/pRniFDMToHAslbQuM.', '2023-11-17 03:28:05', '2023-10-17', '2023-11-17', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-11-18', NULL, '0000-00-00 00:00:00', 0);
+(1, 1, 1, 'Test', 'Test', 'test@test.com', '$2y$10$BToNNDsK7vYZyIalrfiu6O4WqVsNWX4.kW8ZnAXKDCdmAjNoiogma', '2023-11-20 13:41:38', '2023-10-20', '2023-11-20', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-11-23', NULL, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -5044,8 +5138,7 @@ CREATE TABLE `ad_employee_session` (
 --
 
 INSERT INTO `ad_employee_session` (`id_employee_session`, `id_employee`, `token`) VALUES
-(1, 1, '32fbdb78ce189773e1eec14931fbbe2c7131293c'),
-(3, 1, '98613e2e4091844e82a2419e72d08e44ad078c92');
+(1, 1, 'c06b794e209905a383ba21ca032485379b808758');
 
 -- --------------------------------------------------------
 
@@ -5318,9 +5411,9 @@ CREATE TABLE `ad_group` (
 --
 
 INSERT INTO `ad_group` (`id_group`, `reduction`, `price_display_method`, `show_prices`, `date_add`, `date_upd`) VALUES
-(1, 0.00, 0, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03'),
-(2, 0.00, 0, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03'),
-(3, 0.00, 0, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03');
+(1, 0.00, 0, 1, '2023-11-20 19:41:36', '2023-11-20 19:41:36'),
+(2, 0.00, 0, 1, '2023-11-20 19:41:36', '2023-11-20 19:41:36'),
+(3, 0.00, 0, 1, '2023-11-20 19:41:36', '2023-11-20 19:41:36');
 
 -- --------------------------------------------------------
 
@@ -5419,9 +5512,7 @@ CREATE TABLE `ad_guest` (
 INSERT INTO `ad_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id_customer`, `javascript`, `screen_resolution_x`, `screen_resolution_y`, `screen_color`, `sun_java`, `adobe_flash`, `adobe_director`, `apple_quicktime`, `real_player`, `windows_media`, `accept_language`, `mobile_theme`) VALUES
 (1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
 (2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
-(3, 6, 11, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(4, 7, 11, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(5, 7, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(3, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -6410,6 +6501,7 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (11, 1, 695, 1),
 (12, 1, 696, 1),
 (13, 1, 14, 1),
+(14, 1, 7, 1),
 (15, 1, 698, 1),
 (15, 1, 701, 1),
 (16, 1, 69, 1),
@@ -6451,8 +6543,6 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (29, 1, 729, 1),
 (30, 1, 730, 1),
 (31, 1, 58, 1),
-(35, 1, 7, 1),
-(35, 1, 697, 1),
 (44, 1, 18, 1),
 (44, 1, 24, 1),
 (44, 1, 731, 1),
@@ -6463,13 +6553,27 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (55, 1, 140, 1),
 (55, 1, 144, 1),
 (55, 1, 736, 1),
+(56, 1, 30, 1),
+(56, 1, 43, 1),
+(56, 1, 46, 1),
+(56, 1, 79, 1),
+(56, 1, 84, 1),
+(56, 1, 121, 1),
+(56, 1, 208, 1),
+(56, 1, 417, 1),
+(56, 1, 697, 1),
+(56, 1, 737, 1),
+(56, 1, 738, 1),
+(56, 1, 739, 1),
+(56, 1, 740, 1),
+(56, 1, 741, 1),
+(56, 1, 742, 1),
+(56, 1, 743, 1),
 (58, 1, 17, 1),
-(58, 1, 46, 1),
 (58, 1, 744, 1),
 (58, 1, 745, 1),
 (58, 1, 746, 1),
 (58, 1, 747, 1),
-(59, 1, 743, 1),
 (60, 1, 22, 1),
 (60, 1, 26, 1),
 (60, 1, 707, 1),
@@ -6504,6 +6608,7 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (4, 1, 688, 2),
 (5, 1, 689, 2),
 (11, 1, 685, 2),
+(14, 1, 697, 2),
 (16, 1, 31, 2),
 (17, 1, 705, 2),
 (18, 1, 41, 2),
@@ -6518,15 +6623,16 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (26, 1, 706, 2),
 (29, 1, 82, 2),
 (30, 1, 25, 2),
+(35, 1, 7, 2),
 (36, 1, 55, 2),
 (53, 1, 71, 2),
 (54, 1, 47, 2),
 (55, 1, 323, 2),
-(57, 1, 734, 2),
+(56, 1, 734, 2),
+(58, 1, 46, 2),
 (58, 1, 732, 2),
-(59, 1, 46, 2),
+(59, 1, 743, 2),
 (61, 1, 14, 2),
-(62, 1, 697, 2),
 (4, 1, 682, 3),
 (5, 1, 688, 3),
 (6, 1, 689, 3),
@@ -6538,12 +6644,16 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (30, 1, 16, 3),
 (33, 1, 683, 3),
 (33, 1, 707, 3),
+(35, 1, 697, 3),
 (37, 1, 55, 3),
 (54, 1, 122, 3),
+(56, 1, 7, 3),
+(56, 1, 31, 3),
+(57, 1, 734, 3),
 (58, 1, 47, 3),
 (58, 1, 71, 3),
+(59, 1, 46, 3),
 (61, 1, 82, 3),
-(62, 1, 46, 3),
 (1, 1, 41, 4),
 (5, 1, 682, 4),
 (6, 1, 688, 4),
@@ -6551,20 +6661,23 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (32, 1, 16, 4),
 (32, 1, 705, 4),
 (38, 1, 55, 4),
-(58, 1, 683, 4),
+(56, 1, 683, 4),
 (59, 1, 71, 4),
 (7, 1, 682, 5),
 (39, 1, 55, 5),
-(58, 1, 16, 5),
-(60, 1, 683, 5),
+(56, 1, 16, 5),
+(58, 1, 683, 5),
 (40, 1, 55, 6),
 (54, 1, 682, 6),
-(59, 1, 16, 6),
+(58, 1, 16, 6),
+(60, 1, 683, 6),
 (41, 1, 55, 7),
 (55, 1, 682, 7),
+(59, 1, 16, 7),
 (42, 1, 55, 8),
-(57, 1, 682, 8),
+(56, 1, 682, 8),
 (43, 1, 55, 9),
+(57, 1, 682, 9),
 (45, 1, 55, 10),
 (46, 1, 55, 11),
 (47, 1, 55, 12),
@@ -6792,7 +6905,7 @@ CREATE TABLE `ad_info_lang` (
 --
 
 INSERT INTO `ad_info_lang` (`id_info`, `id_shop`, `id_lang`, `text`) VALUES
-(1, 1, 1, '<h2>TWÓJ SPORT, TWÓJ SKLEP SPORTOWY</h2>\n<p>Nasze kolekcje zacierają granice między ekskluzywną modą a doskonałymi osiągami, jak choćby nasza kolekcja odzieży treningowej – zaprojektowana tak, aby wspaniale prezentować się zarówno na siłowni, jak i poza nią. Albo niektóre produkty, które można również nosić jako odzież sportową. Nasze życie wciąż się zmienia. Staje się coraz bardziej różnorodne. Projektując, adidas bierze to pod uwagę.</p>');
+(1, 1, 1, '<h2>Custom Text Block</h2>\n<p><strong class=\"dark\">Lorem ipsum dolor sit amet conse ctetu</strong></p>\n<p>Sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>');
 
 -- --------------------------------------------------------
 
@@ -6890,90 +7003,54 @@ INSERT INTO `ad_layered_category` (`id_layered_category`, `id_shop`, `controller
 (10, 1, 'category', 2, NULL, 'price', 10, 0, 0),
 (11, 1, 'category', 2, 3, 'id_attribute_group', 11, 0, 0),
 (12, 1, 'category', 2, 4, 'id_attribute_group', 12, 0, 0),
-(13, 1, 'category', 3, NULL, 'category', 1, 0, 0),
-(14, 1, 'category', 3, 1, 'id_attribute_group', 2, 0, 0),
-(15, 1, 'category', 3, 2, 'id_attribute_group', 3, 0, 0),
-(16, 1, 'category', 3, 1, 'id_feature', 4, 0, 0),
-(17, 1, 'category', 3, 2, 'id_feature', 5, 0, 0),
-(18, 1, 'category', 3, NULL, 'availability', 6, 0, 0),
-(19, 1, 'category', 3, NULL, 'manufacturer', 7, 0, 0),
-(20, 1, 'category', 3, NULL, 'condition', 8, 0, 0),
-(21, 1, 'category', 3, NULL, 'weight', 9, 0, 0),
-(22, 1, 'category', 3, NULL, 'price', 10, 0, 0),
-(23, 1, 'category', 3, 3, 'id_attribute_group', 11, 0, 0),
-(24, 1, 'category', 3, 4, 'id_attribute_group', 12, 0, 0),
-(25, 1, 'category', 4, NULL, 'category', 1, 0, 0),
-(26, 1, 'category', 4, 1, 'id_attribute_group', 2, 0, 0),
-(27, 1, 'category', 4, 2, 'id_attribute_group', 3, 0, 0),
-(28, 1, 'category', 4, 1, 'id_feature', 4, 0, 0),
-(29, 1, 'category', 4, 2, 'id_feature', 5, 0, 0),
-(30, 1, 'category', 4, NULL, 'availability', 6, 0, 0),
-(31, 1, 'category', 4, NULL, 'manufacturer', 7, 0, 0),
-(32, 1, 'category', 4, NULL, 'condition', 8, 0, 0),
-(33, 1, 'category', 4, NULL, 'weight', 9, 0, 0),
-(34, 1, 'category', 4, NULL, 'price', 10, 0, 0),
-(35, 1, 'category', 4, 3, 'id_attribute_group', 11, 0, 0),
-(36, 1, 'category', 4, 4, 'id_attribute_group', 12, 0, 0),
-(37, 1, 'category', 5, NULL, 'category', 1, 0, 0),
-(38, 1, 'category', 5, 1, 'id_attribute_group', 2, 0, 0),
-(39, 1, 'category', 5, 2, 'id_attribute_group', 3, 0, 0),
-(40, 1, 'category', 5, 1, 'id_feature', 4, 0, 0),
-(41, 1, 'category', 5, 2, 'id_feature', 5, 0, 0),
-(42, 1, 'category', 5, NULL, 'availability', 6, 0, 0),
-(43, 1, 'category', 5, NULL, 'manufacturer', 7, 0, 0),
-(44, 1, 'category', 5, NULL, 'condition', 8, 0, 0),
-(45, 1, 'category', 5, NULL, 'weight', 9, 0, 0),
-(46, 1, 'category', 5, NULL, 'price', 10, 0, 0),
-(47, 1, 'category', 5, 3, 'id_attribute_group', 11, 0, 0),
-(48, 1, 'category', 5, 4, 'id_attribute_group', 12, 0, 0),
-(49, 1, 'category', 9, NULL, 'category', 1, 0, 0),
-(50, 1, 'category', 9, 1, 'id_attribute_group', 2, 0, 0),
-(51, 1, 'category', 9, 2, 'id_attribute_group', 3, 0, 0),
-(52, 1, 'category', 9, 1, 'id_feature', 4, 0, 0),
-(53, 1, 'category', 9, 2, 'id_feature', 5, 0, 0),
-(54, 1, 'category', 9, NULL, 'availability', 6, 0, 0),
-(55, 1, 'category', 9, NULL, 'manufacturer', 7, 0, 0),
-(56, 1, 'category', 9, NULL, 'condition', 8, 0, 0),
-(57, 1, 'category', 9, NULL, 'weight', 9, 0, 0),
-(58, 1, 'category', 9, NULL, 'price', 10, 0, 0),
-(59, 1, 'category', 9, 3, 'id_attribute_group', 11, 0, 0),
-(60, 1, 'category', 9, 4, 'id_attribute_group', 12, 0, 0),
-(61, 1, 'category', 6, NULL, 'category', 1, 0, 0),
-(62, 1, 'category', 6, 1, 'id_attribute_group', 2, 0, 0),
-(63, 1, 'category', 6, 2, 'id_attribute_group', 3, 0, 0),
-(64, 1, 'category', 6, 1, 'id_feature', 4, 0, 0),
-(65, 1, 'category', 6, 2, 'id_feature', 5, 0, 0),
-(66, 1, 'category', 6, NULL, 'availability', 6, 0, 0),
-(67, 1, 'category', 6, NULL, 'manufacturer', 7, 0, 0),
-(68, 1, 'category', 6, NULL, 'condition', 8, 0, 0),
-(69, 1, 'category', 6, NULL, 'weight', 9, 0, 0),
-(70, 1, 'category', 6, NULL, 'price', 10, 0, 0),
-(71, 1, 'category', 6, 3, 'id_attribute_group', 11, 0, 0),
-(72, 1, 'category', 6, 4, 'id_attribute_group', 12, 0, 0),
-(73, 1, 'category', 8, NULL, 'category', 1, 0, 0),
-(74, 1, 'category', 8, 1, 'id_attribute_group', 2, 0, 0),
-(75, 1, 'category', 8, 2, 'id_attribute_group', 3, 0, 0),
-(76, 1, 'category', 8, 1, 'id_feature', 4, 0, 0),
-(77, 1, 'category', 8, 2, 'id_feature', 5, 0, 0),
-(78, 1, 'category', 8, NULL, 'availability', 6, 0, 0),
-(79, 1, 'category', 8, NULL, 'manufacturer', 7, 0, 0),
-(80, 1, 'category', 8, NULL, 'condition', 8, 0, 0),
-(81, 1, 'category', 8, NULL, 'weight', 9, 0, 0),
-(82, 1, 'category', 8, NULL, 'price', 10, 0, 0),
-(83, 1, 'category', 8, 3, 'id_attribute_group', 11, 0, 0),
-(84, 1, 'category', 8, 4, 'id_attribute_group', 12, 0, 0),
-(85, 1, 'category', 7, NULL, 'category', 1, 0, 0),
-(86, 1, 'category', 7, 1, 'id_attribute_group', 2, 0, 0),
-(87, 1, 'category', 7, 2, 'id_attribute_group', 3, 0, 0),
-(88, 1, 'category', 7, 1, 'id_feature', 4, 0, 0),
-(89, 1, 'category', 7, 2, 'id_feature', 5, 0, 0),
-(90, 1, 'category', 7, NULL, 'availability', 6, 0, 0),
-(91, 1, 'category', 7, NULL, 'manufacturer', 7, 0, 0),
-(92, 1, 'category', 7, NULL, 'condition', 8, 0, 0),
-(93, 1, 'category', 7, NULL, 'weight', 9, 0, 0),
-(94, 1, 'category', 7, NULL, 'price', 10, 0, 0),
-(95, 1, 'category', 7, 3, 'id_attribute_group', 11, 0, 0),
-(96, 1, 'category', 7, 4, 'id_attribute_group', 12, 0, 0);
+(13, 1, 'category', 4, NULL, 'category', 1, 0, 0),
+(14, 1, 'category', 4, 1, 'id_attribute_group', 2, 0, 0),
+(15, 1, 'category', 4, 2, 'id_attribute_group', 3, 0, 0),
+(16, 1, 'category', 4, 1, 'id_feature', 4, 0, 0),
+(17, 1, 'category', 4, 2, 'id_feature', 5, 0, 0),
+(18, 1, 'category', 4, NULL, 'availability', 6, 0, 0),
+(19, 1, 'category', 4, NULL, 'manufacturer', 7, 0, 0),
+(20, 1, 'category', 4, NULL, 'condition', 8, 0, 0),
+(21, 1, 'category', 4, NULL, 'weight', 9, 0, 0),
+(22, 1, 'category', 4, NULL, 'price', 10, 0, 0),
+(23, 1, 'category', 4, 3, 'id_attribute_group', 11, 0, 0),
+(24, 1, 'category', 4, 4, 'id_attribute_group', 12, 0, 0),
+(25, 1, 'category', 5, NULL, 'category', 1, 0, 0),
+(26, 1, 'category', 5, 1, 'id_attribute_group', 2, 0, 0),
+(27, 1, 'category', 5, 2, 'id_attribute_group', 3, 0, 0),
+(28, 1, 'category', 5, 1, 'id_feature', 4, 0, 0),
+(29, 1, 'category', 5, 2, 'id_feature', 5, 0, 0),
+(30, 1, 'category', 5, NULL, 'availability', 6, 0, 0),
+(31, 1, 'category', 5, NULL, 'manufacturer', 7, 0, 0),
+(32, 1, 'category', 5, NULL, 'condition', 8, 0, 0),
+(33, 1, 'category', 5, NULL, 'weight', 9, 0, 0),
+(34, 1, 'category', 5, NULL, 'price', 10, 0, 0),
+(35, 1, 'category', 5, 3, 'id_attribute_group', 11, 0, 0),
+(36, 1, 'category', 5, 4, 'id_attribute_group', 12, 0, 0),
+(37, 1, 'category', 8, NULL, 'category', 1, 0, 0),
+(38, 1, 'category', 8, 1, 'id_attribute_group', 2, 0, 0),
+(39, 1, 'category', 8, 2, 'id_attribute_group', 3, 0, 0),
+(40, 1, 'category', 8, 1, 'id_feature', 4, 0, 0),
+(41, 1, 'category', 8, 2, 'id_feature', 5, 0, 0),
+(42, 1, 'category', 8, NULL, 'availability', 6, 0, 0),
+(43, 1, 'category', 8, NULL, 'manufacturer', 7, 0, 0),
+(44, 1, 'category', 8, NULL, 'condition', 8, 0, 0),
+(45, 1, 'category', 8, NULL, 'weight', 9, 0, 0),
+(46, 1, 'category', 8, NULL, 'price', 10, 0, 0),
+(47, 1, 'category', 8, 3, 'id_attribute_group', 11, 0, 0),
+(48, 1, 'category', 8, 4, 'id_attribute_group', 12, 0, 0),
+(49, 1, 'category', 7, NULL, 'category', 1, 0, 0),
+(50, 1, 'category', 7, 1, 'id_attribute_group', 2, 0, 0),
+(51, 1, 'category', 7, 2, 'id_attribute_group', 3, 0, 0),
+(52, 1, 'category', 7, 1, 'id_feature', 4, 0, 0),
+(53, 1, 'category', 7, 2, 'id_feature', 5, 0, 0),
+(54, 1, 'category', 7, NULL, 'availability', 6, 0, 0),
+(55, 1, 'category', 7, NULL, 'manufacturer', 7, 0, 0),
+(56, 1, 'category', 7, NULL, 'condition', 8, 0, 0),
+(57, 1, 'category', 7, NULL, 'weight', 9, 0, 0),
+(58, 1, 'category', 7, NULL, 'price', 10, 0, 0),
+(59, 1, 'category', 7, 3, 'id_attribute_group', 11, 0, 0),
+(60, 1, 'category', 7, 4, 'id_attribute_group', 12, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -6994,7 +7071,7 @@ CREATE TABLE `ad_layered_filter` (
 --
 
 INSERT INTO `ad_layered_filter` (`id_layered_filter`, `name`, `filters`, `n_categories`, `date_add`) VALUES
-(1, 'Mój szablon 2023-11-17', 'a:15:{s:10:\"categories\";a:8:{i:0;i:2;i:1;i:3;i:2;i:4;i:3;i:5;i:4;i:9;i:5;i:6;i:6;i:8;i:7;i:7;}s:11:\"controllers\";a:1:{i:0;s:8:\"category\";}s:9:\"shop_list\";a:1:{i:1;i:1;}s:31:\"layered_selection_subcategories\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_1\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_2\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:24:\"layered_selection_feat_1\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:24:\"layered_selection_feat_2\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:23:\"layered_selection_stock\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:30:\"layered_selection_manufacturer\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:27:\"layered_selection_condition\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:31:\"layered_selection_weight_slider\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:30:\"layered_selection_price_slider\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_3\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_4\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}}', 8, '2023-11-17 08:29:12');
+(1, 'Mój szablon 2023-11-20', 'a:15:{s:10:\"categories\";a:5:{i:0;i:2;i:2;i:4;i:3;i:5;i:6;i:8;i:7;i:7;}s:11:\"controllers\";a:1:{i:0;s:8:\"category\";}s:9:\"shop_list\";a:1:{i:1;i:1;}s:31:\"layered_selection_subcategories\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_1\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_2\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:24:\"layered_selection_feat_1\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:24:\"layered_selection_feat_2\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:23:\"layered_selection_stock\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:30:\"layered_selection_manufacturer\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:27:\"layered_selection_condition\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:31:\"layered_selection_weight_slider\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:30:\"layered_selection_price_slider\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_3\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_4\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}}', 5, '2023-11-20 18:42:41');
 
 -- --------------------------------------------------------
 
@@ -7006,19 +7083,6 @@ CREATE TABLE `ad_layered_filter_block` (
   `hash` char(32) NOT NULL DEFAULT '',
   `data` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `ad_layered_filter_block`
---
-
-INSERT INTO `ad_layered_filter_block` (`hash`, `data`) VALUES
-('1a53abdd3ceb679028d32b737d3bcbdf', 'a:1:{s:7:\"filters\";a:10:{i:0;a:7:{s:9:\"type_lite\";s:8:\"category\";s:4:\"type\";s:8:\"category\";s:6:\"id_key\";i:0;s:4:\"name\";s:9:\"Kategorie\";s:6:\"values\";a:0:{}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:1;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"1\";s:4:\"name\";s:7:\"Rozmiar\";s:14:\"is_color_group\";b:0;s:6:\"values\";a:4:{i:1;a:4:{s:4:\"name\";s:1:\"S\";s:3:\"nbr\";s:1:\"1\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:2;a:4:{s:4:\"name\";s:1:\"M\";s:3:\"nbr\";s:1:\"1\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:3;a:4:{s:4:\"name\";s:1:\"L\";s:3:\"nbr\";s:1:\"1\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:4;a:4:{s:4:\"name\";s:2:\"XL\";s:3:\"nbr\";s:1:\"1\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:2;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"2\";s:4:\"name\";s:5:\"Kolor\";s:14:\"is_color_group\";b:1;s:6:\"values\";a:2:{i:8;a:5:{s:4:\"name\";s:6:\"Biały\";s:3:\"nbr\";s:1:\"1\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:5:\"color\";s:7:\"#ffffff\";}i:11;a:5:{s:4:\"name\";s:6:\"czarny\";s:3:\"nbr\";s:1:\"1\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:5:\"color\";s:7:\"#434A54\";}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:3;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"1\";s:6:\"values\";a:1:{i:4;a:4:{s:3:\"nbr\";s:1:\"1\";s:4:\"name\";s:8:\"Bawełna\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:11:\"Composition\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:4;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"2\";s:6:\"values\";a:1:{i:8;a:4:{s:3:\"nbr\";s:1:\"1\";s:4:\"name\";s:13:\"Short sleeves\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:8:\"Property\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:5;a:7:{s:9:\"type_lite\";s:12:\"availability\";s:4:\"type\";s:12:\"availability\";s:6:\"id_key\";i:0;s:4:\"name\";s:13:\"Dostępność\";s:6:\"values\";a:3:{i:0;a:2:{s:4:\"name\";s:12:\"Niedostępny\";s:3:\"nbr\";i:0;}i:1;a:2:{s:4:\"name\";s:9:\"Dostępny\";s:3:\"nbr\";i:1;}i:2;a:2:{s:4:\"name\";s:11:\"W magazynie\";s:3:\"nbr\";i:1;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:6;a:7:{s:9:\"type_lite\";s:12:\"manufacturer\";s:4:\"type\";s:12:\"manufacturer\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Marka\";s:6:\"values\";a:1:{i:1;a:2:{s:4:\"name\";s:13:\"Studio Design\";s:3:\"nbr\";s:1:\"1\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:7;a:7:{s:9:\"type_lite\";s:9:\"condition\";s:4:\"type\";s:9:\"condition\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Stan:\";s:6:\"values\";a:3:{s:3:\"new\";a:2:{s:4:\"name\";s:4:\"Nowy\";s:3:\"nbr\";s:1:\"1\";}s:4:\"used\";a:2:{s:4:\"name\";s:8:\"Używany\";s:3:\"nbr\";i:0;}s:11:\"refurbished\";a:2:{s:4:\"name\";s:9:\"Odnowiony\";s:3:\"nbr\";i:0;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:8;a:12:{s:9:\"type_lite\";s:6:\"weight\";s:4:\"type\";s:6:\"weight\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Waga\";s:3:\"max\";d:0.29999999999999999;s:3:\"min\";d:0.29999999999999999;s:4:\"unit\";s:2:\"kg\";s:14:\"specifications\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:5:\"value\";N;s:3:\"nbr\";i:1;}i:9;a:12:{s:9:\"type_lite\";s:5:\"price\";s:4:\"type\";s:5:\"price\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Cena\";s:3:\"max\";d:30;s:3:\"min\";d:23;s:4:\"unit\";s:3:\"zł\";s:14:\"specifications\";a:11:{s:6:\"symbol\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:12:\"currencyCode\";s:3:\"PLN\";s:14:\"currencySymbol\";s:3:\"zł\";s:13:\"numberSymbols\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:15:\"positivePattern\";s:12:\"#,##0.00 ¤\";s:15:\"negativePattern\";s:13:\"-#,##0.00 ¤\";s:17:\"maxFractionDigits\";i:2;s:17:\"minFractionDigits\";i:2;s:12:\"groupingUsed\";b:1;s:16:\"primaryGroupSize\";i:3;s:18:\"secondaryGroupSize\";i:3;}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:3:\"nbr\";i:1;s:5:\"value\";N;}}}'),
-('27cdba5da74c4fba5d6d0761625b4fa2', 'a:1:{s:7:\"filters\";a:8:{i:0;a:7:{s:9:\"type_lite\";s:8:\"category\";s:4:\"type\";s:8:\"category\";s:6:\"id_key\";i:0;s:4:\"name\";s:9:\"Kategorie\";s:6:\"values\";a:0:{}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:1;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"1\";s:6:\"values\";a:1:{i:6;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:10:\"Matt paper\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:11:\"Composition\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:2;a:7:{s:9:\"type_lite\";s:12:\"availability\";s:4:\"type\";s:12:\"availability\";s:6:\"id_key\";i:0;s:4:\"name\";s:13:\"Dostępność\";s:6:\"values\";a:3:{i:0;a:2:{s:4:\"name\";s:12:\"Niedostępny\";s:3:\"nbr\";i:0;}i:1;a:2:{s:4:\"name\";s:9:\"Dostępny\";s:3:\"nbr\";i:7;}i:2;a:2:{s:4:\"name\";s:11:\"W magazynie\";s:3:\"nbr\";i:7;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:3;a:7:{s:9:\"type_lite\";s:12:\"manufacturer\";s:4:\"type\";s:12:\"manufacturer\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Marka\";s:6:\"values\";a:1:{i:2;a:2:{s:4:\"name\";s:14:\"Graphic Corner\";s:3:\"nbr\";s:1:\"6\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:4;a:7:{s:9:\"type_lite\";s:9:\"condition\";s:4:\"type\";s:9:\"condition\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Stan:\";s:6:\"values\";a:3:{s:3:\"new\";a:2:{s:4:\"name\";s:4:\"Nowy\";s:3:\"nbr\";s:1:\"7\";}s:4:\"used\";a:2:{s:4:\"name\";s:8:\"Używany\";s:3:\"nbr\";i:0;}s:11:\"refurbished\";a:2:{s:4:\"name\";s:9:\"Odnowiony\";s:3:\"nbr\";i:0;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:5;a:12:{s:9:\"type_lite\";s:6:\"weight\";s:4:\"type\";s:6:\"weight\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Waga\";s:3:\"max\";d:0.29999999999999999;s:3:\"min\";d:0.29999999999999999;s:4:\"unit\";s:2:\"kg\";s:14:\"specifications\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:5:\"value\";N;s:3:\"nbr\";i:7;}i:6;a:12:{s:9:\"type_lite\";s:5:\"price\";s:4:\"type\";s:5:\"price\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Cena\";s:3:\"max\";d:44;s:3:\"min\";d:11;s:4:\"unit\";s:3:\"zł\";s:14:\"specifications\";a:11:{s:6:\"symbol\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:12:\"currencyCode\";s:3:\"PLN\";s:14:\"currencySymbol\";s:3:\"zł\";s:13:\"numberSymbols\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:15:\"positivePattern\";s:12:\"#,##0.00 ¤\";s:15:\"negativePattern\";s:13:\"-#,##0.00 ¤\";s:17:\"maxFractionDigits\";i:2;s:17:\"minFractionDigits\";i:2;s:12:\"groupingUsed\";b:1;s:16:\"primaryGroupSize\";i:3;s:18:\"secondaryGroupSize\";i:3;}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:3:\"nbr\";i:7;s:5:\"value\";N;}i:7;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"3\";s:4:\"name\";s:9:\"Dimension\";s:14:\"is_color_group\";b:0;s:6:\"values\";a:3:{i:19;a:4:{s:4:\"name\";s:7:\"40x60cm\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:20;a:4:{s:4:\"name\";s:7:\"60x90cm\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:21;a:4:{s:4:\"name\";s:8:\"80x120cm\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}}}'),
-('49fe8498c58dfc48a60ed6c25cb40b6e', 'a:1:{s:7:\"filters\";a:10:{i:0;a:7:{s:9:\"type_lite\";s:8:\"category\";s:4:\"type\";s:8:\"category\";s:6:\"id_key\";i:0;s:4:\"name\";s:9:\"Kategorie\";s:6:\"values\";a:2:{i:4;a:2:{s:4:\"name\";s:3:\"Men\";s:3:\"nbr\";s:1:\"1\";}i:5;a:2:{s:4:\"name\";s:5:\"Women\";s:3:\"nbr\";s:1:\"1\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:1;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"1\";s:4:\"name\";s:7:\"Rozmiar\";s:14:\"is_color_group\";b:0;s:6:\"values\";a:4:{i:1;a:4:{s:4:\"name\";s:1:\"S\";s:3:\"nbr\";s:1:\"2\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:2;a:4:{s:4:\"name\";s:1:\"M\";s:3:\"nbr\";s:1:\"2\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:3;a:4:{s:4:\"name\";s:1:\"L\";s:3:\"nbr\";s:1:\"2\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:4;a:4:{s:4:\"name\";s:2:\"XL\";s:3:\"nbr\";s:1:\"2\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:2;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"2\";s:4:\"name\";s:5:\"Kolor\";s:14:\"is_color_group\";b:1;s:6:\"values\";a:2:{i:8;a:5:{s:4:\"name\";s:6:\"Biały\";s:3:\"nbr\";s:1:\"1\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:5:\"color\";s:7:\"#ffffff\";}i:11;a:5:{s:4:\"name\";s:6:\"czarny\";s:3:\"nbr\";s:1:\"1\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:5:\"color\";s:7:\"#434A54\";}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:3;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"1\";s:6:\"values\";a:1:{i:4;a:4:{s:3:\"nbr\";s:1:\"2\";s:4:\"name\";s:8:\"Bawełna\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:11:\"Composition\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:4;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"2\";s:6:\"values\";a:2:{i:7;a:4:{s:3:\"nbr\";s:1:\"1\";s:4:\"name\";s:12:\"Long sleeves\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:8;a:4:{s:3:\"nbr\";s:1:\"1\";s:4:\"name\";s:13:\"Short sleeves\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:8:\"Property\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:5;a:7:{s:9:\"type_lite\";s:12:\"availability\";s:4:\"type\";s:12:\"availability\";s:6:\"id_key\";i:0;s:4:\"name\";s:13:\"Dostępność\";s:6:\"values\";a:3:{i:0;a:2:{s:4:\"name\";s:12:\"Niedostępny\";s:3:\"nbr\";i:0;}i:1;a:2:{s:4:\"name\";s:9:\"Dostępny\";s:3:\"nbr\";i:2;}i:2;a:2:{s:4:\"name\";s:11:\"W magazynie\";s:3:\"nbr\";i:2;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:6;a:7:{s:9:\"type_lite\";s:12:\"manufacturer\";s:4:\"type\";s:12:\"manufacturer\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Marka\";s:6:\"values\";a:1:{i:1;a:2:{s:4:\"name\";s:13:\"Studio Design\";s:3:\"nbr\";s:1:\"2\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:7;a:7:{s:9:\"type_lite\";s:9:\"condition\";s:4:\"type\";s:9:\"condition\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Stan:\";s:6:\"values\";a:3:{s:3:\"new\";a:2:{s:4:\"name\";s:4:\"Nowy\";s:3:\"nbr\";s:1:\"2\";}s:4:\"used\";a:2:{s:4:\"name\";s:8:\"Używany\";s:3:\"nbr\";i:0;}s:11:\"refurbished\";a:2:{s:4:\"name\";s:9:\"Odnowiony\";s:3:\"nbr\";i:0;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:8;a:12:{s:9:\"type_lite\";s:6:\"weight\";s:4:\"type\";s:6:\"weight\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Waga\";s:3:\"max\";d:0.29999999999999999;s:3:\"min\";d:0.29999999999999999;s:4:\"unit\";s:2:\"kg\";s:14:\"specifications\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:5:\"value\";N;s:3:\"nbr\";i:2;}i:9;a:12:{s:9:\"type_lite\";s:5:\"price\";s:4:\"type\";s:5:\"price\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Cena\";s:3:\"max\";d:45;s:3:\"min\";d:23;s:4:\"unit\";s:3:\"zł\";s:14:\"specifications\";a:11:{s:6:\"symbol\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:12:\"currencyCode\";s:3:\"PLN\";s:14:\"currencySymbol\";s:3:\"zł\";s:13:\"numberSymbols\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:15:\"positivePattern\";s:12:\"#,##0.00 ¤\";s:15:\"negativePattern\";s:13:\"-#,##0.00 ¤\";s:17:\"maxFractionDigits\";i:2;s:17:\"minFractionDigits\";i:2;s:12:\"groupingUsed\";b:1;s:16:\"primaryGroupSize\";i:3;s:18:\"secondaryGroupSize\";i:3;}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:3:\"nbr\";i:2;s:5:\"value\";N;}}}'),
-('a48a8491e3c6098bf5297a05f762aa65', 'a:1:{s:7:\"filters\";a:9:{i:0;a:7:{s:9:\"type_lite\";s:8:\"category\";s:4:\"type\";s:8:\"category\";s:6:\"id_key\";i:0;s:4:\"name\";s:9:\"Kategorie\";s:6:\"values\";a:0:{}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:1;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"2\";s:4:\"name\";s:5:\"Kolor\";s:14:\"is_color_group\";b:1;s:6:\"values\";a:2:{i:8;a:5:{s:4:\"name\";s:6:\"Biały\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:5:\"color\";s:7:\"#ffffff\";}i:11;a:5:{s:4:\"name\";s:6:\"czarny\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:5:\"color\";s:7:\"#434A54\";}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:2;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"1\";s:6:\"values\";a:2:{i:3;a:4:{s:3:\"nbr\";s:1:\"4\";s:4:\"name\";s:7:\"Ceramic\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:1;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:9:\"Poliester\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:11:\"Composition\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:3;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"2\";s:6:\"values\";a:1:{i:9;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:15:\"Removable cover\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:8:\"Property\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:4;a:7:{s:9:\"type_lite\";s:12:\"availability\";s:4:\"type\";s:12:\"availability\";s:6:\"id_key\";i:0;s:4:\"name\";s:13:\"Dostępność\";s:6:\"values\";a:3:{i:0;a:2:{s:4:\"name\";s:12:\"Niedostępny\";s:3:\"nbr\";i:0;}i:1;a:2:{s:4:\"name\";s:9:\"Dostępny\";s:3:\"nbr\";i:8;}i:2;a:2:{s:4:\"name\";s:11:\"W magazynie\";s:3:\"nbr\";i:8;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:5;a:7:{s:9:\"type_lite\";s:12:\"manufacturer\";s:4:\"type\";s:12:\"manufacturer\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Marka\";s:6:\"values\";a:1:{i:1;a:2:{s:4:\"name\";s:13:\"Studio Design\";s:3:\"nbr\";s:1:\"7\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:6;a:7:{s:9:\"type_lite\";s:9:\"condition\";s:4:\"type\";s:9:\"condition\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Stan:\";s:6:\"values\";a:3:{s:3:\"new\";a:2:{s:4:\"name\";s:4:\"Nowy\";s:3:\"nbr\";s:1:\"8\";}s:4:\"used\";a:2:{s:4:\"name\";s:8:\"Używany\";s:3:\"nbr\";i:0;}s:11:\"refurbished\";a:2:{s:4:\"name\";s:9:\"Odnowiony\";s:3:\"nbr\";i:0;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:7;a:12:{s:9:\"type_lite\";s:6:\"weight\";s:4:\"type\";s:6:\"weight\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Waga\";s:3:\"max\";d:0.29999999999999999;s:3:\"min\";d:0.29999999999999999;s:4:\"unit\";s:2:\"kg\";s:14:\"specifications\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:5:\"value\";N;s:3:\"nbr\";i:8;}i:8;a:12:{s:9:\"type_lite\";s:5:\"price\";s:4:\"type\";s:5:\"price\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Cena\";s:3:\"max\";d:44;s:3:\"min\";d:14;s:4:\"unit\";s:3:\"zł\";s:14:\"specifications\";a:11:{s:6:\"symbol\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:12:\"currencyCode\";s:3:\"PLN\";s:14:\"currencySymbol\";s:3:\"zł\";s:13:\"numberSymbols\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:15:\"positivePattern\";s:12:\"#,##0.00 ¤\";s:15:\"negativePattern\";s:13:\"-#,##0.00 ¤\";s:17:\"maxFractionDigits\";i:2;s:17:\"minFractionDigits\";i:2;s:12:\"groupingUsed\";b:1;s:16:\"primaryGroupSize\";i:3;s:18:\"secondaryGroupSize\";i:3;}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:3:\"nbr\";i:8;s:5:\"value\";N;}}}'),
-('d09c9a59a8c5442bf92fd6bfac2a47a1', 'a:1:{s:7:\"filters\";a:10:{i:0;a:7:{s:9:\"type_lite\";s:8:\"category\";s:4:\"type\";s:8:\"category\";s:6:\"id_key\";i:0;s:4:\"name\";s:9:\"Kategorie\";s:6:\"values\";a:2:{i:7;a:2:{s:4:\"name\";s:10:\"Stationery\";s:3:\"nbr\";s:1:\"3\";}i:8;a:2:{s:4:\"name\";s:16:\"Home Accessories\";s:3:\"nbr\";s:1:\"8\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:1;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"2\";s:4:\"name\";s:5:\"Kolor\";s:14:\"is_color_group\";b:1;s:6:\"values\";a:2:{i:8;a:5:{s:4:\"name\";s:6:\"Biały\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:5:\"color\";s:7:\"#ffffff\";}i:11;a:5:{s:4:\"name\";s:6:\"czarny\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:5:\"color\";s:7:\"#434A54\";}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:2;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"1\";s:6:\"values\";a:3:{i:3;a:4:{s:3:\"nbr\";s:1:\"4\";s:4:\"name\";s:7:\"Ceramic\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:1;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:9:\"Poliester\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:5;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:18:\"Recycled cardboard\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:11:\"Composition\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:3;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"2\";s:6:\"values\";a:2:{i:10;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:9:\"120 pages\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:9;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:15:\"Removable cover\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:8:\"Property\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:4;a:7:{s:9:\"type_lite\";s:12:\"availability\";s:4:\"type\";s:12:\"availability\";s:6:\"id_key\";i:0;s:4:\"name\";s:13:\"Dostępność\";s:6:\"values\";a:3:{i:0;a:2:{s:4:\"name\";s:12:\"Niedostępny\";s:3:\"nbr\";i:0;}i:1;a:2:{s:4:\"name\";s:9:\"Dostępny\";s:3:\"nbr\";i:11;}i:2;a:2:{s:4:\"name\";s:11:\"W magazynie\";s:3:\"nbr\";i:11;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:5;a:7:{s:9:\"type_lite\";s:12:\"manufacturer\";s:4:\"type\";s:12:\"manufacturer\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Marka\";s:6:\"values\";a:2:{i:1;a:2:{s:4:\"name\";s:13:\"Studio Design\";s:3:\"nbr\";s:1:\"7\";}i:2;a:2:{s:4:\"name\";s:14:\"Graphic Corner\";s:3:\"nbr\";s:1:\"3\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:6;a:7:{s:9:\"type_lite\";s:9:\"condition\";s:4:\"type\";s:9:\"condition\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Stan:\";s:6:\"values\";a:3:{s:3:\"new\";a:2:{s:4:\"name\";s:4:\"Nowy\";s:3:\"nbr\";s:2:\"11\";}s:4:\"used\";a:2:{s:4:\"name\";s:8:\"Używany\";s:3:\"nbr\";i:0;}s:11:\"refurbished\";a:2:{s:4:\"name\";s:9:\"Odnowiony\";s:3:\"nbr\";i:0;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:7;a:12:{s:9:\"type_lite\";s:6:\"weight\";s:4:\"type\";s:6:\"weight\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Waga\";s:3:\"max\";d:0.29999999999999999;s:3:\"min\";d:0.29999999999999999;s:4:\"unit\";s:2:\"kg\";s:14:\"specifications\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:5:\"value\";N;s:3:\"nbr\";i:11;}i:8;a:12:{s:9:\"type_lite\";s:5:\"price\";s:4:\"type\";s:5:\"price\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Cena\";s:3:\"max\";d:44;s:3:\"min\";d:14;s:4:\"unit\";s:3:\"zł\";s:14:\"specifications\";a:11:{s:6:\"symbol\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:12:\"currencyCode\";s:3:\"PLN\";s:14:\"currencySymbol\";s:3:\"zł\";s:13:\"numberSymbols\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:15:\"positivePattern\";s:12:\"#,##0.00 ¤\";s:15:\"negativePattern\";s:13:\"-#,##0.00 ¤\";s:17:\"maxFractionDigits\";i:2;s:17:\"minFractionDigits\";i:2;s:12:\"groupingUsed\";b:1;s:16:\"primaryGroupSize\";i:3;s:18:\"secondaryGroupSize\";i:3;}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:3:\"nbr\";i:11;s:5:\"value\";N;}i:9;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"4\";s:4:\"name\";s:10:\"Paper Type\";s:14:\"is_color_group\";b:0;s:6:\"values\";a:4:{i:22;a:4:{s:4:\"name\";s:5:\"Ruled\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:23;a:4:{s:4:\"name\";s:5:\"Plain\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:24;a:4:{s:4:\"name\";s:8:\"Squarred\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:25;a:4:{s:4:\"name\";s:5:\"Doted\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}}}'),
-('d40da7ef44aaf6cc7547b00007e5a04b', 'a:1:{s:7:\"filters\";a:9:{i:0;a:7:{s:9:\"type_lite\";s:8:\"category\";s:4:\"type\";s:8:\"category\";s:6:\"id_key\";i:0;s:4:\"name\";s:9:\"Kategorie\";s:6:\"values\";a:0:{}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:1;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"1\";s:6:\"values\";a:1:{i:5;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:18:\"Recycled cardboard\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:11:\"Composition\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:2;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"2\";s:6:\"values\";a:1:{i:10;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:9:\"120 pages\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:8:\"Property\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:3;a:7:{s:9:\"type_lite\";s:12:\"availability\";s:4:\"type\";s:12:\"availability\";s:6:\"id_key\";i:0;s:4:\"name\";s:13:\"Dostępność\";s:6:\"values\";a:3:{i:0;a:2:{s:4:\"name\";s:12:\"Niedostępny\";s:3:\"nbr\";i:0;}i:1;a:2:{s:4:\"name\";s:9:\"Dostępny\";s:3:\"nbr\";i:3;}i:2;a:2:{s:4:\"name\";s:11:\"W magazynie\";s:3:\"nbr\";i:3;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:4;a:7:{s:9:\"type_lite\";s:12:\"manufacturer\";s:4:\"type\";s:12:\"manufacturer\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Marka\";s:6:\"values\";a:1:{i:2;a:2:{s:4:\"name\";s:14:\"Graphic Corner\";s:3:\"nbr\";s:1:\"3\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:5;a:7:{s:9:\"type_lite\";s:9:\"condition\";s:4:\"type\";s:9:\"condition\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Stan:\";s:6:\"values\";a:3:{s:3:\"new\";a:2:{s:4:\"name\";s:4:\"Nowy\";s:3:\"nbr\";s:1:\"3\";}s:4:\"used\";a:2:{s:4:\"name\";s:8:\"Używany\";s:3:\"nbr\";i:0;}s:11:\"refurbished\";a:2:{s:4:\"name\";s:9:\"Odnowiony\";s:3:\"nbr\";i:0;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:6;a:12:{s:9:\"type_lite\";s:6:\"weight\";s:4:\"type\";s:6:\"weight\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Waga\";s:3:\"max\";d:0.29999999999999999;s:3:\"min\";d:0.29999999999999999;s:4:\"unit\";s:2:\"kg\";s:14:\"specifications\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:5:\"value\";N;s:3:\"nbr\";i:3;}i:7;a:12:{s:9:\"type_lite\";s:5:\"price\";s:4:\"type\";s:5:\"price\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Cena\";s:3:\"max\";d:16;s:3:\"min\";d:15;s:4:\"unit\";s:3:\"zł\";s:14:\"specifications\";a:11:{s:6:\"symbol\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:12:\"currencyCode\";s:3:\"PLN\";s:14:\"currencySymbol\";s:3:\"zł\";s:13:\"numberSymbols\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:15:\"positivePattern\";s:12:\"#,##0.00 ¤\";s:15:\"negativePattern\";s:13:\"-#,##0.00 ¤\";s:17:\"maxFractionDigits\";i:2;s:17:\"minFractionDigits\";i:2;s:12:\"groupingUsed\";b:1;s:16:\"primaryGroupSize\";i:3;s:18:\"secondaryGroupSize\";i:3;}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:3:\"nbr\";i:3;s:5:\"value\";N;}i:8;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"4\";s:4:\"name\";s:10:\"Paper Type\";s:14:\"is_color_group\";b:0;s:6:\"values\";a:4:{i:22;a:4:{s:4:\"name\";s:5:\"Ruled\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:23;a:4:{s:4:\"name\";s:5:\"Plain\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:24;a:4:{s:4:\"name\";s:8:\"Squarred\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:25;a:4:{s:4:\"name\";s:5:\"Doted\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}}}'),
-('f948e518be6fbab85f8e9652de1a033f', 'a:1:{s:7:\"filters\";a:9:{i:0;a:7:{s:9:\"type_lite\";s:8:\"category\";s:4:\"type\";s:8:\"category\";s:6:\"id_key\";i:0;s:4:\"name\";s:9:\"Kategorie\";s:6:\"values\";a:0:{}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:1;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"1\";s:6:\"values\";a:1:{i:5;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:18:\"Recycled cardboard\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:11:\"Composition\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:2;a:9:{s:9:\"type_lite\";s:10:\"id_feature\";s:4:\"type\";s:10:\"id_feature\";s:6:\"id_key\";s:1:\"2\";s:6:\"values\";a:1:{i:10;a:4:{s:3:\"nbr\";s:1:\"3\";s:4:\"name\";s:9:\"120 pages\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:4:\"name\";s:8:\"Property\";s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:3;a:7:{s:9:\"type_lite\";s:12:\"availability\";s:4:\"type\";s:12:\"availability\";s:6:\"id_key\";i:0;s:4:\"name\";s:13:\"Dostępność\";s:6:\"values\";a:3:{i:0;a:2:{s:4:\"name\";s:12:\"Niedostępny\";s:3:\"nbr\";i:0;}i:1;a:3:{s:4:\"name\";s:9:\"Dostępny\";s:3:\"nbr\";i:3;s:7:\"checked\";b:1;}i:2;a:2:{s:4:\"name\";s:11:\"W magazynie\";s:3:\"nbr\";i:3;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:4;a:7:{s:9:\"type_lite\";s:12:\"manufacturer\";s:4:\"type\";s:12:\"manufacturer\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Marka\";s:6:\"values\";a:1:{i:2;a:2:{s:4:\"name\";s:14:\"Graphic Corner\";s:3:\"nbr\";s:1:\"3\";}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:5;a:7:{s:9:\"type_lite\";s:9:\"condition\";s:4:\"type\";s:9:\"condition\";s:6:\"id_key\";i:0;s:4:\"name\";s:5:\"Stan:\";s:6:\"values\";a:3:{s:3:\"new\";a:2:{s:4:\"name\";s:4:\"Nowy\";s:3:\"nbr\";s:1:\"3\";}s:4:\"used\";a:2:{s:4:\"name\";s:8:\"Używany\";s:3:\"nbr\";i:0;}s:11:\"refurbished\";a:2:{s:4:\"name\";s:9:\"Odnowiony\";s:3:\"nbr\";i:0;}}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}i:6;a:12:{s:9:\"type_lite\";s:6:\"weight\";s:4:\"type\";s:6:\"weight\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Waga\";s:3:\"max\";d:0.29999999999999999;s:3:\"min\";d:0.29999999999999999;s:4:\"unit\";s:2:\"kg\";s:14:\"specifications\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:5:\"value\";N;s:3:\"nbr\";i:3;}i:7;a:12:{s:9:\"type_lite\";s:5:\"price\";s:4:\"type\";s:5:\"price\";s:6:\"id_key\";i:0;s:4:\"name\";s:4:\"Cena\";s:3:\"max\";d:16;s:3:\"min\";d:15;s:4:\"unit\";s:3:\"zł\";s:14:\"specifications\";a:11:{s:6:\"symbol\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:12:\"currencyCode\";s:3:\"PLN\";s:14:\"currencySymbol\";s:3:\"zł\";s:13:\"numberSymbols\";a:11:{i:0;s:1:\",\";i:1;s:2:\" \";i:2;s:1:\";\";i:3;s:1:\"%\";i:4;s:1:\"-\";i:5;s:1:\"+\";i:6;s:1:\"E\";i:7;s:2:\"×\";i:8;s:3:\"‰\";i:9;s:3:\"∞\";i:10;s:3:\"NaN\";}s:15:\"positivePattern\";s:12:\"#,##0.00 ¤\";s:15:\"negativePattern\";s:13:\"-#,##0.00 ¤\";s:17:\"maxFractionDigits\";i:2;s:17:\"minFractionDigits\";i:2;s:12:\"groupingUsed\";b:1;s:16:\"primaryGroupSize\";i:3;s:18:\"secondaryGroupSize\";i:3;}s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";i:3;s:3:\"nbr\";i:3;s:5:\"value\";N;}i:8;a:10:{s:9:\"type_lite\";s:18:\"id_attribute_group\";s:4:\"type\";s:18:\"id_attribute_group\";s:6:\"id_key\";s:1:\"4\";s:4:\"name\";s:10:\"Paper Type\";s:14:\"is_color_group\";b:0;s:6:\"values\";a:4:{i:22;a:4:{s:4:\"name\";s:5:\"Ruled\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:23;a:4:{s:4:\"name\";s:5:\"Plain\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:24;a:4:{s:4:\"name\";s:8:\"Squarred\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}i:25;a:4:{s:4:\"name\";s:5:\"Doted\";s:3:\"nbr\";s:1:\"3\";s:8:\"url_name\";N;s:10:\"meta_title\";N;}}s:8:\"url_name\";N;s:10:\"meta_title\";N;s:17:\"filter_show_limit\";i:0;s:11:\"filter_type\";s:1:\"0\";}}}');
 
 -- --------------------------------------------------------
 
@@ -7270,8 +7334,8 @@ CREATE TABLE `ad_link_block` (
 --
 
 INSERT INTO `ad_link_block` (`id_link_block`, `id_hook`, `position`, `content`) VALUES
-(1, 41, 0, '{\"cms\":[false],\"product\":[\"prices-drop\",\"new-products\",\"best-sales\"],\"static\":[false]}'),
-(2, 41, 1, '{\"cms\":{\"0\":\"1\",\"2\":\"3\",\"3\":\"4\",\"5\":\"6\"},\"static\":[\"contact\"],\"product\":[false],\"category\":[false]}');
+(1, 41, 0, '{\"cms\":[false],\"product\":[\"prices-drop\",\"new-products\",\"best-sales\"],\"static\":[false],\"category\":[false]}'),
+(2, 41, 1, '{\"cms\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"product\":[false],\"static\":[\"contact\",\"sitemap\",\"stores\"],\"category\":[false]}');
 
 -- --------------------------------------------------------
 
@@ -7341,243 +7405,234 @@ CREATE TABLE `ad_log` (
 --
 
 INSERT INTO `ad_log` (`id_log`, `severity`, `error_code`, `message`, `object_type`, `object_id`, `id_shop`, `id_shop_group`, `id_lang`, `in_all_shops`, `id_employee`, `date_add`, `date_upd`) VALUES
-(1, 1, 0, 'Exporting mail with theme modern for language Polski (Polish)', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:27:59', '2023-11-17 09:27:59'),
-(2, 1, 0, 'Core output folder: /var/www/html/mails', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:27:59', '2023-11-17 09:27:59'),
-(3, 1, 0, 'Modules output folder: /var/www/html/modules/', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:27:59', '2023-11-17 09:27:59'),
-(4, 1, 0, 'Generate html template account at /var/www/html/mails/pl/account.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(5, 1, 0, 'Generate txt template account at /var/www/html/mails/pl/account.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(6, 1, 0, 'Generate html template backoffice_order at /var/www/html/mails/pl/backoffice_order.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(7, 1, 0, 'Generate txt template backoffice_order at /var/www/html/mails/pl/backoffice_order.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(8, 1, 0, 'Generate html template bankwire at /var/www/html/mails/pl/bankwire.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(9, 1, 0, 'Generate txt template bankwire at /var/www/html/mails/pl/bankwire.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(10, 1, 0, 'Generate html template cheque at /var/www/html/mails/pl/cheque.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(11, 1, 0, 'Generate txt template cheque at /var/www/html/mails/pl/cheque.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(12, 1, 0, 'Generate html template contact at /var/www/html/mails/pl/contact.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(13, 1, 0, 'Generate txt template contact at /var/www/html/mails/pl/contact.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(14, 1, 0, 'Generate html template contact_form at /var/www/html/mails/pl/contact_form.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(15, 1, 0, 'Generate txt template contact_form at /var/www/html/mails/pl/contact_form.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(16, 1, 0, 'Generate html template credit_slip at /var/www/html/mails/pl/credit_slip.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(17, 1, 0, 'Generate txt template credit_slip at /var/www/html/mails/pl/credit_slip.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(18, 1, 0, 'Generate html template download_product at /var/www/html/mails/pl/download_product.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(19, 1, 0, 'Generate txt template download_product at /var/www/html/mails/pl/download_product.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(20, 1, 0, 'Generate html template employee_password at /var/www/html/mails/pl/employee_password.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(21, 1, 0, 'Generate txt template employee_password at /var/www/html/mails/pl/employee_password.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(22, 1, 0, 'Generate html template forward_msg at /var/www/html/mails/pl/forward_msg.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
-(23, 1, 0, 'Generate txt template forward_msg at /var/www/html/mails/pl/forward_msg.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(24, 1, 0, 'Generate html template guest_to_customer at /var/www/html/mails/pl/guest_to_customer.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(25, 1, 0, 'Generate txt template guest_to_customer at /var/www/html/mails/pl/guest_to_customer.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(26, 1, 0, 'Generate html template import at /var/www/html/mails/pl/import.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(27, 1, 0, 'Generate txt template import at /var/www/html/mails/pl/import.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(28, 1, 0, 'Generate html template in_transit at /var/www/html/mails/pl/in_transit.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(29, 1, 0, 'Generate txt template in_transit at /var/www/html/mails/pl/in_transit.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(30, 1, 0, 'Generate html template log_alert at /var/www/html/mails/pl/log_alert.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(31, 1, 0, 'Generate txt template log_alert at /var/www/html/mails/pl/log_alert.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(32, 1, 0, 'Generate html template newsletter at /var/www/html/mails/pl/newsletter.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(33, 1, 0, 'Generate txt template newsletter at /var/www/html/mails/pl/newsletter.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(34, 1, 0, 'Generate html template order_canceled at /var/www/html/mails/pl/order_canceled.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(35, 1, 0, 'Generate txt template order_canceled at /var/www/html/mails/pl/order_canceled.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(36, 1, 0, 'Generate html template order_changed at /var/www/html/mails/pl/order_changed.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(37, 1, 0, 'Generate txt template order_changed at /var/www/html/mails/pl/order_changed.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(38, 1, 0, 'Generate html template order_conf at /var/www/html/mails/pl/order_conf.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(39, 1, 0, 'Generate txt template order_conf at /var/www/html/mails/pl/order_conf.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(40, 1, 0, 'Generate html template order_customer_comment at /var/www/html/mails/pl/order_customer_comment.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(41, 1, 0, 'Generate txt template order_customer_comment at /var/www/html/mails/pl/order_customer_comment.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(42, 1, 0, 'Generate html template order_merchant_comment at /var/www/html/mails/pl/order_merchant_comment.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(43, 1, 0, 'Generate txt template order_merchant_comment at /var/www/html/mails/pl/order_merchant_comment.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(44, 1, 0, 'Generate html template order_return_state at /var/www/html/mails/pl/order_return_state.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(45, 1, 0, 'Generate txt template order_return_state at /var/www/html/mails/pl/order_return_state.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(46, 1, 0, 'Generate html template outofstock at /var/www/html/mails/pl/outofstock.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(47, 1, 0, 'Generate txt template outofstock at /var/www/html/mails/pl/outofstock.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(48, 1, 0, 'Generate html template password at /var/www/html/mails/pl/password.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(49, 1, 0, 'Generate txt template password at /var/www/html/mails/pl/password.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(50, 1, 0, 'Generate html template password_query at /var/www/html/mails/pl/password_query.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(51, 1, 0, 'Generate txt template password_query at /var/www/html/mails/pl/password_query.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(52, 1, 0, 'Generate html template payment at /var/www/html/mails/pl/payment.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(53, 1, 0, 'Generate txt template payment at /var/www/html/mails/pl/payment.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(54, 1, 0, 'Generate html template payment_error at /var/www/html/mails/pl/payment_error.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(55, 1, 0, 'Generate txt template payment_error at /var/www/html/mails/pl/payment_error.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(56, 1, 0, 'Generate html template preparation at /var/www/html/mails/pl/preparation.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(57, 1, 0, 'Generate txt template preparation at /var/www/html/mails/pl/preparation.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(58, 1, 0, 'Generate html template productoutofstock at /var/www/html/mails/pl/productoutofstock.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(59, 1, 0, 'Generate txt template productoutofstock at /var/www/html/mails/pl/productoutofstock.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(60, 1, 0, 'Generate html template refund at /var/www/html/mails/pl/refund.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(61, 1, 0, 'Generate txt template refund at /var/www/html/mails/pl/refund.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(62, 1, 0, 'Generate html template reply_msg at /var/www/html/mails/pl/reply_msg.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(63, 1, 0, 'Generate txt template reply_msg at /var/www/html/mails/pl/reply_msg.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(64, 1, 0, 'Generate html template shipped at /var/www/html/mails/pl/shipped.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(65, 1, 0, 'Generate txt template shipped at /var/www/html/mails/pl/shipped.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(66, 1, 0, 'Generate html template test at /var/www/html/mails/pl/test.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(67, 1, 0, 'Generate txt template test at /var/www/html/mails/pl/test.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(68, 1, 0, 'Generate html template voucher at /var/www/html/mails/pl/voucher.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(69, 1, 0, 'Generate txt template voucher at /var/www/html/mails/pl/voucher.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(70, 1, 0, 'Generate html template voucher_new at /var/www/html/mails/pl/voucher_new.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(71, 1, 0, 'Generate txt template voucher_new at /var/www/html/mails/pl/voucher_new.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(72, 1, 0, 'Generate html template followup_1 at /var/www/html/modules//ps_reminder/mails/pl/followup_1.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(73, 1, 0, 'Generate txt template followup_1 at /var/www/html/modules//ps_reminder/mails/pl/followup_1.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(74, 1, 0, 'Generate html template followup_2 at /var/www/html/modules//ps_reminder/mails/pl/followup_2.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(75, 1, 0, 'Generate txt template followup_2 at /var/www/html/modules//ps_reminder/mails/pl/followup_2.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(76, 1, 0, 'Generate html template followup_3 at /var/www/html/modules//ps_reminder/mails/pl/followup_3.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(77, 1, 0, 'Generate txt template followup_3 at /var/www/html/modules//ps_reminder/mails/pl/followup_3.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(78, 1, 0, 'Generate html template followup_4 at /var/www/html/modules//ps_reminder/mails/pl/followup_4.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(79, 1, 0, 'Generate txt template followup_4 at /var/www/html/modules//ps_reminder/mails/pl/followup_4.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(80, 1, 0, 'Generate html template followup_1 at /var/www/html/modules//followup/mails/pl/followup_1.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(81, 1, 0, 'Generate txt template followup_1 at /var/www/html/modules//followup/mails/pl/followup_1.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(82, 1, 0, 'Generate html template followup_2 at /var/www/html/modules//followup/mails/pl/followup_2.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(83, 1, 0, 'Generate txt template followup_2 at /var/www/html/modules//followup/mails/pl/followup_2.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(84, 1, 0, 'Generate html template followup_3 at /var/www/html/modules//followup/mails/pl/followup_3.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(85, 1, 0, 'Generate txt template followup_3 at /var/www/html/modules//followup/mails/pl/followup_3.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(86, 1, 0, 'Generate html template followup_4 at /var/www/html/modules//followup/mails/pl/followup_4.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(87, 1, 0, 'Generate txt template followup_4 at /var/www/html/modules//followup/mails/pl/followup_4.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(88, 1, 0, 'Generate html template referralprogram-congratulations at /var/www/html/modules//referralprogram/mails/pl/referralprogram-congratulations.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(89, 1, 0, 'Generate txt template referralprogram-congratulations at /var/www/html/modules//referralprogram/mails/pl/referralprogram-congratulations.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(90, 1, 0, 'Generate html template referralprogram-invitation at /var/www/html/modules//referralprogram/mails/pl/referralprogram-invitation.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(91, 1, 0, 'Generate txt template referralprogram-invitation at /var/www/html/modules//referralprogram/mails/pl/referralprogram-invitation.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(92, 1, 0, 'Generate html template referralprogram-voucher at /var/www/html/modules//referralprogram/mails/pl/referralprogram-voucher.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(93, 1, 0, 'Generate txt template referralprogram-voucher at /var/www/html/modules//referralprogram/mails/pl/referralprogram-voucher.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(94, 1, 0, 'Generate html template customer_qty at /var/www/html/modules//ps_emailalerts/mails/pl/customer_qty.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(95, 1, 0, 'Generate txt template customer_qty at /var/www/html/modules//ps_emailalerts/mails/pl/customer_qty.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(96, 1, 0, 'Generate html template new_order at /var/www/html/modules//ps_emailalerts/mails/pl/new_order.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(97, 1, 0, 'Generate txt template new_order at /var/www/html/modules//ps_emailalerts/mails/pl/new_order.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(98, 1, 0, 'Generate html template order_changed at /var/www/html/modules//ps_emailalerts/mails/pl/order_changed.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(99, 1, 0, 'Generate txt template order_changed at /var/www/html/modules//ps_emailalerts/mails/pl/order_changed.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(100, 1, 0, 'Generate html template productcoverage at /var/www/html/modules//ps_emailalerts/mails/pl/productcoverage.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
-(101, 1, 0, 'Generate txt template productcoverage at /var/www/html/modules//ps_emailalerts/mails/pl/productcoverage.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(102, 1, 0, 'Generate html template productoutofstock at /var/www/html/modules//ps_emailalerts/mails/pl/productoutofstock.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(103, 1, 0, 'Generate txt template productoutofstock at /var/www/html/modules//ps_emailalerts/mails/pl/productoutofstock.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(104, 1, 0, 'Generate html template return_slip at /var/www/html/modules//ps_emailalerts/mails/pl/return_slip.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(105, 1, 0, 'Generate txt template return_slip at /var/www/html/modules//ps_emailalerts/mails/pl/return_slip.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(106, 1, 0, 'Generate html template newsletter_conf at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_conf.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(107, 1, 0, 'Generate txt template newsletter_conf at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_conf.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(108, 1, 0, 'Generate html template newsletter_verif at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_verif.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(109, 1, 0, 'Generate txt template newsletter_verif at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_verif.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(110, 1, 0, 'Generate html template newsletter_voucher at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_voucher.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(111, 1, 0, 'Generate txt template newsletter_voucher at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_voucher.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
-(112, 1, 0, 'Protect vendor folder in module blockwishlist', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(113, 1, 0, 'Module blockwishlist has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(114, 1, 0, 'Protect vendor folder in module contactform', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(115, 1, 0, 'Module contactform has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(116, 1, 0, 'Protect vendor folder in module dashactivity', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(117, 1, 0, 'Module dashactivity has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(118, 1, 0, 'Protect vendor folder in module dashtrends', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(119, 1, 0, 'Module dashtrends has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(120, 1, 0, 'Protect vendor folder in module dashgoals', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(121, 1, 0, 'Module dashgoals has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(122, 1, 0, 'Protect vendor folder in module dashproducts', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(123, 1, 0, 'Module dashproducts has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(124, 1, 0, 'Protect vendor folder in module graphnvd3', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(125, 1, 0, 'Module graphnvd3 has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(126, 1, 0, 'Protect vendor folder in module gridhtml', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(127, 1, 0, 'Module gridhtml has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
-(128, 1, 0, 'Protect vendor folder in module gsitemap', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(129, 1, 0, 'Module gsitemap has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(130, 1, 0, 'Protect vendor folder in module pagesnotfound', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(131, 1, 0, 'Module pagesnotfound has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(132, 1, 0, 'Protect vendor folder in module productcomments', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(133, 1, 0, 'Module productcomments has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(134, 1, 0, 'Protect vendor folder in module ps_banner', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(135, 1, 0, 'Module ps_banner has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(136, 1, 0, 'Protect vendor folder in module ps_categorytree', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(137, 1, 0, 'Module ps_categorytree has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(138, 1, 0, 'Protect vendor folder in module ps_checkpayment', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(139, 1, 0, 'Module ps_checkpayment has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(140, 1, 0, 'Protect vendor folder in module ps_contactinfo', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(141, 1, 0, 'Module ps_contactinfo has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(142, 1, 0, 'Protect vendor folder in module ps_crossselling', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(143, 1, 0, 'Module ps_crossselling has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(144, 1, 0, 'Protect vendor folder in module ps_currencyselector', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(145, 1, 0, 'Module ps_currencyselector has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(146, 1, 0, 'Protect vendor folder in module ps_customeraccountlinks', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(147, 1, 0, 'Module ps_customeraccountlinks has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(148, 1, 0, 'Protect vendor folder in module ps_customersignin', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(149, 1, 0, 'Module ps_customersignin has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(150, 1, 0, 'Protect vendor folder in module ps_customtext', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(151, 1, 0, 'Module ps_customtext has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(152, 1, 0, 'Protect vendor folder in module ps_dataprivacy', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(153, 1, 0, 'Module ps_dataprivacy has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(154, 1, 0, 'Protect vendor folder in module ps_emailsubscription', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(155, 1, 0, 'Module ps_emailsubscription has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(156, 1, 0, 'Protect vendor folder in module ps_facetedsearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(157, 1, 0, 'Module ps_facetedsearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(158, 1, 0, 'Protect vendor folder in module ps_faviconnotificationbo', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(159, 1, 0, 'Module ps_faviconnotificationbo has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(160, 1, 0, 'Protect vendor folder in module ps_featuredproducts', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(161, 1, 0, 'Module ps_featuredproducts has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(162, 1, 0, 'Protect vendor folder in module ps_imageslider', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(163, 1, 0, 'Module ps_imageslider has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(164, 1, 0, 'Protect vendor folder in module ps_languageselector', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(165, 1, 0, 'Module ps_languageselector has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(166, 1, 0, 'Protect vendor folder in module ps_linklist', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(167, 1, 0, 'Module ps_linklist has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(168, 1, 0, 'Protect vendor folder in module ps_mainmenu', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
-(169, 1, 0, 'Module ps_mainmenu has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
-(170, 1, 0, 'Protect vendor folder in module ps_searchbar', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
-(171, 1, 0, 'Module ps_searchbar has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
-(172, 1, 0, 'Protect vendor folder in module ps_sharebuttons', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
-(173, 1, 0, 'Module ps_sharebuttons has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
-(174, 1, 0, 'Protect vendor folder in module ps_shoppingcart', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(175, 1, 0, 'Module ps_shoppingcart has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(176, 1, 0, 'Protect vendor folder in module ps_socialfollow', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(177, 1, 0, 'Module ps_socialfollow has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(178, 1, 0, 'Protect vendor folder in module ps_themecusto', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(179, 1, 0, 'Module ps_themecusto has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
-(180, 1, 0, 'Protect vendor folder in module ps_wirepayment', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(181, 1, 0, 'Module ps_wirepayment has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(182, 1, 0, 'Protect vendor folder in module statsbestcategories', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(183, 1, 0, 'Module statsbestcategories has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(184, 1, 0, 'Protect vendor folder in module statsbestcustomers', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(185, 1, 0, 'Module statsbestcustomers has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(186, 1, 0, 'Protect vendor folder in module statsbestproducts', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(187, 1, 0, 'Module statsbestproducts has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(188, 1, 0, 'Protect vendor folder in module statsbestsuppliers', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(189, 1, 0, 'Module statsbestsuppliers has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(190, 1, 0, 'Protect vendor folder in module statsbestvouchers', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(191, 1, 0, 'Module statsbestvouchers has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(192, 1, 0, 'Protect vendor folder in module statscarrier', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(193, 1, 0, 'Module statscarrier has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(194, 1, 0, 'Protect vendor folder in module statscatalog', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
-(195, 1, 0, 'Module statscatalog has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(196, 1, 0, 'Protect vendor folder in module statscheckup', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(197, 1, 0, 'Module statscheckup has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(198, 1, 0, 'Protect vendor folder in module statsdata', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(199, 1, 0, 'Module statsdata has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(200, 1, 0, 'Protect vendor folder in module statsforecast', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(201, 1, 0, 'Module statsforecast has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(202, 1, 0, 'Protect vendor folder in module statsnewsletter', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(203, 1, 0, 'Module statsnewsletter has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(204, 1, 0, 'Protect vendor folder in module statspersonalinfos', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(205, 1, 0, 'Module statspersonalinfos has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(206, 1, 0, 'Protect vendor folder in module statsproduct', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(207, 1, 0, 'Module statsproduct has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(208, 1, 0, 'Protect vendor folder in module statsregistrations', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(209, 1, 0, 'Module statsregistrations has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(210, 1, 0, 'Protect vendor folder in module statssales', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(211, 1, 0, 'Module statssales has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
-(212, 1, 0, 'Protect vendor folder in module statssearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
-(213, 1, 0, 'Module statssearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
-(214, 1, 0, 'Protect vendor folder in module statsstock', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
-(215, 1, 0, 'Module statsstock has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
-(216, 1, 0, 'Protect vendor folder in module welcome', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
-(217, 1, 0, 'Module welcome has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
-(218, 1, 0, 'Protect vendor folder in module psgdpr', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(219, 1, 0, 'Protect vendor folder in module ps_mbo', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(220, 1, 0, 'Protect vendor folder in module ps_checkout', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
-(221, 1, 0, 'Protect vendor folder in module ps_metrics', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(222, 1, 0, 'Protect vendor folder in module ps_facebook', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(223, 1, 0, 'Protect vendor folder in module psxmarketingwithgoogle', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:48', '2023-11-17 09:28:48'),
-(224, 1, 0, 'Protect vendor folder in module blockreassurance', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
-(225, 1, 0, 'Module blockreassurance has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
-(226, 1, 0, 'Protect vendor folder in module ps_facetedsearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:29:13', '2023-11-17 09:29:13'),
-(227, 1, 0, 'Module ps_facetedsearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:29:13', '2023-11-17 09:29:13'),
-(228, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-17 10:04:08', '2023-11-17 10:04:08'),
-(229, 1, 0, 'Połączenie z panelem administracyjnym z 192.168.65.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-17 13:30:00', '2023-11-17 13:30:00'),
-(230, 1, 0, 'Połączenie z panelem administracyjnym z 192.168.65.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-18 16:34:02', '2023-11-18 16:34:02'),
-(231, 1, 0, 'Protect vendor folder in module ps_cashondelivery', '', 0, 1, NULL, 1, 0, 1, '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
-(232, 3, 0, 'Swift Error: Expected response code 220 but got an empty response', '', 0, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06'),
-(233, 3, 0, 'Swift Error: Expected response code 220 but got an empty response', '', 0, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06'),
-(234, 1, 0, 'Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 'Cart', 7, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06'),
-(235, 1, 0, 'usunięcie Store', 'Store', 1, 1, NULL, 1, 0, 1, '2023-11-18 20:29:38', '2023-11-18 20:29:38'),
-(236, 1, 0, 'usunięcie Store', 'Store', 2, 1, NULL, 1, 0, 1, '2023-11-18 20:29:42', '2023-11-18 20:29:42'),
-(237, 1, 0, 'usunięcie Store', 'Store', 4, 1, NULL, 1, 0, 1, '2023-11-18 20:29:45', '2023-11-18 20:29:45');
+(1, 1, 0, 'Exporting mail with theme modern for language Polski (Polish)', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:33', '2023-11-20 19:41:33'),
+(2, 1, 0, 'Core output folder: /var/www/html/mails', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:33', '2023-11-20 19:41:33'),
+(3, 1, 0, 'Modules output folder: /var/www/html/modules/', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:33', '2023-11-20 19:41:33'),
+(4, 1, 0, 'Generate html template account at /var/www/html/mails/pl/account.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(5, 1, 0, 'Generate txt template account at /var/www/html/mails/pl/account.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(6, 1, 0, 'Generate html template backoffice_order at /var/www/html/mails/pl/backoffice_order.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(7, 1, 0, 'Generate txt template backoffice_order at /var/www/html/mails/pl/backoffice_order.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(8, 1, 0, 'Generate html template bankwire at /var/www/html/mails/pl/bankwire.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(9, 1, 0, 'Generate txt template bankwire at /var/www/html/mails/pl/bankwire.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(10, 1, 0, 'Generate html template cheque at /var/www/html/mails/pl/cheque.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(11, 1, 0, 'Generate txt template cheque at /var/www/html/mails/pl/cheque.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(12, 1, 0, 'Generate html template contact at /var/www/html/mails/pl/contact.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(13, 1, 0, 'Generate txt template contact at /var/www/html/mails/pl/contact.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(14, 1, 0, 'Generate html template contact_form at /var/www/html/mails/pl/contact_form.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(15, 1, 0, 'Generate txt template contact_form at /var/www/html/mails/pl/contact_form.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(16, 1, 0, 'Generate html template credit_slip at /var/www/html/mails/pl/credit_slip.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(17, 1, 0, 'Generate txt template credit_slip at /var/www/html/mails/pl/credit_slip.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(18, 1, 0, 'Generate html template download_product at /var/www/html/mails/pl/download_product.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(19, 1, 0, 'Generate txt template download_product at /var/www/html/mails/pl/download_product.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(20, 1, 0, 'Generate html template employee_password at /var/www/html/mails/pl/employee_password.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(21, 1, 0, 'Generate txt template employee_password at /var/www/html/mails/pl/employee_password.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(22, 1, 0, 'Generate html template forward_msg at /var/www/html/mails/pl/forward_msg.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(23, 1, 0, 'Generate txt template forward_msg at /var/www/html/mails/pl/forward_msg.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(24, 1, 0, 'Generate html template guest_to_customer at /var/www/html/mails/pl/guest_to_customer.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(25, 1, 0, 'Generate txt template guest_to_customer at /var/www/html/mails/pl/guest_to_customer.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(26, 1, 0, 'Generate html template import at /var/www/html/mails/pl/import.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(27, 1, 0, 'Generate txt template import at /var/www/html/mails/pl/import.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(28, 1, 0, 'Generate html template in_transit at /var/www/html/mails/pl/in_transit.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(29, 1, 0, 'Generate txt template in_transit at /var/www/html/mails/pl/in_transit.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(30, 1, 0, 'Generate html template log_alert at /var/www/html/mails/pl/log_alert.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(31, 1, 0, 'Generate txt template log_alert at /var/www/html/mails/pl/log_alert.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(32, 1, 0, 'Generate html template newsletter at /var/www/html/mails/pl/newsletter.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(33, 1, 0, 'Generate txt template newsletter at /var/www/html/mails/pl/newsletter.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(34, 1, 0, 'Generate html template order_canceled at /var/www/html/mails/pl/order_canceled.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(35, 1, 0, 'Generate txt template order_canceled at /var/www/html/mails/pl/order_canceled.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(36, 1, 0, 'Generate html template order_changed at /var/www/html/mails/pl/order_changed.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(37, 1, 0, 'Generate txt template order_changed at /var/www/html/mails/pl/order_changed.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(38, 1, 0, 'Generate html template order_conf at /var/www/html/mails/pl/order_conf.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(39, 1, 0, 'Generate txt template order_conf at /var/www/html/mails/pl/order_conf.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(40, 1, 0, 'Generate html template order_customer_comment at /var/www/html/mails/pl/order_customer_comment.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(41, 1, 0, 'Generate txt template order_customer_comment at /var/www/html/mails/pl/order_customer_comment.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(42, 1, 0, 'Generate html template order_merchant_comment at /var/www/html/mails/pl/order_merchant_comment.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(43, 1, 0, 'Generate txt template order_merchant_comment at /var/www/html/mails/pl/order_merchant_comment.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(44, 1, 0, 'Generate html template order_return_state at /var/www/html/mails/pl/order_return_state.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:34', '2023-11-20 19:41:34'),
+(45, 1, 0, 'Generate txt template order_return_state at /var/www/html/mails/pl/order_return_state.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(46, 1, 0, 'Generate html template outofstock at /var/www/html/mails/pl/outofstock.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(47, 1, 0, 'Generate txt template outofstock at /var/www/html/mails/pl/outofstock.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(48, 1, 0, 'Generate html template password at /var/www/html/mails/pl/password.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(49, 1, 0, 'Generate txt template password at /var/www/html/mails/pl/password.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(50, 1, 0, 'Generate html template password_query at /var/www/html/mails/pl/password_query.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(51, 1, 0, 'Generate txt template password_query at /var/www/html/mails/pl/password_query.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(52, 1, 0, 'Generate html template payment at /var/www/html/mails/pl/payment.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(53, 1, 0, 'Generate txt template payment at /var/www/html/mails/pl/payment.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(54, 1, 0, 'Generate html template payment_error at /var/www/html/mails/pl/payment_error.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(55, 1, 0, 'Generate txt template payment_error at /var/www/html/mails/pl/payment_error.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(56, 1, 0, 'Generate html template preparation at /var/www/html/mails/pl/preparation.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(57, 1, 0, 'Generate txt template preparation at /var/www/html/mails/pl/preparation.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(58, 1, 0, 'Generate html template productoutofstock at /var/www/html/mails/pl/productoutofstock.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(59, 1, 0, 'Generate txt template productoutofstock at /var/www/html/mails/pl/productoutofstock.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(60, 1, 0, 'Generate html template refund at /var/www/html/mails/pl/refund.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(61, 1, 0, 'Generate txt template refund at /var/www/html/mails/pl/refund.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(62, 1, 0, 'Generate html template reply_msg at /var/www/html/mails/pl/reply_msg.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(63, 1, 0, 'Generate txt template reply_msg at /var/www/html/mails/pl/reply_msg.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(64, 1, 0, 'Generate html template shipped at /var/www/html/mails/pl/shipped.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(65, 1, 0, 'Generate txt template shipped at /var/www/html/mails/pl/shipped.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(66, 1, 0, 'Generate html template test at /var/www/html/mails/pl/test.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(67, 1, 0, 'Generate txt template test at /var/www/html/mails/pl/test.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(68, 1, 0, 'Generate html template voucher at /var/www/html/mails/pl/voucher.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(69, 1, 0, 'Generate txt template voucher at /var/www/html/mails/pl/voucher.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(70, 1, 0, 'Generate html template voucher_new at /var/www/html/mails/pl/voucher_new.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(71, 1, 0, 'Generate txt template voucher_new at /var/www/html/mails/pl/voucher_new.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(72, 1, 0, 'Generate html template followup_1 at /var/www/html/modules//followup/mails/pl/followup_1.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(73, 1, 0, 'Generate txt template followup_1 at /var/www/html/modules//followup/mails/pl/followup_1.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(74, 1, 0, 'Generate html template followup_2 at /var/www/html/modules//followup/mails/pl/followup_2.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(75, 1, 0, 'Generate txt template followup_2 at /var/www/html/modules//followup/mails/pl/followup_2.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(76, 1, 0, 'Generate html template followup_3 at /var/www/html/modules//followup/mails/pl/followup_3.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(77, 1, 0, 'Generate txt template followup_3 at /var/www/html/modules//followup/mails/pl/followup_3.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(78, 1, 0, 'Generate html template followup_4 at /var/www/html/modules//followup/mails/pl/followup_4.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(79, 1, 0, 'Generate txt template followup_4 at /var/www/html/modules//followup/mails/pl/followup_4.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(80, 1, 0, 'Generate html template followup_1 at /var/www/html/modules//ps_reminder/mails/pl/followup_1.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(81, 1, 0, 'Generate txt template followup_1 at /var/www/html/modules//ps_reminder/mails/pl/followup_1.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(82, 1, 0, 'Generate html template followup_2 at /var/www/html/modules//ps_reminder/mails/pl/followup_2.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(83, 1, 0, 'Generate txt template followup_2 at /var/www/html/modules//ps_reminder/mails/pl/followup_2.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(84, 1, 0, 'Generate html template followup_3 at /var/www/html/modules//ps_reminder/mails/pl/followup_3.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(85, 1, 0, 'Generate txt template followup_3 at /var/www/html/modules//ps_reminder/mails/pl/followup_3.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(86, 1, 0, 'Generate html template followup_4 at /var/www/html/modules//ps_reminder/mails/pl/followup_4.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(87, 1, 0, 'Generate txt template followup_4 at /var/www/html/modules//ps_reminder/mails/pl/followup_4.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(88, 1, 0, 'Generate html template customer_qty at /var/www/html/modules//ps_emailalerts/mails/pl/customer_qty.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(89, 1, 0, 'Generate txt template customer_qty at /var/www/html/modules//ps_emailalerts/mails/pl/customer_qty.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(90, 1, 0, 'Generate html template new_order at /var/www/html/modules//ps_emailalerts/mails/pl/new_order.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(91, 1, 0, 'Generate txt template new_order at /var/www/html/modules//ps_emailalerts/mails/pl/new_order.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(92, 1, 0, 'Generate html template order_changed at /var/www/html/modules//ps_emailalerts/mails/pl/order_changed.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(93, 1, 0, 'Generate txt template order_changed at /var/www/html/modules//ps_emailalerts/mails/pl/order_changed.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(94, 1, 0, 'Generate html template productcoverage at /var/www/html/modules//ps_emailalerts/mails/pl/productcoverage.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(95, 1, 0, 'Generate txt template productcoverage at /var/www/html/modules//ps_emailalerts/mails/pl/productcoverage.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(96, 1, 0, 'Generate html template productoutofstock at /var/www/html/modules//ps_emailalerts/mails/pl/productoutofstock.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(97, 1, 0, 'Generate txt template productoutofstock at /var/www/html/modules//ps_emailalerts/mails/pl/productoutofstock.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(98, 1, 0, 'Generate html template return_slip at /var/www/html/modules//ps_emailalerts/mails/pl/return_slip.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(99, 1, 0, 'Generate txt template return_slip at /var/www/html/modules//ps_emailalerts/mails/pl/return_slip.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(100, 1, 0, 'Generate html template newsletter_conf at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_conf.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(101, 1, 0, 'Generate txt template newsletter_conf at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_conf.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(102, 1, 0, 'Generate html template newsletter_verif at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_verif.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(103, 1, 0, 'Generate txt template newsletter_verif at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_verif.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(104, 1, 0, 'Generate html template newsletter_voucher at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_voucher.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(105, 1, 0, 'Generate txt template newsletter_voucher at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_voucher.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(106, 1, 0, 'Generate html template referralprogram-congratulations at /var/www/html/modules//referralprogram/mails/pl/referralprogram-congratulations.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(107, 1, 0, 'Generate txt template referralprogram-congratulations at /var/www/html/modules//referralprogram/mails/pl/referralprogram-congratulations.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(108, 1, 0, 'Generate html template referralprogram-invitation at /var/www/html/modules//referralprogram/mails/pl/referralprogram-invitation.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(109, 1, 0, 'Generate txt template referralprogram-invitation at /var/www/html/modules//referralprogram/mails/pl/referralprogram-invitation.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(110, 1, 0, 'Generate html template referralprogram-voucher at /var/www/html/modules//referralprogram/mails/pl/referralprogram-voucher.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(111, 1, 0, 'Generate txt template referralprogram-voucher at /var/www/html/modules//referralprogram/mails/pl/referralprogram-voucher.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:35', '2023-11-20 19:41:35'),
+(112, 1, 0, 'Protect vendor folder in module blockwishlist', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(113, 1, 0, 'Module blockwishlist has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(114, 1, 0, 'Protect vendor folder in module contactform', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(115, 1, 0, 'Module contactform has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(116, 1, 0, 'Protect vendor folder in module dashactivity', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(117, 1, 0, 'Module dashactivity has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:40', '2023-11-20 19:41:40'),
+(118, 1, 0, 'Protect vendor folder in module dashtrends', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(119, 1, 0, 'Module dashtrends has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(120, 1, 0, 'Protect vendor folder in module dashgoals', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(121, 1, 0, 'Module dashgoals has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(122, 1, 0, 'Protect vendor folder in module dashproducts', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(123, 1, 0, 'Module dashproducts has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(124, 1, 0, 'Protect vendor folder in module graphnvd3', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(125, 1, 0, 'Module graphnvd3 has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(126, 1, 0, 'Protect vendor folder in module gridhtml', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(127, 1, 0, 'Module gridhtml has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(128, 1, 0, 'Protect vendor folder in module gsitemap', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(129, 1, 0, 'Module gsitemap has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(130, 1, 0, 'Protect vendor folder in module pagesnotfound', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(131, 1, 0, 'Module pagesnotfound has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(132, 1, 0, 'Protect vendor folder in module productcomments', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(133, 1, 0, 'Module productcomments has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(134, 1, 0, 'Protect vendor folder in module ps_banner', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(135, 1, 0, 'Module ps_banner has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(136, 1, 0, 'Protect vendor folder in module ps_categorytree', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(137, 1, 0, 'Module ps_categorytree has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
+(138, 1, 0, 'Protect vendor folder in module ps_checkpayment', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(139, 1, 0, 'Module ps_checkpayment has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(140, 1, 0, 'Protect vendor folder in module ps_contactinfo', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(141, 1, 0, 'Module ps_contactinfo has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(142, 1, 0, 'Protect vendor folder in module ps_crossselling', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(143, 1, 0, 'Module ps_crossselling has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(144, 1, 0, 'Protect vendor folder in module ps_currencyselector', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(145, 1, 0, 'Module ps_currencyselector has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(146, 1, 0, 'Protect vendor folder in module ps_customeraccountlinks', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(147, 1, 0, 'Module ps_customeraccountlinks has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(148, 1, 0, 'Protect vendor folder in module ps_customersignin', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(149, 1, 0, 'Module ps_customersignin has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(150, 1, 0, 'Protect vendor folder in module ps_customtext', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(151, 1, 0, 'Module ps_customtext has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(152, 1, 0, 'Protect vendor folder in module ps_dataprivacy', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(153, 1, 0, 'Module ps_dataprivacy has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(154, 1, 0, 'Protect vendor folder in module ps_emailsubscription', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(155, 1, 0, 'Module ps_emailsubscription has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:42', '2023-11-20 19:41:42'),
+(156, 1, 0, 'Protect vendor folder in module ps_facetedsearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(157, 1, 0, 'Module ps_facetedsearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(158, 1, 0, 'Protect vendor folder in module ps_faviconnotificationbo', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(159, 1, 0, 'Module ps_faviconnotificationbo has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(160, 1, 0, 'Protect vendor folder in module ps_featuredproducts', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(161, 1, 0, 'Module ps_featuredproducts has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(162, 1, 0, 'Protect vendor folder in module ps_imageslider', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(163, 1, 0, 'Module ps_imageslider has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(164, 1, 0, 'Protect vendor folder in module ps_languageselector', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(165, 1, 0, 'Module ps_languageselector has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:43', '2023-11-20 19:41:43'),
+(166, 1, 0, 'Protect vendor folder in module ps_linklist', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(167, 1, 0, 'Module ps_linklist has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(168, 1, 0, 'Protect vendor folder in module ps_mainmenu', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(169, 1, 0, 'Module ps_mainmenu has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(170, 1, 0, 'Protect vendor folder in module ps_searchbar', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(171, 1, 0, 'Module ps_searchbar has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(172, 1, 0, 'Protect vendor folder in module ps_sharebuttons', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(173, 1, 0, 'Module ps_sharebuttons has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(174, 1, 0, 'Protect vendor folder in module ps_shoppingcart', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(175, 1, 0, 'Module ps_shoppingcart has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(176, 1, 0, 'Protect vendor folder in module ps_socialfollow', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(177, 1, 0, 'Module ps_socialfollow has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:44', '2023-11-20 19:41:44'),
+(178, 1, 0, 'Protect vendor folder in module ps_themecusto', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(179, 1, 0, 'Module ps_themecusto has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(180, 1, 0, 'Protect vendor folder in module ps_wirepayment', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(181, 1, 0, 'Module ps_wirepayment has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(182, 1, 0, 'Protect vendor folder in module statsbestcategories', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(183, 1, 0, 'Module statsbestcategories has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(184, 1, 0, 'Protect vendor folder in module statsbestcustomers', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(185, 1, 0, 'Module statsbestcustomers has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(186, 1, 0, 'Protect vendor folder in module statsbestproducts', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(187, 1, 0, 'Module statsbestproducts has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(188, 1, 0, 'Protect vendor folder in module statsbestsuppliers', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(189, 1, 0, 'Module statsbestsuppliers has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(190, 1, 0, 'Protect vendor folder in module statsbestvouchers', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(191, 1, 0, 'Module statsbestvouchers has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(192, 1, 0, 'Protect vendor folder in module statscarrier', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(193, 1, 0, 'Module statscarrier has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(194, 1, 0, 'Protect vendor folder in module statscatalog', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(195, 1, 0, 'Module statscatalog has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(196, 1, 0, 'Protect vendor folder in module statscheckup', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(197, 1, 0, 'Module statscheckup has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(198, 1, 0, 'Protect vendor folder in module statsdata', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(199, 1, 0, 'Module statsdata has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(200, 1, 0, 'Protect vendor folder in module statsforecast', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(201, 1, 0, 'Module statsforecast has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(202, 1, 0, 'Protect vendor folder in module statsnewsletter', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(203, 1, 0, 'Module statsnewsletter has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(204, 1, 0, 'Protect vendor folder in module statspersonalinfos', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(205, 1, 0, 'Module statspersonalinfos has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:45', '2023-11-20 19:41:45'),
+(206, 1, 0, 'Protect vendor folder in module statsproduct', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(207, 1, 0, 'Module statsproduct has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(208, 1, 0, 'Protect vendor folder in module statsregistrations', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(209, 1, 0, 'Module statsregistrations has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(210, 1, 0, 'Protect vendor folder in module statssales', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(211, 1, 0, 'Module statssales has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(212, 1, 0, 'Protect vendor folder in module statssearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(213, 1, 0, 'Module statssearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(214, 1, 0, 'Protect vendor folder in module statsstock', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(215, 1, 0, 'Module statsstock has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(216, 1, 0, 'Protect vendor folder in module welcome', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(217, 1, 0, 'Module welcome has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:41:46', '2023-11-20 19:41:46'),
+(218, 1, 0, 'Protect vendor folder in module psgdpr', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:20', '2023-11-20 19:42:20'),
+(219, 1, 0, 'Protect vendor folder in module ps_mbo', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(220, 1, 0, 'Protect vendor folder in module ps_checkout', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:21', '2023-11-20 19:42:21'),
+(221, 1, 0, 'Protect vendor folder in module ps_metrics', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:22', '2023-11-20 19:42:22'),
+(222, 1, 0, 'Protect vendor folder in module ps_facebook', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:23', '2023-11-20 19:42:23'),
+(223, 1, 0, 'Protect vendor folder in module psxmarketingwithgoogle', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:24', '2023-11-20 19:42:24'),
+(224, 1, 0, 'Protect vendor folder in module blockreassurance', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:28', '2023-11-20 19:42:28'),
+(225, 1, 0, 'Module blockreassurance has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:28', '2023-11-20 19:42:28'),
+(226, 1, 0, 'Protect vendor folder in module ps_facetedsearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(227, 1, 0, 'Module ps_facetedsearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
+(228, 1, 0, 'Połączenie z panelem administracyjnym z 172.19.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-23 02:46:07', '2023-11-23 02:46:07');
 
 -- --------------------------------------------------------
 
@@ -7613,8 +7668,8 @@ CREATE TABLE `ad_manufacturer` (
 --
 
 INSERT INTO `ad_manufacturer` (`id_manufacturer`, `name`, `date_add`, `date_upd`, `active`) VALUES
-(1, 'Studio Design', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1),
-(2, 'Graphic Corner', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1);
+(1, 'Studio Design', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1),
+(2, 'Graphic Corner', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1);
 
 -- --------------------------------------------------------
 
@@ -7751,12 +7806,13 @@ INSERT INTO `ad_meta` (`id_meta`, `page`, `configurable`) VALUES
 (31, 'module-bankwire-validation', 0),
 (32, 'module-bankwire-payment', 0),
 (33, 'module-cashondelivery-validation', 0),
+(34, 'module-ps_checkpayment-payment', 1),
+(35, 'module-ps_checkpayment-validation', 1),
 (36, 'module-ps_emailsubscription-verification', 1),
 (37, 'module-ps_emailsubscription-subscription', 1),
 (38, 'module-ps_shoppingcart-ajax', 1),
 (39, 'module-ps_wirepayment-payment', 1),
-(40, 'module-ps_wirepayment-validation', 1),
-(41, 'module-ps_cashondelivery-validation', 1);
+(40, 'module-ps_wirepayment-validation', 1);
 
 -- --------------------------------------------------------
 
@@ -7804,12 +7860,13 @@ INSERT INTO `ad_meta_lang` (`id_meta`, `id_shop`, `id_lang`, `title`, `descripti
 (23, 1, 1, 'Sklepy', '', '', 'nasze-sklepy'),
 (24, 1, 1, 'Śledzenie zamówień gości', '', '', 'sledzenie-zamowien-gosci'),
 (25, 1, 1, 'Potwierdzenie zamówienia', '', '', 'potwierdzenie-zamowienia'),
+(34, 1, 1, '', '', '', ''),
+(35, 1, 1, '', '', '', ''),
 (36, 1, 1, '', '', '', ''),
 (37, 1, 1, '', '', '', ''),
 (38, 1, 1, '', '', '', ''),
 (39, 1, 1, '', '', '', ''),
-(40, 1, 1, '', '', '', ''),
-(41, 1, 1, '', '', '', '');
+(40, 1, 1, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -7842,6 +7899,7 @@ INSERT INTO `ad_module` (`id_module`, `name`, `active`, `version`) VALUES
 (11, 'productcomments', 1, '5.0.3'),
 (12, 'ps_banner', 1, '2.1.2'),
 (13, 'ps_categorytree', 1, '2.0.3'),
+(14, 'ps_checkpayment', 1, '2.0.6'),
 (15, 'ps_contactinfo', 1, '3.3.2'),
 (16, 'ps_crossselling', 1, '2.0.2'),
 (17, 'ps_currencyselector', 1, '2.1.1'),
@@ -7882,12 +7940,12 @@ INSERT INTO `ad_module` (`id_module`, `name`, `active`, `version`) VALUES
 (53, 'welcome', 1, '6.0.9'),
 (54, 'psgdpr', 1, '1.4.3'),
 (55, 'ps_mbo', 1, '2.3.3'),
+(56, 'ps_checkout', 1, '7.3.5.1'),
 (57, 'ps_metrics', 1, '4.0.2'),
-(58, 'ps_facebook', 1, '1.33.1'),
+(58, 'ps_facebook', 1, '1.33.2'),
 (59, 'psxmarketingwithgoogle', 1, '1.61.1'),
 (60, 'blockreassurance', 1, '5.1.2'),
-(61, 'ps_facetedsearch', 1, '3.12.1'),
-(62, 'ps_cashondelivery', 1, '2.0.1');
+(61, 'ps_facetedsearch', 1, '3.12.1');
 
 -- --------------------------------------------------------
 
@@ -7957,6 +8015,10 @@ INSERT INTO `ad_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 550),
 (1, 551),
 (1, 552),
+(1, 553),
+(1, 554),
+(1, 555),
+(1, 556),
 (1, 557),
 (1, 558),
 (1, 559),
@@ -8117,6 +8179,10 @@ INSERT INTO `ad_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 762),
 (1, 763),
 (1, 764),
+(1, 765),
+(1, 766),
+(1, 767),
+(1, 768),
 (1, 777),
 (1, 778),
 (1, 779),
@@ -8136,11 +8202,7 @@ INSERT INTO `ad_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 825),
 (1, 826),
 (1, 827),
-(1, 828),
-(1, 829),
-(1, 830),
-(1, 831),
-(1, 832);
+(1, 828);
 
 -- --------------------------------------------------------
 
@@ -8159,16 +8221,24 @@ CREATE TABLE `ad_module_carrier` (
 --
 
 INSERT INTO `ad_module_carrier` (`id_module`, `id_shop`, `id_reference`) VALUES
+(14, 1, 1),
+(14, 1, 2),
+(14, 1, 3),
+(14, 1, 4),
+(14, 1, 5),
+(14, 1, 7),
 (35, 1, 1),
 (35, 1, 2),
 (35, 1, 3),
 (35, 1, 4),
 (35, 1, 5),
-(62, 1, 1),
-(62, 1, 2),
-(62, 1, 3),
-(62, 1, 4),
-(62, 1, 5);
+(35, 1, 7),
+(56, 1, 1),
+(56, 1, 2),
+(56, 1, 3),
+(56, 1, 4),
+(56, 1, 5),
+(56, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -8187,8 +8257,208 @@ CREATE TABLE `ad_module_country` (
 --
 
 INSERT INTO `ad_module_country` (`id_module`, `id_shop`, `id_country`) VALUES
+(14, 1, 14),
 (35, 1, 14),
-(62, 1, 14);
+(56, 1, 1),
+(56, 1, 2),
+(56, 1, 3),
+(56, 1, 4),
+(56, 1, 5),
+(56, 1, 6),
+(56, 1, 7),
+(56, 1, 8),
+(56, 1, 9),
+(56, 1, 10),
+(56, 1, 11),
+(56, 1, 12),
+(56, 1, 13),
+(56, 1, 14),
+(56, 1, 15),
+(56, 1, 16),
+(56, 1, 17),
+(56, 1, 18),
+(56, 1, 19),
+(56, 1, 20),
+(56, 1, 21),
+(56, 1, 22),
+(56, 1, 23),
+(56, 1, 24),
+(56, 1, 25),
+(56, 1, 26),
+(56, 1, 27),
+(56, 1, 28),
+(56, 1, 29),
+(56, 1, 30),
+(56, 1, 31),
+(56, 1, 32),
+(56, 1, 33),
+(56, 1, 34),
+(56, 1, 35),
+(56, 1, 36),
+(56, 1, 37),
+(56, 1, 38),
+(56, 1, 40),
+(56, 1, 41),
+(56, 1, 42),
+(56, 1, 43),
+(56, 1, 44),
+(56, 1, 45),
+(56, 1, 46),
+(56, 1, 47),
+(56, 1, 48),
+(56, 1, 49),
+(56, 1, 51),
+(56, 1, 52),
+(56, 1, 53),
+(56, 1, 54),
+(56, 1, 55),
+(56, 1, 56),
+(56, 1, 57),
+(56, 1, 58),
+(56, 1, 59),
+(56, 1, 60),
+(56, 1, 62),
+(56, 1, 63),
+(56, 1, 64),
+(56, 1, 65),
+(56, 1, 67),
+(56, 1, 68),
+(56, 1, 69),
+(56, 1, 70),
+(56, 1, 71),
+(56, 1, 72),
+(56, 1, 73),
+(56, 1, 74),
+(56, 1, 76),
+(56, 1, 77),
+(56, 1, 78),
+(56, 1, 79),
+(56, 1, 81),
+(56, 1, 82),
+(56, 1, 83),
+(56, 1, 85),
+(56, 1, 86),
+(56, 1, 87),
+(56, 1, 88),
+(56, 1, 89),
+(56, 1, 90),
+(56, 1, 91),
+(56, 1, 92),
+(56, 1, 93),
+(56, 1, 95),
+(56, 1, 96),
+(56, 1, 97),
+(56, 1, 98),
+(56, 1, 100),
+(56, 1, 102),
+(56, 1, 103),
+(56, 1, 104),
+(56, 1, 106),
+(56, 1, 107),
+(56, 1, 108),
+(56, 1, 109),
+(56, 1, 110),
+(56, 1, 114),
+(56, 1, 116),
+(56, 1, 117),
+(56, 1, 118),
+(56, 1, 119),
+(56, 1, 121),
+(56, 1, 122),
+(56, 1, 123),
+(56, 1, 124),
+(56, 1, 126),
+(56, 1, 129),
+(56, 1, 130),
+(56, 1, 132),
+(56, 1, 133),
+(56, 1, 134),
+(56, 1, 135),
+(56, 1, 136),
+(56, 1, 137),
+(56, 1, 138),
+(56, 1, 139),
+(56, 1, 140),
+(56, 1, 141),
+(56, 1, 142),
+(56, 1, 143),
+(56, 1, 144),
+(56, 1, 145),
+(56, 1, 146),
+(56, 1, 147),
+(56, 1, 148),
+(56, 1, 149),
+(56, 1, 150),
+(56, 1, 151),
+(56, 1, 152),
+(56, 1, 153),
+(56, 1, 154),
+(56, 1, 155),
+(56, 1, 156),
+(56, 1, 157),
+(56, 1, 158),
+(56, 1, 159),
+(56, 1, 160),
+(56, 1, 162),
+(56, 1, 164),
+(56, 1, 166),
+(56, 1, 167),
+(56, 1, 168),
+(56, 1, 169),
+(56, 1, 170),
+(56, 1, 171),
+(56, 1, 173),
+(56, 1, 174),
+(56, 1, 175),
+(56, 1, 176),
+(56, 1, 178),
+(56, 1, 179),
+(56, 1, 181),
+(56, 1, 182),
+(56, 1, 183),
+(56, 1, 184),
+(56, 1, 185),
+(56, 1, 186),
+(56, 1, 187),
+(56, 1, 188),
+(56, 1, 189),
+(56, 1, 190),
+(56, 1, 191),
+(56, 1, 192),
+(56, 1, 193),
+(56, 1, 195),
+(56, 1, 197),
+(56, 1, 198),
+(56, 1, 199),
+(56, 1, 201),
+(56, 1, 202),
+(56, 1, 203),
+(56, 1, 204),
+(56, 1, 206),
+(56, 1, 207),
+(56, 1, 208),
+(56, 1, 210),
+(56, 1, 211),
+(56, 1, 212),
+(56, 1, 213),
+(56, 1, 214),
+(56, 1, 215),
+(56, 1, 216),
+(56, 1, 218),
+(56, 1, 219),
+(56, 1, 220),
+(56, 1, 221),
+(56, 1, 223),
+(56, 1, 225),
+(56, 1, 226),
+(56, 1, 227),
+(56, 1, 228),
+(56, 1, 231),
+(56, 1, 233),
+(56, 1, 234),
+(56, 1, 237),
+(56, 1, 238),
+(56, 1, 239);
 
 -- --------------------------------------------------------
 
@@ -8207,8 +8477,9 @@ CREATE TABLE `ad_module_currency` (
 --
 
 INSERT INTO `ad_module_currency` (`id_module`, `id_shop`, `id_currency`) VALUES
+(14, 1, 1),
 (35, 1, 1),
-(62, 1, 1);
+(56, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -8266,6 +8537,9 @@ INSERT INTO `ad_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (13, 1, 1),
 (13, 1, 2),
 (13, 1, 3),
+(14, 1, 1),
+(14, 1, 2),
+(14, 1, 3),
 (15, 1, 1),
 (15, 1, 2),
 (15, 1, 3),
@@ -8386,6 +8660,9 @@ INSERT INTO `ad_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (55, 1, 1),
 (55, 1, 2),
 (55, 1, 3),
+(56, 1, 1),
+(56, 1, 2),
+(56, 1, 3),
 (57, 1, 1),
 (57, 1, 2),
 (57, 1, 3),
@@ -8400,10 +8677,7 @@ INSERT INTO `ad_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (60, 1, 3),
 (61, 1, 1),
 (61, 1, 2),
-(61, 1, 3),
-(62, 1, 1),
-(62, 1, 2),
-(62, 1, 3);
+(61, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -8424,11 +8698,8 @@ CREATE TABLE `ad_module_history` (
 --
 
 INSERT INTO `ad_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `date_upd`) VALUES
-(1, 1, 35, '2023-11-18 16:37:30', '2023-11-18 16:37:30'),
-(2, 1, 60, '2023-11-18 19:43:39', '2023-11-18 20:31:35'),
-(3, 1, 21, '2023-11-18 19:48:40', '2023-11-18 19:48:40'),
-(4, 1, 2, '2023-11-18 19:50:10', '2023-11-18 19:50:10'),
-(5, 1, 15, '2023-11-18 19:50:19', '2023-11-18 19:50:19');
+(1, 1, 12, '2023-11-23 02:53:51', '2023-11-23 02:53:51'),
+(2, 1, 29, '2023-11-23 02:59:09', '2023-11-23 02:59:09');
 
 -- --------------------------------------------------------
 
@@ -8474,6 +8745,7 @@ INSERT INTO `ad_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (11, 1, 7),
 (12, 1, 3),
 (13, 1, 7),
+(14, 1, 7),
 (15, 1, 7),
 (16, 1, 7),
 (17, 1, 7),
@@ -8514,12 +8786,12 @@ INSERT INTO `ad_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (53, 1, 7),
 (54, 1, 7),
 (55, 1, 7),
+(56, 1, 7),
 (57, 1, 7),
 (58, 1, 7),
 (59, 1, 7),
 (60, 1, 7),
-(61, 1, 7),
-(62, 1, 7);
+(61, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -8608,12 +8880,11 @@ CREATE TABLE `ad_orders` (
 --
 
 INSERT INTO `ad_orders` (`id_order`, `reference`, `id_shop_group`, `id_shop`, `id_carrier`, `id_lang`, `id_customer`, `id_cart`, `id_currency`, `id_address_delivery`, `id_address_invoice`, `current_state`, `secure_key`, `payment`, `conversion_rate`, `module`, `recyclable`, `gift`, `gift_message`, `mobile_theme`, `shipping_number`, `total_discounts`, `total_discounts_tax_incl`, `total_discounts_tax_excl`, `total_paid`, `total_paid_tax_incl`, `total_paid_tax_excl`, `total_paid_real`, `total_products`, `total_products_wt`, `total_shipping`, `total_shipping_tax_incl`, `total_shipping_tax_excl`, `carrier_tax_rate`, `total_wrapping`, `total_wrapping_tax_incl`, `total_wrapping_tax_excl`, `round_mode`, `round_type`, `invoice_number`, `delivery_number`, `invoice_date`, `delivery_date`, `valid`, `date_add`, `date_upd`, `note`) VALUES
-(1, 'XKBKNABJK', 1, 1, 2, 1, 2, 1, 1, 5, 5, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 61.800000, 68.200000, 66.800000, 0.000000, 59.800000, 59.800000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 'Test'),
-(2, 'OHSATSERP', 1, 1, 2, 1, 2, 2, 1, 5, 5, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 169.900000, 169.900000, 169.900000, 0.000000, 169.900000, 169.900000, 0.000000, 0.000000, 0.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', ''),
-(3, 'UOYEVOLI', 1, 1, 2, 1, 2, 3, 1, 5, 5, 8, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 14.900000, 21.300000, 19.900000, 0.000000, 12.900000, 12.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', ''),
-(4, 'FFATNOMMJ', 1, 1, 2, 1, 2, 4, 1, 5, 5, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 14.900000, 21.300000, 19.900000, 0.000000, 12.900000, 12.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', ''),
-(5, 'KHWLILZLL', 1, 1, 2, 1, 2, 5, 1, 5, 5, 10, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Bank wire', 1.000000, 'ps_wirepayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 20.900000, 27.300000, 25.900000, 0.000000, 18.900000, 18.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', ''),
-(6, 'AJVQLAMFZ', 1, 1, 2, 1, 4, 7, 1, 8, 8, 10, '42397d7a86c715692d4d271c4c52262c', 'Płatności elektroniczne', 1.000000, 'ps_wirepayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 43.940000, 43.940000, 35.720000, 0.000000, 28.720000, 35.330000, 8.610000, 8.610000, 7.000000, 23.000, 0.000000, 0.000000, 0.000000, 2, 2, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06', '');
+(1, 'XKBKNABJK', 1, 1, 2, 1, 2, 1, 1, 5, 5, 6, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 61.800000, 68.200000, 66.800000, 0.000000, 59.800000, 59.800000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-20 19:42:38', '2023-11-20 19:42:38', 'Test'),
+(2, 'OHSATSERP', 1, 1, 2, 1, 2, 2, 1, 5, 5, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 169.900000, 169.900000, 169.900000, 0.000000, 169.900000, 169.900000, 0.000000, 0.000000, 0.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-20 19:42:38', '2023-11-20 19:42:38', ''),
+(3, 'UOYEVOLI', 1, 1, 2, 1, 2, 3, 1, 5, 5, 8, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 14.900000, 21.300000, 19.900000, 0.000000, 12.900000, 12.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-20 19:42:38', '2023-11-20 19:42:38', ''),
+(4, 'FFATNOMMJ', 1, 1, 2, 1, 2, 4, 1, 5, 5, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Payment by check', 1.000000, 'ps_checkpayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 14.900000, 21.300000, 19.900000, 0.000000, 12.900000, 12.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-20 19:42:38', '2023-11-20 19:42:38', ''),
+(5, 'KHWLILZLL', 1, 1, 2, 1, 2, 5, 1, 5, 5, 10, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 'Bank wire', 1.000000, 'ps_wirepayment', 0, 0, '', 0, '', 0.000000, 0.000000, 0.000000, 20.900000, 27.300000, 25.900000, 0.000000, 18.900000, 18.900000, 7.000000, 8.400000, 7.000000, 0.000, 0.000000, 0.000000, 0.000000, 0, 0, 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, '2023-11-20 19:42:38', '2023-11-20 19:42:38', '');
 
 -- --------------------------------------------------------
 
@@ -8638,12 +8909,11 @@ CREATE TABLE `ad_order_carrier` (
 --
 
 INSERT INTO `ad_order_carrier` (`id_order_carrier`, `id_order`, `id_carrier`, `id_order_invoice`, `weight`, `shipping_cost_tax_excl`, `shipping_cost_tax_incl`, `tracking_number`, `date_add`) VALUES
-(1, 1, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-17 09:29:10'),
-(2, 2, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-17 09:29:10'),
-(3, 3, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-17 09:29:10'),
-(4, 4, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-17 09:29:10'),
-(5, 5, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-17 09:29:10'),
-(6, 6, 2, 0, 0.300000, 7.000000, 8.610000, '', '2023-11-18 16:53:06');
+(1, 1, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-20 19:42:38'),
+(2, 2, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-20 19:42:38'),
+(3, 3, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-20 19:42:38'),
+(4, 4, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-20 19:42:38'),
+(5, 5, 2, 0, 0.000000, 7.000000, 8.400000, '', '2023-11-20 19:42:38');
 
 -- --------------------------------------------------------
 
@@ -8732,8 +9002,7 @@ INSERT INTO `ad_order_detail` (`id_order_detail`, `id_order`, `id_order_invoice`
 (4, 2, 0, 0, 1, 8, 0, 0, 'Mug Today is a good day', 1, 1, 0, 0, 0, 11.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_13', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 11.900000, 11.900000, 11.900000, 11.900000, 0.000000, 0.000000, 0.000000, 11.900000, 0.000000, 0.000000, 0.000000),
 (5, 3, 0, 0, 1, 16, 28, 0, 'Mountain fox notebook Style : Ruled', 1, 1, 0, 0, 0, 12.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_8', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 12.900000, 12.900000, 12.900000, 12.900000, 0.000000, 0.000000, 0.000000, 12.900000, 0.000000, 0.000000, 0.000000),
 (6, 4, 0, 0, 1, 16, 29, 0, 'Mountain fox notebook Style : Plain', 1, 1, 0, 0, 0, 12.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_8', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 12.900000, 12.900000, 12.900000, 12.900000, 0.000000, 0.000000, 0.000000, 12.900000, 0.000000, 0.000000, 0.000000),
-(7, 5, 0, 0, 1, 10, 25, 0, 'Brown bear cushion Color : Black', 1, 1, 0, 0, 0, 18.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_16', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 18.900000, 18.900000, 18.900000, 18.900000, 0.000000, 0.000000, 0.000000, 18.900000, 0.000000, 0.000000, 0.000000),
-(8, 6, 0, 0, 1, 2, 9, 0, 'Hummingbird printed sweater (Rozmiar: S)', 1, 1, 0, 0, 0, 28.720000, 20.00, 0.000000, 0.000000, 0.000000, 0.00, 36.560000, '', '', '', '', 'demo_3', 'demo_3_62', 0.300000, 1, 0, 'PTU PL 23%', 23.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 35.330000, 28.720000, 35.325600, 28.720000, 0.000000, 0.000000, 5.490000, 35.900000, 0.000000, 0.000000, 0.000000);
+(7, 5, 0, 0, 1, 10, 25, 0, 'Brown bear cushion Color : Black', 1, 1, 0, 0, 0, 18.900000, 0.00, 0.000000, 0.000000, 0.000000, 0.00, 0.000000, '', '', '', '', 'demo_16', '', 0.000000, 0, 0, '', 0.000, 0.000000, 0.000, 0, '', 0, '0000-00-00 00:00:00', 18.900000, 18.900000, 18.900000, 18.900000, 0.000000, 0.000000, 0.000000, 18.900000, 0.000000, 0.000000, 0.000000);
 
 -- --------------------------------------------------------
 
@@ -8747,13 +9016,6 @@ CREATE TABLE `ad_order_detail_tax` (
   `unit_amount` decimal(16,6) NOT NULL DEFAULT 0.000000,
   `total_amount` decimal(16,6) NOT NULL DEFAULT 0.000000
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `ad_order_detail_tax`
---
-
-INSERT INTO `ad_order_detail_tax` (`id_order_detail`, `id_tax`, `unit_amount`, `total_amount`) VALUES
-(8, 1, 6.605600, 6.610000);
 
 -- --------------------------------------------------------
 
@@ -8774,14 +9036,13 @@ CREATE TABLE `ad_order_history` (
 --
 
 INSERT INTO `ad_order_history` (`id_order_history`, `id_employee`, `id_order`, `id_order_state`, `date_add`) VALUES
-(1, 0, 1, 1, '2023-11-17 09:29:10'),
-(2, 0, 2, 1, '2023-11-17 09:29:10'),
-(3, 0, 3, 1, '2023-11-17 09:29:10'),
-(4, 0, 4, 1, '2023-11-17 09:29:10'),
-(5, 0, 5, 10, '2023-11-17 09:29:10'),
-(6, 1, 1, 6, '2023-11-17 09:29:10'),
-(7, 1, 3, 8, '2023-11-17 09:29:10'),
-(8, 0, 6, 10, '2023-11-18 16:53:06');
+(1, 0, 1, 1, '2023-11-20 19:42:38'),
+(2, 0, 2, 1, '2023-11-20 19:42:38'),
+(3, 0, 3, 1, '2023-11-20 19:42:38'),
+(4, 0, 4, 1, '2023-11-20 19:42:38'),
+(5, 0, 5, 10, '2023-11-20 19:42:38'),
+(6, 1, 1, 6, '2023-11-20 19:42:38'),
+(7, 1, 3, 8, '2023-11-20 19:42:38');
 
 -- --------------------------------------------------------
 
@@ -8852,7 +9113,7 @@ CREATE TABLE `ad_order_message` (
 --
 
 INSERT INTO `ad_order_message` (`id_order_message`, `date_add`) VALUES
-(1, '2023-11-17 09:29:10');
+(1, '2023-11-20 19:42:38');
 
 -- --------------------------------------------------------
 
@@ -9131,9 +9392,7 @@ CREATE TABLE `ad_page` (
 --
 
 INSERT INTO `ad_page` (`id_page`, `id_page_type`, `id_object`) VALUES
-(1, 1, NULL),
-(2, 2, NULL),
-(3, 3, NULL);
+(1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -9166,9 +9425,7 @@ CREATE TABLE `ad_page_type` (
 --
 
 INSERT INTO `ad_page_type` (`id_page_type`, `name`) VALUES
-(3, 'cms'),
-(1, 'index'),
-(2, 'orderconfirmation');
+(1, 'index');
 
 -- --------------------------------------------------------
 
@@ -9253,25 +9510,25 @@ CREATE TABLE `ad_product` (
 --
 
 INSERT INTO `ad_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_category_default`, `id_shop_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ean13`, `isbn`, `upc`, `mpn`, `ecotax`, `quantity`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `reference`, `supplier_reference`, `location`, `width`, `height`, `depth`, `weight`, `out_of_stock`, `additional_delivery_times`, `quantity_discount`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_is_pack`, `cache_has_attachments`, `is_virtual`, `cache_default_attribute`, `date_add`, `date_upd`, `advanced_stock_management`, `pack_stock_type`, `state`, `product_type`) VALUES
-(1, 1, 1, 4, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 23.900000, 0.000000, '', 0.000000, 0.000000, 'demo_1', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 3, 1, 'combinations'),
-(2, 1, 1, 5, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 35.900000, 0.000000, '', 0.000000, 0.000000, 'demo_3', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 9, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 3, 1, 'combinations'),
-(3, 1, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 'demo_6', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 13, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 3, 1, 'combinations'),
-(4, 1, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 'demo_5', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 16, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
-(5, 1, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 'demo_7', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 19, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
-(6, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 'demo_11', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'standard'),
-(7, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 'demo_12', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'standard'),
-(8, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 'demo_13', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'standard'),
-(9, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 'demo_15', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 22, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
-(10, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 'demo_16', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 24, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
-(11, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 'demo_17', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 26, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
-(12, 2, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 'demo_18', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 1, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'virtual'),
-(13, 2, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 'demo_19', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 1, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'virtual'),
-(14, 2, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 'demo_20', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 1, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'virtual'),
-(15, 2, 0, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 35.000000, 0.000000, '', 0.000000, 0.000000, 'demo_21', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 1, 0, 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'pack'),
-(16, 2, 2, 7, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 'demo_8', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 28, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
-(17, 2, 2, 7, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 'demo_9', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 32, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
-(18, 2, 2, 7, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 'demo_10', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 36, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
-(19, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 13.900000, 0.000000, '', 0.000000, 0.000000, 'demo_14', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 1, 0, 1, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'standard');
+(1, 1, 1, 4, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 23.900000, 0.000000, '', 0.000000, 0.000000, 'demo_1', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 1, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(2, 1, 1, 5, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 35.900000, 0.000000, '', 0.000000, 0.000000, 'demo_3', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 9, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(3, 1, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 'demo_6', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 13, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(4, 1, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 'demo_5', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 16, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(5, 1, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 'demo_7', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 19, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(6, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 'demo_11', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'standard'),
+(7, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 'demo_12', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'standard'),
+(8, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 'demo_13', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'standard'),
+(9, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 'demo_15', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 22, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(10, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 'demo_16', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 24, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(11, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 'demo_17', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 26, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(12, 2, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 'demo_18', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 1, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'virtual'),
+(13, 2, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 'demo_19', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 1, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'virtual'),
+(14, 2, 2, 9, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 'demo_20', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 1, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'virtual'),
+(15, 2, 0, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 35.000000, 0.000000, '', 0.000000, 0.000000, 'demo_21', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 1, 0, 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'pack'),
+(16, 2, 2, 7, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 'demo_8', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 28, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(17, 2, 2, 7, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 'demo_9', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 32, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(18, 2, 2, 7, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 'demo_10', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 36, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'combinations'),
+(19, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 13.900000, 0.000000, '', 0.000000, 0.000000, 'demo_14', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 1, 0, 1, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 0, 3, 1, 'standard');
 
 -- --------------------------------------------------------
 
@@ -9564,18 +9821,18 @@ CREATE TABLE `ad_product_carrier` (
 --
 
 CREATE TABLE `ad_product_comment` (
-  `id_product_comment` int(10) UNSIGNED NOT NULL,
-  `id_product` int(10) UNSIGNED NOT NULL,
-  `id_customer` int(10) UNSIGNED NOT NULL,
-  `id_guest` int(10) UNSIGNED DEFAULT NULL,
-  `title` varchar(64) DEFAULT NULL,
-  `content` text NOT NULL,
-  `customer_name` varchar(64) DEFAULT NULL,
-  `grade` float UNSIGNED NOT NULL,
+  `id_product_comment` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL,
+  `id_customer` int(11) NOT NULL,
+  `id_guest` int(11) NOT NULL,
+  `customer_name` varchar(64) NOT NULL,
+  `title` varchar(64) NOT NULL,
+  `content` longtext NOT NULL,
+  `grade` int(11) NOT NULL,
   `validate` tinyint(1) NOT NULL,
   `deleted` tinyint(1) NOT NULL,
   `date_add` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -9584,10 +9841,10 @@ CREATE TABLE `ad_product_comment` (
 --
 
 CREATE TABLE `ad_product_comment_criterion` (
-  `id_product_comment_criterion` int(10) UNSIGNED NOT NULL,
-  `id_product_comment_criterion_type` tinyint(1) NOT NULL,
+  `id_product_comment_criterion` int(11) NOT NULL,
+  `id_product_comment_criterion_type` int(11) NOT NULL,
   `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `ad_product_comment_criterion`
@@ -9644,10 +9901,10 @@ CREATE TABLE `ad_product_comment_criterion_product` (
 --
 
 CREATE TABLE `ad_product_comment_grade` (
-  `id_product_comment` int(10) UNSIGNED NOT NULL,
-  `id_product_comment_criterion` int(10) UNSIGNED NOT NULL,
-  `grade` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `id_product_comment` int(11) NOT NULL,
+  `id_product_comment_criterion` int(11) NOT NULL,
+  `grade` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -9656,9 +9913,9 @@ CREATE TABLE `ad_product_comment_grade` (
 --
 
 CREATE TABLE `ad_product_comment_report` (
-  `id_product_comment` int(10) UNSIGNED NOT NULL,
-  `id_customer` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `id_customer` int(11) NOT NULL,
+  `id_product_comment` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -9667,10 +9924,10 @@ CREATE TABLE `ad_product_comment_report` (
 --
 
 CREATE TABLE `ad_product_comment_usefulness` (
-  `id_product_comment` int(10) UNSIGNED NOT NULL,
-  `id_customer` int(10) UNSIGNED NOT NULL,
-  `usefulness` tinyint(1) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `id_customer` int(11) NOT NULL,
+  `id_product_comment` int(11) NOT NULL,
+  `usefulness` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -9823,25 +10080,25 @@ CREATE TABLE `ad_product_shop` (
 --
 
 INSERT INTO `ad_product_shop` (`id_product`, `id_shop`, `id_category_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ecotax`, `minimal_quantity`, `low_stock_threshold`, `low_stock_alert`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_type_redirected`, `available_for_order`, `available_date`, `show_condition`, `condition`, `show_price`, `indexed`, `visibility`, `cache_default_attribute`, `advanced_stock_management`, `date_add`, `date_upd`, `pack_stock_type`) VALUES
-(1, 1, 4, 1, 0, 0, 0.000000, 1, NULL, 0, 23.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 1, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 3),
-(2, 1, 5, 1, 0, 0, 0.000000, 1, NULL, 0, 35.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 9, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 3),
-(3, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 13, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 3),
-(4, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 16, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(5, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 19, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(6, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(7, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(8, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(9, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 22, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(10, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 24, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(11, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 26, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(12, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(13, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(14, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(15, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 35.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(16, 1, 7, 1, 0, 0, 0.000000, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 28, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(17, 1, 7, 1, 0, 0, 0.000000, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 32, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(18, 1, 7, 1, 0, 0, 0.000000, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 36, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(19, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 13.900000, 0.000000, '', 0.000000, 0.000000, 1, 0, 1, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3);
+(1, 1, 4, 1, 0, 0, 0.000000, 1, NULL, 0, 23.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 1, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(2, 1, 5, 1, 0, 0, 0.000000, 1, NULL, 0, 35.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 9, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(3, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 13, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(4, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 16, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(5, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 29.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 19, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(6, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(7, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(8, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 11.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(9, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 22, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(10, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 24, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(11, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 18.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 26, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(12, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(13, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(14, 1, 9, 1, 0, 0, 0.000000, 1, NULL, 0, 9.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(15, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 35.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(16, 1, 7, 1, 0, 0, 0.000000, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 28, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(17, 1, 7, 1, 0, 0, 0.000000, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 32, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(18, 1, 7, 1, 0, 0, 0.000000, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 36, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3),
+(19, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 13.900000, 0.000000, '', 0.000000, 0.000000, 1, 0, 1, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-20 19:42:37', '2023-11-20 19:42:37', 3);
 
 -- --------------------------------------------------------
 
@@ -10100,14 +10357,6 @@ CREATE TABLE `ad_psgdpr_log` (
   `date_upd` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `ad_psgdpr_log`
---
-
-INSERT INTO `ad_psgdpr_log` (`id_gdpr_log`, `id_customer`, `id_guest`, `client_name`, `id_module`, `request_type`, `date_add`, `date_upd`) VALUES
-(1, 3, 0, 'd d', 0, 1, '2023-11-17 10:19:39', '2023-11-17 10:19:39'),
-(2, 4, 0, 'Szymon Małecki', 0, 1, '2023-11-18 16:52:44', '2023-11-18 16:52:44');
-
 -- --------------------------------------------------------
 
 --
@@ -10131,9 +10380,9 @@ CREATE TABLE `ad_psreassurance` (
 --
 
 INSERT INTO `ad_psreassurance` (`id_psreassurance`, `icon`, `custom_icon`, `status`, `position`, `type_link`, `id_cms`, `date_add`, `date_upd`) VALUES
-(1, '/modules/blockreassurance/views/img/reassurance/pack2/security.svg', '', 1, 1, 1, 3, '2023-11-18 20:32:04', '2023-11-18 20:32:04'),
-(2, '/modules/blockreassurance/views/img/reassurance/pack2/carrier.svg', '', 1, 2, 1, 1, '2023-11-18 20:31:53', '2023-11-18 20:31:53'),
-(3, '/modules/blockreassurance/views/img/reassurance/pack2/parcel.svg', '', 1, 3, 1, 6, '2023-11-18 20:35:46', '2023-11-18 20:35:46');
+(1, '/modules/blockreassurance/views/img/reassurance/pack2/security.svg', NULL, 1, 1, NULL, NULL, '2023-11-20 18:42:27', NULL),
+(2, '/modules/blockreassurance/views/img/reassurance/pack2/carrier.svg', NULL, 1, 2, NULL, NULL, '2023-11-20 18:42:27', NULL),
+(3, '/modules/blockreassurance/views/img/reassurance/pack2/parcel.svg', NULL, 1, 3, NULL, NULL, '2023-11-20 18:42:27', NULL);
 
 -- --------------------------------------------------------
 
@@ -10154,9 +10403,9 @@ CREATE TABLE `ad_psreassurance_lang` (
 --
 
 INSERT INTO `ad_psreassurance_lang` (`id_psreassurance`, `id_lang`, `title`, `description`, `link`) VALUES
-(1, 1, 'Polityka prywatności', '', 'http://localhost:8080/content/3-terms-and-conditions-of-use'),
-(2, 1, 'Dostawa', '', 'http://localhost:8080/content/1-dostawa'),
-(3, 1, 'Zwroty', '', 'http://localhost:8080/content/6-zwroty');
+(1, 1, 'Polityka bezpieczeństwa', '(edytuj w module Customer Reassurance)', ''),
+(2, 1, 'Zasady dostawy', '(edytuj w module Customer Reassurance)', ''),
+(3, 1, 'Zasady zwrotu', '(edytuj w module Customer Reassurance)', '');
 
 -- --------------------------------------------------------
 
@@ -10227,7 +10476,13 @@ INSERT INTO `ad_range_price` (`id_range_price`, `id_carrier`, `delimiter1`, `del
 (1, 2, 0.000000, 10000.000000),
 (2, 3, 0.000000, 50.000000),
 (3, 3, 50.000000, 100.000000),
-(4, 3, 100.000000, 200.000000);
+(4, 3, 100.000000, 200.000000),
+(5, 5, 0.000000, 2000.000000),
+(6, 5, 2000.000000, 9999999.000000),
+(7, 6, 0.000000, 2000.000000),
+(8, 6, 2000.000000, 9999999.000000),
+(9, 7, 0.000000, 2000.000000),
+(10, 7, 2000.000000, 99999.000000);
 
 -- --------------------------------------------------------
 
@@ -11990,7 +12245,7 @@ CREATE TABLE `ad_stock_available` (
 
 INSERT INTO `ad_stock_available` (`id_stock_available`, `id_product`, `id_product_attribute`, `id_shop`, `id_shop_group`, `quantity`, `physical_quantity`, `reserved_quantity`, `depends_on_stock`, `out_of_stock`, `location`) VALUES
 (1, 1, 0, 1, 0, 2400, 0, 0, 0, 2, ''),
-(2, 2, 0, 1, 0, 2099, 2099, 0, 0, 2, ''),
+(2, 2, 0, 1, 0, 2100, 0, 0, 0, 2, ''),
 (3, 3, 0, 1, 0, 1500, 0, 0, 0, 2, ''),
 (4, 4, 0, 1, 0, 1500, 0, 0, 0, 2, ''),
 (5, 5, 0, 1, 0, 900, 0, 0, 0, 2, ''),
@@ -12016,10 +12271,10 @@ INSERT INTO `ad_stock_available` (`id_stock_available`, `id_product`, `id_produc
 (25, 1, 6, 1, 0, 300, 0, 0, 0, 2, ''),
 (26, 1, 7, 1, 0, 300, 0, 0, 0, 2, ''),
 (27, 1, 8, 1, 0, 300, 0, 0, 0, 2, ''),
-(28, 2, 9, 1, 0, 1199, 1200, 1, 0, 2, ''),
-(29, 2, 10, 1, 0, 300, 300, 0, 0, 2, ''),
-(30, 2, 11, 1, 0, 300, 300, 0, 0, 2, ''),
-(31, 2, 12, 1, 0, 300, 300, 0, 0, 2, ''),
+(28, 2, 9, 1, 0, 1200, 0, 0, 0, 2, ''),
+(29, 2, 10, 1, 0, 300, 0, 0, 0, 2, ''),
+(30, 2, 11, 1, 0, 300, 0, 0, 0, 2, ''),
+(31, 2, 12, 1, 0, 300, 0, 0, 0, 2, ''),
 (32, 3, 13, 1, 0, 900, 0, 0, 0, 2, ''),
 (33, 3, 14, 1, 0, 300, 0, 0, 0, 2, ''),
 (34, 3, 15, 1, 0, 300, 0, 0, 0, 2, ''),
@@ -12091,18 +12346,18 @@ CREATE TABLE `ad_stock_mvt_reason` (
 --
 
 INSERT INTO `ad_stock_mvt_reason` (`id_stock_mvt_reason`, `sign`, `date_add`, `date_upd`, `deleted`) VALUES
-(1, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(2, -1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(3, -1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(4, -1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(5, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(6, -1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(7, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(8, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(9, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(10, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(11, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0),
-(12, -1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0);
+(1, 1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(2, -1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(3, -1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(4, -1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(5, 1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(6, -1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(7, 1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(8, 1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(9, 1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(10, 1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(11, 1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0),
+(12, -1, '2023-11-20 19:41:37', '2023-11-20 19:41:37', 0);
 
 -- --------------------------------------------------------
 
@@ -12161,8 +12416,11 @@ CREATE TABLE `ad_store` (
 --
 
 INSERT INTO `ad_store` (`id_store`, `id_country`, `id_state`, `city`, `postcode`, `latitude`, `longitude`, `phone`, `fax`, `email`, `active`, `date_add`, `date_upd`) VALUES
-(3, 21, 12, 'Miami', '33026', 26.00998700, -80.29447200, '', '', '', 1, '2023-11-17 09:29:11', '2023-11-17 09:29:11'),
-(5, 21, 12, 'Miami', '33181', 25.88674000, -80.16329200, '', '', '', 1, '2023-11-17 09:29:11', '2023-11-17 09:29:11');
+(1, 21, 12, 'Miami', '33135', 25.76500500, -80.24379700, '', '', '', 1, '2023-11-20 19:42:38', '2023-11-20 19:42:38'),
+(2, 21, 12, 'Miami', '33304', 26.13793600, -80.13943500, '', '', '', 1, '2023-11-20 19:42:38', '2023-11-20 19:42:38'),
+(3, 21, 12, 'Miami', '33026', 26.00998700, -80.29447200, '', '', '', 1, '2023-11-20 19:42:38', '2023-11-20 19:42:38'),
+(4, 21, 12, 'Miami', '33133', 25.73629600, -80.24479700, '', '', '', 1, '2023-11-20 19:42:38', '2023-11-20 19:42:38'),
+(5, 21, 12, 'Miami', '33181', 25.88674000, -80.16329200, '', '', '', 1, '2023-11-20 19:42:38', '2023-11-20 19:42:38');
 
 -- --------------------------------------------------------
 
@@ -12185,7 +12443,10 @@ CREATE TABLE `ad_store_lang` (
 --
 
 INSERT INTO `ad_store_lang` (`id_store`, `id_lang`, `name`, `address1`, `address2`, `hours`, `note`) VALUES
+(1, 1, 'Dade County', '3030 SW 8th St Miami', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', ''),
+(2, 1, 'E Fort Lauderdale', '1000 Northeast 4th Ave Fort Lauderdale', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', ''),
 (3, 1, 'Pembroke Pines', '11001 Pines Blvd Pembroke Pines', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', ''),
+(4, 1, 'Coconut Grove', '2999 SW 32nd Avenue', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', ''),
 (5, 1, 'N Miami/Biscayne', '12055 Biscayne Blvd', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', '');
 
 -- --------------------------------------------------------
@@ -12204,7 +12465,10 @@ CREATE TABLE `ad_store_shop` (
 --
 
 INSERT INTO `ad_store_shop` (`id_store`, `id_shop`) VALUES
+(1, 1),
+(2, 1),
 (3, 1),
+(4, 1),
 (5, 1);
 
 -- --------------------------------------------------------
@@ -12226,8 +12490,8 @@ CREATE TABLE `ad_supplier` (
 --
 
 INSERT INTO `ad_supplier` (`id_supplier`, `name`, `date_add`, `date_upd`, `active`) VALUES
-(1, 'Fashion supplier', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1),
-(2, 'Accessories supplier', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1);
+(1, 'Fashion supplier', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1),
+(2, 'Accessories supplier', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1);
 
 -- --------------------------------------------------------
 
@@ -12564,25 +12828,27 @@ INSERT INTO `ad_tab` (`id_tab`, `id_parent`, `position`, `module`, `class_name`,
 (118, 103, 9, NULL, 'AdminShopGroup', NULL, 0, 1, 0, '', 'Multistore', 'Admin.Navigation.Menu'),
 (119, 103, 10, NULL, 'AdminShopUrl', NULL, 0, 1, 0, '', 'Multistore', 'Admin.Navigation.Menu'),
 (120, 103, 11, NULL, 'AdminFeatureFlag', NULL, 1, 1, 0, '', 'Experimental Features', 'Admin.Navigation.Menu'),
-(121, -1, 1, NULL, 'AdminQuickAccesses', NULL, 1, 1, 0, '', 'Quick Access', 'Admin.Navigation.Menu'),
+(121, -1, 0, NULL, 'AdminQuickAccesses', NULL, 1, 1, 0, '', 'Quick Access', 'Admin.Navigation.Menu'),
 (122, 0, 4, NULL, 'DEFAULT', NULL, 1, 1, 0, '', 'More', 'Admin.Navigation.Menu'),
-(123, -1, 3, NULL, 'AdminPatterns', NULL, 1, 1, 0, '', '', ''),
+(123, -1, 1, NULL, 'AdminPatterns', NULL, 1, 1, 0, '', '', ''),
 (124, 43, 3, 'blockwishlist', 'WishlistConfigurationAdminParentController', '', 0, 1, 0, '', NULL, NULL),
 (125, 124, 1, 'blockwishlist', 'WishlistConfigurationAdminController', '', 1, 1, 0, '', NULL, NULL),
 (126, 124, 2, 'blockwishlist', 'WishlistStatisticsAdminController', '', 1, 1, 0, '', NULL, NULL),
-(127, -1, 4, 'dashgoals', 'AdminDashgoals', '', 1, 1, 0, '', NULL, NULL),
-(128, -1, 5, 'ps_faviconnotificationbo', 'AdminConfigureFaviconBo', '', 1, 1, 0, '', NULL, NULL),
+(127, -1, 2, 'dashgoals', 'AdminDashgoals', '', 1, 1, 0, '', NULL, NULL),
+(128, -1, 3, 'ps_faviconnotificationbo', 'AdminConfigureFaviconBo', '', 1, 1, 0, '', NULL, NULL),
 (129, 52, 6, 'ps_linklist', 'AdminLinkWidget', 'admin_link_block_list', 1, 1, 0, '', 'Link List', 'Modules.Linklist.Admin'),
 (130, 52, 0, '', 'AdminThemesParent', '', 1, 1, 0, '', 'Theme & Logo', 'Admin.Navigation.Menu'),
 (131, 130, 2, 'ps_themecusto', 'AdminPsThemeCustoConfiguration', '', 1, 1, 0, '', NULL, NULL),
 (132, 130, 3, 'ps_themecusto', 'AdminPsThemeCustoAdvanced', '', 1, 1, 0, '', NULL, NULL),
 (133, 0, 5, 'welcome', 'AdminWelcome', '', 1, 1, 0, '', NULL, NULL),
-(134, -1, 6, 'psgdpr', 'AdminAjaxPsgdpr', '', 1, 1, 0, '', NULL, NULL),
-(135, -1, 7, 'psgdpr', 'AdminDownloadInvoicesPsgdpr', '', 1, 1, 0, '', NULL, NULL),
+(134, -1, 4, 'psgdpr', 'AdminAjaxPsgdpr', '', 1, 1, 0, '', NULL, NULL),
+(135, -1, 5, 'psgdpr', 'AdminDownloadInvoicesPsgdpr', '', 1, 1, 0, '', NULL, NULL),
 (136, 48, 0, 'ps_mbo', 'AdminPsMboModule', '', 1, 1, 0, '', NULL, NULL),
 (137, 48, 1, 'ps_mbo', 'AdminPsMboAddons', '', 1, 1, 0, '', 'Modules in the spotlight', 'Modules.Mbo.Modulesselection'),
-(138, -1, 2, 'ps_mbo', 'AdminPsMboRecommended', '', 1, 1, 0, '', 'Recommended Modules and Services', 'Modules.Mbo.Recommendedmodulesandservices'),
+(138, -1, 0, 'ps_mbo', 'AdminPsMboRecommended', '', 1, 1, 0, '', 'Recommended Modules and Services', 'Modules.Mbo.Recommendedmodulesandservices'),
 (139, 52, 1, 'ps_mbo', 'AdminPsMboTheme', '', 1, 1, 0, '', NULL, NULL),
+(140, -1, 6, 'ps_checkout', 'AdminAjaxPrestashopCheckout', '', 1, 1, 0, '', NULL, NULL),
+(141, -1, 7, 'ps_checkout', 'AdminPaypalOnboardingPrestashopCheckout', '', 1, 1, 0, '', NULL, NULL),
 (142, 32, 1, 'ps_metrics', 'AdminMetricsLegacyStatsController', '', 1, 1, 0, '', NULL, NULL),
 (143, 32, 2, 'ps_metrics', 'AdminMetricsController', '', 1, 1, 0, '', NULL, NULL),
 (144, 42, 5, '', 'Marketing', '', 1, 1, 0, 'campaign', NULL, NULL),
@@ -12744,6 +13010,8 @@ INSERT INTO `ad_tab_lang` (`id_tab`, `id_lang`, `name`) VALUES
 (137, 1, 'Modules in the spotlight'),
 (138, 1, 'Recommended Modules and Services'),
 (139, 1, 'Katalog'),
+(140, 1, 'PrestaShop Checkout'),
+(141, 1, 'PrestaShop Checkout'),
 (142, 1, 'Statystyki'),
 (143, 1, 'PrestaShop Metrics'),
 (144, 1, 'Marketing'),
@@ -13073,11 +13341,11 @@ CREATE TABLE `ad_tax_rules_group` (
 --
 
 INSERT INTO `ad_tax_rules_group` (`id_tax_rules_group`, `name`, `active`, `deleted`, `date_add`, `date_upd`) VALUES
-(1, 'PL Standard Rate (23%)', 1, 0, '2023-11-17 09:28:04', '2023-11-17 09:28:04'),
-(2, 'PL Reduced Rate (8%)', 1, 0, '2023-11-17 09:28:04', '2023-11-17 09:28:04'),
-(3, 'PL Reduced Rate (5%)', 1, 0, '2023-11-17 09:28:04', '2023-11-17 09:28:04'),
-(4, 'PL Exempted Rate (0%)', 1, 0, '2023-11-17 09:28:04', '2023-11-17 09:28:04'),
-(5, 'EU VAT For Virtual Products', 1, 0, '2023-11-17 09:28:04', '2023-11-17 09:28:04');
+(1, 'PL Standard Rate (23%)', 1, 0, '2023-11-20 19:41:37', '2023-11-20 19:41:37'),
+(2, 'PL Reduced Rate (8%)', 1, 0, '2023-11-20 19:41:37', '2023-11-20 19:41:37'),
+(3, 'PL Reduced Rate (5%)', 1, 0, '2023-11-20 19:41:38', '2023-11-20 19:41:38'),
+(4, 'PL Exempted Rate (0%)', 1, 0, '2023-11-20 19:41:38', '2023-11-20 19:41:38'),
+(5, 'EU VAT For Virtual Products', 1, 0, '2023-11-20 19:41:38', '2023-11-20 19:41:38');
 
 -- --------------------------------------------------------
 
@@ -15226,10 +15494,7 @@ ALTER TABLE `ad_product_carrier`
 -- Indeksy dla tabeli `ad_product_comment`
 --
 ALTER TABLE `ad_product_comment`
-  ADD PRIMARY KEY (`id_product_comment`),
-  ADD KEY `id_product` (`id_product`),
-  ADD KEY `id_customer` (`id_customer`),
-  ADD KEY `id_guest` (`id_guest`);
+  ADD PRIMARY KEY (`id_product_comment`);
 
 --
 -- Indeksy dla tabeli `ad_product_comment_criterion`
@@ -15262,19 +15527,22 @@ ALTER TABLE `ad_product_comment_criterion_product`
 --
 ALTER TABLE `ad_product_comment_grade`
   ADD PRIMARY KEY (`id_product_comment`,`id_product_comment_criterion`),
-  ADD KEY `id_product_comment_criterion` (`id_product_comment_criterion`);
+  ADD KEY `IDX_29978189ACF38A54` (`id_product_comment`),
+  ADD KEY `IDX_299781898375853C` (`id_product_comment_criterion`);
 
 --
 -- Indeksy dla tabeli `ad_product_comment_report`
 --
 ALTER TABLE `ad_product_comment_report`
-  ADD PRIMARY KEY (`id_product_comment`,`id_customer`);
+  ADD PRIMARY KEY (`id_product_comment`,`id_customer`),
+  ADD KEY `IDX_718F759AACF38A54` (`id_product_comment`);
 
 --
 -- Indeksy dla tabeli `ad_product_comment_usefulness`
 --
 ALTER TABLE `ad_product_comment_usefulness`
-  ADD PRIMARY KEY (`id_product_comment`,`id_customer`);
+  ADD PRIMARY KEY (`id_product_comment`,`id_customer`),
+  ADD KEY `IDX_B33184E4ACF38A54` (`id_product_comment`);
 
 --
 -- Indeksy dla tabeli `ad_product_country_tax`
@@ -15887,13 +16155,13 @@ ALTER TABLE `ad_zone_shop`
 -- AUTO_INCREMENT for table `ad_address`
 --
 ALTER TABLE `ad_address`
-  MODIFY `id_address` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_address` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `ad_admin_filter`
 --
 ALTER TABLE `ad_admin_filter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ad_alias`
@@ -15935,7 +16203,7 @@ ALTER TABLE `ad_attribute_impact`
 -- AUTO_INCREMENT for table `ad_authorization_role`
 --
 ALTER TABLE `ad_authorization_role`
-  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=833;
+  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=829;
 
 --
 -- AUTO_INCREMENT for table `ad_blockwishlist_statistics`
@@ -15947,13 +16215,13 @@ ALTER TABLE `ad_blockwishlist_statistics`
 -- AUTO_INCREMENT for table `ad_carrier`
 --
 ALTER TABLE `ad_carrier`
-  MODIFY `id_carrier` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_carrier` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ad_cart`
 --
 ALTER TABLE `ad_cart`
-  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ad_cart_rule`
@@ -15977,13 +16245,13 @@ ALTER TABLE `ad_cart_rule_product_rule_group`
 -- AUTO_INCREMENT for table `ad_category`
 --
 ALTER TABLE `ad_category`
-  MODIFY `id_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `ad_cms`
 --
 ALTER TABLE `ad_cms`
-  MODIFY `id_cms` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_cms` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ad_cms_category`
@@ -16007,25 +16275,25 @@ ALTER TABLE `ad_cms_role`
 -- AUTO_INCREMENT for table `ad_configuration`
 --
 ALTER TABLE `ad_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=434;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=425;
 
 --
 -- AUTO_INCREMENT for table `ad_configuration_kpi`
 --
 ALTER TABLE `ad_configuration_kpi`
-  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `ad_connections`
 --
 ALTER TABLE `ad_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ad_connections_source`
 --
 ALTER TABLE `ad_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ad_contact`
@@ -16049,7 +16317,7 @@ ALTER TABLE `ad_currency`
 -- AUTO_INCREMENT for table `ad_customer`
 --
 ALTER TABLE `ad_customer`
-  MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ad_customer_message`
@@ -16061,7 +16329,7 @@ ALTER TABLE `ad_customer_message`
 -- AUTO_INCREMENT for table `ad_customer_session`
 --
 ALTER TABLE `ad_customer_session`
-  MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ad_customer_thread`
@@ -16091,7 +16359,7 @@ ALTER TABLE `ad_date_range`
 -- AUTO_INCREMENT for table `ad_delivery`
 --
 ALTER TABLE `ad_delivery`
-  MODIFY `id_delivery` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_delivery` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 
 --
 -- AUTO_INCREMENT for table `ad_emailsubscription`
@@ -16109,7 +16377,7 @@ ALTER TABLE `ad_employee`
 -- AUTO_INCREMENT for table `ad_employee_session`
 --
 ALTER TABLE `ad_employee_session`
-  MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ad_feature`
@@ -16151,7 +16419,7 @@ ALTER TABLE `ad_group_reduction`
 -- AUTO_INCREMENT for table `ad_guest`
 --
 ALTER TABLE `ad_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `ad_homeslider`
@@ -16217,7 +16485,7 @@ ALTER TABLE `ad_lang`
 -- AUTO_INCREMENT for table `ad_layered_category`
 --
 ALTER TABLE `ad_layered_category`
-  MODIFY `id_layered_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id_layered_category` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `ad_layered_filter`
@@ -16247,7 +16515,7 @@ ALTER TABLE `ad_link_block_shop`
 -- AUTO_INCREMENT for table `ad_log`
 --
 ALTER TABLE `ad_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=238;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=229;
 
 --
 -- AUTO_INCREMENT for table `ad_mail`
@@ -16277,19 +16545,19 @@ ALTER TABLE `ad_message`
 -- AUTO_INCREMENT for table `ad_meta`
 --
 ALTER TABLE `ad_meta`
-  MODIFY `id_meta` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id_meta` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `ad_module`
 --
 ALTER TABLE `ad_module`
-  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `ad_module_history`
 --
 ALTER TABLE `ad_module_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ad_module_preference`
@@ -16307,13 +16575,13 @@ ALTER TABLE `ad_operating_system`
 -- AUTO_INCREMENT for table `ad_orders`
 --
 ALTER TABLE `ad_orders`
-  MODIFY `id_order` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_order` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ad_order_carrier`
 --
 ALTER TABLE `ad_order_carrier`
-  MODIFY `id_order_carrier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_order_carrier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `ad_order_cart_rule`
@@ -16325,13 +16593,13 @@ ALTER TABLE `ad_order_cart_rule`
 -- AUTO_INCREMENT for table `ad_order_detail`
 --
 ALTER TABLE `ad_order_detail`
-  MODIFY `id_order_detail` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_order_detail` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ad_order_history`
 --
 ALTER TABLE `ad_order_history`
-  MODIFY `id_order_history` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_order_history` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ad_order_invoice`
@@ -16379,7 +16647,7 @@ ALTER TABLE `ad_order_state`
 -- AUTO_INCREMENT for table `ad_page`
 --
 ALTER TABLE `ad_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ad_pagenotfound`
@@ -16391,7 +16659,7 @@ ALTER TABLE `ad_pagenotfound`
 -- AUTO_INCREMENT for table `ad_page_type`
 --
 ALTER TABLE `ad_page_type`
-  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ad_product`
@@ -16409,13 +16677,13 @@ ALTER TABLE `ad_product_attribute`
 -- AUTO_INCREMENT for table `ad_product_comment`
 --
 ALTER TABLE `ad_product_comment`
-  MODIFY `id_product_comment` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_product_comment` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ad_product_comment_criterion`
 --
 ALTER TABLE `ad_product_comment_criterion`
-  MODIFY `id_product_comment_criterion` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_product_comment_criterion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `ad_product_download`
@@ -16463,7 +16731,7 @@ ALTER TABLE `ad_psgdpr_consent_lang`
 -- AUTO_INCREMENT for table `ad_psgdpr_log`
 --
 ALTER TABLE `ad_psgdpr_log`
-  MODIFY `id_gdpr_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_gdpr_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ad_psreassurance`
@@ -16481,7 +16749,7 @@ ALTER TABLE `ad_quick_access`
 -- AUTO_INCREMENT for table `ad_range_price`
 --
 ALTER TABLE `ad_range_price`
-  MODIFY `id_range_price` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_range_price` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `ad_range_weight`
@@ -16529,7 +16797,7 @@ ALTER TABLE `ad_search_engine`
 -- AUTO_INCREMENT for table `ad_search_word`
 --
 ALTER TABLE `ad_search_word`
-  MODIFY `id_word` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=666;
+  MODIFY `id_word` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=657;
 
 --
 -- AUTO_INCREMENT for table `ad_shop`
