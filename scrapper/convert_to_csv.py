@@ -25,13 +25,13 @@ def get_dict(data, category):
 
 csv_dictwriter = csv.DictWriter(open("../scrapper-results/data.csv", "w", newline='', encoding='utf-8'), fieldnames=["Product ID", "Categories", "Name *", "Price tax excluded", "Price tax included", "Image URLs (x,y,z...)", "Description", "Feature(Name:Value:Position)"], delimiter=";")
 
+csv_dictwriter.writeheader()
+
 def write_to_csv(filename, category):
     file = open("../scrapper-results/" + filename + ".json", "r")
     data = json.load(file)
 
     data_to_export = get_dict(data, category)
-
-    csv_dictwriter.writeheader()
 
     for row in data_to_export:
         csv_dictwriter.writerow(row)
