@@ -1,25 +1,36 @@
+import base64
+import io
 import os
 import json
 import csv
+import PIL.Image as Image
 
 data_to_export = []
+
+def save_image_from_base64(base64_string, filename):
+    img = Image.open(io.BytesIO(base64.b64decode(base64_string)))
+    img.save(filename, "JPEG")
 
 def get_dict(data, category):
     d = []
     for key in data.keys():
         try:
+            save_image_from_base64(data[key]["image_full"], "../scrapper-results/images/" + key + "_full.jpg")
+            save_image_from_base64(data[key]["image_thumb"], "../scrapper-results/images/" + key + "_thumb.jpg")
             d.append({
                 "Product ID": key,
                 "Categories": category,
                 "Name *": data[key]["name"].encode('utf-8').decode('utf-8'),
                 "Price tax excluded": round(data[key]["price"] / 1.23, 2),
                 "Price tax included": data[key]["price"],
-                "Image URLs (x,y,z...)": "null",
+                "Image URLs (x,y,z...)": "http://localhost:8080/images/" + key + "_full.jpg,http://localhost:8080/images/" + key + "_thumb.jpg",
                 "Description": data[key]["description"].encode('utf-8').decode('utf-8'),
                 "Feature(Name:Value:Position)": "Kolor:" + data[key]["color"].encode('utf-8').decode('utf-8') + ":0",
             })
-        except:
-            pass
+        except Exception as e:
+            print(e)
+            continue
+            
     return d
     
 
