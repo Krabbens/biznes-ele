@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: adidas-mariadb-server:3306
+<<<<<<< Updated upstream
 -- Generation Time: Lis 23, 2023 at 02:28 AM
+=======
+-- Generation Time: Lis 25, 2023 at 01:58 AM
+>>>>>>> Stashed changes
 -- Wersja serwera: 10.5.23-MariaDB-1:10.5.23+maria~ubu2004
 -- Wersja PHP: 8.2.8
 
@@ -20,8 +24,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `adidas-mariadb`
 --
-CREATE DATABASE IF NOT EXISTS `adidas-mariadb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `adidas-mariadb`;
 
 -- --------------------------------------------------------
 
@@ -905,12 +907,24 @@ CREATE TABLE `ad_address` (
 --
 
 INSERT INTO `ad_address` (`id_address`, `id_country`, `id_state`, `id_customer`, `id_manufacturer`, `id_supplier`, `id_warehouse`, `alias`, `company`, `lastname`, `firstname`, `address1`, `address2`, `postcode`, `city`, `other`, `phone`, `phone_mobile`, `vat_number`, `dni`, `date_add`, `date_upd`, `active`, `deleted`) VALUES
+<<<<<<< Updated upstream
 (1, 14, 0, 1, 0, 0, 0, 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', '', '00000', 'Anonymous', '', '0000000000', '0000000000', '0000', '0000', '2023-11-20 19:42:20', '2023-11-20 19:42:20', 1, 0),
 (2, 8, 0, 2, 0, 0, 0, 'Mon adresse', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '75002', 'Paris ', '', '0102030405', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0),
 (3, 21, 35, 0, 0, 1, 0, 'supplier', 'Fashion', 'supplier', 'supplier', '767 Fifth Ave.', '', '10153', 'New York', '', '(212) 336-1440', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0),
 (4, 21, 35, 0, 1, 0, 0, 'manufacturer', 'Fashion', 'manufacturer', 'manufacturer', '767 Fifth Ave.', '', '10154', 'New York', '', '(212) 336-1666', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0),
 (5, 21, 12, 2, 0, 0, 0, 'My address', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '33133', 'Miami', '', '0102030405', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0),
 (6, 8, 0, 0, 0, 2, 0, 'accessories_supplier', 'Accessories and Co', 'accessories', 'accessories', '42 Avenue Maréchal Soult', '', '64990', 'Bayonne', '', '0102030405', '', '', '', '2023-11-20 19:42:36', '2023-11-20 19:42:36', 1, 0);
+=======
+(1, 14, 0, 1, 0, 0, 0, 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', '', '00000', 'Anonymous', '', '0000000000', '0000000000', '0000', '0000', '2023-11-17 09:28:45', '2023-11-17 09:28:45', 1, 0),
+(2, 8, 0, 2, 0, 0, 0, 'Mon adresse', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '75002', 'Paris ', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
+(3, 21, 35, 0, 0, 1, 0, 'supplier', 'Fashion', 'supplier', 'supplier', '767 Fifth Ave.', '', '10153', 'New York', '', '(212) 336-1440', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
+(4, 21, 35, 0, 1, 0, 0, 'manufacturer', 'Fashion', 'manufacturer', 'manufacturer', '767 Fifth Ave.', '', '10154', 'New York', '', '(212) 336-1666', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
+(5, 21, 12, 2, 0, 0, 0, 'My address', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '33133', 'Miami', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
+(6, 8, 0, 0, 0, 2, 0, 'accessories_supplier', 'Accessories and Co', 'accessories', 'accessories', '42 Avenue Maréchal Soult', '', '64990', 'Bayonne', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
+(7, 14, 0, 3, 0, 0, 0, 'Mój adres', '', 'd', 'd', 'd12', '', '11-123', 'd', '', '', '', '', '', '2023-11-17 10:19:44', '2023-11-17 10:19:44', 1, 0),
+(8, 14, 0, 4, 0, 0, 0, 'Mój adres', 'asadasda', 'Małecki', 'Szymon', 'asdasd', '', '06-545', 'dasdas', '', '', '', '', '', '2023-11-18 16:52:53', '2023-11-18 16:52:53', 1, 0),
+(9, 14, 0, 5, 0, 0, 0, 'Mój adres', '', 'x', 'x', 'x', '', '11-111', 'x', '', '', '', '', '', '2023-11-25 02:54:01', '2023-11-25 02:54:01', 1, 0);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -1191,8 +1205,15 @@ CREATE TABLE `ad_admin_filter` (
 --
 
 INSERT INTO `ad_admin_filter` (`id`, `employee`, `shop`, `controller`, `action`, `filter`, `filter_id`) VALUES
+<<<<<<< Updated upstream
 (1, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_category_parent\":\"2\"}}', 'category'),
 (2, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_order\",\"sortOrder\":\"DESC\",\"filters\":[]}', 'order');
+=======
+(1, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page_category'),
+(2, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page'),
+(3, 1, 1, 'contacts', 'index', '{\"limit\":10,\"orderBy\":\"id_contact\",\"sortOrder\":\"asc\",\"filters\":[]}', ''),
+(4, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_category_parent\":\"2\"}}', 'category');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -2347,9 +2368,15 @@ INSERT INTO `ad_carrier` (`id_carrier`, `id_reference`, `id_tax_rules_group`, `n
 (2, 2, 0, 'My carrier', '', 1, 0, 1, 0, 0, 0, 0, 0, '', 0, 1, 0, 0, 0, 0.000000, 0),
 (3, 3, 0, 'My cheap carrier', '', 0, 0, 1, 0, 0, 0, 0, 0, '', 2, 2, 0, 0, 0, 0.000000, 0),
 (4, 4, 0, 'My light carrier', '', 0, 0, 1, 0, 0, 0, 0, 0, '', 1, 3, 0, 0, 0, 0.000000, 0),
+<<<<<<< Updated upstream
 (5, 5, 0, 'DHL', '', 1, 1, 0, 0, 0, 0, 0, 0, '', 2, 4, 350, 350, 350, 50.000000, 0),
 (6, 5, 0, 'DHL', '', 1, 0, 0, 0, 0, 0, 0, 0, '', 2, 4, 350, 350, 350, 50.000000, 0),
 (7, 7, 0, 'UPS', '', 1, 0, 0, 0, 0, 0, 0, 0, '', 2, 5, 300, 300, 300, 50.000000, 0);
+=======
+(5, 5, 0, 'Widzisz mnie?', '', 1, 1, 1, 0, 0, 1, 0, 0, '', 1, 4, 0, 0, 0, 0.000000, 0),
+(6, 6, 0, 'DHL', '', 1, 0, 0, 0, 0, 0, 0, 0, '', 2, 4, 350, 350, 350, 50.000000, 0),
+(7, 7, 0, 'UPS', '', 1, 0, 0, 0, 0, 0, 0, 0, '', 2, 5, 300, 300, 350, 50.000000, 0);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -2411,9 +2438,15 @@ INSERT INTO `ad_carrier_lang` (`id_carrier`, `id_shop`, `id_lang`, `delay`) VALU
 (2, 1, 1, 'Dostawa następnego dnia!'),
 (3, 1, 1, 'Buy more to pay less!'),
 (4, 1, 1, 'The lighter the cheaper!'),
+<<<<<<< Updated upstream
 (5, 1, 1, '10 dni'),
 (6, 1, 1, '10 dni'),
 (7, 1, 1, '15 dni');
+=======
+(5, 1, 1, '100dni'),
+(6, 1, 1, '10 dni'),
+(7, 1, 1, '8 dni');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -2488,6 +2521,7 @@ INSERT INTO `ad_carrier_zone` (`id_carrier`, `id_zone`) VALUES
 (4, 1),
 (4, 2),
 (5, 1),
+<<<<<<< Updated upstream
 (5, 2),
 (5, 3),
 (5, 4),
@@ -2495,6 +2529,8 @@ INSERT INTO `ad_carrier_zone` (`id_carrier`, `id_zone`) VALUES
 (5, 6),
 (5, 7),
 (5, 8),
+=======
+>>>>>>> Stashed changes
 (6, 1),
 (6, 2),
 (6, 3),
@@ -2546,11 +2582,23 @@ CREATE TABLE `ad_cart` (
 --
 
 INSERT INTO `ad_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `delivery_option`, `id_lang`, `id_address_delivery`, `id_address_invoice`, `id_currency`, `id_customer`, `id_guest`, `secure_key`, `recyclable`, `gift`, `gift_message`, `mobile_theme`, `allow_seperated_package`, `date_add`, `date_upd`, `checkout_session_data`) VALUES
+<<<<<<< Updated upstream
 (1, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL),
 (2, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL),
 (3, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL),
 (4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL),
 (5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', NULL);
+=======
+(1, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
+(2, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
+(3, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
+(4, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
+(5, 1, 1, 2, '{\"3\":\"2,\"}', 1, 5, 5, 1, 2, 1, 'b44a6d9efd7a0076a0fbce6b15eaf3b1', 0, 0, '', 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', NULL),
+(6, 1, 1, 0, '', 1, 7, 7, 1, 3, 3, 'dac06b111ff76d51ece3a60bd7191a82', 0, 0, '', 0, 0, '2023-11-17 10:19:31', '2023-11-17 10:19:44', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"ee08f0371eda7c40645cb6d22df2a9f65740c2e2\"}'),
+(7, 1, 1, 2, '{\"8\":\"2,\"}', 1, 8, 8, 1, 4, 4, '42397d7a86c715692d4d271c4c52262c', 0, 0, '', 0, 0, '2023-11-18 16:52:06', '2023-11-18 16:53:00', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-payment-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checksum\":\"d100cc17bf15b006fd1b2034e4bf9df00241cf6a\"}'),
+(8, 1, 1, 0, '', 1, 0, 0, 1, 0, 5, '', 0, 0, '', 0, 0, '2023-11-18 19:42:05', '2023-11-18 19:42:05', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-addresses-step\":{\"step_is_reachable\":false,\"step_is_complete\":false,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"3fd276d430e426d625ce06c4aa2679526eb74a92\"}'),
+(9, 1, 1, 1, '{\"9\":\"1,\"}', 1, 9, 9, 1, 5, 3, 'f2d44722acb7c6c187155867c8afee52', 0, 0, '', 0, 0, '2023-11-25 02:53:14', '2023-11-25 02:54:04', '{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":true},\"checkout-addresses-step\":{\"step_is_reachable\":true,\"step_is_complete\":true,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"6310959130f9813e52ee46303548b9713ccda427\"}');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -2591,7 +2639,15 @@ INSERT INTO `ad_cart_product` (`id_cart`, `id_product`, `id_address_delivery`, `
 (2, 8, 3, 1, 0, 0, 1, '0000-00-00 00:00:00'),
 (3, 16, 3, 1, 28, 0, 1, '0000-00-00 00:00:00'),
 (4, 16, 3, 1, 29, 0, 1, '0000-00-00 00:00:00'),
+<<<<<<< Updated upstream
 (5, 10, 3, 1, 25, 0, 1, '0000-00-00 00:00:00');
+=======
+(5, 10, 3, 1, 25, 0, 1, '0000-00-00 00:00:00'),
+(6, 7, 7, 1, 0, 0, 1, '2023-11-17 10:19:31'),
+(7, 2, 8, 1, 9, 0, 1, '2023-11-18 16:52:06'),
+(8, 2, 0, 1, 9, 0, 1, '2023-11-18 19:42:05'),
+(9, 2, 9, 1, 9, 0, 1, '2023-11-25 02:53:14');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -2762,6 +2818,7 @@ CREATE TABLE `ad_category` (
 --
 
 INSERT INTO `ad_category` (`id_category`, `id_parent`, `id_shop_default`, `level_depth`, `nleft`, `nright`, `active`, `date_add`, `date_upd`, `position`, `is_root_category`) VALUES
+<<<<<<< Updated upstream
 (1, 0, 1, 0, 1, 48, 1, '2023-11-20 19:41:36', '2023-11-20 19:41:36', 0, 0),
 (2, 1, 1, 1, 2, 47, 1, '2023-11-20 19:41:36', '2023-11-20 19:41:36', 0, 1),
 (3, 2, 1, 2, 3, 8, 0, '2023-11-20 19:42:36', '2023-11-23 02:46:45', 0, 0),
@@ -2786,6 +2843,32 @@ INSERT INTO `ad_category` (`id_category`, `id_parent`, `id_shop_default`, `level
 (22, 12, 1, 3, 38, 39, 1, '2023-11-23 02:49:31', '2023-11-23 02:49:31', 2, 0),
 (23, 13, 1, 3, 42, 43, 1, '2023-11-23 02:49:50', '2023-11-23 02:50:36', 0, 0),
 (24, 13, 1, 3, 44, 45, 1, '2023-11-23 02:50:01', '2023-11-23 02:50:43', 1, 0);
+=======
+(1, 0, 1, 0, 1, 48, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0, 0),
+(2, 1, 1, 1, 2, 47, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0, 1),
+(3, 2, 1, 2, 3, 8, 0, '2023-11-17 09:29:09', '2023-11-25 02:57:25', 0, 0),
+(4, 3, 1, 3, 4, 5, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 0),
+(5, 3, 1, 3, 6, 7, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
+(6, 2, 1, 2, 9, 14, 0, '2023-11-17 09:29:09', '2023-11-25 02:57:25', 1, 0),
+(7, 6, 1, 3, 10, 11, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 0),
+(8, 6, 1, 3, 12, 13, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
+(9, 2, 1, 2, 15, 16, 0, '2023-11-17 09:29:09', '2023-11-25 02:57:25', 2, 0),
+(10, 2, 1, 2, 17, 24, 1, '2023-11-25 02:49:54', '2023-11-25 02:49:54', 3, 0),
+(11, 2, 1, 2, 25, 32, 1, '2023-11-25 02:50:01', '2023-11-25 02:50:01', 4, 0),
+(12, 2, 1, 2, 33, 40, 1, '2023-11-25 02:50:28', '2023-11-25 02:50:28', 5, 0),
+(13, 2, 1, 2, 41, 46, 1, '2023-11-25 02:50:33', '2023-11-25 02:50:33', 6, 0),
+(14, 10, 1, 3, 18, 19, 1, '2023-11-25 02:50:46', '2023-11-25 02:50:46', 0, 0),
+(15, 10, 1, 3, 20, 21, 1, '2023-11-25 02:50:50', '2023-11-25 02:50:50', 1, 0),
+(16, 10, 1, 3, 22, 23, 1, '2023-11-25 02:50:55', '2023-11-25 02:50:55', 2, 0),
+(17, 11, 1, 3, 26, 27, 1, '2023-11-25 02:51:05', '2023-11-25 02:51:05', 0, 0),
+(18, 11, 1, 3, 28, 29, 1, '2023-11-25 02:51:10', '2023-11-25 02:51:10', 1, 0),
+(19, 11, 1, 3, 30, 31, 1, '2023-11-25 02:51:16', '2023-11-25 02:51:16', 2, 0),
+(20, 12, 1, 3, 34, 35, 1, '2023-11-25 02:52:12', '2023-11-25 02:52:12', 0, 0),
+(21, 12, 1, 3, 36, 37, 1, '2023-11-25 02:52:18', '2023-11-25 02:52:18', 1, 0),
+(22, 12, 1, 3, 38, 39, 1, '2023-11-25 02:52:25', '2023-11-25 02:52:25', 2, 0),
+(23, 13, 1, 3, 42, 43, 1, '2023-11-25 02:52:37', '2023-11-25 02:52:37', 0, 0),
+(24, 13, 1, 3, 44, 45, 1, '2023-11-25 02:52:44', '2023-11-25 02:52:44', 1, 0);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -3440,7 +3523,11 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (208, NULL, NULL, 'BLOCKADVERT_LINK', 'https://www.prestashop.com', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (209, NULL, NULL, 'BLOCKSTORE_IMG', 'store.jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (210, NULL, NULL, 'BLOCKADVERT_IMG_EXT', 'jpg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+<<<<<<< Updated upstream
 (211, NULL, NULL, 'MOD_BLOCKTOPMENU_ITEMS', 'CAT3,CAT6,CAT9,CAT10,CAT11,CAT12,CAT13', '0000-00-00 00:00:00', '2023-11-23 03:00:43'),
+=======
+(211, NULL, NULL, 'MOD_BLOCKTOPMENU_ITEMS', 'CAT3,CAT6,CAT9,CAT10,CAT11,CAT12,CAT13', '0000-00-00 00:00:00', '2023-11-25 02:57:16'),
+>>>>>>> Stashed changes
 (212, NULL, NULL, 'MOD_BLOCKTOPMENU_SEARCH', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (213, NULL, NULL, 'BLOCKSOCIAL_FACEBOOK', NULL, '0000-00-00 00:00:00', '2023-11-20 19:41:44'),
 (214, NULL, NULL, 'BLOCKSOCIAL_TWITTER', NULL, '0000-00-00 00:00:00', '2023-11-20 19:41:44'),
@@ -3667,6 +3754,7 @@ CREATE TABLE `ad_configuration_kpi` (
 --
 
 INSERT INTO `ad_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id_shop`, `name`, `value`, `date_add`, `date_upd`) VALUES
+<<<<<<< Updated upstream
 (1, NULL, NULL, 'DASHGOALS_TRAFFIC_01_2023', '600', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
 (2, NULL, NULL, 'DASHGOALS_CONVERSION_01_2023', '2', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
 (3, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_01_2023', '80', '2023-11-20 19:41:41', '2023-11-20 19:41:41'),
@@ -3719,6 +3807,52 @@ INSERT INTO `ad_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 (50, NULL, NULL, 'NETPROFIT_VISIT_EXPIRE', '1700780400', '2023-11-23 02:56:38', '2023-11-23 02:56:38'),
 (51, NULL, NULL, 'AVG_ORDER_VALUE', '0,00 zł', '2023-11-23 02:56:39', '2023-11-23 02:56:39'),
 (52, NULL, NULL, 'AVG_ORDER_VALUE_EXPIRE', '1700780400', '2023-11-23 02:56:39', '2023-11-23 02:56:39');
+=======
+(1, NULL, NULL, 'DASHGOALS_TRAFFIC_01_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(2, NULL, NULL, 'DASHGOALS_CONVERSION_01_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(3, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_01_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(4, NULL, NULL, 'DASHGOALS_TRAFFIC_02_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(5, NULL, NULL, 'DASHGOALS_CONVERSION_02_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(6, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_02_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(7, NULL, NULL, 'DASHGOALS_TRAFFIC_03_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(8, NULL, NULL, 'DASHGOALS_CONVERSION_03_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(9, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_03_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(10, NULL, NULL, 'DASHGOALS_TRAFFIC_04_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(11, NULL, NULL, 'DASHGOALS_CONVERSION_04_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(12, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_04_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(13, NULL, NULL, 'DASHGOALS_TRAFFIC_05_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(14, NULL, NULL, 'DASHGOALS_CONVERSION_05_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(15, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_05_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(16, NULL, NULL, 'DASHGOALS_TRAFFIC_06_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(17, NULL, NULL, 'DASHGOALS_CONVERSION_06_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(18, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_06_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(19, NULL, NULL, 'DASHGOALS_TRAFFIC_07_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(20, NULL, NULL, 'DASHGOALS_CONVERSION_07_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(21, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_07_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(22, NULL, NULL, 'DASHGOALS_TRAFFIC_08_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(23, NULL, NULL, 'DASHGOALS_CONVERSION_08_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(24, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_08_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(25, NULL, NULL, 'DASHGOALS_TRAFFIC_09_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(26, NULL, NULL, 'DASHGOALS_CONVERSION_09_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(27, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_09_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(28, NULL, NULL, 'DASHGOALS_TRAFFIC_10_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(29, NULL, NULL, 'DASHGOALS_CONVERSION_10_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(30, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_10_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(31, NULL, NULL, 'DASHGOALS_TRAFFIC_11_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(32, NULL, NULL, 'DASHGOALS_CONVERSION_11_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(33, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_11_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(34, NULL, NULL, 'DASHGOALS_TRAFFIC_12_2023', '600', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(35, NULL, NULL, 'DASHGOALS_CONVERSION_12_2023', '2', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2023', '80', '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(37, NULL, NULL, 'PRODUCTS_PER_CATEGORY', '2', '2023-11-25 02:49:45', '2023-11-25 02:49:45'),
+(38, NULL, NULL, 'PRODUCTS_PER_CATEGORY_EXPIRE', '1700880585', '2023-11-25 02:49:45', '2023-11-25 02:49:45'),
+(39, NULL, NULL, 'TOP_CATEGORY', NULL, '2023-11-25 02:49:45', '2023-11-25 02:49:45'),
+(40, NULL, NULL, 'TOP_CATEGORY_EXPIRE', NULL, '2023-11-25 02:49:45', '2023-11-25 02:49:45'),
+(41, NULL, NULL, 'DISABLED_CATEGORIES', '0', '2023-11-25 02:49:45', '2023-11-25 02:49:45'),
+(42, NULL, NULL, 'DISABLED_CATEGORIES_EXPIRE', '1700884185', '2023-11-25 02:49:45', '2023-11-25 02:49:45'),
+(43, NULL, NULL, 'EMPTY_CATEGORIES', '0', '2023-11-25 02:49:45', '2023-11-25 02:49:45'),
+(44, NULL, NULL, 'EMPTY_CATEGORIES_EXPIRE', '1700884185', '2023-11-25 02:49:45', '2023-11-25 02:49:45');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -3738,8 +3872,13 @@ CREATE TABLE `ad_configuration_kpi_lang` (
 --
 
 INSERT INTO `ad_configuration_kpi_lang` (`id_configuration_kpi`, `id_lang`, `value`, `date_upd`) VALUES
+<<<<<<< Updated upstream
 (39, 1, 'Stationery', '2023-11-23 02:46:29'),
 (40, 1, '1700790389', '2023-11-23 02:46:29');
+=======
+(39, 1, 'Men', '2023-11-25 02:49:45'),
+(40, 1, '1700963385', '2023-11-25 02:49:45');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -3801,8 +3940,20 @@ CREATE TABLE `ad_connections` (
 --
 
 INSERT INTO `ad_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_guest`, `id_page`, `ip_address`, `date_add`, `http_referer`) VALUES
+<<<<<<< Updated upstream
 (1, 1, 1, 1, 1, 2130706433, '2023-11-20 19:42:37', 'https://www.prestashop.com'),
 (2, 1, 1, 3, 1, 2886926337, '2023-11-23 02:45:06', '');
+=======
+(1, 1, 1, 1, 1, 2130706433, '2023-11-17 09:29:10', 'https://www.prestashop.com'),
+(2, 1, 1, 3, 1, 2886860801, '2023-11-17 09:29:24', ''),
+(3, 1, 1, 3, 1, 2886860801, '2023-11-17 10:03:27', ''),
+(4, 1, 1, 4, 1, 3232252161, '2023-11-17 13:29:43', ''),
+(5, 1, 1, 4, 1, 3232252161, '2023-11-18 16:33:21', ''),
+(6, 1, 1, 5, 2, 3232252161, '2023-11-18 16:53:07', 'http://localhost:8080/zam%C3%B3wienie'),
+(7, 1, 1, 5, 1, 3232252161, '2023-11-18 19:41:55', ''),
+(8, 1, 1, 5, 3, 3232252161, '2023-11-18 20:26:17', ''),
+(9, 1, 1, 3, 1, 2886926337, '2023-11-25 02:48:51', '');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -3837,8 +3988,145 @@ CREATE TABLE `ad_connections_source` (
 --
 
 INSERT INTO `ad_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
+<<<<<<< Updated upstream
 (1, 2, 'http://localhost:8080/admin4444/index.php/sell/catalog/categories/2?_token=r3wvJQbee7MI9t2XbhjiN_8Y0W7BRbi-DM1kQRX2kIA', 'localhost:8080/', '', '2023-11-23 02:52:38'),
 (2, 2, 'http://localhost:8080/admin4444/index.php/sell/catalog/categories/2?_token=r3wvJQbee7MI9t2XbhjiN_8Y0W7BRbi-DM1kQRX2kIA', 'localhost:8080/', '', '2023-11-23 03:00:45');
+=======
+(1, 2, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-17 09:29:27'),
+(2, 3, 'http://localhost:8080/', 'localhost:8080/logowanie?back=my-account', '', '2023-11-17 10:19:19'),
+(3, 3, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/6-accessories', '', '2023-11-17 10:19:28'),
+(4, 3, 'http://localhost:8080/6-accessories', 'localhost:8080/8-home-accessories', '', '2023-11-17 10:19:29'),
+(5, 3, 'http://localhost:8080/8-home-accessories', 'localhost:8080/home-accessories/7-mug-the-adventure-begins.html', '', '2023-11-17 10:19:30'),
+(6, 3, 'http://localhost:8080/home-accessories/7-mug-the-adventure-begins.html', 'localhost:8080/koszyk?action=show', '', '2023-11-17 10:19:32'),
+(7, 3, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-17 10:19:33'),
+(8, 3, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-17 10:19:39'),
+(9, 3, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-17 10:19:45'),
+(10, 4, 'http://localhost:8080/', 'localhost:8080/4-men', '', '2023-11-17 13:30:40'),
+(11, 4, 'http://localhost:8080/', 'localhost:8080/4-men', '', '2023-11-17 13:30:45'),
+(12, 4, 'http://localhost:8080/4-men', 'localhost:8080/8-home-accessories', '', '2023-11-17 13:31:00'),
+(13, 4, 'http://localhost:8080/4-men', 'localhost:8080/8-home-accessories', '', '2023-11-17 13:31:07'),
+(14, 4, 'http://localhost:8080/8-home-accessories', 'localhost:8080/kontakt', '', '2023-11-17 13:31:38'),
+(15, 4, 'http://localhost:8080/kontakt', 'localhost:8080/logowanie?back=my-account', '', '2023-11-17 13:31:40'),
+(16, 4, 'http://localhost:8080/logowanie?back=my-account', 'localhost:8080/6-accessories', '', '2023-11-17 13:31:43'),
+(17, 4, 'http://localhost:8080/6-accessories', 'localhost:8080/7-stationery', '', '2023-11-17 13:31:46'),
+(18, 4, 'http://localhost:8080/6-accessories', 'localhost:8080/7-stationery', '', '2023-11-17 13:31:56'),
+(19, 4, 'http://localhost:8080/7-stationery?q=Dost%C4%99pno%C5%9B%C4%87-Dost%C4%99pny', 'localhost:8080/9-art', '', '2023-11-17 13:32:03'),
+(20, 4, 'http://localhost:8080/9-art', 'localhost:8080/6-accessories', '', '2023-11-17 13:32:05'),
+(21, 4, 'http://localhost:8080/9-art', 'localhost:8080/6-accessories', '', '2023-11-17 13:34:04'),
+(22, 4, 'http://localhost:8080/6-accessories', 'localhost:8080/7-stationery', '', '2023-11-17 13:34:05'),
+(23, 4, 'http://localhost:8080/7-stationery', 'localhost:8080/stationery/16-28-mountain-fox-notebook.html', '', '2023-11-17 13:34:08'),
+(24, 4, 'http://localhost:8080/stationery/16-28-mountain-fox-notebook.html', 'localhost:8080/3-clothes', '', '2023-11-17 13:34:10'),
+(25, 4, 'http://localhost:8080/3-clothes', 'localhost:8080/', '', '2023-11-17 13:34:11'),
+(26, 4, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-17 13:34:13'),
+(27, 4, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-17 13:48:34'),
+(28, 5, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 16:51:16'),
+(29, 5, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/koszyk?action=show', '', '2023-11-18 16:52:24'),
+(30, 5, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:52:32'),
+(31, 5, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:52:45'),
+(32, 5, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:52:54'),
+(33, 5, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 16:53:01'),
+(34, 6, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/potwierdzenie-zamowienia?id_cart=7&id_module=35&id_order=6&key=42397d7a86c715692d4d271c4c52262c', '', '2023-11-18 16:53:07'),
+(35, 6, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/logowanie?back=history', '', '2023-11-18 17:01:14'),
+(36, 7, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 19:42:03'),
+(37, 7, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/koszyk?action=show', '', '2023-11-18 19:42:08'),
+(38, 7, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 19:42:12'),
+(39, 7, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 19:46:21'),
+(40, 7, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-18 19:48:12'),
+(41, 7, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/content/3-terms-and-conditions-of-use?content_only=1', '', '2023-11-18 19:48:22'),
+(42, 7, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/kontakt', '', '2023-11-18 19:50:01'),
+(43, 7, 'http://localhost:8080/kontakt', 'localhost:8080/promocje', '', '2023-11-18 19:50:34'),
+(44, 7, 'http://localhost:8080/kontakt', 'localhost:8080/nowe-produkty', '', '2023-11-18 19:50:38'),
+(45, 7, 'http://localhost:8080/kontakt', 'localhost:8080/najczesciej-kupowane', '', '2023-11-18 19:50:38'),
+(46, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/1-delivery', '', '2023-11-18 19:50:40'),
+(47, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 19:50:51'),
+(48, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/1-delivery', '', '2023-11-18 19:50:55'),
+(49, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/2-legal-notice', '', '2023-11-18 19:51:09'),
+(50, 7, 'http://localhost:8080/kontakt', 'localhost:8080/logowanie?back=identity', '', '2023-11-18 19:52:16'),
+(51, 7, 'http://localhost:8080/kontakt', 'localhost:8080/content/2-legal-notice', '', '2023-11-18 19:53:16'),
+(52, 7, 'http://localhost:8080/content/2-legal-notice', 'localhost:8080/', '', '2023-11-18 19:53:51'),
+(53, 7, 'http://localhost:8080/', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 19:53:56'),
+(54, 7, 'http://localhost:8080/', 'localhost:8080/content/4-about-us', '', '2023-11-18 19:53:56'),
+(55, 7, 'http://localhost:8080/', 'localhost:8080/content/5-secure-payment', '', '2023-11-18 19:54:01'),
+(56, 7, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2023-11-18 19:54:02'),
+(57, 7, 'http://localhost:8080/', 'localhost:8080/Mapa%20strony', '', '2023-11-18 19:54:02'),
+(58, 7, 'http://localhost:8080/', 'localhost:8080/nasze-sklepy', '', '2023-11-18 19:54:03'),
+(59, 7, 'http://localhost:8080/', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 19:55:48'),
+(60, 7, 'http://localhost:8080/', 'localhost:8080/content/4-about-us', '', '2023-11-18 19:58:34'),
+(61, 7, 'http://localhost:8080/content/2-legal-notice', 'localhost:8080/', '', '2023-11-18 19:58:56'),
+(62, 7, 'http://localhost:8080/', 'localhost:8080/Mapa%20strony', '', '2023-11-18 19:59:01'),
+(63, 7, 'http://localhost:8080/', 'localhost:8080/nasze-sklepy', '', '2023-11-18 19:59:02'),
+(64, 7, 'http://localhost:8080/content/2-legal-notice', 'localhost:8080/', '', '2023-11-18 20:01:25'),
+(65, 7, 'http://localhost:8080/', 'localhost:8080/6-accessories', '', '2023-11-18 20:01:40'),
+(66, 7, 'http://localhost:8080/6-accessories', 'localhost:8080/3-clothes', '', '2023-11-18 20:01:44'),
+(67, 7, 'http://localhost:8080/3-clothes', 'localhost:8080/najczesciej-kupowane', '', '2023-11-18 20:01:50'),
+(68, 8, 'http://localhost:8080/', 'localhost:8080/content/1-delivery', '', '2023-11-18 20:30:33'),
+(69, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:31:25'),
+(70, 8, 'http://localhost:8080/content/1-delivery', 'localhost:8080/', '', '2023-11-18 20:32:52'),
+(71, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:04'),
+(72, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:22'),
+(73, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:25'),
+(74, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:28'),
+(75, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:35:50'),
+(76, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:35:52'),
+(77, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:36:01'),
+(78, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:37:04'),
+(79, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:37:05'),
+(80, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-terms-and-conditions-of-use', '', '2023-11-18 20:37:05'),
+(81, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:38:35'),
+(82, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:39:15'),
+(83, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:42:46'),
+(84, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:42:56'),
+(85, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-18 20:42:56'),
+(86, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:42:56'),
+(87, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-18 20:45:42'),
+(88, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/index.php?controller=404', '', '2023-11-18 20:45:42'),
+(89, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:46:06'),
+(90, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/4-about-us', '', '2023-11-18 20:46:10'),
+(91, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:46:13'),
+(92, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:46:33'),
+(93, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/kontakt', '', '2023-11-18 20:47:00'),
+(94, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:47:13'),
+(95, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:48:50'),
+(96, 8, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-18 20:53:53'),
+(97, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/1-dostawa', '', '2023-11-18 20:53:56'),
+(98, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-18 20:53:57'),
+(99, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/4-o-nas', '', '2023-11-18 20:54:04'),
+(100, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/6-zwroty', '', '2023-11-18 20:54:05'),
+(101, 8, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/kontakt', '', '2023-11-18 20:54:05'),
+(102, 5, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2023-11-25 02:48:13'),
+(103, 5, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-25 02:48:16'),
+(104, 5, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/', '', '2023-11-25 02:48:24'),
+(105, 5, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/', '', '2023-11-25 02:48:32'),
+(106, 5, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-11-25 02:48:33'),
+(107, 5, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/14-ubrania', '', '2023-11-25 02:48:34'),
+(108, 5, 'http://localhost:8080/14-ubrania', 'localhost:8080/15-buty', '', '2023-11-25 02:48:36'),
+(109, 5, 'http://localhost:8080/15-buty', 'localhost:8080/16-akcesoria', '', '2023-11-25 02:48:36'),
+(110, 5, 'http://localhost:8080/16-akcesoria', 'localhost:8080/17-ubrania', '', '2023-11-25 02:48:38'),
+(111, 5, 'http://localhost:8080/17-ubrania', 'localhost:8080/18-buty', '', '2023-11-25 02:48:39'),
+(112, 5, 'http://localhost:8080/18-buty', 'localhost:8080/19-akcesoria', '', '2023-11-25 02:48:39'),
+(113, 5, 'http://localhost:8080/19-akcesoria', 'localhost:8080/20-buty-dla-chlopcow', '', '2023-11-25 02:48:40'),
+(114, 5, 'http://localhost:8080/20-buty-dla-chlopcow', 'localhost:8080/21-buty-dla-dziewczynek', '', '2023-11-25 02:48:41'),
+(115, 5, 'http://localhost:8080/21-buty-dla-dziewczynek', 'localhost:8080/22-akcesoria', '', '2023-11-25 02:48:42'),
+(116, 5, 'http://localhost:8080/22-akcesoria', 'localhost:8080/23-buty-pilkarskie', '', '2023-11-25 02:48:43'),
+(117, 5, 'http://localhost:8080/23-buty-pilkarskie', 'localhost:8080/24-buty-biegowe', '', '2023-11-25 02:48:45'),
+(118, 5, 'http://localhost:8080/24-buty-biegowe', 'localhost:8080/', '', '2023-11-25 02:48:45'),
+(119, 9, 'http://localhost:8080/', 'localhost:8080/17-ubrania', '', '2023-11-25 02:49:06'),
+(120, 9, 'http://localhost:8080/17-ubrania', 'localhost:8080/', '', '2023-11-25 02:49:08'),
+(121, 9, 'http://localhost:8080/', 'localhost:8080/women/2-9-brown-bear-printed-sweater.html', '', '2023-11-25 02:53:13'),
+(122, 9, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/koszyk?action=show', '', '2023-11-25 02:53:16'),
+(123, 9, 'http://localhost:8080/koszyk?action=show', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-25 02:53:18'),
+(124, 9, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-25 02:53:42'),
+(125, 9, 'http://localhost:8080/zam%C3%B3wienie', 'localhost:8080/zam%C3%B3wienie?id_address=0', '', '2023-11-25 02:53:52'),
+(126, 9, 'http://localhost:8080/zam%C3%B3wienie?id_address=0', 'localhost:8080/zam%C3%B3wienie?id_address=0', '', '2023-11-25 02:53:57'),
+(127, 9, 'http://localhost:8080/zam%C3%B3wienie?id_address=0', 'localhost:8080/zam%C3%B3wienie', '', '2023-11-25 02:54:01'),
+(128, 9, 'http://localhost:8080/admin4444/index.php?controller=AdminModules&configure=ps_mainmenu&tab_module=front_office_features&module_name=ps_mainmenu&token=298876f98f75659a2a13406f045fcfd5', 'localhost:8080/', '', '2023-11-25 02:57:19'),
+(129, 9, 'http://localhost:8080/admin4444/index.php?controller=AdminModules&configure=ps_mainmenu&tab_module=front_office_features&module_name=ps_mainmenu&token=298876f98f75659a2a13406f045fcfd5', 'localhost:8080/', '', '2023-11-25 02:57:28'),
+(130, 9, 'http://localhost:8080/', 'localhost:8080/24-buty-biegowe', '', '2023-11-25 02:57:31'),
+(131, 9, 'http://localhost:8080/24-buty-biegowe', 'localhost:8080/14-ubrania', '', '2023-11-25 02:57:34'),
+(132, 9, 'http://localhost:8080/14-ubrania', 'localhost:8080/', '', '2023-11-25 02:57:35'),
+(133, 9, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2023-11-25 02:57:37'),
+(134, 9, 'http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-25 02:57:39');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -4798,8 +5086,16 @@ CREATE TABLE `ad_customer` (
 --
 
 INSERT INTO `ad_customer` (`id_customer`, `id_shop_group`, `id_shop`, `id_gender`, `id_default_group`, `id_lang`, `id_risk`, `company`, `siret`, `ape`, `firstname`, `lastname`, `email`, `passwd`, `last_passwd_gen`, `birthday`, `newsletter`, `ip_registration_newsletter`, `newsletter_date_add`, `optin`, `website`, `outstanding_allow_amount`, `show_public_prices`, `max_payment_days`, `secure_key`, `note`, `active`, `is_guest`, `deleted`, `date_add`, `date_upd`, `reset_password_token`, `reset_password_validity`) VALUES
+<<<<<<< Updated upstream
 (1, 1, 1, 1, 3, 1, 0, '', '', '', 'Anonymous', 'Anonymous', 'anonymous@psgdpr.com', '$2y$10$6SlkGM9Sp6NVqVfKKWcLe.kB3OZXwv/OpJwzKZ.RFeQZRip5Q5GMa', '2023-11-20 13:42:20', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '713a504096fba91fc30010cff11115dd', '', 0, 0, 0, '2023-11-20 19:42:20', '2023-11-20 19:42:20', '', '0000-00-00 00:00:00'),
 (2, 1, 1, 1, 3, 1, 0, '', '', '', 'John', 'DOE', 'pub@prestashop.com', 'f16d43f030c34d62a0a52b3230912a74', '2023-11-20 13:42:36', '1970-01-15', 1, '', '2013-12-13 08:19:15', 1, '', 0.000000, 0, 0, 'ddf8897f191a9de868227164b8b55197', '', 1, 0, 0, '2023-11-20 19:42:36', '2023-11-20 19:42:36', '', '0000-00-00 00:00:00');
+=======
+(1, 1, 1, 1, 3, 1, 0, '', '', '', 'Anonymous', 'Anonymous', 'anonymous@psgdpr.com', '$2y$10$4fYar5G0eB0nV6MAw/U1xeobQB/xFYo4bYaApcIBDdf2jeW7TBlMi', '2023-11-17 03:28:45', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '85779532f1c2b733c19a837b1ed1900b', '', 0, 0, 0, '2023-11-17 09:28:45', '2023-11-17 09:28:45', '', '0000-00-00 00:00:00'),
+(2, 1, 1, 1, 3, 1, 0, '', '', '', 'John', 'DOE', 'pub@prestashop.com', '64cf9e6d26da4cce4b28989d3691dde4', '2023-11-17 03:29:09', '1970-01-15', 1, '', '2013-12-13 08:19:15', 1, '', 0.000000, 0, 0, 'e1d14b4acca8fb8b91d072872ff1fea9', '', 1, 0, 0, '2023-11-17 09:29:09', '2023-11-17 09:29:09', '', '0000-00-00 00:00:00'),
+(3, 1, 1, 0, 2, 1, 0, '', '', '', 'd', 'd', 'd@wpl.pl', '$2y$10$bDcv2qcopj1KuCw8vg8AD.EbRUL7paqosZ5kKyupXX2Vs0yGfO1zC', '2023-11-17 04:19:39', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, 'dac06b111ff76d51ece3a60bd7191a82', '', 1, 1, 0, '2023-11-17 10:19:39', '2023-11-17 10:19:39', '', '0000-00-00 00:00:00'),
+(4, 1, 1, 1, 2, 1, 0, '', '', '', 'Szymon', 'Małecki', 'szymal514324764@wp.pl', '$2y$10$1NT5yS/C0ZwFbevL97m3QusiJpK5UaXTzAsd3WnRMiITDfECGp9xm', '2023-11-18 10:52:44', '0000-00-00', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, '42397d7a86c715692d4d271c4c52262c', '', 1, 1, 0, '2023-11-18 16:52:44', '2023-11-18 16:52:44', '', '0000-00-00 00:00:00'),
+(5, 1, 1, 1, 2, 1, 0, '', '', '', 'x', 'x', 'x@x', '$2y$10$BPDwRHpFrqh1XNtlXjS5l.SE9DeUOLTXnQzL0PraGXSxD7rAtIxMi', '2023-11-24 20:53:42', '1970-05-31', 0, '', '0000-00-00 00:00:00', 0, '', 0.000000, 0, 0, 'f2d44722acb7c6c187155867c8afee52', '', 1, 1, 0, '2023-11-25 02:53:42', '2023-11-25 02:53:42', '', '0000-00-00 00:00:00');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -4818,7 +5114,14 @@ CREATE TABLE `ad_customer_group` (
 
 INSERT INTO `ad_customer_group` (`id_customer`, `id_group`) VALUES
 (1, 3),
+<<<<<<< Updated upstream
 (2, 3);
+=======
+(2, 3),
+(3, 2),
+(4, 2),
+(5, 2);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -4862,6 +5165,17 @@ CREATE TABLE `ad_customer_session` (
   `token` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+<<<<<<< Updated upstream
+=======
+--
+-- Dumping data for table `ad_customer_session`
+--
+
+INSERT INTO `ad_customer_session` (`id_customer_session`, `id_customer`, `token`) VALUES
+(1, 3, '8acc7dfd6d29370a86acbf8c0b00228fa2cb8539'),
+(3, 5, '683fcdb4c41b3bb79b9d673152124bebb61f436a');
+
+>>>>>>> Stashed changes
 -- --------------------------------------------------------
 
 --
@@ -5009,6 +5323,7 @@ INSERT INTO `ad_delivery` (`id_delivery`, `id_shop`, `id_shop_group`, `id_carrie
 (14, NULL, NULL, 4, 0, 3, 2, 3.000000),
 (15, NULL, NULL, 4, 0, 4, 1, 5.000000),
 (16, NULL, NULL, 4, 0, 4, 2, 6.000000),
+<<<<<<< Updated upstream
 (25, NULL, NULL, 5, 5, NULL, 4, 50.000000),
 (26, NULL, NULL, 5, 5, NULL, 3, 50.000000),
 (27, NULL, NULL, 5, 5, NULL, 8, 50.000000),
@@ -5057,6 +5372,40 @@ INSERT INTO `ad_delivery` (`id_delivery`, `id_shop`, `id_shop_group`, `id_carrie
 (110, NULL, NULL, 7, 10, NULL, 2, 0.000000),
 (111, NULL, NULL, 7, 10, NULL, 5, 0.000000),
 (112, NULL, NULL, 7, 10, NULL, 6, 0.000000);
+=======
+(25, NULL, NULL, 6, 5, NULL, 4, 45.000000),
+(26, NULL, NULL, 6, 5, NULL, 3, 45.000000),
+(27, NULL, NULL, 6, 5, NULL, 8, 45.000000),
+(28, NULL, NULL, 6, 5, NULL, 1, 45.000000),
+(29, NULL, NULL, 6, 5, NULL, 7, 45.000000),
+(30, NULL, NULL, 6, 5, NULL, 2, 45.000000),
+(31, NULL, NULL, 6, 5, NULL, 5, 45.000000),
+(32, NULL, NULL, 6, 5, NULL, 6, 45.000000),
+(41, NULL, NULL, 6, 6, NULL, 4, 0.000000),
+(42, NULL, NULL, 6, 6, NULL, 3, 0.000000),
+(43, NULL, NULL, 6, 6, NULL, 8, 0.000000),
+(44, NULL, NULL, 6, 6, NULL, 1, 0.000000),
+(45, NULL, NULL, 6, 6, NULL, 7, 0.000000),
+(46, NULL, NULL, 6, 6, NULL, 2, 0.000000),
+(47, NULL, NULL, 6, 6, NULL, 5, 0.000000),
+(48, NULL, NULL, 6, 6, NULL, 6, 0.000000),
+(57, NULL, NULL, 7, 7, NULL, 4, 55.000000),
+(58, NULL, NULL, 7, 7, NULL, 3, 55.000000),
+(59, NULL, NULL, 7, 7, NULL, 8, 55.000000),
+(60, NULL, NULL, 7, 7, NULL, 1, 55.000000),
+(61, NULL, NULL, 7, 7, NULL, 7, 55.000000),
+(62, NULL, NULL, 7, 7, NULL, 2, 55.000000),
+(63, NULL, NULL, 7, 7, NULL, 5, 55.000000),
+(64, NULL, NULL, 7, 7, NULL, 6, 55.000000),
+(73, NULL, NULL, 7, 8, NULL, 4, 0.000000),
+(74, NULL, NULL, 7, 8, NULL, 3, 0.000000),
+(75, NULL, NULL, 7, 8, NULL, 8, 0.000000),
+(76, NULL, NULL, 7, 8, NULL, 1, 0.000000),
+(77, NULL, NULL, 7, 8, NULL, 7, 0.000000),
+(78, NULL, NULL, 7, 8, NULL, 2, 0.000000),
+(79, NULL, NULL, 7, 8, NULL, 5, 0.000000),
+(80, NULL, NULL, 7, 8, NULL, 6, 0.000000);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -5119,7 +5468,11 @@ CREATE TABLE `ad_employee` (
 --
 
 INSERT INTO `ad_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
+<<<<<<< Updated upstream
 (1, 1, 1, 'Test', 'Test', 'test@test.com', '$2y$10$BToNNDsK7vYZyIalrfiu6O4WqVsNWX4.kW8ZnAXKDCdmAjNoiogma', '2023-11-20 13:41:38', '2023-10-20', '2023-11-20', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-11-23', NULL, '0000-00-00 00:00:00', 0);
+=======
+(1, 1, 1, 'Test', 'Test', 'test@test.com', '$2y$10$qsD9LCfAYKaz7/6eppoU/.MoidieTkwkbw/pRniFDMToHAslbQuM.', '2023-11-17 03:28:05', '2023-10-17', '2023-11-17', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-11-25', NULL, '0000-00-00 00:00:00', 0);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -5138,7 +5491,12 @@ CREATE TABLE `ad_employee_session` (
 --
 
 INSERT INTO `ad_employee_session` (`id_employee_session`, `id_employee`, `token`) VALUES
+<<<<<<< Updated upstream
 (1, 1, 'c06b794e209905a383ba21ca032485379b808758');
+=======
+(3, 1, '98613e2e4091844e82a2419e72d08e44ad078c92'),
+(4, 1, '8cb7bfc86ff208bae56bca818bc2ae0521614f52');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -5512,7 +5870,14 @@ CREATE TABLE `ad_guest` (
 INSERT INTO `ad_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id_customer`, `javascript`, `screen_resolution_x`, `screen_resolution_y`, `screen_color`, `sun_java`, `adobe_flash`, `adobe_director`, `apple_quicktime`, `real_player`, `windows_media`, `accept_language`, `mobile_theme`) VALUES
 (1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
 (2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+<<<<<<< Updated upstream
 (3, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+=======
+(3, 6, 11, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(4, 7, 11, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(5, 7, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(6, 6, 11, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -7071,7 +7436,11 @@ CREATE TABLE `ad_layered_filter` (
 --
 
 INSERT INTO `ad_layered_filter` (`id_layered_filter`, `name`, `filters`, `n_categories`, `date_add`) VALUES
+<<<<<<< Updated upstream
 (1, 'Mój szablon 2023-11-20', 'a:15:{s:10:\"categories\";a:5:{i:0;i:2;i:2;i:4;i:3;i:5;i:6;i:8;i:7;i:7;}s:11:\"controllers\";a:1:{i:0;s:8:\"category\";}s:9:\"shop_list\";a:1:{i:1;i:1;}s:31:\"layered_selection_subcategories\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_1\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_2\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:24:\"layered_selection_feat_1\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:24:\"layered_selection_feat_2\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:23:\"layered_selection_stock\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:30:\"layered_selection_manufacturer\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:27:\"layered_selection_condition\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:31:\"layered_selection_weight_slider\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:30:\"layered_selection_price_slider\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_3\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_4\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}}', 5, '2023-11-20 18:42:41');
+=======
+(1, 'Mój szablon 2023-11-17', 'a:15:{s:10:\"categories\";a:5:{i:0;i:2;i:2;i:4;i:3;i:5;i:6;i:8;i:7;i:7;}s:11:\"controllers\";a:1:{i:0;s:8:\"category\";}s:9:\"shop_list\";a:1:{i:1;i:1;}s:31:\"layered_selection_subcategories\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_1\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_2\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:24:\"layered_selection_feat_1\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:24:\"layered_selection_feat_2\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:23:\"layered_selection_stock\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:30:\"layered_selection_manufacturer\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:27:\"layered_selection_condition\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:31:\"layered_selection_weight_slider\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:30:\"layered_selection_price_slider\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_3\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}s:22:\"layered_selection_ag_4\";a:2:{s:11:\"filter_type\";i:0;s:17:\"filter_show_limit\";i:0;}}', 5, '2023-11-17 08:29:12');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -7084,6 +7453,17 @@ CREATE TABLE `ad_layered_filter_block` (
   `data` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+<<<<<<< Updated upstream
+=======
+--
+-- Dumping data for table `ad_layered_filter_block`
+--
+
+INSERT INTO `ad_layered_filter_block` (`hash`, `data`) VALUES
+('92c1db76124efd342da8bd351010bb6f', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('e3dfc0a14c813ae417255a852b429a59', 'a:1:{s:7:\"filters\";a:0:{}}');
+
+>>>>>>> Stashed changes
 -- --------------------------------------------------------
 
 --
@@ -7405,6 +7785,7 @@ CREATE TABLE `ad_log` (
 --
 
 INSERT INTO `ad_log` (`id_log`, `severity`, `error_code`, `message`, `object_type`, `object_id`, `id_shop`, `id_shop_group`, `id_lang`, `in_all_shops`, `id_employee`, `date_add`, `date_upd`) VALUES
+<<<<<<< Updated upstream
 (1, 1, 0, 'Exporting mail with theme modern for language Polski (Polish)', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:33', '2023-11-20 19:41:33'),
 (2, 1, 0, 'Core output folder: /var/www/html/mails', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:33', '2023-11-20 19:41:33'),
 (3, 1, 0, 'Modules output folder: /var/www/html/modules/', '', 0, NULL, NULL, 0, 0, 0, '2023-11-20 19:41:33', '2023-11-20 19:41:33'),
@@ -7633,6 +8014,247 @@ INSERT INTO `ad_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (226, 1, 0, 'Protect vendor folder in module ps_facetedsearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
 (227, 1, 0, 'Module ps_facetedsearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-20 19:42:41', '2023-11-20 19:42:41'),
 (228, 1, 0, 'Połączenie z panelem administracyjnym z 172.19.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-23 02:46:07', '2023-11-23 02:46:07');
+=======
+(1, 1, 0, 'Exporting mail with theme modern for language Polski (Polish)', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:27:59', '2023-11-17 09:27:59'),
+(2, 1, 0, 'Core output folder: /var/www/html/mails', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:27:59', '2023-11-17 09:27:59'),
+(3, 1, 0, 'Modules output folder: /var/www/html/modules/', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:27:59', '2023-11-17 09:27:59'),
+(4, 1, 0, 'Generate html template account at /var/www/html/mails/pl/account.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(5, 1, 0, 'Generate txt template account at /var/www/html/mails/pl/account.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(6, 1, 0, 'Generate html template backoffice_order at /var/www/html/mails/pl/backoffice_order.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(7, 1, 0, 'Generate txt template backoffice_order at /var/www/html/mails/pl/backoffice_order.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(8, 1, 0, 'Generate html template bankwire at /var/www/html/mails/pl/bankwire.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(9, 1, 0, 'Generate txt template bankwire at /var/www/html/mails/pl/bankwire.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(10, 1, 0, 'Generate html template cheque at /var/www/html/mails/pl/cheque.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(11, 1, 0, 'Generate txt template cheque at /var/www/html/mails/pl/cheque.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(12, 1, 0, 'Generate html template contact at /var/www/html/mails/pl/contact.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(13, 1, 0, 'Generate txt template contact at /var/www/html/mails/pl/contact.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(14, 1, 0, 'Generate html template contact_form at /var/www/html/mails/pl/contact_form.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(15, 1, 0, 'Generate txt template contact_form at /var/www/html/mails/pl/contact_form.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(16, 1, 0, 'Generate html template credit_slip at /var/www/html/mails/pl/credit_slip.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(17, 1, 0, 'Generate txt template credit_slip at /var/www/html/mails/pl/credit_slip.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(18, 1, 0, 'Generate html template download_product at /var/www/html/mails/pl/download_product.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(19, 1, 0, 'Generate txt template download_product at /var/www/html/mails/pl/download_product.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(20, 1, 0, 'Generate html template employee_password at /var/www/html/mails/pl/employee_password.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(21, 1, 0, 'Generate txt template employee_password at /var/www/html/mails/pl/employee_password.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(22, 1, 0, 'Generate html template forward_msg at /var/www/html/mails/pl/forward_msg.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:00', '2023-11-17 09:28:00'),
+(23, 1, 0, 'Generate txt template forward_msg at /var/www/html/mails/pl/forward_msg.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(24, 1, 0, 'Generate html template guest_to_customer at /var/www/html/mails/pl/guest_to_customer.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(25, 1, 0, 'Generate txt template guest_to_customer at /var/www/html/mails/pl/guest_to_customer.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(26, 1, 0, 'Generate html template import at /var/www/html/mails/pl/import.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(27, 1, 0, 'Generate txt template import at /var/www/html/mails/pl/import.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(28, 1, 0, 'Generate html template in_transit at /var/www/html/mails/pl/in_transit.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(29, 1, 0, 'Generate txt template in_transit at /var/www/html/mails/pl/in_transit.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(30, 1, 0, 'Generate html template log_alert at /var/www/html/mails/pl/log_alert.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(31, 1, 0, 'Generate txt template log_alert at /var/www/html/mails/pl/log_alert.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(32, 1, 0, 'Generate html template newsletter at /var/www/html/mails/pl/newsletter.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(33, 1, 0, 'Generate txt template newsletter at /var/www/html/mails/pl/newsletter.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(34, 1, 0, 'Generate html template order_canceled at /var/www/html/mails/pl/order_canceled.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(35, 1, 0, 'Generate txt template order_canceled at /var/www/html/mails/pl/order_canceled.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(36, 1, 0, 'Generate html template order_changed at /var/www/html/mails/pl/order_changed.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(37, 1, 0, 'Generate txt template order_changed at /var/www/html/mails/pl/order_changed.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(38, 1, 0, 'Generate html template order_conf at /var/www/html/mails/pl/order_conf.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(39, 1, 0, 'Generate txt template order_conf at /var/www/html/mails/pl/order_conf.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(40, 1, 0, 'Generate html template order_customer_comment at /var/www/html/mails/pl/order_customer_comment.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(41, 1, 0, 'Generate txt template order_customer_comment at /var/www/html/mails/pl/order_customer_comment.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(42, 1, 0, 'Generate html template order_merchant_comment at /var/www/html/mails/pl/order_merchant_comment.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(43, 1, 0, 'Generate txt template order_merchant_comment at /var/www/html/mails/pl/order_merchant_comment.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(44, 1, 0, 'Generate html template order_return_state at /var/www/html/mails/pl/order_return_state.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(45, 1, 0, 'Generate txt template order_return_state at /var/www/html/mails/pl/order_return_state.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(46, 1, 0, 'Generate html template outofstock at /var/www/html/mails/pl/outofstock.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(47, 1, 0, 'Generate txt template outofstock at /var/www/html/mails/pl/outofstock.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(48, 1, 0, 'Generate html template password at /var/www/html/mails/pl/password.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(49, 1, 0, 'Generate txt template password at /var/www/html/mails/pl/password.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(50, 1, 0, 'Generate html template password_query at /var/www/html/mails/pl/password_query.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(51, 1, 0, 'Generate txt template password_query at /var/www/html/mails/pl/password_query.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(52, 1, 0, 'Generate html template payment at /var/www/html/mails/pl/payment.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(53, 1, 0, 'Generate txt template payment at /var/www/html/mails/pl/payment.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(54, 1, 0, 'Generate html template payment_error at /var/www/html/mails/pl/payment_error.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(55, 1, 0, 'Generate txt template payment_error at /var/www/html/mails/pl/payment_error.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(56, 1, 0, 'Generate html template preparation at /var/www/html/mails/pl/preparation.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(57, 1, 0, 'Generate txt template preparation at /var/www/html/mails/pl/preparation.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(58, 1, 0, 'Generate html template productoutofstock at /var/www/html/mails/pl/productoutofstock.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(59, 1, 0, 'Generate txt template productoutofstock at /var/www/html/mails/pl/productoutofstock.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(60, 1, 0, 'Generate html template refund at /var/www/html/mails/pl/refund.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(61, 1, 0, 'Generate txt template refund at /var/www/html/mails/pl/refund.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(62, 1, 0, 'Generate html template reply_msg at /var/www/html/mails/pl/reply_msg.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(63, 1, 0, 'Generate txt template reply_msg at /var/www/html/mails/pl/reply_msg.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(64, 1, 0, 'Generate html template shipped at /var/www/html/mails/pl/shipped.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(65, 1, 0, 'Generate txt template shipped at /var/www/html/mails/pl/shipped.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(66, 1, 0, 'Generate html template test at /var/www/html/mails/pl/test.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(67, 1, 0, 'Generate txt template test at /var/www/html/mails/pl/test.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(68, 1, 0, 'Generate html template voucher at /var/www/html/mails/pl/voucher.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(69, 1, 0, 'Generate txt template voucher at /var/www/html/mails/pl/voucher.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(70, 1, 0, 'Generate html template voucher_new at /var/www/html/mails/pl/voucher_new.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(71, 1, 0, 'Generate txt template voucher_new at /var/www/html/mails/pl/voucher_new.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(72, 1, 0, 'Generate html template followup_1 at /var/www/html/modules//ps_reminder/mails/pl/followup_1.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(73, 1, 0, 'Generate txt template followup_1 at /var/www/html/modules//ps_reminder/mails/pl/followup_1.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(74, 1, 0, 'Generate html template followup_2 at /var/www/html/modules//ps_reminder/mails/pl/followup_2.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(75, 1, 0, 'Generate txt template followup_2 at /var/www/html/modules//ps_reminder/mails/pl/followup_2.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(76, 1, 0, 'Generate html template followup_3 at /var/www/html/modules//ps_reminder/mails/pl/followup_3.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(77, 1, 0, 'Generate txt template followup_3 at /var/www/html/modules//ps_reminder/mails/pl/followup_3.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(78, 1, 0, 'Generate html template followup_4 at /var/www/html/modules//ps_reminder/mails/pl/followup_4.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(79, 1, 0, 'Generate txt template followup_4 at /var/www/html/modules//ps_reminder/mails/pl/followup_4.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(80, 1, 0, 'Generate html template followup_1 at /var/www/html/modules//followup/mails/pl/followup_1.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(81, 1, 0, 'Generate txt template followup_1 at /var/www/html/modules//followup/mails/pl/followup_1.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(82, 1, 0, 'Generate html template followup_2 at /var/www/html/modules//followup/mails/pl/followup_2.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(83, 1, 0, 'Generate txt template followup_2 at /var/www/html/modules//followup/mails/pl/followup_2.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(84, 1, 0, 'Generate html template followup_3 at /var/www/html/modules//followup/mails/pl/followup_3.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(85, 1, 0, 'Generate txt template followup_3 at /var/www/html/modules//followup/mails/pl/followup_3.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(86, 1, 0, 'Generate html template followup_4 at /var/www/html/modules//followup/mails/pl/followup_4.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(87, 1, 0, 'Generate txt template followup_4 at /var/www/html/modules//followup/mails/pl/followup_4.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(88, 1, 0, 'Generate html template referralprogram-congratulations at /var/www/html/modules//referralprogram/mails/pl/referralprogram-congratulations.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(89, 1, 0, 'Generate txt template referralprogram-congratulations at /var/www/html/modules//referralprogram/mails/pl/referralprogram-congratulations.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(90, 1, 0, 'Generate html template referralprogram-invitation at /var/www/html/modules//referralprogram/mails/pl/referralprogram-invitation.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(91, 1, 0, 'Generate txt template referralprogram-invitation at /var/www/html/modules//referralprogram/mails/pl/referralprogram-invitation.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(92, 1, 0, 'Generate html template referralprogram-voucher at /var/www/html/modules//referralprogram/mails/pl/referralprogram-voucher.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(93, 1, 0, 'Generate txt template referralprogram-voucher at /var/www/html/modules//referralprogram/mails/pl/referralprogram-voucher.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(94, 1, 0, 'Generate html template customer_qty at /var/www/html/modules//ps_emailalerts/mails/pl/customer_qty.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(95, 1, 0, 'Generate txt template customer_qty at /var/www/html/modules//ps_emailalerts/mails/pl/customer_qty.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(96, 1, 0, 'Generate html template new_order at /var/www/html/modules//ps_emailalerts/mails/pl/new_order.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(97, 1, 0, 'Generate txt template new_order at /var/www/html/modules//ps_emailalerts/mails/pl/new_order.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(98, 1, 0, 'Generate html template order_changed at /var/www/html/modules//ps_emailalerts/mails/pl/order_changed.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(99, 1, 0, 'Generate txt template order_changed at /var/www/html/modules//ps_emailalerts/mails/pl/order_changed.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(100, 1, 0, 'Generate html template productcoverage at /var/www/html/modules//ps_emailalerts/mails/pl/productcoverage.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:01', '2023-11-17 09:28:01'),
+(101, 1, 0, 'Generate txt template productcoverage at /var/www/html/modules//ps_emailalerts/mails/pl/productcoverage.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(102, 1, 0, 'Generate html template productoutofstock at /var/www/html/modules//ps_emailalerts/mails/pl/productoutofstock.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(103, 1, 0, 'Generate txt template productoutofstock at /var/www/html/modules//ps_emailalerts/mails/pl/productoutofstock.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(104, 1, 0, 'Generate html template return_slip at /var/www/html/modules//ps_emailalerts/mails/pl/return_slip.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(105, 1, 0, 'Generate txt template return_slip at /var/www/html/modules//ps_emailalerts/mails/pl/return_slip.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(106, 1, 0, 'Generate html template newsletter_conf at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_conf.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(107, 1, 0, 'Generate txt template newsletter_conf at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_conf.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(108, 1, 0, 'Generate html template newsletter_verif at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_verif.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(109, 1, 0, 'Generate txt template newsletter_verif at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_verif.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(110, 1, 0, 'Generate html template newsletter_voucher at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_voucher.html', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(111, 1, 0, 'Generate txt template newsletter_voucher at /var/www/html/modules//ps_emailsubscription/mails/pl/newsletter_voucher.txt', '', 0, NULL, NULL, 0, 0, 0, '2023-11-17 09:28:02', '2023-11-17 09:28:02'),
+(112, 1, 0, 'Protect vendor folder in module blockwishlist', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(113, 1, 0, 'Module blockwishlist has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(114, 1, 0, 'Protect vendor folder in module contactform', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(115, 1, 0, 'Module contactform has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(116, 1, 0, 'Protect vendor folder in module dashactivity', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(117, 1, 0, 'Module dashactivity has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(118, 1, 0, 'Protect vendor folder in module dashtrends', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(119, 1, 0, 'Module dashtrends has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(120, 1, 0, 'Protect vendor folder in module dashgoals', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(121, 1, 0, 'Module dashgoals has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(122, 1, 0, 'Protect vendor folder in module dashproducts', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(123, 1, 0, 'Module dashproducts has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(124, 1, 0, 'Protect vendor folder in module graphnvd3', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(125, 1, 0, 'Module graphnvd3 has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(126, 1, 0, 'Protect vendor folder in module gridhtml', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(127, 1, 0, 'Module gridhtml has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:07', '2023-11-17 09:28:07'),
+(128, 1, 0, 'Protect vendor folder in module gsitemap', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(129, 1, 0, 'Module gsitemap has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(130, 1, 0, 'Protect vendor folder in module pagesnotfound', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(131, 1, 0, 'Module pagesnotfound has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(132, 1, 0, 'Protect vendor folder in module productcomments', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(133, 1, 0, 'Module productcomments has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(134, 1, 0, 'Protect vendor folder in module ps_banner', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(135, 1, 0, 'Module ps_banner has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(136, 1, 0, 'Protect vendor folder in module ps_categorytree', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(137, 1, 0, 'Module ps_categorytree has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(138, 1, 0, 'Protect vendor folder in module ps_checkpayment', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(139, 1, 0, 'Module ps_checkpayment has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(140, 1, 0, 'Protect vendor folder in module ps_contactinfo', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(141, 1, 0, 'Module ps_contactinfo has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(142, 1, 0, 'Protect vendor folder in module ps_crossselling', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(143, 1, 0, 'Module ps_crossselling has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(144, 1, 0, 'Protect vendor folder in module ps_currencyselector', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(145, 1, 0, 'Module ps_currencyselector has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(146, 1, 0, 'Protect vendor folder in module ps_customeraccountlinks', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(147, 1, 0, 'Module ps_customeraccountlinks has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(148, 1, 0, 'Protect vendor folder in module ps_customersignin', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(149, 1, 0, 'Module ps_customersignin has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(150, 1, 0, 'Protect vendor folder in module ps_customtext', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(151, 1, 0, 'Module ps_customtext has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(152, 1, 0, 'Protect vendor folder in module ps_dataprivacy', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(153, 1, 0, 'Module ps_dataprivacy has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
+(154, 1, 0, 'Protect vendor folder in module ps_emailsubscription', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(155, 1, 0, 'Module ps_emailsubscription has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(156, 1, 0, 'Protect vendor folder in module ps_facetedsearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(157, 1, 0, 'Module ps_facetedsearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(158, 1, 0, 'Protect vendor folder in module ps_faviconnotificationbo', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(159, 1, 0, 'Module ps_faviconnotificationbo has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(160, 1, 0, 'Protect vendor folder in module ps_featuredproducts', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(161, 1, 0, 'Module ps_featuredproducts has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(162, 1, 0, 'Protect vendor folder in module ps_imageslider', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(163, 1, 0, 'Module ps_imageslider has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(164, 1, 0, 'Protect vendor folder in module ps_languageselector', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(165, 1, 0, 'Module ps_languageselector has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(166, 1, 0, 'Protect vendor folder in module ps_linklist', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(167, 1, 0, 'Module ps_linklist has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(168, 1, 0, 'Protect vendor folder in module ps_mainmenu', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
+(169, 1, 0, 'Module ps_mainmenu has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
+(170, 1, 0, 'Protect vendor folder in module ps_searchbar', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
+(171, 1, 0, 'Module ps_searchbar has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
+(172, 1, 0, 'Protect vendor folder in module ps_sharebuttons', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
+(173, 1, 0, 'Module ps_sharebuttons has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
+(174, 1, 0, 'Protect vendor folder in module ps_shoppingcart', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
+(175, 1, 0, 'Module ps_shoppingcart has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
+(176, 1, 0, 'Protect vendor folder in module ps_socialfollow', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
+(177, 1, 0, 'Module ps_socialfollow has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
+(178, 1, 0, 'Protect vendor folder in module ps_themecusto', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
+(179, 1, 0, 'Module ps_themecusto has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:11', '2023-11-17 09:28:11'),
+(180, 1, 0, 'Protect vendor folder in module ps_wirepayment', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(181, 1, 0, 'Module ps_wirepayment has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(182, 1, 0, 'Protect vendor folder in module statsbestcategories', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(183, 1, 0, 'Module statsbestcategories has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(184, 1, 0, 'Protect vendor folder in module statsbestcustomers', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(185, 1, 0, 'Module statsbestcustomers has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(186, 1, 0, 'Protect vendor folder in module statsbestproducts', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(187, 1, 0, 'Module statsbestproducts has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(188, 1, 0, 'Protect vendor folder in module statsbestsuppliers', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(189, 1, 0, 'Module statsbestsuppliers has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(190, 1, 0, 'Protect vendor folder in module statsbestvouchers', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(191, 1, 0, 'Module statsbestvouchers has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(192, 1, 0, 'Protect vendor folder in module statscarrier', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(193, 1, 0, 'Module statscarrier has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(194, 1, 0, 'Protect vendor folder in module statscatalog', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:12', '2023-11-17 09:28:12'),
+(195, 1, 0, 'Module statscatalog has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(196, 1, 0, 'Protect vendor folder in module statscheckup', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(197, 1, 0, 'Module statscheckup has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(198, 1, 0, 'Protect vendor folder in module statsdata', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(199, 1, 0, 'Module statsdata has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(200, 1, 0, 'Protect vendor folder in module statsforecast', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(201, 1, 0, 'Module statsforecast has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(202, 1, 0, 'Protect vendor folder in module statsnewsletter', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(203, 1, 0, 'Module statsnewsletter has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(204, 1, 0, 'Protect vendor folder in module statspersonalinfos', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(205, 1, 0, 'Module statspersonalinfos has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(206, 1, 0, 'Protect vendor folder in module statsproduct', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(207, 1, 0, 'Module statsproduct has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(208, 1, 0, 'Protect vendor folder in module statsregistrations', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(209, 1, 0, 'Module statsregistrations has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(210, 1, 0, 'Protect vendor folder in module statssales', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(211, 1, 0, 'Module statssales has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:13', '2023-11-17 09:28:13'),
+(212, 1, 0, 'Protect vendor folder in module statssearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
+(213, 1, 0, 'Module statssearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
+(214, 1, 0, 'Protect vendor folder in module statsstock', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
+(215, 1, 0, 'Module statsstock has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
+(216, 1, 0, 'Protect vendor folder in module welcome', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
+(217, 1, 0, 'Module welcome has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:14', '2023-11-17 09:28:14'),
+(218, 1, 0, 'Protect vendor folder in module psgdpr', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
+(219, 1, 0, 'Protect vendor folder in module ps_mbo', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
+(220, 1, 0, 'Protect vendor folder in module ps_checkout', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:46', '2023-11-17 09:28:46'),
+(221, 1, 0, 'Protect vendor folder in module ps_metrics', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
+(222, 1, 0, 'Protect vendor folder in module ps_facebook', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
+(223, 1, 0, 'Protect vendor folder in module psxmarketingwithgoogle', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:48', '2023-11-17 09:28:48'),
+(224, 1, 0, 'Protect vendor folder in module blockreassurance', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
+(225, 1, 0, 'Module blockreassurance has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
+(226, 1, 0, 'Protect vendor folder in module ps_facetedsearch', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:29:13', '2023-11-17 09:29:13'),
+(227, 1, 0, 'Module ps_facetedsearch has no vendor folder', '', 0, 1, NULL, 1, 0, 1, '2023-11-17 09:29:13', '2023-11-17 09:29:13'),
+(228, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-17 10:04:08', '2023-11-17 10:04:08'),
+(229, 1, 0, 'Połączenie z panelem administracyjnym z 192.168.65.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-17 13:30:00', '2023-11-17 13:30:00'),
+(230, 1, 0, 'Połączenie z panelem administracyjnym z 192.168.65.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-18 16:34:02', '2023-11-18 16:34:02'),
+(231, 1, 0, 'Protect vendor folder in module ps_cashondelivery', '', 0, 1, NULL, 1, 0, 1, '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
+(232, 3, 0, 'Swift Error: Expected response code 220 but got an empty response', '', 0, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06'),
+(233, 3, 0, 'Swift Error: Expected response code 220 but got an empty response', '', 0, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06'),
+(234, 1, 0, 'Frontcontroller::init - Cart cannot be loaded or an order has already been placed using this cart', 'Cart', 7, 1, NULL, 1, 0, 0, '2023-11-18 16:53:06', '2023-11-18 16:53:06'),
+(235, 1, 0, 'usunięcie Store', 'Store', 1, 1, NULL, 1, 0, 1, '2023-11-18 20:29:38', '2023-11-18 20:29:38'),
+(236, 1, 0, 'usunięcie Store', 'Store', 2, 1, NULL, 1, 0, 1, '2023-11-18 20:29:42', '2023-11-18 20:29:42'),
+(237, 1, 0, 'usunięcie Store', 'Store', 4, 1, NULL, 1, 0, 1, '2023-11-18 20:29:45', '2023-11-18 20:29:45'),
+(238, 1, 0, 'Połączenie z panelem administracyjnym z 172.19.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-25 02:49:15', '2023-11-25 02:49:15'),
+(239, 1, 0, 'usunięcie Carrier', 'Carrier', 5, 1, NULL, 1, 0, 1, '2023-11-25 02:54:12', '2023-11-25 02:54:12');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -8232,6 +8854,7 @@ INSERT INTO `ad_module_carrier` (`id_module`, `id_shop`, `id_reference`) VALUES
 (35, 1, 3),
 (35, 1, 4),
 (35, 1, 5),
+<<<<<<< Updated upstream
 (35, 1, 7),
 (56, 1, 1),
 (56, 1, 2),
@@ -8239,6 +8862,17 @@ INSERT INTO `ad_module_carrier` (`id_module`, `id_shop`, `id_reference`) VALUES
 (56, 1, 4),
 (56, 1, 5),
 (56, 1, 7);
+=======
+(35, 1, 6),
+(35, 1, 7),
+(62, 1, 1),
+(62, 1, 2),
+(62, 1, 3),
+(62, 1, 4),
+(62, 1, 5),
+(62, 1, 6),
+(62, 1, 7);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -8698,8 +9332,17 @@ CREATE TABLE `ad_module_history` (
 --
 
 INSERT INTO `ad_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `date_upd`) VALUES
+<<<<<<< Updated upstream
 (1, 1, 12, '2023-11-23 02:53:51', '2023-11-23 02:53:51'),
 (2, 1, 29, '2023-11-23 02:59:09', '2023-11-23 02:59:09');
+=======
+(1, 1, 35, '2023-11-18 16:37:30', '2023-11-18 16:37:30'),
+(2, 1, 60, '2023-11-18 19:43:39', '2023-11-18 20:31:35'),
+(3, 1, 21, '2023-11-18 19:48:40', '2023-11-18 19:48:40'),
+(4, 1, 2, '2023-11-18 19:50:10', '2023-11-18 19:50:10'),
+(5, 1, 15, '2023-11-18 19:50:19', '2023-11-18 19:50:19'),
+(6, 1, 29, '2023-11-25 02:57:03', '2023-11-25 02:57:03');
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -10357,6 +11000,18 @@ CREATE TABLE `ad_psgdpr_log` (
   `date_upd` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+<<<<<<< Updated upstream
+=======
+--
+-- Dumping data for table `ad_psgdpr_log`
+--
+
+INSERT INTO `ad_psgdpr_log` (`id_gdpr_log`, `id_customer`, `id_guest`, `client_name`, `id_module`, `request_type`, `date_add`, `date_upd`) VALUES
+(1, 3, 0, 'd d', 0, 1, '2023-11-17 10:19:39', '2023-11-17 10:19:39'),
+(2, 4, 0, 'Szymon Małecki', 0, 1, '2023-11-18 16:52:44', '2023-11-18 16:52:44'),
+(3, 5, 0, 'x x', 0, 1, '2023-11-25 02:53:42', '2023-11-25 02:53:42');
+
+>>>>>>> Stashed changes
 -- --------------------------------------------------------
 
 --
@@ -10477,12 +11132,19 @@ INSERT INTO `ad_range_price` (`id_range_price`, `id_carrier`, `delimiter1`, `del
 (2, 3, 0.000000, 50.000000),
 (3, 3, 50.000000, 100.000000),
 (4, 3, 100.000000, 200.000000),
+<<<<<<< Updated upstream
 (5, 5, 0.000000, 2000.000000),
 (6, 5, 2000.000000, 9999999.000000),
 (7, 6, 0.000000, 2000.000000),
 (8, 6, 2000.000000, 9999999.000000),
 (9, 7, 0.000000, 2000.000000),
 (10, 7, 2000.000000, 99999.000000);
+=======
+(5, 6, 0.000000, 2000.000000),
+(6, 6, 2000.000000, 999999.000000),
+(7, 7, 0.000000, 2000.000000),
+(8, 7, 2000.000000, 999999.000000);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -16155,13 +16817,21 @@ ALTER TABLE `ad_zone_shop`
 -- AUTO_INCREMENT for table `ad_address`
 --
 ALTER TABLE `ad_address`
+<<<<<<< Updated upstream
   MODIFY `id_address` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+=======
+  MODIFY `id_address` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_admin_filter`
 --
 ALTER TABLE `ad_admin_filter`
+<<<<<<< Updated upstream
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_alias`
@@ -16221,7 +16891,11 @@ ALTER TABLE `ad_carrier`
 -- AUTO_INCREMENT for table `ad_cart`
 --
 ALTER TABLE `ad_cart`
+<<<<<<< Updated upstream
   MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+=======
+  MODIFY `id_cart` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_cart_rule`
@@ -16281,19 +16955,31 @@ ALTER TABLE `ad_configuration`
 -- AUTO_INCREMENT for table `ad_configuration_kpi`
 --
 ALTER TABLE `ad_configuration_kpi`
+<<<<<<< Updated upstream
   MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+=======
+  MODIFY `id_configuration_kpi` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_connections`
 --
 ALTER TABLE `ad_connections`
+<<<<<<< Updated upstream
   MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+=======
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_connections_source`
 --
 ALTER TABLE `ad_connections_source`
+<<<<<<< Updated upstream
   MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+=======
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_contact`
@@ -16317,7 +17003,11 @@ ALTER TABLE `ad_currency`
 -- AUTO_INCREMENT for table `ad_customer`
 --
 ALTER TABLE `ad_customer`
+<<<<<<< Updated upstream
   MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+=======
+  MODIFY `id_customer` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_customer_message`
@@ -16329,7 +17019,11 @@ ALTER TABLE `ad_customer_message`
 -- AUTO_INCREMENT for table `ad_customer_session`
 --
 ALTER TABLE `ad_customer_session`
+<<<<<<< Updated upstream
   MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id_customer_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_customer_thread`
@@ -16359,7 +17053,11 @@ ALTER TABLE `ad_date_range`
 -- AUTO_INCREMENT for table `ad_delivery`
 --
 ALTER TABLE `ad_delivery`
+<<<<<<< Updated upstream
   MODIFY `id_delivery` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+=======
+  MODIFY `id_delivery` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_emailsubscription`
@@ -16377,7 +17075,11 @@ ALTER TABLE `ad_employee`
 -- AUTO_INCREMENT for table `ad_employee_session`
 --
 ALTER TABLE `ad_employee_session`
+<<<<<<< Updated upstream
   MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+=======
+  MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_feature`
@@ -16419,7 +17121,11 @@ ALTER TABLE `ad_group_reduction`
 -- AUTO_INCREMENT for table `ad_guest`
 --
 ALTER TABLE `ad_guest`
+<<<<<<< Updated upstream
   MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+=======
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_homeslider`
@@ -16515,7 +17221,11 @@ ALTER TABLE `ad_link_block_shop`
 -- AUTO_INCREMENT for table `ad_log`
 --
 ALTER TABLE `ad_log`
+<<<<<<< Updated upstream
   MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=229;
+=======
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_mail`
@@ -16557,7 +17267,11 @@ ALTER TABLE `ad_module`
 -- AUTO_INCREMENT for table `ad_module_history`
 --
 ALTER TABLE `ad_module_history`
+<<<<<<< Updated upstream
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_module_preference`
@@ -16731,7 +17445,11 @@ ALTER TABLE `ad_psgdpr_consent_lang`
 -- AUTO_INCREMENT for table `ad_psgdpr_log`
 --
 ALTER TABLE `ad_psgdpr_log`
+<<<<<<< Updated upstream
   MODIFY `id_gdpr_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id_gdpr_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_psreassurance`
@@ -16749,7 +17467,11 @@ ALTER TABLE `ad_quick_access`
 -- AUTO_INCREMENT for table `ad_range_price`
 --
 ALTER TABLE `ad_range_price`
+<<<<<<< Updated upstream
   MODIFY `id_range_price` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+=======
+  MODIFY `id_range_price` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `ad_range_weight`
