@@ -23,7 +23,7 @@ def get_dict(data, category):
                 "Name *": data[key]["name"].encode('utf-8').decode('utf-8'),
                 "Price tax excluded": round(data[key]["price"] / 1.23, 2),
                 "Price tax included": data[key]["price"],
-                "Image URLs (x,y,z...)": "http://localhost:8080/images/" + key + "_full.jpg,http://localhost:8080/images/" + key + "_thumb.jpg",
+                "Image URLs (x,y,z...)": "/var/www/html/images/" + key + "_full.jpg,/var/www/html/images/" + key + "_thumb.jpg",
                 "Description": data[key]["description"].encode('utf-8').decode('utf-8'),
                 "Feature(Name:Value:Position)": "Kolor:" + data[key]["color"].encode('utf-8').decode('utf-8') + ":0",
             })
