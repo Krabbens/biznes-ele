@@ -2,3 +2,39 @@
  * Custom code goes here.
  * A template should always ship with an empty custom.css
  */
+.top-menu a[data-depth="0"]{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+#header .header-top a[data-depth="0"] {
+    color: black;
+    text-transform: uppercase;
+}
+
+#custom-text{
+    padding-bottom: 40px;
+    padding-top: 40px;
+
+    background-color:#f5f5e5;
+    column-count: 2;
+    column-gap: 40px;
+    font-size:16px;
+}
+
+#custom-text p{
+    text-align: justify;
+}
+
+#custom-text h1{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 36px;
+    text-decoration: none;
+    text-transform: none;
+    margin-bottom: 10px;
+    text-align: left;
+}
