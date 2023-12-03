@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: adidas-mariadb-server:3306
--- Generation Time: Lis 28, 2023 at 08:32 PM
+-- Generation Time: Dec 03, 2023 at 01:04 PM
 -- Wersja serwera: 10.5.23-MariaDB-1:10.5.23+maria~ubu2004
 -- Wersja PHP: 8.2.8
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `adidas-mariadb`
 --
-CREATE DATABASE IF NOT EXISTS `adidas-mariadb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `adidas-mariadb`;
 
 -- --------------------------------------------------------
 
@@ -907,10 +905,9 @@ CREATE TABLE `ad_address` (
 INSERT INTO `ad_address` (`id_address`, `id_country`, `id_state`, `id_customer`, `id_manufacturer`, `id_supplier`, `id_warehouse`, `alias`, `company`, `lastname`, `firstname`, `address1`, `address2`, `postcode`, `city`, `other`, `phone`, `phone_mobile`, `vat_number`, `dni`, `date_add`, `date_upd`, `active`, `deleted`) VALUES
 (1, 14, 0, 1, 0, 0, 0, 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', 'Anonymous', '', '00000', 'Anonymous', '', '0000000000', '0000000000', '0000', '0000', '2023-11-17 09:28:45', '2023-11-17 09:28:45', 1, 0),
 (2, 8, 0, 2, 0, 0, 0, 'Mon adresse', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '75002', 'Paris ', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(3, 21, 35, 0, 0, 1, 0, 'supplier', 'Fashion', 'supplier', 'supplier', '767 Fifth Ave.', '', '10153', 'New York', '', '(212) 336-1440', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(4, 21, 35, 0, 1, 0, 0, 'manufacturer', 'Fashion', 'manufacturer', 'manufacturer', '767 Fifth Ave.', '', '10154', 'New York', '', '(212) 336-1666', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
+(3, 21, 35, 0, 0, 1, 0, 'supplier', 'Fashion', 'supplier', 'supplier', '767 Fifth Ave.', '', '10153', 'New York', '', '(212) 336-1440', '', '', '', '2023-11-17 09:29:09', '2023-12-02 21:07:41', 1, 1),
 (5, 21, 12, 2, 0, 0, 0, 'My address', 'My Company', 'DOE', 'John', '16, Main street', '2nd floor', '33133', 'Miami', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(6, 8, 0, 0, 0, 2, 0, 'accessories_supplier', 'Accessories and Co', 'accessories', 'accessories', '42 Avenue Maréchal Soult', '', '64990', 'Bayonne', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
+(6, 8, 0, 0, 0, 2, 0, 'accessories_supplier', 'Accessories and Co', 'accessories', 'accessories', '42 Avenue Maréchal Soult', '', '64990', 'Bayonne', '', '0102030405', '', '', '', '2023-11-17 09:29:09', '2023-12-02 21:07:39', 1, 1),
 (7, 14, 0, 3, 0, 0, 0, 'Mój adres', '', 'd', 'd', 'd12', '', '11-123', 'd', '', '', '', '', '', '2023-11-17 10:19:44', '2023-11-17 10:19:44', 1, 0),
 (8, 14, 0, 4, 0, 0, 0, 'Mój adres', 'asadasda', 'Małecki', 'Szymon', 'asdasd', '', '06-545', 'dasdas', '', '', '', '', '', '2023-11-18 16:52:53', '2023-11-18 16:52:53', 1, 0);
 
@@ -1196,7 +1193,11 @@ INSERT INTO `ad_admin_filter` (`id`, `employee`, `shop`, `controller`, `action`,
 (1, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page_category'),
 (2, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_cms_category_parent\":1}}', 'cms_page'),
 (3, 1, 1, 'contacts', 'index', '{\"limit\":10,\"orderBy\":\"id_contact\",\"sortOrder\":\"asc\",\"filters\":[]}', ''),
-(4, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_category_parent\":2}}', 'category');
+(4, 1, 1, '', '', '{\"orderBy\":\"position\",\"sortOrder\":\"asc\",\"limit\":50,\"filters\":{\"id_category_parent\":\"2\"}}', 'category'),
+(5, 1, 1, '', '', '{\"limit\":10,\"orderBy\":\"name\",\"sortOrder\":\"asc\",\"filters\":[]}', 'manufacturer'),
+(6, 1, 1, '', '', '{\"limit\":10,\"orderBy\":\"id_address\",\"sortOrder\":\"desc\",\"filters\":[]}', 'manufacturer_address'),
+(7, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"name\",\"sortOrder\":\"asc\",\"filters\":[]}', 'supplier'),
+(8, 1, 1, '', '', '{\"limit\":50,\"orderBy\":\"id_webservice_account\",\"sortOrder\":\"asc\",\"filters\":[]}', 'webservice_key');
 
 -- --------------------------------------------------------
 
@@ -1560,10 +1561,10 @@ INSERT INTO `ad_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (576, 'ROLE_MOD_MODULE_PS_CUSTOMERSIGNIN_DELETE'),
 (574, 'ROLE_MOD_MODULE_PS_CUSTOMERSIGNIN_READ'),
 (575, 'ROLE_MOD_MODULE_PS_CUSTOMERSIGNIN_UPDATE'),
-(577, 'ROLE_MOD_MODULE_PS_CUSTOMTEXT_CREATE'),
-(580, 'ROLE_MOD_MODULE_PS_CUSTOMTEXT_DELETE'),
-(578, 'ROLE_MOD_MODULE_PS_CUSTOMTEXT_READ'),
-(579, 'ROLE_MOD_MODULE_PS_CUSTOMTEXT_UPDATE'),
+(833, 'ROLE_MOD_MODULE_PS_CUSTOMTEXT_CREATE'),
+(836, 'ROLE_MOD_MODULE_PS_CUSTOMTEXT_DELETE'),
+(834, 'ROLE_MOD_MODULE_PS_CUSTOMTEXT_READ'),
+(835, 'ROLE_MOD_MODULE_PS_CUSTOMTEXT_UPDATE'),
 (581, 'ROLE_MOD_MODULE_PS_DATAPRIVACY_CREATE'),
 (584, 'ROLE_MOD_MODULE_PS_DATAPRIVACY_DELETE'),
 (582, 'ROLE_MOD_MODULE_PS_DATAPRIVACY_READ'),
@@ -1596,10 +1597,10 @@ INSERT INTO `ad_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (612, 'ROLE_MOD_MODULE_PS_LANGUAGESELECTOR_DELETE'),
 (610, 'ROLE_MOD_MODULE_PS_LANGUAGESELECTOR_READ'),
 (611, 'ROLE_MOD_MODULE_PS_LANGUAGESELECTOR_UPDATE'),
-(613, 'ROLE_MOD_MODULE_PS_LINKLIST_CREATE'),
-(616, 'ROLE_MOD_MODULE_PS_LINKLIST_DELETE'),
-(614, 'ROLE_MOD_MODULE_PS_LINKLIST_READ'),
-(615, 'ROLE_MOD_MODULE_PS_LINKLIST_UPDATE'),
+(837, 'ROLE_MOD_MODULE_PS_LINKLIST_CREATE'),
+(840, 'ROLE_MOD_MODULE_PS_LINKLIST_DELETE'),
+(838, 'ROLE_MOD_MODULE_PS_LINKLIST_READ'),
+(839, 'ROLE_MOD_MODULE_PS_LINKLIST_UPDATE'),
 (617, 'ROLE_MOD_MODULE_PS_MAINMENU_CREATE'),
 (620, 'ROLE_MOD_MODULE_PS_MAINMENU_DELETE'),
 (618, 'ROLE_MOD_MODULE_PS_MAINMENU_READ'),
@@ -2753,30 +2754,23 @@ CREATE TABLE `ad_category` (
 --
 
 INSERT INTO `ad_category` (`id_category`, `id_parent`, `id_shop_default`, `level_depth`, `nleft`, `nright`, `active`, `date_add`, `date_upd`, `position`, `is_root_category`) VALUES
-(1, 0, 1, 0, 1, 48, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0, 0),
-(2, 1, 1, 1, 2, 47, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0, 1),
-(3, 2, 1, 2, 3, 8, 0, '2023-11-17 09:29:09', '2023-11-28 21:26:06', 0, 0),
-(4, 3, 1, 3, 4, 5, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 0),
-(5, 3, 1, 3, 6, 7, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(6, 2, 1, 2, 9, 14, 0, '2023-11-17 09:29:09', '2023-11-28 21:26:06', 1, 0),
-(7, 6, 1, 3, 10, 11, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 0, 0),
-(8, 6, 1, 3, 12, 13, 1, '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1, 0),
-(9, 2, 1, 2, 15, 16, 0, '2023-11-17 09:29:09', '2023-11-28 21:26:07', 2, 0),
-(10, 2, 1, 2, 17, 24, 1, '2023-11-28 21:26:19', '2023-11-28 21:26:19', 3, 0),
-(11, 2, 1, 2, 25, 32, 1, '2023-11-28 21:26:23', '2023-11-28 21:26:23', 4, 0),
-(12, 2, 1, 2, 33, 40, 1, '2023-11-28 21:26:27', '2023-11-28 21:26:27', 5, 0),
-(13, 2, 1, 2, 41, 46, 1, '2023-11-28 21:26:35', '2023-11-28 21:26:35', 6, 0),
-(14, 10, 1, 3, 18, 19, 1, '2023-11-28 21:26:42', '2023-11-28 21:26:42', 0, 0),
-(15, 10, 1, 3, 20, 21, 1, '2023-11-28 21:26:47', '2023-11-28 21:26:47', 1, 0),
-(16, 10, 1, 3, 22, 23, 1, '2023-11-28 21:26:51', '2023-11-28 21:26:51', 2, 0),
-(17, 11, 1, 3, 26, 27, 1, '2023-11-28 21:26:59', '2023-11-28 21:26:59', 0, 0),
-(18, 11, 1, 3, 28, 29, 1, '2023-11-28 21:27:03', '2023-11-28 21:27:03', 1, 0),
-(19, 11, 1, 3, 30, 31, 1, '2023-11-28 21:27:08', '2023-11-28 21:27:08', 2, 0),
-(20, 12, 1, 3, 34, 35, 1, '2023-11-28 21:27:28', '2023-11-28 21:27:28', 0, 0),
-(21, 12, 1, 3, 36, 37, 1, '2023-11-28 21:27:33', '2023-11-28 21:27:33', 1, 0),
-(22, 12, 1, 3, 38, 39, 1, '2023-11-28 21:27:37', '2023-11-28 21:27:37', 2, 0),
-(23, 13, 1, 3, 42, 43, 1, '2023-11-28 21:27:45', '2023-11-28 21:27:45', 0, 0),
-(24, 13, 1, 3, 44, 45, 1, '2023-11-28 21:27:49', '2023-11-28 21:27:49', 1, 0);
+(1, 0, 1, 0, 1, 34, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0, 0),
+(2, 1, 1, 1, 2, 33, 1, '2023-11-17 09:28:03', '2023-11-17 09:28:03', 0, 1),
+(10, 2, 1, 2, 3, 10, 1, '2023-11-28 21:26:19', '2023-12-02 21:06:08', 0, 0),
+(11, 2, 1, 2, 11, 18, 1, '2023-11-28 21:26:23', '2023-12-02 21:06:22', 1, 0),
+(12, 2, 1, 2, 19, 26, 1, '2023-11-28 21:26:27', '2023-12-02 21:06:28', 2, 0),
+(13, 2, 1, 2, 27, 32, 1, '2023-11-28 21:26:35', '2023-12-02 21:06:34', 3, 0),
+(14, 10, 1, 3, 4, 5, 1, '2023-11-28 21:26:42', '2023-11-28 21:26:42', 0, 0),
+(15, 10, 1, 3, 6, 7, 1, '2023-11-28 21:26:47', '2023-11-28 21:26:47', 1, 0),
+(16, 10, 1, 3, 8, 9, 1, '2023-11-28 21:26:51', '2023-11-28 21:26:51', 2, 0),
+(17, 11, 1, 3, 12, 13, 1, '2023-11-28 21:26:59', '2023-11-28 21:26:59', 0, 0),
+(18, 11, 1, 3, 14, 15, 1, '2023-11-28 21:27:03', '2023-11-28 21:27:03', 1, 0),
+(19, 11, 1, 3, 16, 17, 1, '2023-11-28 21:27:08', '2023-11-28 21:27:08', 2, 0),
+(20, 12, 1, 3, 20, 21, 1, '2023-11-28 21:27:28', '2023-11-28 21:27:28', 0, 0),
+(21, 12, 1, 3, 22, 23, 1, '2023-11-28 21:27:33', '2023-11-28 21:27:33', 1, 0),
+(22, 12, 1, 3, 24, 25, 1, '2023-11-28 21:27:37', '2023-11-28 21:27:37', 2, 0),
+(23, 13, 1, 3, 28, 29, 1, '2023-11-28 21:27:45', '2023-11-28 21:27:45', 0, 0),
+(24, 13, 1, 3, 30, 31, 1, '2023-11-28 21:27:49', '2023-11-28 21:27:49', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -2798,27 +2792,6 @@ INSERT INTO `ad_category_group` (`id_category`, `id_group`) VALUES
 (2, 1),
 (2, 2),
 (2, 3),
-(3, 1),
-(3, 2),
-(3, 3),
-(4, 1),
-(4, 2),
-(4, 3),
-(5, 1),
-(5, 2),
-(5, 3),
-(6, 1),
-(6, 2),
-(6, 3),
-(7, 1),
-(7, 2),
-(7, 3),
-(8, 1),
-(8, 2),
-(8, 3),
-(9, 1),
-(9, 2),
-(9, 3),
 (10, 1),
 (10, 2),
 (10, 3),
@@ -2890,13 +2863,6 @@ CREATE TABLE `ad_category_lang` (
 INSERT INTO `ad_category_lang` (`id_category`, `id_shop`, `id_lang`, `name`, `description`, `link_rewrite`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
 (1, 1, 1, 'Baza', '', 'baza', '', '', ''),
 (2, 1, 1, 'Strona główna', '', 'strona-glowna', '', '', ''),
-(3, 1, 1, 'Clothes', '<p>Discover our favorites fashionable discoveries, a selection of cool items to integrate in your wardrobe. Compose a unique style with personality which matches your own.</p>', 'clothes', '', '', ''),
-(4, 1, 1, 'Men', '<p>T-shirts, sweaters, hoodies and men\'s accessories. From basics to original creations, for every style. </p>', 'men', '', '', ''),
-(5, 1, 1, 'Women', '<p>T-shirts, sweaters, hoodies and women\'s accessories. From basics to original creations, for every style. </p>', 'women', '', '', ''),
-(6, 1, 1, 'Produkty powiązane', '<p>Items and accessories for your desk, kitchen or living room. Make your house a home with our eye-catching designs. </p>', 'accessories', '', '', ''),
-(7, 1, 1, 'Stationery', '<p>Notebooks, agendas, office accessories and more. Everything you need to combine the pleasant and the useful, either at work or at home. </p>', 'stationery', '', '', ''),
-(8, 1, 1, 'Home Accessories', '<p>Details matter! Liven up your interior with our selection of home accessories. </p>', 'home-accessories', '', '', ''),
-(9, 1, 1, 'Art', '<p>Framed poster and vector images, all you need to give personality to your walls or bring your creative projects to life.</p>', 'art', '', '', ''),
 (10, 1, 1, 'Mężczyźni', '', 'mezczyzni', '', '', ''),
 (11, 1, 1, 'Kobiety', '', 'kobiety', '', '', ''),
 (12, 1, 1, 'Dzieci', '', 'dzieci', '', '', ''),
@@ -2949,39 +2915,7 @@ INSERT INTO `ad_category_product` (`id_category`, `id_product`, `position`) VALU
 (2, 17, 17),
 (2, 18, 18),
 (2, 19, 19),
-(3, 1, 1),
-(3, 2, 2),
-(4, 1, 1),
-(5, 2, 1),
-(6, 7, 1),
-(6, 6, 2),
-(6, 8, 3),
-(6, 10, 4),
-(6, 9, 5),
-(6, 11, 6),
-(6, 15, 7),
-(6, 16, 8),
-(6, 17, 9),
-(6, 18, 10),
-(6, 19, 11),
-(7, 16, 1),
-(7, 17, 2),
-(7, 18, 3),
-(8, 6, 1),
-(8, 7, 2),
-(8, 8, 3),
-(8, 9, 4),
-(8, 10, 5),
-(8, 11, 6),
-(8, 15, 7),
-(8, 19, 8),
-(9, 3, 1),
-(9, 4, 2),
-(9, 5, 3),
-(9, 12, 4),
-(9, 13, 5),
-(9, 14, 6),
-(9, 15, 7);
+(2, 20, 20);
 
 -- --------------------------------------------------------
 
@@ -3002,17 +2936,10 @@ CREATE TABLE `ad_category_shop` (
 INSERT INTO `ad_category_shop` (`id_category`, `id_shop`, `position`) VALUES
 (1, 1, 0),
 (2, 1, 0),
-(3, 1, 0),
-(4, 1, 0),
-(5, 1, 1),
-(6, 1, 1),
-(7, 1, 0),
-(8, 1, 1),
-(9, 1, 2),
-(10, 1, 3),
-(11, 1, 4),
-(12, 1, 5),
-(13, 1, 6),
+(10, 1, 0),
+(11, 1, 1),
+(12, 1, 2),
+(13, 1, 3),
 (14, 1, 0),
 (15, 1, 1),
 (16, 1, 2),
@@ -3304,11 +3231,11 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (84, NULL, NULL, 'PS_STOCK_MVT_REASON_DEFAULT', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (85, NULL, NULL, 'PS_SPECIFIC_PRICE_PRIORITIES', 'id_shop;id_currency;id_country;id_group', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (86, NULL, NULL, 'PS_TAX_DISPLAY', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(87, NULL, NULL, 'PS_SMARTY_FORCE_COMPILE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(87, NULL, NULL, 'PS_SMARTY_FORCE_COMPILE', '2', '0000-00-00 00:00:00', '2023-12-02 21:56:48'),
 (88, NULL, NULL, 'PS_DISTANCE_UNIT', 'km', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (89, NULL, NULL, 'PS_STORES_DISPLAY_CMS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(90, NULL, NULL, 'SHOP_LOGO_WIDTH', '100', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
-(91, NULL, NULL, 'SHOP_LOGO_HEIGHT', '28', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
+(90, NULL, NULL, 'SHOP_LOGO_WIDTH', '100', '0000-00-00 00:00:00', '2023-12-02 21:00:05'),
+(91, NULL, NULL, 'SHOP_LOGO_HEIGHT', '75', '0000-00-00 00:00:00', '2023-12-02 21:00:05'),
 (92, NULL, NULL, 'EDITORIAL_IMAGE_WIDTH', '530', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (93, NULL, NULL, 'EDITORIAL_IMAGE_HEIGHT', '228', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (94, NULL, NULL, 'PS_STATSDATA_CUSTOMER_PAGESVIEWS', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3320,7 +3247,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (100, NULL, NULL, 'PS_LOCALE_LANGUAGE', 'pl', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
 (101, NULL, NULL, 'PS_LOCALE_COUNTRY', 'pl', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
 (102, NULL, NULL, 'PS_ATTACHMENT_MAXIMUM_SIZE', '8', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(103, NULL, NULL, 'PS_SMARTY_CACHE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(103, NULL, NULL, 'PS_SMARTY_CACHE', NULL, '0000-00-00 00:00:00', '2023-12-02 21:56:48'),
 (104, NULL, NULL, 'PS_DIMENSION_UNIT', 'cm', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (105, NULL, NULL, 'PS_GUEST_CHECKOUT_ENABLED', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (106, NULL, NULL, 'PS_DISPLAY_SUPPLIERS', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3333,7 +3260,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (113, NULL, NULL, 'PS_COOKIE_SAMESITE', 'Lax', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (114, NULL, NULL, 'PS_USE_ECOTAX', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (115, NULL, NULL, 'PS_CANONICAL_REDIRECT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(116, NULL, NULL, 'PS_IMG_UPDATE_TIME', '1324977642', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(116, NULL, NULL, 'PS_IMG_UPDATE_TIME', '1701547205', '0000-00-00 00:00:00', '2023-12-02 21:00:05'),
 (117, NULL, NULL, 'PS_BACKUP_DROP_TABLE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (118, NULL, NULL, 'PS_OS_CHEQUE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (119, NULL, NULL, 'PS_OS_PAYMENT', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3447,7 +3374,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (227, NULL, NULL, 'UPGRADER_BACKUPFILES_FILENAME', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (228, NULL, NULL, 'BLOCKREINSURANCE_NBBLOCKS', '5', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (229, NULL, NULL, 'HOMESLIDER_WIDTH', '535', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(230, NULL, NULL, 'HOMESLIDER_SPEED', '5000', '0000-00-00 00:00:00', '2023-11-17 09:28:09'),
+(230, NULL, NULL, 'HOMESLIDER_SPEED', '5000', '0000-00-00 00:00:00', '2023-12-03 13:57:34'),
 (231, NULL, NULL, 'HOMESLIDER_PAUSE', '7700', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (232, NULL, NULL, 'HOMESLIDER_LOOP', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (233, NULL, NULL, 'PS_BASE_DISTANCE_UNIT', 'm', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3457,8 +3384,8 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (237, NULL, NULL, 'PS_SHOP_EMAIL', 'test@test.com', '0000-00-00 00:00:00', '2023-11-17 09:28:05'),
 (238, NULL, NULL, 'PS_MAIL_METHOD', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (239, NULL, NULL, 'PS_SHOP_ACTIVITY', '9', '0000-00-00 00:00:00', '2023-11-17 09:28:03'),
-(240, NULL, NULL, 'PS_LOGO', 'logo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(241, NULL, NULL, 'PS_FAVICON', 'favicon.ico', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(240, NULL, NULL, 'PS_LOGO', 'logo-1701547205.jpg', '0000-00-00 00:00:00', '2023-12-02 21:00:05'),
+(241, NULL, NULL, 'PS_FAVICON', 'favicon.ico', '0000-00-00 00:00:00', '2023-12-02 20:52:49'),
 (242, NULL, NULL, 'PS_STORES_ICON', 'logo_stores.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (243, NULL, NULL, 'PS_ROOT_CATEGORY', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (244, NULL, NULL, 'PS_HOME_CATEGORY', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3483,7 +3410,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (263, NULL, NULL, 'PS_DASHBOARD_SIMULATION', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (264, NULL, NULL, 'PS_USE_HTMLPURIFIER', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (265, NULL, NULL, 'PS_SMARTY_CACHING_TYPE', 'filesystem', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(266, NULL, NULL, 'PS_SMARTY_LOCAL', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(266, NULL, NULL, 'PS_SMARTY_LOCAL', NULL, '0000-00-00 00:00:00', '2023-12-02 21:56:48'),
 (267, NULL, NULL, 'PS_SMARTY_CLEAR_CACHE', 'everytime', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (268, NULL, NULL, 'PS_DETECT_LANG', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (269, NULL, NULL, 'PS_DETECT_COUNTRY', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -3555,7 +3482,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (344, NULL, NULL, 'BACKGROUND_COLOR_FAVICONBO', '#DF0067', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
 (345, NULL, NULL, 'TEXT_COLOR_FAVICONBO', '#FFFFFF', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
 (346, NULL, NULL, 'HOME_FEATURED_CAT', '2', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
-(347, NULL, NULL, 'HOMESLIDER_PAUSE_ON_HOVER', '1', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
+(347, NULL, NULL, 'HOMESLIDER_PAUSE_ON_HOVER', '0', '2023-11-17 09:28:09', '2023-12-03 12:01:11'),
 (348, NULL, NULL, 'HOMESLIDER_WRAP', '1', '2023-11-17 09:28:09', '2023-11-17 09:28:09'),
 (349, NULL, NULL, 'PS_SC_TWITTER', '1', '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
 (350, NULL, NULL, 'PS_SC_FACEBOOK', '1', '2023-11-17 09:28:10', '2023-11-17 09:28:10'),
@@ -3578,7 +3505,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (367, NULL, NULL, 'PSGDPR_CUSTOMER_FORM', NULL, '2023-11-17 09:28:44', '2023-11-17 09:28:44'),
 (368, NULL, NULL, 'PSGDPR_ANONYMOUS_CUSTOMER', '1', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
 (369, NULL, NULL, 'PSGDPR_ANONYMOUS_ADDRESS', '1', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(370, NULL, NULL, 'PS_MBO_SHOP_ADMIN_UUID', 'b1e5895d-9daf-4e51-b1d8-eddc73b57c48', '2023-11-17 09:28:45', '2023-11-18 16:50:06'),
+(370, NULL, NULL, 'PS_MBO_SHOP_ADMIN_UUID', 'cdfe2ce2-a57a-4285-b745-8761f23bc69e', '2023-11-17 09:28:45', '2023-12-02 21:08:10'),
 (371, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED', '0.2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
 (372, NULL, NULL, 'CONF_PS_CHECKOUT_VAR', '2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
 (373, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED_FOREIGN', '0.2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
@@ -3602,7 +3529,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (406, NULL, NULL, '8', 'PS_FACEBOOK_PIXEL_ENABLED', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
 (407, NULL, NULL, '9', 'PS_FACEBOOK_PRODUCT_SYNC_FIRST_START', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
 (408, NULL, NULL, '10', 'PS_FACEBOOK_PRODUCT_SYNC_ON', '2023-11-17 09:28:47', '2023-11-17 09:28:47'),
-(409, NULL, NULL, 'PSR_HOOK_HEADER', '0', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
+(409, NULL, NULL, 'PSR_HOOK_HEADER', '0', '2023-11-17 09:28:56', '2023-12-02 21:33:33'),
 (410, NULL, NULL, 'PSR_HOOK_FOOTER', '0', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
 (411, NULL, NULL, 'PSR_HOOK_PRODUCT', '1', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
 (412, NULL, NULL, 'PSR_HOOK_CHECKOUT', '1', '2023-11-17 09:28:56', '2023-11-17 09:28:56'),
@@ -3617,7 +3544,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (421, NULL, NULL, 'PS_LAYERED_FILTER_SHOW_OUT_OF_STOCK_LAST', '0', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
 (422, NULL, NULL, 'PS_LAYERED_FILTER_BY_DEFAULT_CATEGORY', '0', '2023-11-17 09:29:12', '2023-11-17 09:29:12'),
 (423, NULL, NULL, 'PS_LAYERED_INDEXED', '1', '2023-11-17 09:29:13', '2023-11-17 09:29:13'),
-(424, NULL, NULL, 'ONBOARDINGV2_SHUT_DOWN', '1', '2023-11-17 10:04:13', '2023-11-17 10:04:13'),
+(424, NULL, NULL, 'ONBOARDINGV2_SHUT_DOWN', '1', '2023-11-17 10:04:13', '2023-12-03 00:21:15'),
 (425, NULL, NULL, 'BANK_WIRE_DETAILS', 'PL 93 1610 1032 3800 8084 0358 2393', '2023-11-18 16:38:01', '2023-11-18 16:38:01'),
 (426, NULL, NULL, 'BANK_WIRE_OWNER', 'Szymon Małecki', '2023-11-18 16:38:01', '2023-11-18 16:38:01'),
 (427, NULL, NULL, 'BANK_WIRE_ADDRESS', 'SGB-Bank SA O. w Ostrowie Wielkopolskim', '2023-11-18 16:38:01', '2023-11-18 16:38:01'),
@@ -3626,7 +3553,14 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (430, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED', '0.2', '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
 (431, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR', '2', '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
 (432, NULL, NULL, 'CONF_PS_CASHONDELIVERY_FIXED_FOREIGN', '0.2', '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
-(433, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR_FOREIGN', '2', '2023-11-18 16:50:13', '2023-11-18 16:50:13');
+(433, NULL, NULL, 'CONF_PS_CASHONDELIVERY_VAR_FOREIGN', '2', '2023-11-18 16:50:13', '2023-11-18 16:50:13'),
+(434, NULL, NULL, 'PS_LOGO_MAIL', 'logo_mail-1701546942.jpg', '2023-12-02 20:55:42', '2023-12-02 20:55:42'),
+(435, NULL, NULL, 'PS_LOGO_INVOICE', 'logo_invoice-1701546942.jpg', '2023-12-02 20:55:42', '2023-12-02 20:55:42'),
+(436, NULL, NULL, 'HOME_FEATURED_RANDOMIZE', '1', '2023-12-02 21:09:18', '2023-12-02 21:09:18'),
+(437, NULL, NULL, 'NW_VOUCHER_CODE', NULL, '2023-12-02 21:17:55', '2023-12-02 21:18:36'),
+(438, NULL, NULL, 'PS_CCCJS_VERSION', '2', '2023-12-02 21:56:51', '2023-12-03 12:30:25'),
+(439, NULL, NULL, 'PS_CCCCSS_VERSION', '2', '2023-12-02 21:56:51', '2023-12-03 12:30:25'),
+(440, NULL, NULL, 'ONBOARDINGV2_CURRENT_STEP', '11', '2023-12-03 00:21:06', '2023-12-03 00:21:18');
 
 -- --------------------------------------------------------
 
@@ -3738,6 +3672,8 @@ INSERT INTO `ad_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (43, 1, '#ZW', NULL),
 (54, 1, 'ach|aj|albo|bardzo|bez|bo|być|ci|cię|ciebie|co|czy|daleko|dla|dlaczego|dlatego|do|dobrze|dokąd|dość|dużo|dwa|dwaj|dwie|dwoje|dziś|dzisiaj|gdyby|gdzie|go|ich|ile|im|inny|ja|ją|jak|jakby|jaki|je|jeden|jedna|jedno|jego|jej|jemu|jeśli|jest|jestem|jeżeli|już|każdy|kiedy|kierunku|kto|ku|lub|ma|mają|mam|mi|mną|mnie|moi|mój|moja|moje|może|mu|my|na|nam|nami|nas|nasi|nasz|nasza|nasze|natychmiast|nią|nic|nich|nie|niego|niej|niemu|nigdy|nim|nimi|niż|obok|od|okolo|on|ona|one|oni|ono|owszem|po|pod|ponieważ|przed|przedtem|są|sam|sama|się|skąd|tak|taki|tam|ten|to|tobą|tobie|tu|tutaj|twoi|twój|twoja|twoje|ty|wam|wami|was|wasi|wasz|wasza|wasze|we|więc|wszystko|wtedy|wy|żaden|zawsze|że', NULL),
 (80, 1, 'Dear Customer,\r\n\r\nRegards,\r\nCustomer service', NULL),
+(213, 1, 'https://www.facebook.com/adidas', '2023-12-02 21:19:28'),
+(214, 1, 'https://twitter.com/adidas', '2023-12-02 21:19:28'),
 (281, 1, 'We are currently updating our shop and will be back really soon.\r\nThanks for your patience.', NULL),
 (283, 1, '', NULL),
 (284, 1, '', NULL),
@@ -3745,11 +3681,15 @@ INSERT INTO `ad_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (293, 1, 'Moje listy życzeń', '2023-11-17 09:28:07'),
 (294, 1, 'Moja lista życzeń', '2023-11-17 09:28:07'),
 (295, 1, 'Utwórz nową listę', '2023-11-17 09:28:07'),
-(316, 1, 'sale70.png', '2023-11-17 09:28:08'),
+(316, 1, '6ae81c0e96dd9d3f843c0c7f79577301.png', '2023-12-03 12:48:31'),
 (317, 1, '', '2023-11-17 09:28:08'),
 (318, 1, '', '2023-11-17 09:28:08'),
 (327, 1, '<p>Aby zoptymalizować i ulepszyć korzystanie z naszej strony, przetwarzamy dane osobowe zgodnie z naszą Informacją o Prywatności. To pozwala nam na przedstawianie informacji dopasowanych indywidualnie do poszczególnych osób, w tym informacji o produktach i ofertach dostępnych w danym regionie czy mieście.</p>', '2023-11-18 18:49:27'),
-(329, 1, 'Możesz zrezygnować w każdej chwili. W tym celu należy odnaleźć szczegóły w naszej informacji prawnej.', '2023-11-17 09:28:08'),
+(329, 1, '', '2023-12-02 20:17:55'),
+(352, 1, 'https://www.youtube.com/c/adidas', '2023-12-02 21:19:28'),
+(353, 1, 'https://www.pinterest.de/adidas/', '2023-12-02 21:19:28'),
+(355, 1, 'https://www.instagram.com/adidas/', '2023-12-02 21:19:28'),
+(357, 1, 'https://www.tiktok.com/@adidas?lang=en', '2023-12-02 21:19:28'),
 (365, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-17 09:28:44'),
 (367, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-17 09:28:44'),
 (429, 1, '', '2023-11-18 16:38:01');
@@ -3784,7 +3724,19 @@ INSERT INTO `ad_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (6, 1, 1, 5, 2, 3232252161, '2023-11-18 16:53:07', 'http://localhost:8080/zam%C3%B3wienie'),
 (7, 1, 1, 5, 1, 3232252161, '2023-11-18 19:41:55', ''),
 (8, 1, 1, 5, 3, 3232252161, '2023-11-18 20:26:17', ''),
-(9, 1, 1, 4, 1, 2886926337, '2023-11-28 21:31:39', '');
+(9, 1, 1, 4, 1, 2886926337, '2023-11-28 21:31:39', ''),
+(10, 1, 1, 6, 1, 2886860801, '2023-12-02 20:43:50', ''),
+(11, 1, 1, 6, 1, 2886860801, '2023-12-02 21:25:27', ''),
+(12, 1, 1, 6, 4, 2886860801, '2023-12-02 21:58:25', ''),
+(13, 1, 1, 6, 4, 2886860801, '2023-12-02 22:31:14', ''),
+(14, 1, 1, 6, 1, 2886860801, '2023-12-03 00:10:15', ''),
+(15, 1, 1, 6, 4, 2886860801, '2023-12-03 00:42:24', ''),
+(16, 1, 1, 6, 1, 2886860801, '2023-12-03 11:58:34', ''),
+(17, 1, 1, 6, 4, 2886860801, '2023-12-03 12:29:05', ''),
+(18, 1, 1, 7, 1, 2886860801, '2023-12-03 12:34:19', ''),
+(19, 1, 1, 7, 4, 2886860801, '2023-12-03 13:05:36', ''),
+(20, 1, 1, 7, 1, 2886860801, '2023-12-03 13:36:55', ''),
+(21, 1, 1, 6, 1, 2886860801, '2023-12-03 13:43:35', '');
 
 -- --------------------------------------------------------
 
@@ -3930,7 +3882,270 @@ INSERT INTO `ad_connections_source` (`id_connections_source`, `id_connections`, 
 (109, 9, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-11-28 21:31:43'),
 (110, 9, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/', '', '2023-11-28 21:31:46'),
 (111, 9, 'http://localhost:8080/women/2-9-brown-bear-printed-sweater.html', 'localhost:8080/', '', '2023-11-28 21:32:14'),
-(112, 9, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2023-11-28 21:32:22');
+(112, 9, 'http://localhost:8080/', 'localhost:8080/men/1-1-hummingbird-printed-t-shirt.html', '', '2023-11-28 21:32:22'),
+(113, 10, 'http://localhost:8080/', 'localhost:8080/14-ubrania', '', '2023-12-02 21:04:48'),
+(114, 10, 'http://localhost:8080/14-ubrania', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:04:49'),
+(115, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/11-kobiety', '', '2023-12-02 21:04:50'),
+(116, 10, 'http://localhost:8080/11-kobiety', 'localhost:8080/12-dzieci', '', '2023-12-02 21:04:51'),
+(117, 10, 'http://localhost:8080/12-dzieci', 'localhost:8080/12-dzieci', '', '2023-12-02 21:04:53'),
+(118, 10, 'http://localhost:8080/12-dzieci', 'localhost:8080/13-sport', '', '2023-12-02 21:04:54'),
+(119, 10, 'http://localhost:8080/12-dzieci', 'localhost:8080/13-sport', '', '2023-12-02 21:05:45'),
+(120, 10, 'http://localhost:8080/13-sport', 'localhost:8080/', '', '2023-12-02 21:05:46'),
+(121, 10, 'http://localhost:8080/13-sport', 'localhost:8080/', '', '2023-12-02 21:05:47'),
+(122, 10, 'http://localhost:8080/13-sport', 'localhost:8080/', '', '2023-12-02 21:05:48'),
+(123, 10, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:05:49'),
+(124, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/11-kobiety', '', '2023-12-02 21:05:51'),
+(125, 10, 'http://localhost:8080/11-kobiety', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:05:51'),
+(126, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:05:59'),
+(127, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:06:37'),
+(128, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:08:19'),
+(129, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:09:04'),
+(130, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:09:22'),
+(131, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:09:23'),
+(132, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:09:25'),
+(133, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:10:42'),
+(134, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:11:50'),
+(135, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:16:22'),
+(136, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:18:20'),
+(137, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:18:30'),
+(138, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:18:32'),
+(139, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:19:31'),
+(140, 10, 'http://localhost:8080/admin4444/index.php?controller=AdminPsThemeCustoConfiguration&token=79e56e78e74c2e86a40310746cd80182', 'localhost:8080/', '', '2023-12-02 21:19:42'),
+(141, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:21:26'),
+(142, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:23:24'),
+(143, 10, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-02 21:24:24'),
+(144, 10, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:24:48'),
+(145, 10, 'http://localhost:8080/', 'localhost:8080/2-strona-glowna', '', '2023-12-02 21:24:50'),
+(146, 10, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:24:53'),
+(147, 10, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:25:22'),
+(148, 10, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:25:23'),
+(149, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:26:05'),
+(150, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:26:59'),
+(151, 11, 'http://localhost:8080/', 'localhost:8080/1-baza', '', '2023-12-02 21:27:01'),
+(152, 11, 'http://localhost:8080/', 'localhost:8080/19-akcesoria', '', '2023-12-02 21:27:06'),
+(153, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:27:09'),
+(154, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:27:38'),
+(155, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:27:54'),
+(156, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:28:07'),
+(157, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:29:33'),
+(158, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:29:53'),
+(159, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:29:54'),
+(160, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:29:55'),
+(161, 11, 'http://localhost:8080/', 'localhost:8080/kontakt', '', '2023-12-02 21:29:57'),
+(162, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:29:58'),
+(163, 11, 'http://localhost:8080/', 'localhost:8080/content/3-regulamin-firmy', '', '2023-12-02 21:29:59'),
+(164, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:30:00'),
+(165, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:31:00'),
+(166, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:31:02'),
+(167, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:31:03'),
+(168, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:31:36'),
+(169, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:31:43'),
+(170, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:32:27'),
+(171, 11, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:32:31'),
+(172, 11, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:32:41'),
+(173, 11, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:32:42'),
+(174, 11, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/logowanie?back=my-account', '', '2023-12-02 21:32:44'),
+(175, 11, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:32:45'),
+(176, 11, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:34:00'),
+(177, 11, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-02 21:34:01'),
+(178, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:53:36'),
+(179, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:53:49'),
+(180, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:56:42'),
+(181, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:56:53'),
+(182, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:56:56'),
+(183, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:57:09'),
+(184, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:59:41'),
+(185, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 21:59:46'),
+(186, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:00:34'),
+(187, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:00:36'),
+(188, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:00:40'),
+(189, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:00:44'),
+(190, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:01:55'),
+(191, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:01:56'),
+(192, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:03:42'),
+(193, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:06:46'),
+(194, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:07:55'),
+(195, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:07:56'),
+(196, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:08:03'),
+(197, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:09:07'),
+(198, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:10:32'),
+(199, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:11:03'),
+(200, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:11:04'),
+(201, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:11:21'),
+(202, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:11:32'),
+(203, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:24:40'),
+(204, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:31:14'),
+(205, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:31:16'),
+(206, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:31:32'),
+(207, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:31:33'),
+(208, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:32:22'),
+(209, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:33:06'),
+(210, 11, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-02 22:48:32'),
+(211, 14, 'http://localhost:8080/', 'localhost:8080/4-16-the-adventure-begins-framed-poster.html', '', '2023-12-03 00:15:00'),
+(212, 14, 'http://localhost:8080/4-16-the-adventure-begins-framed-poster.html', 'localhost:8080/', '', '2023-12-03 00:15:04'),
+(213, 14, 'http://localhost:8080/4-16-the-adventure-begins-framed-poster.html', 'localhost:8080/', '', '2023-12-03 00:15:07'),
+(214, 14, 'http://localhost:8080/4-16-the-adventure-begins-framed-poster.html', 'localhost:8080/', '', '2023-12-03 00:15:10'),
+(215, 14, 'http://localhost:8080/4-16-the-adventure-begins-framed-poster.html', 'localhost:8080/', '', '2023-12-03 00:15:34'),
+(216, 14, 'http://localhost:8080/4-16-the-adventure-begins-framed-poster.html', 'localhost:8080/', '', '2023-12-03 00:15:46'),
+(217, 14, 'http://localhost:8080/4-16-the-adventure-begins-framed-poster.html', 'localhost:8080/', '', '2023-12-03 00:15:48'),
+(218, 14, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-03 00:15:50'),
+(219, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:15:52'),
+(220, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:15:55'),
+(221, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:17:05'),
+(222, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:17:25'),
+(223, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:17:39'),
+(224, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:17:40'),
+(225, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:18:03'),
+(226, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:18:04'),
+(227, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:18:46'),
+(228, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:18:48'),
+(229, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:19:02'),
+(230, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:19:05'),
+(231, 14, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-03 00:19:06'),
+(232, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:19:07'),
+(233, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:19:45'),
+(234, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:20:00'),
+(235, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:20:02'),
+(236, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:20:56'),
+(237, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:20:59'),
+(238, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:21:45'),
+(239, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:21:46'),
+(240, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:21:47'),
+(241, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:21:48'),
+(242, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:21:49'),
+(243, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:21:49'),
+(244, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:21:50'),
+(245, 14, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-03 00:21:53'),
+(246, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/11-kobiety', '', '2023-12-03 00:21:54'),
+(247, 14, 'http://localhost:8080/11-kobiety', 'localhost:8080/12-dzieci', '', '2023-12-03 00:21:56'),
+(248, 14, 'http://localhost:8080/12-dzieci', 'localhost:8080/22-akcesoria', '', '2023-12-03 00:21:56'),
+(249, 14, 'http://localhost:8080/22-akcesoria', 'localhost:8080/10-mezczyzni', '', '2023-12-03 00:21:57'),
+(250, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:21:59'),
+(251, 14, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-03 00:22:00'),
+(252, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:22:03'),
+(253, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:22:30'),
+(254, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:22:42'),
+(255, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:23:35'),
+(256, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:24:20'),
+(257, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:25:10'),
+(258, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:25:12'),
+(259, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:25:18'),
+(260, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:25:19'),
+(261, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:26:43'),
+(262, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:26:45'),
+(263, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:27:08'),
+(264, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:27:10'),
+(265, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:27:42'),
+(266, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:28:17'),
+(267, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:29:26'),
+(268, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:29:28'),
+(269, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:30:18'),
+(270, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:30:52'),
+(271, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:32:35'),
+(272, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:32:36'),
+(273, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:32:58'),
+(274, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:35:54'),
+(275, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:38:37'),
+(276, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:39:47'),
+(277, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:42:18'),
+(278, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:43:27'),
+(279, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:43:49'),
+(280, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:44:09'),
+(281, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:46:51'),
+(282, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:47:04'),
+(283, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:47:45'),
+(284, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:48:11'),
+(285, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:48:13'),
+(286, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:49:39'),
+(287, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:49:57'),
+(288, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:51:55'),
+(289, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:52:06'),
+(290, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:53:43'),
+(291, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:55:59'),
+(292, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:56:27'),
+(293, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:56:53'),
+(294, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 00:57:08'),
+(295, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:04:45'),
+(296, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:06:18'),
+(297, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:07:31'),
+(298, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:07:33'),
+(299, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:08:21'),
+(300, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:08:39'),
+(301, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:09:23'),
+(302, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:09:45'),
+(303, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:10:17'),
+(304, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:10:19'),
+(305, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:12:17'),
+(306, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:12:52'),
+(307, 14, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-03 01:15:54'),
+(308, 14, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-03 01:15:57'),
+(309, 14, 'http://localhost:8080/', 'localhost:8080/23-buty-biegowe', '', '2023-12-03 01:16:12'),
+(310, 14, 'http://localhost:8080/', 'localhost:8080/23-buty-biegowe', '', '2023-12-03 01:16:41'),
+(311, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:09:55'),
+(312, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:09:57'),
+(313, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:13:06'),
+(314, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:13:16'),
+(315, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:13:29'),
+(316, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:13:32'),
+(317, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:17:23'),
+(318, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:18:03'),
+(319, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:19:41'),
+(320, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:21:46'),
+(321, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:21:47'),
+(322, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:21:50'),
+(323, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:23:50'),
+(324, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:24:16'),
+(325, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:24:38'),
+(326, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:25:13'),
+(327, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:25:56'),
+(328, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:26:20'),
+(329, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:26:22'),
+(330, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:27:22'),
+(331, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:28:01'),
+(332, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:28:18'),
+(333, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:28:30'),
+(334, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:28:32'),
+(335, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:28:40'),
+(336, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:28:42'),
+(337, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:28:55'),
+(338, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:28:56'),
+(339, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:29:05'),
+(340, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:29:55'),
+(341, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:29:57'),
+(342, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:30:18'),
+(343, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:31:06'),
+(344, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:31:34'),
+(345, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:31:41'),
+(346, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:32:18'),
+(347, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:32:20'),
+(348, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:32:44'),
+(349, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:32:46'),
+(350, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:33:06'),
+(351, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:33:10'),
+(352, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:33:15'),
+(353, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:33:30'),
+(354, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:33:31'),
+(355, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:33:36'),
+(356, 16, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 12:33:38'),
+(357, 18, 'http://localhost:8080/', 'localhost:8080/5-19-today-is-a-good-day-framed-poster.html', '', '2023-12-03 13:35:36'),
+(358, 20, 'http://localhost:8080/', 'localhost:8080/adicolor', '', '2023-12-03 13:40:51'),
+(359, 20, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 13:40:53'),
+(360, 20, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 13:40:54'),
+(361, 20, 'http://localhost:8080/', 'localhost:8080/adicolor', '', '2023-12-03 13:40:55'),
+(362, 20, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 13:40:56'),
+(363, 20, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 13:42:12'),
+(364, 20, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 13:42:13'),
+(365, 21, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 13:58:40'),
+(366, 21, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 13:58:42'),
+(367, 21, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-03 13:58:44'),
+(368, 21, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-03 13:58:46'),
+(369, 21, 'http://localhost:8080/', 'localhost:8080/8-mug-today-is-a-good-day.html', '', '2023-12-03 13:58:48'),
+(370, 21, 'http://localhost:8080/8-mug-today-is-a-good-day.html', 'localhost:8080/content/3-regulamin-firmy', '', '2023-12-03 13:58:52'),
+(371, 21, 'http://localhost:8080/8-mug-today-is-a-good-day.html', 'localhost:8080/content/1-dostawa', '', '2023-12-03 13:58:58'),
+(372, 21, 'http://localhost:8080/8-mug-today-is-a-good-day.html', 'localhost:8080/content/6-zwroty', '', '2023-12-03 13:59:01'),
+(373, 21, 'http://localhost:8080/8-mug-today-is-a-good-day.html', 'localhost:8080/10-mezczyzni', '', '2023-12-03 13:59:05'),
+(374, 21, 'http://localhost:8080/', 'localhost:8080/8-mug-today-is-a-good-day.html', '', '2023-12-03 13:59:06'),
+(375, 21, 'http://localhost:8080/8-mug-today-is-a-good-day.html', 'localhost:8080/', '', '2023-12-03 13:59:07');
 
 -- --------------------------------------------------------
 
@@ -5206,7 +5421,7 @@ CREATE TABLE `ad_employee` (
 --
 
 INSERT INTO `ad_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
-(1, 1, 1, 'Test', 'Test', 'test@test.com', '$2y$10$qsD9LCfAYKaz7/6eppoU/.MoidieTkwkbw/pRniFDMToHAslbQuM.', '2023-11-17 03:28:05', '2023-10-17', '2023-11-17', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-11-28', NULL, '0000-00-00 00:00:00', 0);
+(1, 1, 1, 'Test', 'Test', 'test@test.com', '$2y$10$qsD9LCfAYKaz7/6eppoU/.MoidieTkwkbw/pRniFDMToHAslbQuM.', '2023-11-17 03:28:05', '2023-10-17', '2023-11-17', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-12-03', NULL, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -5227,7 +5442,8 @@ CREATE TABLE `ad_employee_session` (
 INSERT INTO `ad_employee_session` (`id_employee_session`, `id_employee`, `token`) VALUES
 (1, 1, '32fbdb78ce189773e1eec14931fbbe2c7131293c'),
 (3, 1, '98613e2e4091844e82a2419e72d08e44ad078c92'),
-(4, 1, '921089e06a2acb2a679f28f54f21d2e742a6ed96');
+(8, 1, '7d99c5a21b91092e473d5c56d81bbe35818010ec'),
+(9, 1, '9c5a67f3ac20e517df59d832c3412ca6bfeb1e85');
 
 -- --------------------------------------------------------
 
@@ -5603,7 +5819,9 @@ INSERT INTO `ad_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
 (3, 6, 11, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (4, 7, 11, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(5, 7, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(5, 7, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(6, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(7, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -5621,9 +5839,9 @@ CREATE TABLE `ad_homeslider` (
 --
 
 INSERT INTO `ad_homeslider` (`id_homeslider_slides`, `id_shop`) VALUES
-(1, 1),
-(2, 1),
-(3, 1);
+(4, 1),
+(6, 1),
+(7, 1);
 
 -- --------------------------------------------------------
 
@@ -5642,9 +5860,9 @@ CREATE TABLE `ad_homeslider_slides` (
 --
 
 INSERT INTO `ad_homeslider_slides` (`id_homeslider_slides`, `position`, `active`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(3, 3, 1);
+(4, 1, 1),
+(6, 2, 1),
+(7, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -5667,9 +5885,9 @@ CREATE TABLE `ad_homeslider_slides_lang` (
 --
 
 INSERT INTO `ad_homeslider_slides_lang` (`id_homeslider_slides`, `id_lang`, `title`, `description`, `legend`, `url`, `image`) VALUES
-(1, 1, 'Sample 1', '<h3>EXCEPTEUR OCCAECAT</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>', 'sample-1', 'https://www.prestashop-project.org?utm_source=back-office&utm_medium=v17_homeslider&utm_campaign=back-office-PL&utm_content=download', 'sample-1.jpg'),
-(2, 1, 'Sample 2', '<h3>EXCEPTEUR OCCAECAT</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>', 'sample-2', 'https://www.prestashop-project.org?utm_source=back-office&utm_medium=v17_homeslider&utm_campaign=back-office-PL&utm_content=download', 'sample-2.jpg'),
-(3, 1, 'Sample 3', '<h3>EXCEPTEUR OCCAECAT</h3>\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>', 'sample-3', 'https://www.prestashop-project.org?utm_source=back-office&utm_medium=v17_homeslider&utm_campaign=back-office-PL&utm_content=download', 'sample-3.jpg');
+(4, 1, '', '', '', '', '4af5efa93b012a6ace199ba9378985da441cf089_slider1.png'),
+(6, 1, '', '', '', '', 'f1a8cc572503345907a898a5803016784eaa49df_slider2.png'),
+(7, 1, '', '', '', '', 'ab15bede1cf7cc0fa6e13be6941b7bd64c17326d_slider3.png');
 
 -- --------------------------------------------------------
 
@@ -6590,6 +6808,7 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (11, 1, 693, 1),
 (11, 1, 694, 1),
 (11, 1, 695, 1),
+(12, 1, 15, 1),
 (12, 1, 696, 1),
 (13, 1, 14, 1),
 (15, 1, 698, 1),
@@ -6598,8 +6817,8 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (17, 1, 702, 1),
 (18, 1, 703, 1),
 (18, 1, 704, 1),
-(20, 1, 706, 1),
 (21, 1, 122, 1),
+(22, 1, 41, 1),
 (22, 1, 47, 1),
 (22, 1, 48, 1),
 (22, 1, 708, 1),
@@ -6610,11 +6829,8 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (25, 1, 713, 1),
 (25, 1, 714, 1),
 (25, 1, 750, 1),
-(26, 1, 15, 1),
+(26, 1, 706, 1),
 (27, 1, 705, 1),
-(28, 1, 41, 1),
-(28, 1, 141, 1),
-(28, 1, 323, 1),
 (29, 1, 25, 1),
 (29, 1, 715, 1),
 (29, 1, 716, 1),
@@ -6644,6 +6860,7 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (54, 1, 735, 1),
 (55, 1, 140, 1),
 (55, 1, 144, 1),
+(55, 1, 323, 1),
 (55, 1, 736, 1),
 (58, 1, 17, 1),
 (58, 1, 46, 1),
@@ -6654,25 +6871,17 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (59, 1, 743, 1),
 (60, 1, 22, 1),
 (60, 1, 26, 1),
-(60, 1, 707, 1),
 (60, 1, 748, 1),
 (60, 1, 749, 1),
 (61, 1, 81, 1),
 (61, 1, 83, 1),
-(61, 1, 87, 1),
 (61, 1, 88, 1),
 (61, 1, 89, 1),
-(61, 1, 90, 1),
 (61, 1, 91, 1),
 (61, 1, 92, 1),
 (61, 1, 93, 1),
-(61, 1, 94, 1),
-(61, 1, 95, 1),
-(61, 1, 96, 1),
-(61, 1, 97, 1),
 (61, 1, 98, 1),
 (61, 1, 99, 1),
-(61, 1, 100, 1),
 (61, 1, 101, 1),
 (61, 1, 103, 1),
 (61, 1, 426, 1),
@@ -6682,59 +6891,57 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (61, 1, 710, 1),
 (61, 1, 711, 1),
 (61, 1, 712, 1),
+(64, 1, 141, 1),
 (3, 1, 682, 2),
 (4, 1, 688, 2),
 (5, 1, 689, 2),
 (11, 1, 685, 2),
 (16, 1, 31, 2),
 (17, 1, 705, 2),
-(18, 1, 41, 2),
 (22, 1, 122, 2),
 (22, 1, 683, 2),
 (22, 1, 694, 2),
 (22, 1, 695, 2),
-(22, 1, 707, 2),
-(25, 1, 15, 2),
 (25, 1, 28, 2),
+(26, 1, 15, 2),
 (26, 1, 16, 2),
-(26, 1, 706, 2),
 (29, 1, 82, 2),
+(29, 1, 706, 2),
 (30, 1, 25, 2),
 (36, 1, 55, 2),
 (53, 1, 71, 2),
 (54, 1, 47, 2),
-(55, 1, 323, 2),
 (57, 1, 734, 2),
 (58, 1, 732, 2),
 (59, 1, 46, 2),
 (61, 1, 14, 2),
 (62, 1, 697, 2),
+(64, 1, 41, 2),
+(64, 1, 323, 2),
 (4, 1, 682, 3),
 (5, 1, 688, 3),
 (6, 1, 689, 3),
-(12, 1, 15, 3),
-(15, 1, 41, 3),
 (19, 1, 705, 3),
 (22, 1, 685, 3),
-(29, 1, 706, 3),
+(25, 1, 15, 3),
 (30, 1, 16, 3),
+(33, 1, 41, 3),
 (33, 1, 683, 3),
-(33, 1, 707, 3),
 (37, 1, 55, 3),
 (54, 1, 122, 3),
 (58, 1, 47, 3),
 (58, 1, 71, 3),
 (61, 1, 82, 3),
 (62, 1, 46, 3),
-(1, 1, 41, 4),
+(63, 1, 706, 3),
 (5, 1, 682, 4),
 (6, 1, 688, 4),
-(20, 1, 15, 4),
 (32, 1, 16, 4),
 (32, 1, 705, 4),
 (38, 1, 55, 4),
 (58, 1, 683, 4),
 (59, 1, 71, 4),
+(63, 1, 15, 4),
 (7, 1, 682, 5),
 (39, 1, 55, 5),
 (58, 1, 16, 5),
@@ -6974,7 +7181,7 @@ CREATE TABLE `ad_info_lang` (
 --
 
 INSERT INTO `ad_info_lang` (`id_info`, `id_shop`, `id_lang`, `text`) VALUES
-(1, 1, 1, '<h2>TWÓJ SPORT, TWÓJ SKLEP SPORTOWY</h2>\n<p>Nasze kolekcje zacierają granice między ekskluzywną modą a doskonałymi osiągami, jak choćby nasza kolekcja odzieży treningowej – zaprojektowana tak, aby wspaniale prezentować się zarówno na siłowni, jak i poza nią. Albo niektóre produkty, które można również nosić jako odzież sportową. Nasze życie wciąż się zmienia. Staje się coraz bardziej różnorodne. Projektując, adidas bierze to pod uwagę.</p>');
+(1, 1, 1, '<h1>HISTORIA, SPORT, STYL I ODZIEŻ SPORTOWA W ADIDAS, OD 1949</h1>\n<p>Sport to dobra forma i kondycja. To pozytywne nastawienie. To coś, co nas łączy. Sport pomaga nam zmieniać świat na lepsze. Często są to inspirujące historie sportowców. Mobilizują nas do różnego rodzaju aktywności fizycznej. Odpowiednia odzież sportowa, a także najnowsze technologie pozwalają osiągać coraz lepsze rezultaty, bić kolejne rekordy życiowe. adidas ma wszystko to, co jest niezbędne do uprawiania różnych dyscyplin – od biegania przez koszykówkę i piłkę nożną po fitness. Ma wszystko, co niezbędne do bicia kolejnych rekordów. Także dla tych, którzy lubią w weekendy wybrać się za miasto. I dla tych, którzy ćwiczą jogę i przekazują jej tajniki innym. 3 paski sprawdzają się nawet na scenie muzycznej. Nie tylko podczas koncertów i festiwali. Nasza odzież sportowa ułatwia koncentrację przed pierwszym gwizdkiem. Podczas wyścigu i biegu. Na linii mety. Jesteśmy po to, by wspierać kreatorów. By byli lepszymi sportowcami. By lepiej im się żyło. I by mogli zmieniać świat na lepsze.<br /><br />adidas to nie tylko odzież sportowa czy treningowa. Współpracujemy i współtworzymy z najlepszymi w branży. Dzięki temu oferujemy naszym fanom odzież sportową i styl dopasowany do ich potrzeb treningowych, jednocześnie dbając o zrównoważony rozwój. Wspieramy kreatorów. Pomagamy im się rozwijać. Tworzymy zmianę. Przykładamy wagę do wpływu, jaki mamy na otaczający nas świat.</p>\n<h1>TWÓJ SPORT, TWÓJ SKLEP SPORTOWY</h1>\n<p>adidas projektuje buty i ubrania sportowe dla sportowców uprawiających różne dyscypliny. Dla kreatorów, którym zależy na ciągłym rozwoju, którzy rzucają wyzwanie stereotypom, przesuwają granice sportu i swoją kreatywnością łamią skostniałe zasady. I nic ich nie może zatrzymać. Nasz sklep sportowy online ma dla wszystko to, co niezbędne dla drużyn i indywidualnych sportowców. Bo kreatorzy są dla nas najważniejsi. Projektujemy odzież sportową, która pozwala osiągać coraz lepsze wyniki. I wygrywać. Wszystkie aktywne kobiety znajdą dla siebie najwyższej jakości biustonosze sportowe i legginsy. Na każdy rodzaj aktywności. Tworzymy, ulepszamy, wprowadzamy innowacyjne rozwiązania. Testujemy nowe technologie: na boisku, na bieżni, na korcie, parkiecie i basenie, ale też na łonie natury. Zainspirowani naszymi archiwami, tworzymy ubrania i buty, które doskonale sprawdzają się w pozasportowych sytuacjach, jak NMD czy dresy Firebird. Klasyczne sportowe modele powracają w wielkim stylu, jak Stan Smith czy Superstar. Wszędzie są widoczne, bo są ponadczasowe.<br /><br />Nasze kolekcje zacierają granice między ekskluzywną modą a doskonałymi osiągami, jak choćby nasza kolekcja odzieży treningowej adidas by Stella McCartney – zaprojektowana tak, aby wspaniale prezentować się zarówno na siłowni, jak i poza nią. Albo niektóre produkty z serii adidas Originals, które można również nosić jako odzież sportową. Nasze życie wciąż się zmienia. Staje się coraz bardziej różnorodne. Projektując, adidas bierze to pod uwagę.</p>');
 
 -- --------------------------------------------------------
 
@@ -7153,6 +7360,17 @@ CREATE TABLE `ad_layered_filter_block` (
   `data` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Dumping data for table `ad_layered_filter_block`
+--
+
+INSERT INTO `ad_layered_filter_block` (`hash`, `data`) VALUES
+('3446fce58f5024d3dedce6008b5f830e', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('86edb0feb8581f417648ef9b3c264225', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('87caf0acf58d3b2a914c0927ea8fe254', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('c3472b35e09c5c3aa26a5d39af308a9c', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('c3eaa4a60d9807441019a11dbd71a470', 'a:1:{s:7:\"filters\";a:0:{}}');
+
 -- --------------------------------------------------------
 
 --
@@ -7301,7 +7519,8 @@ INSERT INTO `ad_layered_price_index` (`id_product`, `id_currency`, `id_shop`, `p
 (16, 1, 1, 15.867000, 15.867000, 14),
 (17, 1, 1, 15.867000, 15.867000, 14),
 (18, 1, 1, 15.867000, 15.867000, 14),
-(19, 1, 1, 17.097000, 17.097000, 14);
+(19, 1, 1, 17.097000, 17.097000, 14),
+(20, 1, 1, 0.000000, 0.000000, 14);
 
 -- --------------------------------------------------------
 
@@ -7403,8 +7622,10 @@ CREATE TABLE `ad_link_block` (
 --
 
 INSERT INTO `ad_link_block` (`id_link_block`, `id_hook`, `position`, `content`) VALUES
-(1, 41, 0, '{\"cms\":[false],\"product\":[\"prices-drop\",\"new-products\",\"best-sales\"],\"static\":[false]}'),
-(2, 41, 1, '{\"cms\":{\"0\":\"1\",\"2\":\"3\",\"3\":\"4\",\"5\":\"6\"},\"static\":[\"contact\"],\"product\":[false],\"category\":[false]}');
+(1, 41, 0, '{\"cms\":[false],\"static\":[false],\"product\":[\"prices-drop\",\"new-products\",\"best-sales\"],\"category\":[\"22\",\"18\",\"17\"]}'),
+(2, 41, 1, '{\"cms\":[false],\"static\":[false],\"product\":[false],\"category\":[false]}'),
+(3, 41, 0, '{\"cms\":[false],\"static\":[false],\"product\":[false],\"category\":[false]}'),
+(4, 41, 0, '{\"cms\":[\"1\",\"6\"],\"static\":[\"contact\"],\"product\":[false],\"category\":[false]}');
 
 -- --------------------------------------------------------
 
@@ -7424,8 +7645,10 @@ CREATE TABLE `ad_link_block_lang` (
 --
 
 INSERT INTO `ad_link_block_lang` (`id_link_block`, `id_lang`, `name`, `custom_content`) VALUES
-(1, 1, 'Produkty', NULL),
-(2, 1, 'Nasza firma', NULL);
+(1, 1, 'PRODUKTY', '[{\"title\":\"Nowo\\u015bci\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Najpopularniejsze\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Daty premiery\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"adidas Outlet\",\"url\":\"http:\\/\\/localhost:8080\\/\"}]'),
+(2, 1, 'SPORTS', '[{\"title\":\"Futbol\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Koszyk\\u00f3wka\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Golf\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Fitness i trening\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Outdoor\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Rugby\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Bieganie\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Tenis\",\"url\":\"http:\\/\\/localhost:8080\\/\"}]'),
+(3, 1, 'KOLEKCJE', '[{\"title\":\"Originals\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"IVY PARK\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Ultraboost\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"NMD\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Gazelle\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Superstar\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Stan Smith\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Ozweego\",\"url\":\"http:\\/\\/localhost:8080\\/\"}]'),
+(4, 1, 'WSPARCIE', '[{\"title\":\"Tabela rozmiar\\u00f3w\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Europejska Procedura Rozstrzygania Spor\\u00f3w\",\"url\":\"http:\\/\\/localhost:8080\\/\"},{\"title\":\"Dane informacyjne\",\"url\":\"http:\\/\\/localhost:8080\\/\"}]');
 
 -- --------------------------------------------------------
 
@@ -7445,7 +7668,9 @@ CREATE TABLE `ad_link_block_shop` (
 
 INSERT INTO `ad_link_block_shop` (`id_link_block`, `id_shop`, `position`) VALUES
 (1, 1, 0),
-(2, 1, 1);
+(2, 1, 1),
+(3, 1, 2),
+(4, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -7712,7 +7937,14 @@ INSERT INTO `ad_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (236, 1, 0, 'usunięcie Store', 'Store', 2, 1, NULL, 1, 0, 1, '2023-11-18 20:29:42', '2023-11-18 20:29:42'),
 (237, 1, 0, 'usunięcie Store', 'Store', 4, 1, NULL, 1, 0, 1, '2023-11-18 20:29:45', '2023-11-18 20:29:45'),
 (238, 1, 0, 'Połączenie z panelem administracyjnym z 172.19.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-11-28 21:25:39', '2023-11-28 21:25:39'),
-(239, 1, 0, 'usunięcie Carrier', 'Carrier', 5, 1, NULL, 1, 0, 1, '2023-11-28 21:28:04', '2023-11-28 21:28:04');
+(239, 1, 0, 'usunięcie Carrier', 'Carrier', 5, 1, NULL, 1, 0, 1, '2023-11-28 21:28:04', '2023-11-28 21:28:04'),
+(240, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-02 20:44:46', '2023-12-02 20:44:46'),
+(241, 1, 0, 'usunięcie Store', 'Store', 3, 1, NULL, 1, 0, 1, '2023-12-02 21:20:26', '2023-12-02 21:20:26'),
+(242, 1, 0, 'usunięcie Store', 'Store', 5, 1, NULL, 1, 0, 1, '2023-12-02 21:20:29', '2023-12-02 21:20:29'),
+(243, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-03 00:18:14', '2023-12-03 00:18:14'),
+(244, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-03 12:00:01', '2023-12-03 12:00:01'),
+(245, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-03 12:51:19', '2023-12-03 12:51:19'),
+(246, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-03 13:43:41', '2023-12-03 13:43:41');
 
 -- --------------------------------------------------------
 
@@ -7743,14 +7975,6 @@ CREATE TABLE `ad_manufacturer` (
   `active` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `ad_manufacturer`
---
-
-INSERT INTO `ad_manufacturer` (`id_manufacturer`, `name`, `date_add`, `date_upd`, `active`) VALUES
-(1, 'Studio Design', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1),
-(2, 'Graphic Corner', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -7767,14 +7991,6 @@ CREATE TABLE `ad_manufacturer_lang` (
   `meta_description` varchar(512) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `ad_manufacturer_lang`
---
-
-INSERT INTO `ad_manufacturer_lang` (`id_manufacturer`, `id_lang`, `description`, `short_description`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
-(1, 1, '<p>Studio Design offers a range of items from ready-to-wear collections to contemporary objects. The brand has been presenting new ideas and trends since its creation in 2012.</p>', '', '', '', ''),
-(2, 1, '<p>Since 2010, Graphic Corner offers a large choice of quality posters, available on paper and many other formats. </p>', '', '', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -7785,14 +8001,6 @@ CREATE TABLE `ad_manufacturer_shop` (
   `id_manufacturer` int(11) UNSIGNED NOT NULL,
   `id_shop` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `ad_manufacturer_shop`
---
-
-INSERT INTO `ad_manufacturer_shop` (`id_manufacturer`, `id_shop`) VALUES
-(1, 1),
-(2, 1);
 
 -- --------------------------------------------------------
 
@@ -7982,14 +8190,12 @@ INSERT INTO `ad_module` (`id_module`, `name`, `active`, `version`) VALUES
 (17, 'ps_currencyselector', 1, '2.1.1'),
 (18, 'ps_customeraccountlinks', 1, '3.2.0'),
 (19, 'ps_customersignin', 1, '2.0.5'),
-(20, 'ps_customtext', 1, '4.2.1'),
 (21, 'ps_dataprivacy', 1, '2.1.1'),
 (22, 'ps_emailsubscription', 1, '2.7.1'),
 (24, 'ps_faviconnotificationbo', 1, '2.1.3'),
 (25, 'ps_featuredproducts', 1, '2.1.4'),
 (26, 'ps_imageslider', 1, '3.1.3'),
 (27, 'ps_languageselector', 1, '2.1.3'),
-(28, 'ps_linklist', 1, '5.0.5'),
 (29, 'ps_mainmenu', 1, '2.3.2'),
 (30, 'ps_searchbar', 1, '2.1.3'),
 (31, 'ps_sharebuttons', 1, '2.1.2'),
@@ -8022,7 +8228,9 @@ INSERT INTO `ad_module` (`id_module`, `name`, `active`, `version`) VALUES
 (59, 'psxmarketingwithgoogle', 1, '1.61.1'),
 (60, 'blockreassurance', 1, '5.1.2'),
 (61, 'ps_facetedsearch', 1, '3.12.1'),
-(62, 'ps_cashondelivery', 1, '2.0.1');
+(62, 'ps_cashondelivery', 1, '2.0.1'),
+(63, 'ps_customtext', 1, '4.2.1'),
+(64, 'ps_linklist', 1, '5.0.5');
 
 -- --------------------------------------------------------
 
@@ -8112,10 +8320,6 @@ INSERT INTO `ad_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 574),
 (1, 575),
 (1, 576),
-(1, 577),
-(1, 578),
-(1, 579),
-(1, 580),
 (1, 581),
 (1, 582),
 (1, 583),
@@ -8140,10 +8344,6 @@ INSERT INTO `ad_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 610),
 (1, 611),
 (1, 612),
-(1, 613),
-(1, 614),
-(1, 615),
-(1, 616),
 (1, 617),
 (1, 618),
 (1, 619),
@@ -8275,7 +8475,15 @@ INSERT INTO `ad_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 829),
 (1, 830),
 (1, 831),
-(1, 832);
+(1, 832),
+(1, 833),
+(1, 834),
+(1, 835),
+(1, 836),
+(1, 837),
+(1, 838),
+(1, 839),
+(1, 840);
 
 -- --------------------------------------------------------
 
@@ -8420,9 +8628,6 @@ INSERT INTO `ad_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (19, 1, 1),
 (19, 1, 2),
 (19, 1, 3),
-(20, 1, 1),
-(20, 1, 2),
-(20, 1, 3),
 (21, 1, 1),
 (21, 1, 2),
 (21, 1, 3),
@@ -8441,9 +8646,6 @@ INSERT INTO `ad_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (27, 1, 1),
 (27, 1, 2),
 (27, 1, 3),
-(28, 1, 1),
-(28, 1, 2),
-(28, 1, 3),
 (29, 1, 1),
 (29, 1, 2),
 (29, 1, 3),
@@ -8542,7 +8744,13 @@ INSERT INTO `ad_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (61, 1, 3),
 (62, 1, 1),
 (62, 1, 2),
-(62, 1, 3);
+(62, 1, 3),
+(63, 1, 1),
+(63, 1, 2),
+(63, 1, 3),
+(64, 1, 1),
+(64, 1, 2),
+(64, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -8568,7 +8776,8 @@ INSERT INTO `ad_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (3, 1, 21, '2023-11-18 19:48:40', '2023-11-18 19:48:40'),
 (4, 1, 2, '2023-11-18 19:50:10', '2023-11-18 19:50:10'),
 (5, 1, 15, '2023-11-18 19:50:19', '2023-11-18 19:50:19'),
-(6, 1, 29, '2023-11-28 21:32:02', '2023-11-28 21:32:02');
+(6, 1, 29, '2023-11-28 21:32:02', '2023-11-28 21:32:02'),
+(7, 1, 22, '2023-12-03 13:19:58', '2023-12-03 13:20:42');
 
 -- --------------------------------------------------------
 
@@ -8619,14 +8828,12 @@ INSERT INTO `ad_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (17, 1, 7),
 (18, 1, 7),
 (19, 1, 7),
-(20, 1, 7),
 (21, 1, 7),
 (22, 1, 7),
 (24, 1, 7),
 (25, 1, 7),
-(26, 1, 3),
+(26, 1, 7),
 (27, 1, 7),
-(28, 1, 7),
 (29, 1, 7),
 (30, 1, 7),
 (31, 1, 7),
@@ -8659,7 +8866,9 @@ INSERT INTO `ad_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (59, 1, 7),
 (60, 1, 7),
 (61, 1, 7),
-(62, 1, 7);
+(62, 1, 7),
+(63, 1, 7),
+(64, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -9273,7 +9482,8 @@ CREATE TABLE `ad_page` (
 INSERT INTO `ad_page` (`id_page`, `id_page_type`, `id_object`) VALUES
 (1, 1, NULL),
 (2, 2, NULL),
-(3, 3, NULL);
+(3, 3, NULL),
+(4, 4, NULL);
 
 -- --------------------------------------------------------
 
@@ -9308,7 +9518,8 @@ CREATE TABLE `ad_page_type` (
 INSERT INTO `ad_page_type` (`id_page_type`, `name`) VALUES
 (3, 'cms'),
 (1, 'index'),
-(2, 'orderconfirmation');
+(2, 'orderconfirmation'),
+(4, 'pagenotfound');
 
 -- --------------------------------------------------------
 
@@ -9411,7 +9622,8 @@ INSERT INTO `ad_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_ca
 (16, 2, 2, 7, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 'demo_8', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 28, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
 (17, 2, 2, 7, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 'demo_9', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 32, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
 (18, 2, 2, 7, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 'demo_10', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 36, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'combinations'),
-(19, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 13.900000, 0.000000, '', 0.000000, 0.000000, 'demo_14', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 1, 0, 1, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'standard');
+(19, 2, 1, 8, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 13.900000, 0.000000, '', 0.000000, 0.000000, 'demo_14', '', '', 0.000000, 0.000000, 0.000000, 0.300000, 2, 1, 0, 1, 0, 1, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 0, 3, 1, 'standard'),
+(20, 0, 0, 2, 1, 1, 0, 0, '', '', '', '', 0.000000, 0, 1, NULL, 0, 0.000000, 0.000000, '', 0.000000, 0.000000, '', '', '', 0.000000, 0.000000, 0.000000, 0.000000, 2, 1, 0, 0, 0, 0, 0, '404', 0, 1, '0000-00-00', 0, 'new', 1, 0, 'both', 0, 0, 0, 0, '2023-12-03 00:21:09', '2023-12-03 00:21:09', 0, 3, 0, '');
 
 -- --------------------------------------------------------
 
@@ -9901,7 +10113,8 @@ INSERT INTO `ad_product_lang` (`id_product`, `id_shop`, `id_lang`, `description`
 (16, 1, 1, '<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>', '<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>', 'mountain-fox-notebook', '', '', '', 'Mountain fox notebook', '', '', '', ''),
 (17, 1, 1, '<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>', '<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>', 'brown-bear-notebook', '', '', '', 'Brown bear notebook', '', '', '', ''),
 (18, 1, 1, '<p>The Mountain fox notebook is the best option to write down your most ingenious ideas. At work, at home or when traveling, its endearing design and manufacturing quality will make you feel like writing! 90 gsm paper / double spiral binding.</p>', '<p>120 sheets notebook with hard cover made of recycled cardboard. 16x22cm</p>', 'hummingbird-notebook', '', '', '', 'Hummingbird notebook', '', '', '', ''),
-(19, 1, 1, '<p>Customize your mug with the text of your choice. A mood, a message, a quote... It\'s up to you! Maximum number of characters: ---</p>', '<p>White Ceramic Mug. 325ml</p>', 'customizable-mug', '', '', '', 'Customizable mug', '', '', '', '');
+(19, 1, 1, '<p>Customize your mug with the text of your choice. A mood, a message, a quote... It\'s up to you! Maximum number of characters: ---</p>', '<p>White Ceramic Mug. 325ml</p>', 'customizable-mug', '', '', '', 'Customizable mug', '', '', '', ''),
+(20, 1, 1, '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -9981,7 +10194,8 @@ INSERT INTO `ad_product_shop` (`id_product`, `id_shop`, `id_category_default`, `
 (16, 1, 7, 1, 0, 0, 0.000000, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 28, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
 (17, 1, 7, 1, 0, 0, 0.000000, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 32, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
 (18, 1, 7, 1, 0, 0, 0.000000, 1, NULL, 0, 12.900000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 36, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
-(19, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 13.900000, 0.000000, '', 0.000000, 0.000000, 1, 0, 1, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3);
+(19, 1, 8, 1, 0, 0, 0.000000, 1, NULL, 0, 13.900000, 0.000000, '', 0.000000, 0.000000, 1, 0, 1, 1, '301-category', 0, 1, '0000-00-00', 0, 'new', 1, 1, 'both', 0, 0, '2023-11-17 09:29:10', '2023-11-17 09:29:10', 3),
+(20, 1, 2, 1, 0, 0, 0.000000, 1, NULL, 0, 0.000000, 0.000000, '', 0.000000, 0.000000, 0, 0, 0, 0, '404', 0, 1, '0000-00-00', 0, 'new', 1, 0, 'both', 0, 0, '2023-12-03 00:21:09', '2023-12-03 00:21:09', 3);
 
 -- --------------------------------------------------------
 
@@ -9998,82 +10212,6 @@ CREATE TABLE `ad_product_supplier` (
   `product_supplier_price_te` decimal(20,6) NOT NULL DEFAULT 0.000000,
   `id_currency` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `ad_product_supplier`
---
-
-INSERT INTO `ad_product_supplier` (`id_product_supplier`, `id_product`, `id_product_attribute`, `id_supplier`, `product_supplier_reference`, `product_supplier_price_te`, `id_currency`) VALUES
-(1, 6, 0, 2, 'demo_11', 5.490000, 0),
-(2, 7, 0, 2, 'demo_12', 5.490000, 0),
-(3, 8, 0, 2, 'demo_13', 5.490000, 0),
-(4, 19, 0, 2, 'demo_14', 5.490000, 0),
-(5, 12, 0, 2, 'demo_18', 5.490000, 0),
-(6, 13, 0, 2, 'demo_19', 5.490000, 0),
-(7, 14, 0, 2, 'demo_20', 5.490000, 0),
-(8, 1, 0, 1, 'demo_1_46', 5.490000, 0),
-(9, 1, 1, 1, 'demo_1_46', 5.490000, 0),
-(10, 1, 2, 1, 'demo_1_47', 5.490000, 0),
-(11, 1, 3, 1, 'demo_1_48', 5.490000, 0),
-(12, 1, 4, 1, 'demo_1_49', 5.490000, 0),
-(13, 1, 5, 1, 'demo_1_50', 5.490000, 0),
-(14, 1, 6, 1, 'demo_1_51', 5.490000, 0),
-(15, 1, 7, 1, 'demo_1_52', 5.490000, 0),
-(16, 1, 8, 1, 'demo_1_53', 5.490000, 0),
-(17, 2, 0, 1, 'demo_3_62', 5.490000, 0),
-(18, 2, 9, 1, 'demo_3_62', 5.490000, 0),
-(19, 2, 10, 1, 'demo_3_63', 5.490000, 0),
-(20, 2, 11, 1, 'demo_3_64', 5.490000, 0),
-(21, 2, 12, 1, 'demo_3_65', 5.490000, 0),
-(22, 3, 0, 1, 'demo_6_70', 5.490000, 0),
-(23, 3, 13, 1, 'demo_6_70', 5.490000, 0),
-(24, 3, 14, 1, 'demo_6_71', 5.490000, 0),
-(25, 3, 15, 1, 'demo_6_72', 5.490000, 0),
-(26, 4, 0, 1, 'demo_5_73', 5.490000, 0),
-(27, 4, 16, 1, 'demo_5_73', 5.490000, 0),
-(28, 4, 17, 1, 'demo_5_74', 5.490000, 0),
-(29, 4, 18, 1, 'demo_5_75', 5.490000, 0),
-(30, 5, 0, 1, 'demo_5_76', 5.490000, 0),
-(31, 5, 19, 1, 'demo_5_76', 5.490000, 0),
-(32, 5, 20, 1, 'demo_5_77', 5.490000, 0),
-(33, 5, 21, 1, 'demo_5_78', 5.490000, 0),
-(34, 3, 0, 2, 'demo_6_70', 2.490000, 0),
-(35, 3, 13, 2, 'demo_6_70', 2.490000, 0),
-(36, 3, 14, 2, 'demo_6_71', 2.490000, 0),
-(37, 3, 15, 2, 'demo_6_72', 2.490000, 0),
-(38, 4, 0, 2, 'demo_5_73', 2.490000, 0),
-(39, 4, 16, 2, 'demo_5_73', 2.490000, 0),
-(40, 4, 17, 2, 'demo_5_74', 2.490000, 0),
-(41, 4, 18, 2, 'demo_5_75', 2.490000, 0),
-(42, 5, 0, 2, 'demo_5_76', 2.490000, 0),
-(43, 5, 19, 2, 'demo_5_76', 2.490000, 0),
-(44, 5, 20, 2, 'demo_5_77', 2.490000, 0),
-(45, 5, 21, 2, 'demo_5_78', 2.490000, 0),
-(46, 9, 0, 2, 'demo_15_79', 5.490000, 0),
-(47, 9, 22, 2, 'demo_15_79', 5.490000, 0),
-(48, 9, 23, 2, 'demo_15_80', 5.490000, 0),
-(49, 10, 0, 2, 'demo_16_81', 5.490000, 0),
-(50, 10, 24, 2, 'demo_16_81', 5.490000, 0),
-(51, 10, 25, 2, 'demo_16_82', 5.490000, 0),
-(52, 11, 0, 2, 'demo_17_83', 5.490000, 0),
-(53, 11, 26, 2, 'demo_17_83', 5.490000, 0),
-(54, 11, 27, 2, 'demo_17_84', 5.490000, 0),
-(55, 16, 0, 2, 'demo_8_85', 5.490000, 0),
-(56, 16, 28, 2, 'demo_8_85', 5.490000, 0),
-(57, 16, 29, 2, 'demo_8_86', 5.490000, 0),
-(58, 16, 30, 2, 'demo_8_87', 5.490000, 0),
-(59, 16, 31, 2, 'demo_8_88', 5.490000, 0),
-(60, 17, 0, 2, 'demo_9_89', 5.490000, 0),
-(61, 17, 32, 2, 'demo_9_89', 5.490000, 0),
-(62, 17, 33, 2, 'demo_9_90', 5.490000, 0),
-(63, 17, 34, 2, 'demo_9_91', 5.490000, 0),
-(64, 17, 35, 2, 'demo_9_92', 5.490000, 0),
-(65, 18, 0, 2, 'demo_10_93', 5.490000, 0),
-(66, 18, 36, 2, 'demo_10_93', 5.490000, 0),
-(67, 18, 37, 2, 'demo_10_94', 5.490000, 0),
-(68, 18, 38, 2, 'demo_10_95', 5.490000, 0),
-(69, 18, 39, 2, 'demo_10_96', 5.490000, 0),
-(70, 15, 0, 2, '', 0.000000, 0);
 
 -- --------------------------------------------------------
 
@@ -11516,7 +11654,7 @@ CREATE TABLE `ad_shop` (
 --
 
 INSERT INTO `ad_shop` (`id_shop`, `id_shop_group`, `name`, `color`, `id_category`, `theme_name`, `active`, `deleted`) VALUES
-(1, 1, 'Adidas', '', 2, 'classic', 1, 0);
+(1, 1, 'Adidas', '', 2, 'child_classic', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -12190,7 +12328,8 @@ INSERT INTO `ad_stock_available` (`id_stock_available`, `id_product`, `id_produc
 (55, 18, 36, 1, 0, 300, 0, 0, 0, 2, ''),
 (56, 18, 37, 1, 0, 300, 0, 0, 0, 2, ''),
 (57, 18, 38, 1, 0, 300, 0, 0, 0, 2, ''),
-(58, 18, 39, 1, 0, 300, 0, 0, 0, 2, '');
+(58, 18, 39, 1, 0, 300, 0, 0, 0, 2, ''),
+(59, 20, 0, 1, 0, 0, 0, 0, 0, 2, '');
 
 -- --------------------------------------------------------
 
@@ -12300,14 +12439,6 @@ CREATE TABLE `ad_store` (
   `date_upd` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `ad_store`
---
-
-INSERT INTO `ad_store` (`id_store`, `id_country`, `id_state`, `city`, `postcode`, `latitude`, `longitude`, `phone`, `fax`, `email`, `active`, `date_add`, `date_upd`) VALUES
-(3, 21, 12, 'Miami', '33026', 26.00998700, -80.29447200, '', '', '', 1, '2023-11-17 09:29:11', '2023-11-17 09:29:11'),
-(5, 21, 12, 'Miami', '33181', 25.88674000, -80.16329200, '', '', '', 1, '2023-11-17 09:29:11', '2023-11-17 09:29:11');
-
 -- --------------------------------------------------------
 
 --
@@ -12324,14 +12455,6 @@ CREATE TABLE `ad_store_lang` (
   `note` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `ad_store_lang`
---
-
-INSERT INTO `ad_store_lang` (`id_store`, `id_lang`, `name`, `address1`, `address2`, `hours`, `note`) VALUES
-(3, 1, 'Pembroke Pines', '11001 Pines Blvd Pembroke Pines', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', ''),
-(5, 1, 'N Miami/Biscayne', '12055 Biscayne Blvd', '', ' [[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"09:00AM - 07:00PM\"],[\"10:00AM - 04:00PM\"],[\"10:00AM - 04:00PM\"]]', '');
-
 -- --------------------------------------------------------
 
 --
@@ -12342,14 +12465,6 @@ CREATE TABLE `ad_store_shop` (
   `id_store` int(11) UNSIGNED NOT NULL,
   `id_shop` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `ad_store_shop`
---
-
-INSERT INTO `ad_store_shop` (`id_store`, `id_shop`) VALUES
-(3, 1),
-(5, 1);
 
 -- --------------------------------------------------------
 
@@ -12364,14 +12479,6 @@ CREATE TABLE `ad_supplier` (
   `date_upd` datetime NOT NULL,
   `active` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `ad_supplier`
---
-
-INSERT INTO `ad_supplier` (`id_supplier`, `name`, `date_add`, `date_upd`, `active`) VALUES
-(1, 'Fashion supplier', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1),
-(2, 'Accessories supplier', '2023-11-17 09:29:09', '2023-11-17 09:29:09', 1);
 
 -- --------------------------------------------------------
 
@@ -12388,14 +12495,6 @@ CREATE TABLE `ad_supplier_lang` (
   `meta_description` varchar(512) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `ad_supplier_lang`
---
-
-INSERT INTO `ad_supplier_lang` (`id_supplier`, `id_lang`, `description`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
-(1, 1, '', '', '', ''),
-(2, 1, '', '', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -12406,14 +12505,6 @@ CREATE TABLE `ad_supplier_shop` (
   `id_supplier` int(11) UNSIGNED NOT NULL,
   `id_shop` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `ad_supplier_shop`
---
-
-INSERT INTO `ad_supplier_shop` (`id_supplier`, `id_shop`) VALUES
-(1, 1),
-(2, 1);
 
 -- --------------------------------------------------------
 
@@ -16037,7 +16128,7 @@ ALTER TABLE `ad_address`
 -- AUTO_INCREMENT for table `ad_admin_filter`
 --
 ALTER TABLE `ad_admin_filter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ad_alias`
@@ -16079,7 +16170,7 @@ ALTER TABLE `ad_attribute_impact`
 -- AUTO_INCREMENT for table `ad_authorization_role`
 --
 ALTER TABLE `ad_authorization_role`
-  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=833;
+  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=841;
 
 --
 -- AUTO_INCREMENT for table `ad_blockwishlist_statistics`
@@ -16151,7 +16242,7 @@ ALTER TABLE `ad_cms_role`
 -- AUTO_INCREMENT for table `ad_configuration`
 --
 ALTER TABLE `ad_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=434;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=441;
 
 --
 -- AUTO_INCREMENT for table `ad_configuration_kpi`
@@ -16163,13 +16254,13 @@ ALTER TABLE `ad_configuration_kpi`
 -- AUTO_INCREMENT for table `ad_connections`
 --
 ALTER TABLE `ad_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `ad_connections_source`
 --
 ALTER TABLE `ad_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=376;
 
 --
 -- AUTO_INCREMENT for table `ad_contact`
@@ -16253,7 +16344,7 @@ ALTER TABLE `ad_employee`
 -- AUTO_INCREMENT for table `ad_employee_session`
 --
 ALTER TABLE `ad_employee_session`
-  MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `ad_feature`
@@ -16295,19 +16386,19 @@ ALTER TABLE `ad_group_reduction`
 -- AUTO_INCREMENT for table `ad_guest`
 --
 ALTER TABLE `ad_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ad_homeslider`
 --
 ALTER TABLE `ad_homeslider`
-  MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ad_homeslider_slides`
 --
 ALTER TABLE `ad_homeslider_slides`
-  MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_homeslider_slides` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ad_hook`
@@ -16379,19 +16470,19 @@ ALTER TABLE `ad_linksmenutop`
 -- AUTO_INCREMENT for table `ad_link_block`
 --
 ALTER TABLE `ad_link_block`
-  MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ad_link_block_shop`
 --
 ALTER TABLE `ad_link_block_shop`
-  MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_link_block` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ad_log`
 --
 ALTER TABLE `ad_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
 
 --
 -- AUTO_INCREMENT for table `ad_mail`
@@ -16427,13 +16518,13 @@ ALTER TABLE `ad_meta`
 -- AUTO_INCREMENT for table `ad_module`
 --
 ALTER TABLE `ad_module`
-  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `ad_module_history`
 --
 ALTER TABLE `ad_module_history`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `ad_module_preference`
@@ -16523,7 +16614,7 @@ ALTER TABLE `ad_order_state`
 -- AUTO_INCREMENT for table `ad_page`
 --
 ALTER TABLE `ad_page`
-  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_page` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ad_pagenotfound`
@@ -16535,13 +16626,13 @@ ALTER TABLE `ad_pagenotfound`
 -- AUTO_INCREMENT for table `ad_page_type`
 --
 ALTER TABLE `ad_page_type`
-  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_page_type` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `ad_product`
 --
 ALTER TABLE `ad_product`
-  MODIFY `id_product` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_product` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `ad_product_attribute`
@@ -16745,7 +16836,7 @@ ALTER TABLE `ad_stock`
 -- AUTO_INCREMENT for table `ad_stock_available`
 --
 ALTER TABLE `ad_stock_available`
-  MODIFY `id_stock_available` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id_stock_available` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `ad_stock_mvt`
