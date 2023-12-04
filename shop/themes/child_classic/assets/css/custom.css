@@ -2,25 +2,140 @@
  * Custom code goes here.
  * A template should always ship with an empty custom.css
  */
+body{
+    overflow-x: hidden !important;
+}
+
+.carousel .carousel-inner {
+    height: auto;
+}
+
+.breadcrumb
+{
+    padding-left:10px !important;
+    padding-top:10px !important;
+}
+
+#wrapper{
+    padding-top:0px;
+}
+
+#wrapper .banner{
+    margin: 0;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .top-menu a[data-depth="0"]{
     font-size: 14px;
     font-weight: bold;
     color: black;
 }
 
+.header-top
+{
+    padding-bottom: 0px !important;
+}
+
+.header-top-right{
+    width: auto;
+}
+
+.right-nav{
+    float:right;
+    padding: 0;
+}
+
+.col-md-7{
+    width: 20%;
+}
+
+#search_widget{
+    margin-left: 400px;
+}
+
+.menu{
+    margin-left: 400px;
+}
+
+.block_newsletter #block-newsletter-label {
+    display: block;
+    margin-bottom: var(--gl-spacing-0150);
+    font-family: var(--gl-heading-font-set-family-standard-14),var(--gl-font-family-fallback);
+    font-size: var(--gl-heading-font-set-size-standard-14);
+    font-style: var(--gl-heading-font-set-style-standard-14);
+    font-weight: var(--gl-heading-font-set-weight-standard-14);
+    letter-spacing: var(--gl-heading-font-set-letterspacing-standard-14);
+    line-height: var(--gl-heading-font-set-lineheight-standard-14);
+    text-decoration: var(--gl-heading-font-set-decoration-standard-14);
+    text-transform: var(--gl-heading-font-set-case-standard-14);
+    margin-left: 400px;
+}
+
+.block_newsletter{
+    padding: var(--gl-spacing-0300);
+    text-align: center;
+    background-color: var(--gl-color-background-highlight);
+    max-width: 100%;
+}
+
+
 #header .header-top a[data-depth="0"] {
     color: black;
     text-transform: uppercase;
 }
 
-#custom-text{
-    padding-bottom: 40px;
-    padding-top: 40px;
+#footer{
+    padding-top: 0;
+}
 
+.footer-container{
+    padding-top: 0;
+}
+
+#main .page-footer {
+    margin-bottom: 0;
+}
+
+#carousel{
+    margin-bottom: 0;
+}
+
+#custom-text {
+    margin-bottom: 0;
     background-color: #f5f5e5;
-    column-count: 2;
     column-gap: 40px;
-    font-size:16px;
+    font-size: 16px;
+}
+
+@media (min-width: 1920px) {
+    #custom-text {
+        padding: 40px 300px;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+    #custom-text {
+        padding: 20px 100px; /* Dostosuj te wartości według potrzeb */
+        column-count: 2;
+    }
+}
+
+@media (max-width: 1199px) {
+    #custom-text {
+        padding: 10px; /* Minimalny padding dla innych szerokości ekranu */
+        column-count: 1;
+    }
 }
 
 #custom-text p{
@@ -89,13 +204,6 @@
     color: var(--gl-color-grey-400);
 }
 
-.block_newsletter{
-    padding: var(--gl-spacing-0400);
-    text-align: center;
-    background-color: var(--gl-color-background-highlight);
-    max-width: 100%;
-}
-
 #block-newsletter-label{
     display: block;
     margin-bottom: var(--gl-spacing-0150);
@@ -107,6 +215,10 @@
     line-height: var(--gl-heading-font-set-lineheight-standard-14);
     text-decoration: var(--gl-heading-font-set-decoration-standard-14);
     text-transform: var(--gl-heading-font-set-case-standard-14);
+}
+
+.col-xs-12{
+    padding-left: 10px;
 }
 
 .col-xs-12 input[name="submitNewsletter"]{
@@ -124,6 +236,12 @@
     text-decoration: var(--gl-button-font-set-decoration-functional-1);
     text-transform: var(--gl-button-font-set-case-functional-1);
     transform: translate(-3px, -3px);
+}
+
+.links{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 500px;
 }
 
 .col-md-6{
