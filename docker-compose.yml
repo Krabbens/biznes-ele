@@ -22,13 +22,15 @@ services:
       - mariadb
     ports:
       - 8080:80
+      - 80:80
+      - 443:443
     environment:
       DB_SERVER: adidas-mariadb-server
       DB_NAME: adidas-mariadb
       DB_USER: root
       DB_PASSWD: admin
       PS_INSTALL_AUTO: 0
-      PS_DOMAIN: localhost:8080
+      PS_DOMAIN: localhost
       PS_FOLDER_ADMIN: admin4444
       PS_FOLDER_INSTALL: install4444
     networks:
