@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: adidas-mariadb-server:3306
--- Generation Time: Dec 03, 2023 at 01:04 PM
+-- Generation Time: Dec 04, 2023 at 09:17 PM
 -- Wersja serwera: 10.5.23-MariaDB-1:10.5.23+maria~ubu2004
 -- Wersja PHP: 8.2.8
 
@@ -1529,10 +1529,10 @@ INSERT INTO `ad_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (816, 'ROLE_MOD_MODULE_PSXMARKETINGWITHGOOGLE_DELETE'),
 (814, 'ROLE_MOD_MODULE_PSXMARKETINGWITHGOOGLE_READ'),
 (815, 'ROLE_MOD_MODULE_PSXMARKETINGWITHGOOGLE_UPDATE'),
-(545, 'ROLE_MOD_MODULE_PS_BANNER_CREATE'),
-(548, 'ROLE_MOD_MODULE_PS_BANNER_DELETE'),
-(546, 'ROLE_MOD_MODULE_PS_BANNER_READ'),
-(547, 'ROLE_MOD_MODULE_PS_BANNER_UPDATE'),
+(841, 'ROLE_MOD_MODULE_PS_BANNER_CREATE'),
+(844, 'ROLE_MOD_MODULE_PS_BANNER_DELETE'),
+(842, 'ROLE_MOD_MODULE_PS_BANNER_READ'),
+(843, 'ROLE_MOD_MODULE_PS_BANNER_UPDATE'),
 (829, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_CREATE'),
 (832, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_DELETE'),
 (830, 'ROLE_MOD_MODULE_PS_CASHONDELIVERY_READ'),
@@ -3460,9 +3460,6 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (313, NULL, NULL, 'PRODUCT_COMMENTS_COMMENTS_PER_PAGE', '5', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
 (314, NULL, NULL, 'PRODUCT_COMMENTS_ANONYMISATION', '0', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
 (315, NULL, NULL, 'PRODUCT_COMMENTS_MODERATE', '1', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(316, NULL, NULL, 'BANNER_IMG', NULL, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(317, NULL, NULL, 'BANNER_LINK', NULL, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
-(318, NULL, NULL, 'BANNER_DESC', NULL, '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
 (319, NULL, NULL, 'BLOCK_CATEG_ROOT_CATEGORY', '1', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
 (320, NULL, NULL, 'CONF_PS_CHECKPAYMENT_FIXED', '0.2', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
 (321, NULL, NULL, 'CONF_PS_CHECKPAYMENT_VAR', '2', '2023-11-17 09:28:08', '2023-11-17 09:28:08'),
@@ -3505,7 +3502,7 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (367, NULL, NULL, 'PSGDPR_CUSTOMER_FORM', NULL, '2023-11-17 09:28:44', '2023-11-17 09:28:44'),
 (368, NULL, NULL, 'PSGDPR_ANONYMOUS_CUSTOMER', '1', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
 (369, NULL, NULL, 'PSGDPR_ANONYMOUS_ADDRESS', '1', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
-(370, NULL, NULL, 'PS_MBO_SHOP_ADMIN_UUID', 'cdfe2ce2-a57a-4285-b745-8761f23bc69e', '2023-11-17 09:28:45', '2023-12-02 21:08:10'),
+(370, NULL, NULL, 'PS_MBO_SHOP_ADMIN_UUID', 'b5cba389-2fd3-4e3c-bbc0-70227fe49d26', '2023-11-17 09:28:45', '2023-12-04 20:41:28'),
 (371, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED', '0.2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
 (372, NULL, NULL, 'CONF_PS_CHECKOUT_VAR', '2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
 (373, NULL, NULL, 'CONF_PS_CHECKOUT_FIXED_FOREIGN', '0.2', '2023-11-17 09:28:45', '2023-11-17 09:28:45'),
@@ -3558,9 +3555,12 @@ INSERT INTO `ad_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (435, NULL, NULL, 'PS_LOGO_INVOICE', 'logo_invoice-1701546942.jpg', '2023-12-02 20:55:42', '2023-12-02 20:55:42'),
 (436, NULL, NULL, 'HOME_FEATURED_RANDOMIZE', '1', '2023-12-02 21:09:18', '2023-12-02 21:09:18'),
 (437, NULL, NULL, 'NW_VOUCHER_CODE', NULL, '2023-12-02 21:17:55', '2023-12-02 21:18:36'),
-(438, NULL, NULL, 'PS_CCCJS_VERSION', '2', '2023-12-02 21:56:51', '2023-12-03 12:30:25'),
-(439, NULL, NULL, 'PS_CCCCSS_VERSION', '2', '2023-12-02 21:56:51', '2023-12-03 12:30:25'),
-(440, NULL, NULL, 'ONBOARDINGV2_CURRENT_STEP', '11', '2023-12-03 00:21:06', '2023-12-03 00:21:18');
+(438, NULL, NULL, 'PS_CCCJS_VERSION', '3', '2023-12-02 21:56:51', '2023-12-04 20:26:11'),
+(439, NULL, NULL, 'PS_CCCCSS_VERSION', '3', '2023-12-02 21:56:51', '2023-12-04 20:26:11'),
+(440, NULL, NULL, 'ONBOARDINGV2_CURRENT_STEP', '11', '2023-12-03 00:21:06', '2023-12-03 00:21:18'),
+(441, NULL, NULL, 'BANNER_IMG', NULL, '2023-12-04 21:31:19', '2023-12-04 21:31:19'),
+(442, NULL, NULL, 'BANNER_LINK', NULL, '2023-12-04 21:31:19', '2023-12-04 21:31:19'),
+(443, NULL, NULL, 'BANNER_DESC', NULL, '2023-12-04 21:31:19', '2023-12-04 21:31:19');
 
 -- --------------------------------------------------------
 
@@ -3681,9 +3681,6 @@ INSERT INTO `ad_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (293, 1, 'Moje listy życzeń', '2023-11-17 09:28:07'),
 (294, 1, 'Moja lista życzeń', '2023-11-17 09:28:07'),
 (295, 1, 'Utwórz nową listę', '2023-11-17 09:28:07'),
-(316, 1, '6ae81c0e96dd9d3f843c0c7f79577301.png', '2023-12-03 12:48:31'),
-(317, 1, '', '2023-11-17 09:28:08'),
-(318, 1, '', '2023-11-17 09:28:08'),
 (327, 1, '<p>Aby zoptymalizować i ulepszyć korzystanie z naszej strony, przetwarzamy dane osobowe zgodnie z naszą Informacją o Prywatności. To pozwala nam na przedstawianie informacji dopasowanych indywidualnie do poszczególnych osób, w tym informacji o produktach i ofertach dostępnych w danym regionie czy mieście.</p>', '2023-11-18 18:49:27'),
 (329, 1, '', '2023-12-02 20:17:55'),
 (352, 1, 'https://www.youtube.com/c/adidas', '2023-12-02 21:19:28'),
@@ -3692,7 +3689,10 @@ INSERT INTO `ad_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (357, 1, 'https://www.tiktok.com/@adidas?lang=en', '2023-12-02 21:19:28'),
 (365, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-17 09:28:44'),
 (367, 1, 'Akceptuję ogólne warunki użytkowania i politykę prywatności', '2023-11-17 09:28:44'),
-(429, 1, '', '2023-11-18 16:38:01');
+(429, 1, '', '2023-11-18 16:38:01'),
+(441, 1, '21c3f071155a4c5b1f246408a558a0c5.png', '2023-12-04 20:35:26'),
+(442, 1, '', '2023-12-04 21:31:19'),
+(443, 1, '', '2023-12-04 21:31:19');
 
 -- --------------------------------------------------------
 
@@ -3736,7 +3736,15 @@ INSERT INTO `ad_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (18, 1, 1, 7, 1, 2886860801, '2023-12-03 12:34:19', ''),
 (19, 1, 1, 7, 4, 2886860801, '2023-12-03 13:05:36', ''),
 (20, 1, 1, 7, 1, 2886860801, '2023-12-03 13:36:55', ''),
-(21, 1, 1, 6, 1, 2886860801, '2023-12-03 13:43:35', '');
+(21, 1, 1, 6, 1, 2886860801, '2023-12-03 13:43:35', ''),
+(22, 1, 1, 7, 1, 2886926337, '2023-12-04 19:58:37', ''),
+(23, 1, 1, 8, 1, 2886926337, '2023-12-04 20:25:01', ''),
+(24, 1, 1, 7, 1, 2886926337, '2023-12-04 20:29:00', ''),
+(25, 1, 1, 7, 4, 2886926337, '2023-12-04 20:59:01', ''),
+(26, 1, 1, 7, 4, 2886926337, '2023-12-04 21:31:22', ''),
+(27, 1, 1, 9, 1, 2886926337, '2023-12-04 21:47:25', ''),
+(28, 1, 1, 10, 1, 2886926337, '2023-12-04 21:59:57', ''),
+(29, 1, 1, 7, 4, 2886926337, '2023-12-04 22:02:43', '');
 
 -- --------------------------------------------------------
 
@@ -4145,7 +4153,293 @@ INSERT INTO `ad_connections_source` (`id_connections_source`, `id_connections`, 
 (372, 21, 'http://localhost:8080/8-mug-today-is-a-good-day.html', 'localhost:8080/content/6-zwroty', '', '2023-12-03 13:59:01'),
 (373, 21, 'http://localhost:8080/8-mug-today-is-a-good-day.html', 'localhost:8080/10-mezczyzni', '', '2023-12-03 13:59:05'),
 (374, 21, 'http://localhost:8080/', 'localhost:8080/8-mug-today-is-a-good-day.html', '', '2023-12-03 13:59:06'),
-(375, 21, 'http://localhost:8080/8-mug-today-is-a-good-day.html', 'localhost:8080/', '', '2023-12-03 13:59:07');
+(375, 21, 'http://localhost:8080/8-mug-today-is-a-good-day.html', 'localhost:8080/', '', '2023-12-03 13:59:07'),
+(376, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:31:14'),
+(377, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:41:37'),
+(378, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:41:51'),
+(379, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:41:52'),
+(380, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:45:05'),
+(381, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:45:11'),
+(382, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:45:19'),
+(383, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:45:43'),
+(384, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:46:46'),
+(385, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:47:05'),
+(386, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:47:18'),
+(387, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:47:29'),
+(388, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:48:13'),
+(389, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:48:27'),
+(390, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:49:31'),
+(391, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:50:07'),
+(392, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:50:24'),
+(393, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:51:26'),
+(394, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:51:51'),
+(395, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:52:46'),
+(396, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:53:03'),
+(397, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:53:40'),
+(398, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:53:54'),
+(399, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:54:01'),
+(400, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:54:24'),
+(401, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:55:36'),
+(402, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:56:33'),
+(403, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:57:06'),
+(404, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:57:42'),
+(405, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:58:24'),
+(406, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:59:00'),
+(407, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:59:07'),
+(408, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:59:12'),
+(409, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:59:17'),
+(410, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:59:43'),
+(411, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:59:49'),
+(412, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:59:54'),
+(413, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 20:59:58'),
+(414, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:00:09'),
+(415, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:00:33'),
+(416, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:00:38'),
+(417, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:00:42'),
+(418, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:01:02'),
+(419, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:01:22'),
+(420, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:01:37'),
+(421, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:01:42'),
+(422, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:01:46'),
+(423, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:01:52'),
+(424, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:01:58'),
+(425, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:02:34'),
+(426, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:03:01'),
+(427, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:03:06'),
+(428, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:03:12'),
+(429, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:03:21'),
+(430, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:04:31'),
+(431, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:04:59'),
+(432, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:07:18'),
+(433, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:07:25'),
+(434, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:07:38'),
+(435, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:07:49'),
+(436, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:08:28'),
+(437, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:09:17'),
+(438, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:09:54'),
+(439, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:13:24'),
+(440, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:14:48'),
+(441, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:15:10'),
+(442, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:15:23'),
+(443, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:15:48'),
+(444, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:16:00'),
+(445, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:16:39'),
+(446, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:17:46'),
+(447, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:17:52'),
+(448, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:18:22'),
+(449, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:18:33'),
+(450, 24, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-04 21:18:57'),
+(451, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-04 21:19:02'),
+(452, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-04 21:19:06'),
+(453, 24, 'http://localhost:8080/', 'localhost:8080/11-kobiety', '', '2023-12-04 21:19:08'),
+(454, 24, 'http://localhost:8080/11-kobiety', 'localhost:8080/10-mezczyzni', '', '2023-12-04 21:19:11'),
+(455, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/11-kobiety', '', '2023-12-04 21:19:13'),
+(456, 24, 'http://localhost:8080/11-kobiety', 'localhost:8080/10-mezczyzni', '', '2023-12-04 21:19:13'),
+(457, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/11-kobiety', '', '2023-12-04 21:19:14'),
+(458, 24, 'http://localhost:8080/11-kobiety', 'localhost:8080/19-akcesoria', '', '2023-12-04 21:19:16'),
+(459, 24, 'http://localhost:8080/19-akcesoria', 'localhost:8080/15-buty', '', '2023-12-04 21:19:18'),
+(460, 24, 'http://localhost:8080/15-buty', 'localhost:8080/', '', '2023-12-04 21:19:19'),
+(461, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:19:43'),
+(462, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:19:47'),
+(463, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:20:39'),
+(464, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:20:55'),
+(465, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:21:06'),
+(466, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:21:11'),
+(467, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:21:19'),
+(468, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:21:51'),
+(469, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:22:22'),
+(470, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:23:05'),
+(471, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:23:53'),
+(472, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:23:58'),
+(473, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:24:04'),
+(474, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:24:18'),
+(475, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:24:33'),
+(476, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:24:39'),
+(477, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:25:11'),
+(478, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:25:49'),
+(479, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:26:05'),
+(480, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:26:14'),
+(481, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:26:40'),
+(482, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:26:43'),
+(483, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:26:46'),
+(484, 24, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-04 21:27:16'),
+(485, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/19-akcesoria', '', '2023-12-04 21:27:17'),
+(486, 24, 'http://localhost:8080/19-akcesoria', 'localhost:8080/10-mezczyzni', '', '2023-12-04 21:27:18'),
+(487, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-04 21:27:20'),
+(488, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-04 21:31:22'),
+(489, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-04 21:31:23'),
+(490, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-04 21:31:25'),
+(491, 24, 'http://localhost:8080/admin4444/index.php?controller=AdminModules&configure=ps_banner&token=298876f98f75659a2a13406f045fcfd5', 'localhost:8080/modules/ps_banner/img/sale70.png', '', '2023-12-04 21:31:31'),
+(492, 24, 'http://localhost:8080/admin4444/index.php?controller=AdminModules&configure=ps_banner&token=298876f98f75659a2a13406f045fcfd5', 'localhost:8080/modules/ps_banner/img/sale70.png', '', '2023-12-04 21:31:33'),
+(493, 24, 'http://localhost:8080/admin4444/index.php?controller=AdminModules&configure=ps_banner&token=298876f98f75659a2a13406f045fcfd5', 'localhost:8080/modules/ps_banner/img/sale70.png', '', '2023-12-04 21:32:01'),
+(494, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-04 21:32:10'),
+(495, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-04 21:32:44'),
+(496, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:32:46'),
+(497, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:33:01'),
+(498, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:33:26'),
+(499, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:33:35'),
+(500, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:33:51'),
+(501, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:35:03'),
+(502, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:35:05'),
+(503, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:35:07'),
+(504, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:35:29'),
+(505, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:36:58'),
+(506, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:37:00'),
+(507, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:38:30'),
+(508, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:38:32'),
+(509, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:38:34'),
+(510, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:38:35'),
+(511, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:39:19'),
+(512, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:39:20'),
+(513, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:40:27'),
+(514, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:40:54'),
+(515, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:40:56'),
+(516, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:41:15'),
+(517, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:23'),
+(518, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:30'),
+(519, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:31'),
+(520, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:32'),
+(521, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:32'),
+(522, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:33'),
+(523, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:33'),
+(524, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:33'),
+(525, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:33'),
+(526, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:33'),
+(527, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:33');
+INSERT INTO `ad_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
+(528, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:34'),
+(529, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:34'),
+(530, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:35'),
+(531, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:35'),
+(532, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:36'),
+(533, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:39'),
+(534, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:41'),
+(535, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:41'),
+(536, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:42'),
+(537, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:42'),
+(538, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:42'),
+(539, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:42'),
+(540, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:42'),
+(541, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:42'),
+(542, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:42'),
+(543, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:42'),
+(544, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:42'),
+(545, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(546, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(547, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(548, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(549, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(550, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(551, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(552, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(553, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(554, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(555, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(556, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(557, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(558, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(559, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(560, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:43'),
+(561, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(562, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(563, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(564, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(565, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(566, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(567, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(568, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(569, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(570, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(571, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(572, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:44'),
+(573, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(574, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(575, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(576, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(577, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(578, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(579, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(580, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(581, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(582, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(583, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(584, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:45'),
+(585, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(586, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(587, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(588, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(589, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(590, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(591, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(592, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(593, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(594, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:46'),
+(595, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:47'),
+(596, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:47'),
+(597, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:47'),
+(598, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:47'),
+(599, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:47'),
+(600, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:47'),
+(601, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:47'),
+(602, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:47'),
+(603, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:47'),
+(604, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:48'),
+(605, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:48'),
+(606, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:48'),
+(607, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:48'),
+(608, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:48'),
+(609, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:48'),
+(610, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:48'),
+(611, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:48'),
+(612, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:51'),
+(613, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:55'),
+(614, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:56'),
+(615, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:43:58'),
+(616, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:46:00'),
+(617, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:46:00'),
+(618, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:47:03'),
+(619, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:47:05'),
+(620, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:47:21'),
+(621, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:47:22'),
+(622, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:50:01'),
+(623, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:51:43'),
+(624, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:51:49'),
+(625, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:51:59'),
+(626, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:53:30'),
+(627, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:56:50'),
+(628, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:58:24'),
+(629, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:58:27'),
+(630, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:59:16'),
+(631, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:59:17'),
+(632, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:59:48'),
+(633, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:59:50'),
+(634, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:59:51'),
+(635, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 21:59:52'),
+(636, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 22:00:48'),
+(637, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 22:00:48'),
+(638, 24, 'http://localhost:8080/', 'localhost:8080/', '', '2023-12-04 22:03:37'),
+(639, 24, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:03:54'),
+(640, 24, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:04:45'),
+(641, 24, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:04:46'),
+(642, 24, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:04:49'),
+(643, 24, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:05:14'),
+(644, 24, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:05:25'),
+(645, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/16-akcesoria', '', '2023-12-04 22:05:37'),
+(646, 24, 'http://localhost:8080/16-akcesoria', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:05:39'),
+(647, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/15-buty', '', '2023-12-04 22:05:40'),
+(648, 24, 'http://localhost:8080/15-buty', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:05:41'),
+(649, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/14-ubrania', '', '2023-12-04 22:05:48'),
+(650, 24, 'http://localhost:8080/14-ubrania', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:05:49'),
+(651, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/', '', '2023-12-04 22:05:50'),
+(652, 24, 'http://localhost:8080/', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:05:55'),
+(653, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/10-mezczyzni', '', '2023-12-04 22:05:59'),
+(654, 24, 'http://localhost:8080/10-mezczyzni', 'localhost:8080/12-dzieci', '', '2023-12-04 22:06:01'),
+(655, 24, 'http://localhost:8080/12-dzieci', 'localhost:8080/', '', '2023-12-04 22:06:03'),
+(656, 24, 'http://localhost:8080/', 'localhost:8080/11-kobiety', '', '2023-12-04 22:06:05'),
+(657, 24, 'http://localhost:8080/11-kobiety', 'localhost:8080/17-ubrania', '', '2023-12-04 22:06:06'),
+(658, 24, 'http://localhost:8080/17-ubrania', 'localhost:8080/', '', '2023-12-04 22:06:08'),
+(659, 24, 'http://localhost:8080/17-ubrania', 'localhost:8080/', '', '2023-12-04 22:10:28'),
+(660, 24, 'http://localhost:8080/17-ubrania', 'localhost:8080/', '', '2023-12-04 22:10:34');
 
 -- --------------------------------------------------------
 
@@ -5421,7 +5715,7 @@ CREATE TABLE `ad_employee` (
 --
 
 INSERT INTO `ad_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`, `has_enabled_gravatar`) VALUES
-(1, 1, 1, 'Test', 'Test', 'test@test.com', '$2y$10$qsD9LCfAYKaz7/6eppoU/.MoidieTkwkbw/pRniFDMToHAslbQuM.', '2023-11-17 03:28:05', '2023-10-17', '2023-11-17', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-12-03', NULL, '0000-00-00 00:00:00', 0);
+(1, 1, 1, 'Test', 'Test', 'test@test.com', '$2y$10$qsD9LCfAYKaz7/6eppoU/.MoidieTkwkbw/pRniFDMToHAslbQuM.', '2023-11-17 03:28:05', '2023-10-17', '2023-11-17', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, NULL, 0, 0, 0, '2023-12-04', NULL, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -5443,7 +5737,8 @@ INSERT INTO `ad_employee_session` (`id_employee_session`, `id_employee`, `token`
 (1, 1, '32fbdb78ce189773e1eec14931fbbe2c7131293c'),
 (3, 1, '98613e2e4091844e82a2419e72d08e44ad078c92'),
 (8, 1, '7d99c5a21b91092e473d5c56d81bbe35818010ec'),
-(9, 1, '9c5a67f3ac20e517df59d832c3412ca6bfeb1e85');
+(9, 1, '9c5a67f3ac20e517df59d832c3412ca6bfeb1e85'),
+(10, 1, '10f3f0f7b5a8943f4a7065ecd067c208684e7d69');
 
 -- --------------------------------------------------------
 
@@ -5821,7 +6116,10 @@ INSERT INTO `ad_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id
 (4, 7, 11, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (5, 7, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
 (6, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(7, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
+(7, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(8, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(9, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
+(10, 6, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -6808,8 +7106,6 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (11, 1, 693, 1),
 (11, 1, 694, 1),
 (11, 1, 695, 1),
-(12, 1, 15, 1),
-(12, 1, 696, 1),
 (13, 1, 14, 1),
 (15, 1, 698, 1),
 (15, 1, 701, 1),
@@ -6892,6 +7188,8 @@ INSERT INTO `ad_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (61, 1, 711, 1),
 (61, 1, 712, 1),
 (64, 1, 141, 1),
+(65, 1, 15, 1),
+(65, 1, 696, 1),
 (3, 1, 682, 2),
 (4, 1, 688, 2),
 (5, 1, 689, 2),
@@ -7365,11 +7663,16 @@ CREATE TABLE `ad_layered_filter_block` (
 --
 
 INSERT INTO `ad_layered_filter_block` (`hash`, `data`) VALUES
+('25112799a09b87d315d30ee769334f03', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('3446fce58f5024d3dedce6008b5f830e', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('455eadc2ab03463bcf81606e4e466e66', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('4c0da530de3e08d1ce6e3cd5628db0dd', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('4e159e3fe2d4becd1fe2f66e51d285c4', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('86edb0feb8581f417648ef9b3c264225', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('87caf0acf58d3b2a914c0927ea8fe254', 'a:1:{s:7:\"filters\";a:0:{}}'),
 ('c3472b35e09c5c3aa26a5d39af308a9c', 'a:1:{s:7:\"filters\";a:0:{}}'),
-('c3eaa4a60d9807441019a11dbd71a470', 'a:1:{s:7:\"filters\";a:0:{}}');
+('c3eaa4a60d9807441019a11dbd71a470', 'a:1:{s:7:\"filters\";a:0:{}}'),
+('e3dfc0a14c813ae417255a852b429a59', 'a:1:{s:7:\"filters\";a:0:{}}');
 
 -- --------------------------------------------------------
 
@@ -7944,7 +8247,8 @@ INSERT INTO `ad_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (243, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-03 00:18:14', '2023-12-03 00:18:14'),
 (244, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-03 12:00:01', '2023-12-03 12:00:01'),
 (245, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-03 12:51:19', '2023-12-03 12:51:19'),
-(246, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-03 13:43:41', '2023-12-03 13:43:41');
+(246, 1, 0, 'Połączenie z panelem administracyjnym z 172.18.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-03 13:43:41', '2023-12-03 13:43:41'),
+(247, 1, 0, 'Połączenie z panelem administracyjnym z 172.19.0.1', '', 0, NULL, NULL, 1, 1, 1, '2023-12-04 20:25:17', '2023-12-04 20:25:17');
 
 -- --------------------------------------------------------
 
@@ -8183,7 +8487,6 @@ INSERT INTO `ad_module` (`id_module`, `name`, `active`, `version`) VALUES
 (9, 'gsitemap', 1, '4.3.0'),
 (10, 'pagesnotfound', 1, '2.0.2'),
 (11, 'productcomments', 1, '5.0.3'),
-(12, 'ps_banner', 1, '2.1.2'),
 (13, 'ps_categorytree', 1, '2.0.3'),
 (15, 'ps_contactinfo', 1, '3.3.2'),
 (16, 'ps_crossselling', 1, '2.0.2'),
@@ -8230,7 +8533,8 @@ INSERT INTO `ad_module` (`id_module`, `name`, `active`, `version`) VALUES
 (61, 'ps_facetedsearch', 1, '3.12.1'),
 (62, 'ps_cashondelivery', 1, '2.0.1'),
 (63, 'ps_customtext', 1, '4.2.1'),
-(64, 'ps_linklist', 1, '5.0.5');
+(64, 'ps_linklist', 1, '5.0.5'),
+(65, 'ps_banner', 1, '2.1.2');
 
 -- --------------------------------------------------------
 
@@ -8292,10 +8596,6 @@ INSERT INTO `ad_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 542),
 (1, 543),
 (1, 544),
-(1, 545),
-(1, 546),
-(1, 547),
-(1, 548),
 (1, 549),
 (1, 550),
 (1, 551),
@@ -8483,7 +8783,11 @@ INSERT INTO `ad_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 837),
 (1, 838),
 (1, 839),
-(1, 840);
+(1, 840),
+(1, 841),
+(1, 842),
+(1, 843),
+(1, 844);
 
 -- --------------------------------------------------------
 
@@ -8607,9 +8911,6 @@ INSERT INTO `ad_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (11, 1, 1),
 (11, 1, 2),
 (11, 1, 3),
-(12, 1, 1),
-(12, 1, 2),
-(12, 1, 3),
 (13, 1, 1),
 (13, 1, 2),
 (13, 1, 3),
@@ -8750,7 +9051,10 @@ INSERT INTO `ad_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (63, 1, 3),
 (64, 1, 1),
 (64, 1, 2),
-(64, 1, 3);
+(64, 1, 3),
+(65, 1, 1),
+(65, 1, 2),
+(65, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -8821,7 +9125,6 @@ INSERT INTO `ad_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (9, 1, 7),
 (10, 1, 7),
 (11, 1, 7),
-(12, 1, 3),
 (13, 1, 7),
 (15, 1, 7),
 (16, 1, 7),
@@ -8868,7 +9171,8 @@ INSERT INTO `ad_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (61, 1, 7),
 (62, 1, 7),
 (63, 1, 7),
-(64, 1, 7);
+(64, 1, 7),
+(65, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -16170,7 +16474,7 @@ ALTER TABLE `ad_attribute_impact`
 -- AUTO_INCREMENT for table `ad_authorization_role`
 --
 ALTER TABLE `ad_authorization_role`
-  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=841;
+  MODIFY `id_authorization_role` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=845;
 
 --
 -- AUTO_INCREMENT for table `ad_blockwishlist_statistics`
@@ -16242,7 +16546,7 @@ ALTER TABLE `ad_cms_role`
 -- AUTO_INCREMENT for table `ad_configuration`
 --
 ALTER TABLE `ad_configuration`
-  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=441;
+  MODIFY `id_configuration` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=444;
 
 --
 -- AUTO_INCREMENT for table `ad_configuration_kpi`
@@ -16254,13 +16558,13 @@ ALTER TABLE `ad_configuration_kpi`
 -- AUTO_INCREMENT for table `ad_connections`
 --
 ALTER TABLE `ad_connections`
-  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_connections` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `ad_connections_source`
 --
 ALTER TABLE `ad_connections_source`
-  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=376;
+  MODIFY `id_connections_source` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=661;
 
 --
 -- AUTO_INCREMENT for table `ad_contact`
@@ -16344,7 +16648,7 @@ ALTER TABLE `ad_employee`
 -- AUTO_INCREMENT for table `ad_employee_session`
 --
 ALTER TABLE `ad_employee_session`
-  MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_employee_session` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `ad_feature`
@@ -16386,7 +16690,7 @@ ALTER TABLE `ad_group_reduction`
 -- AUTO_INCREMENT for table `ad_guest`
 --
 ALTER TABLE `ad_guest`
-  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_guest` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `ad_homeslider`
@@ -16482,7 +16786,7 @@ ALTER TABLE `ad_link_block_shop`
 -- AUTO_INCREMENT for table `ad_log`
 --
 ALTER TABLE `ad_log`
-  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
+  MODIFY `id_log` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=248;
 
 --
 -- AUTO_INCREMENT for table `ad_mail`
@@ -16518,7 +16822,7 @@ ALTER TABLE `ad_meta`
 -- AUTO_INCREMENT for table `ad_module`
 --
 ALTER TABLE `ad_module`
-  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id_module` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `ad_module_history`
