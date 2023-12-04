@@ -1,2 +1,3 @@
 /dbdata/
-/psdata/
+/shop/var/cache/
+*.log
