@@ -3,6 +3,7 @@ import io
 import os
 import json
 import csv
+import random
 import PIL.Image as Image
 
 data_to_export = []
@@ -26,6 +27,7 @@ def get_dict(data, category):
                 "Image URLs (x,y,z...)": "/var/www/html/images/" + key + "_full.jpg,/var/www/html/images/" + key + "_thumb.jpg",
                 "Description": data[key]["description"].encode('utf-8').decode('utf-8'),
                 "Feature(Name:Value:Position)": "Kolor:" + data[key]["color"].encode('utf-8').decode('utf-8') + ":0",
+                "Count": random.randint(0, 10)
             })
         except Exception as e:
             print(e)
@@ -34,7 +36,7 @@ def get_dict(data, category):
     return d
     
 
-csv_dictwriter = csv.DictWriter(open("../scrapper-results/data.csv", "w", newline='', encoding='utf-8'), fieldnames=["Product ID", "Categories", "Name *", "Price tax excluded", "Price tax included", "Image URLs (x,y,z...)", "Description", "Feature(Name:Value:Position)"], delimiter=";")
+csv_dictwriter = csv.DictWriter(open("../scrapper-results/data.csv", "w", newline='', encoding='utf-8'), fieldnames=["Product ID", "Categories", "Name *", "Price tax excluded", "Price tax included", "Image URLs (x,y,z...)", "Description", "Feature(Name:Value:Position)", "Count"], delimiter=";")
 
 csv_dictwriter.writeheader()
 
