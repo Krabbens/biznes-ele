@@ -15,7 +15,7 @@ class AddRandomFromCategoriesToCart:
         self._products_num = products_num
         self._categories_num = categories_num
 
-        self._categories_filters_addr = ['&q=Kategorie-Mężczyźni&page=20', '&q=Kategorie-Kobiety&page=20']
+        self._categories_filters_addr = ['&q=Kategorie-Mężczyźni/Dostępność-Dostępny&page=20', '&q=Kategorie-Kobiety/Dostępność-Dostępny&page=20']
         num = random.randint(1, 10)
         self._num_products_from_categories = [num, 10 - num]
 

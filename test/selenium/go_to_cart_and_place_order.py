@@ -56,7 +56,7 @@ class GoToCartAndPlaceOrder:
         )
 
     def _choose_payment_option(self):
-        self._browser.find_element(By.ID, 'payment-option-1').click()
+        self._browser.find_element(By.ID, 'payment-option-2').click()
         self._browser.find_element(By.ID, 'conditions_to_approve[terms-and-conditions]').click()
 
         WebDriverWait(self._browser, 10).until(
