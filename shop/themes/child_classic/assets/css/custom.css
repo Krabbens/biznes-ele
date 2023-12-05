@@ -1,0 +1,922 @@
+/*
+ * Custom code goes here.
+ * A template should always ship with an empty custom.css
+ */
+body{
+    overflow-x: hidden !important;
+}
+
+.carousel .carousel-inner {
+    height: auto;
+}
+
+.breadcrumb
+{
+    padding-left:10px !important;
+    padding-top:10px !important;
+}
+
+#wrapper{
+    padding-top:0px;
+}
+
+#wrapper .banner{
+    margin: 0;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.top-menu a[data-depth="0"]{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.header-top
+{
+    padding-bottom: 0px !important;
+}
+
+.header-top-right{
+    width: auto;
+}
+
+.right-nav{
+    float:right;
+    padding: 0;
+}
+
+.col-md-7{
+    width: 20%;
+}
+
+#search_widget{
+    margin-left: 400px;
+}
+
+.menu{
+    margin-left: 400px;
+}
+
+.block_newsletter #block-newsletter-label {
+    display: block;
+    margin-bottom: var(--gl-spacing-0150);
+    font-family: var(--gl-heading-font-set-family-standard-14),var(--gl-font-family-fallback);
+    font-size: var(--gl-heading-font-set-size-standard-14);
+    font-style: var(--gl-heading-font-set-style-standard-14);
+    font-weight: var(--gl-heading-font-set-weight-standard-14);
+    letter-spacing: var(--gl-heading-font-set-letterspacing-standard-14);
+    line-height: var(--gl-heading-font-set-lineheight-standard-14);
+    text-decoration: var(--gl-heading-font-set-decoration-standard-14);
+    text-transform: var(--gl-heading-font-set-case-standard-14);
+    margin-left: 400px;
+}
+
+.block_newsletter{
+    padding: var(--gl-spacing-0300);
+    text-align: center;
+    background-color: var(--gl-color-background-highlight);
+    max-width: 100%;
+}
+
+
+#header .header-top a[data-depth="0"] {
+    color: black;
+    text-transform: uppercase;
+}
+
+#footer{
+    padding-top: 0;
+}
+
+.footer-container{
+    padding-top: 0;
+}
+
+#main .page-footer {
+    margin-bottom: 0;
+}
+
+#carousel{
+    margin-bottom: 0;
+}
+
+#custom-text {
+    margin-bottom: 0;
+    background-color: #f5f5e5;
+    column-gap: 40px;
+    font-size: 16px;
+}
+
+@media (min-width: 1920px) {
+    #custom-text {
+        padding: 40px 300px;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+    #custom-text {
+        padding: 20px 100px; /* Dostosuj te wartości według potrzeb */
+        column-count: 2;
+    }
+}
+
+@media (max-width: 1199px) {
+    #custom-text {
+        padding: 10px; /* Minimalny padding dla innych szerokości ekranu */
+        column-count: 1;
+    }
+}
+
+#custom-text p{
+    text-align: justify;
+}
+
+#custom-text h1{
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 36px;
+    text-decoration: none;
+    text-transform: none;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+._footer_bottom_1lxga_1{
+    border-top: 1px solid #767677;
+    background-color: #282c31;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column
+}
+
+._legal_menu__item_1lxga_20 {
+    display: inline-block;
+    width: 50%;
+    margin: var(--gl-spacing-0150) 0;
+    padding: 0 var(--gl-spacing-0150);
+    color: var(--gl-color-grey-400);
+    font-family: var(--gl-body-font-set-family-functional-2),var(--gl-font-family-fallback);
+    font-size: var(--gl-body-font-set-size-functional-2);
+    font-style: var(--gl-body-font-set-style-functional-2);
+    font-weight: var(--gl-body-font-set-weight-functional-2);
+    letter-spacing: var(--gl-body-font-set-letterspacing-functional-2);
+    line-height: var(--gl-body-font-set-lineheight-functional-2);
+    text-decoration: var(--gl-body-font-set-decoration-functional-2);
+    text-transform: var(--gl-body-font-set-case-functional-2);
+}
+._legal_menu_1lxga_9 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1010px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+._legal_menu__item_1lxga_20{
+    width: auto;
+    border-right: 1px solid #d3d7da;
+}
+
+._legal_menu__item_1lxga_20:last-child {
+    border-right: none;
+    border-right-width: initial;
+    border-right-style: none;
+    border-right-color: initial;
+}
+
+.footer-container ._legal_menu_1lxga_9 li a{
+    color: var(--gl-color-grey-400);
+}
+
+#block-newsletter-label{
+    display: block;
+    margin-bottom: var(--gl-spacing-0150);
+    font-family: var(--gl-heading-font-set-family-standard-14),var(--gl-font-family-fallback);
+    font-size: var(--gl-heading-font-set-size-standard-14);
+    font-style: var(--gl-heading-font-set-style-standard-14);
+    font-weight: var(--gl-heading-font-set-weight-standard-14);
+    letter-spacing: var(--gl-heading-font-set-letterspacing-standard-14);
+    line-height: var(--gl-heading-font-set-lineheight-standard-14);
+    text-decoration: var(--gl-heading-font-set-decoration-standard-14);
+    text-transform: var(--gl-heading-font-set-case-standard-14);
+}
+
+.col-xs-12{
+    padding-left: 10px;
+}
+
+.col-xs-12 input[name="submitNewsletter"]{
+    background-color: var(--gl-color-background-inverse);
+    border-color: var(--gl-color-border-inverse);
+    color: var(--gl-color-text-inverse);
+    height: 50px;
+    font-family: var(--gl-button-font-set-family-functional-1),var(--gl-font-family-fallback);
+    font-size: var(--gl-button-font-set-size-functional-1);
+    font-style: var(--gl-button-font-set-style-functional-1);
+    font-weight: var(--gl-button-font-set-weight-functional-1);
+    letter-spacing: var(--gl-button-font-set-letterspacing-functional-1);
+    line-height: var(--gl-button-font-set-lineheight-functional-1);
+    -webkit-text-decoration: var(--gl-button-font-set-decoration-functional-1);
+    text-decoration: var(--gl-button-font-set-decoration-functional-1);
+    text-transform: var(--gl-button-font-set-case-functional-1);
+    transform: translate(-3px, -3px);
+}
+
+.links{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 500px;
+}
+
+.col-md-6{
+    width: auto;
+}
+
+.block-social{
+    width: auto;
+}
+
+.banner ._poster-content_1w0zu_337 {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    max-width: 550px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+._banner_1w0zu_321 ._content_1w0zu_195._body-position-left_1w0zu_455 {
+    justify-content: flex-start;
+}
+
+._banner_1w0zu_321 ._poster-content_1w0zu_337 {
+    position: relative;
+    justify-content: flex-end;
+}
+._text-justify-left_1w0zu_350 ._poster-content_1w0zu_337 {
+    text-align: left;
+}
+
+:root {
+    --gl-font-family-fallback: 'Helvetica', 'Arial', sans-serif;
+    --gl-body-font-set-family-functional-1: AdihausDIN;
+    --gl-body-font-set-size-functional-1: 12px;
+    --gl-body-font-set-style-functional-1: normal;
+    --gl-body-font-set-weight-functional-1: 400;
+    --gl-body-font-set-letterspacing-functional-1: 0px;
+    --gl-body-font-set-lineheight-functional-1: 16px;
+    --gl-body-font-set-decoration-functional-1: none;
+    --gl-body-font-set-case-functional-1: none;
+    --gl-body-font-set-family-functional-2: AdihausDIN;
+    --gl-body-font-set-size-functional-2: 12px;
+    --gl-body-font-set-style-functional-2: normal;
+    --gl-body-font-set-weight-functional-2: 500;
+    --gl-body-font-set-letterspacing-functional-2: 0px;
+    --gl-body-font-set-lineheight-functional-2: 16px;
+    --gl-body-font-set-decoration-functional-2: none;
+    --gl-body-font-set-case-functional-2: none;
+    --gl-body-font-set-family-functional-3: AdihausDIN;
+    --gl-body-font-set-size-functional-3: 12px;
+    --gl-body-font-set-style-functional-3: normal;
+    --gl-body-font-set-weight-functional-3: 700;
+    --gl-body-font-set-letterspacing-functional-3: 0px;
+    --gl-body-font-set-lineheight-functional-3: 16px;
+    --gl-body-font-set-decoration-functional-3: none;
+    --gl-body-font-set-case-functional-3: none;
+    --gl-body-font-set-family-functional-4: AdihausDIN;
+    --gl-body-font-set-size-functional-4: 14px;
+    --gl-body-font-set-style-functional-4: normal;
+    --gl-body-font-set-weight-functional-4: 400;
+    --gl-body-font-set-letterspacing-functional-4: 0px;
+    --gl-body-font-set-lineheight-functional-4: 20px;
+    --gl-body-font-set-decoration-functional-4: none;
+    --gl-body-font-set-case-functional-4: none;
+    --gl-body-font-set-family-functional-5: AdihausDIN;
+    --gl-body-font-set-size-functional-5: 14px;
+    --gl-body-font-set-style-functional-5: normal;
+    --gl-body-font-set-weight-functional-5: 500;
+    --gl-body-font-set-letterspacing-functional-5: 0px;
+    --gl-body-font-set-lineheight-functional-5: 20px;
+    --gl-body-font-set-decoration-functional-5: none;
+    --gl-body-font-set-case-functional-5: none;
+    --gl-body-font-set-family-functional-6: AdihausDIN;
+    --gl-body-font-set-size-functional-6: 14px;
+    --gl-body-font-set-style-functional-6: normal;
+    --gl-body-font-set-weight-functional-6: 700;
+    --gl-body-font-set-letterspacing-functional-6: 0px;
+    --gl-body-font-set-lineheight-functional-6: 20px;
+    --gl-body-font-set-decoration-functional-6: none;
+    --gl-body-font-set-case-functional-6: none;
+    --gl-body-font-set-family-functional-7: AdihausDIN;
+    --gl-body-font-set-size-functional-7: 16px;
+    --gl-body-font-set-style-functional-7: normal;
+    --gl-body-font-set-weight-functional-7: 400;
+    --gl-body-font-set-letterspacing-functional-7: 0px;
+    --gl-body-font-set-lineheight-functional-7: 22px;
+    --gl-body-font-set-decoration-functional-7: none;
+    --gl-body-font-set-case-functional-7: none;
+    --gl-body-font-set-family-functional-8: AdihausDIN;
+    --gl-body-font-set-size-functional-8: 16px;
+    --gl-body-font-set-style-functional-8: normal;
+    --gl-body-font-set-weight-functional-8: 700;
+    --gl-body-font-set-letterspacing-functional-8: 0px;
+    --gl-body-font-set-lineheight-functional-8: 22px;
+    --gl-body-font-set-decoration-functional-8: none;
+    --gl-body-font-set-case-functional-8: none;
+    --gl-body-font-set-family-functional-9: AdihausDIN;
+    --gl-body-font-set-size-functional-9: 16px;
+    --gl-body-font-set-style-functional-9: normal;
+    --gl-body-font-set-weight-functional-9: 700;
+    --gl-body-font-set-letterspacing-functional-9: 0px;
+    --gl-body-font-set-lineheight-functional-9: 22px;
+    --gl-body-font-set-decoration-functional-9: none;
+    --gl-body-font-set-case-functional-9: none;
+    --gl-body-font-set-family-functional-10: AdihausDIN;
+    --gl-body-font-set-size-functional-10: 18px;
+    --gl-body-font-set-style-functional-10: normal;
+    --gl-body-font-set-weight-functional-10: 400;
+    --gl-body-font-set-letterspacing-functional-10: 0px;
+    --gl-body-font-set-lineheight-functional-10: 24px;
+    --gl-body-font-set-decoration-functional-10: none;
+    --gl-body-font-set-case-functional-10: none;
+    --gl-body-font-set-family-functional-11: AdihausDIN;
+    --gl-body-font-set-size-functional-11: 18px;
+    --gl-body-font-set-style-functional-11: normal;
+    --gl-body-font-set-weight-functional-11: 500;
+    --gl-body-font-set-letterspacing-functional-11: 0px;
+    --gl-body-font-set-lineheight-functional-11: 24px;
+    --gl-body-font-set-decoration-functional-11: none;
+    --gl-body-font-set-case-functional-11: none;
+    --gl-body-font-set-family-functional-12: AdihausDIN;
+    --gl-body-font-set-size-functional-12: 18px;
+    --gl-body-font-set-style-functional-12: normal;
+    --gl-body-font-set-weight-functional-12: 700;
+    --gl-body-font-set-letterspacing-functional-12: 0px;
+    --gl-body-font-set-lineheight-functional-12: 24px;
+    --gl-body-font-set-decoration-functional-12: none;
+    --gl-body-font-set-case-functional-12: none;
+    --gl-body-font-set-family-functional-13: AdihausDIN;
+    --gl-body-font-set-size-functional-13: 28px;
+    --gl-body-font-set-style-functional-13: normal;
+    --gl-body-font-set-weight-functional-13: 400;
+    --gl-body-font-set-letterspacing-functional-13: 0px;
+    --gl-body-font-set-lineheight-functional-13: 36px;
+    --gl-body-font-set-decoration-functional-13: none;
+    --gl-body-font-set-case-functional-13: none;
+    --gl-body-font-set-family-functional-14: AdihausDIN;
+    --gl-body-font-set-size-functional-14: 28px;
+    --gl-body-font-set-style-functional-14: normal;
+    --gl-body-font-set-weight-functional-14: 500;
+    --gl-body-font-set-letterspacing-functional-14: 0px;
+    --gl-body-font-set-lineheight-functional-14: 36px;
+    --gl-body-font-set-decoration-functional-14: none;
+    --gl-body-font-set-case-functional-14: none;
+    --gl-body-font-set-family-functional-15: AdihausDIN;
+    --gl-body-font-set-size-functional-15: 28px;
+    --gl-body-font-set-style-functional-15: normal;
+    --gl-body-font-set-weight-functional-15: 700;
+    --gl-body-font-set-letterspacing-functional-15: 0px;
+    --gl-body-font-set-lineheight-functional-15: 36px;
+    --gl-body-font-set-decoration-functional-15: none;
+    --gl-body-font-set-case-functional-15: none;
+    --gl-heading-font-set-family-functional-1: AdihausDIN;
+    --gl-heading-font-set-size-functional-1: 18px;
+    --gl-heading-font-set-style-functional-1: normal;
+    --gl-heading-font-set-weight-functional-1: 400;
+    --gl-heading-font-set-letterspacing-functional-1: 1px;
+    --gl-heading-font-set-lineheight-functional-1: 24px;
+    --gl-heading-font-set-decoration-functional-1: none;
+    --gl-heading-font-set-case-functional-1: uppercase;
+    --gl-heading-font-set-family-functional-2: AdihausDIN;
+    --gl-heading-font-set-size-functional-2: 18px;
+    --gl-heading-font-set-style-functional-2: normal;
+    --gl-heading-font-set-weight-functional-2: 700;
+    --gl-heading-font-set-letterspacing-functional-2: 1px;
+    --gl-heading-font-set-lineheight-functional-2: 24px;
+    --gl-heading-font-set-decoration-functional-2: none;
+    --gl-heading-font-set-case-functional-2: uppercase;
+    --gl-heading-font-set-family-standard-3: AdineuePRO;
+    --gl-heading-font-set-size-standard-3: 18px;
+    --gl-heading-font-set-style-standard-3: normal;
+    --gl-heading-font-set-weight-standard-3: 400;
+    --gl-heading-font-set-letterspacing-standard-3: 1px;
+    --gl-heading-font-set-lineheight-standard-3: 24px;
+    --gl-heading-font-set-decoration-standard-3: none;
+    --gl-heading-font-set-case-standard-3: uppercase;
+    --gl-heading-font-set-family-standard-4: AdineuePRO;
+    --gl-heading-font-set-size-standard-4: 18px;
+    --gl-heading-font-set-style-standard-4: normal;
+    --gl-heading-font-set-weight-standard-4: 700;
+    --gl-heading-font-set-letterspacing-standard-4: 1px;
+    --gl-heading-font-set-lineheight-standard-4: 24px;
+    --gl-heading-font-set-decoration-standard-4: none;
+    --gl-heading-font-set-case-standard-4: uppercase;
+    --gl-heading-font-set-family-expressive-5: AdihausDIN Cn;
+    --gl-heading-font-set-size-expressive-5: 18px;
+    --gl-heading-font-set-style-expressive-5: italic;
+    --gl-heading-font-set-weight-expressive-5: 500;
+    --gl-heading-font-set-letterspacing-expressive-5: 1px;
+    --gl-heading-font-set-lineheight-expressive-5: 24px;
+    --gl-heading-font-set-decoration-expressive-5: none;
+    --gl-heading-font-set-case-expressive-5: uppercase;
+    --gl-heading-font-set-family-expressive-6: adineue PRO Cond;
+    --gl-heading-font-set-size-expressive-6: 18px;
+    --gl-heading-font-set-style-expressive-6: normal;
+    --gl-heading-font-set-weight-expressive-6: 700;
+    --gl-heading-font-set-letterspacing-expressive-6: 1px;
+    --gl-heading-font-set-lineheight-expressive-6: 24px;
+    --gl-heading-font-set-decoration-expressive-6: none;
+    --gl-heading-font-set-case-expressive-6: uppercase;
+    --gl-heading-font-set-family-functional-7: AdihausDIN;
+    --gl-heading-font-set-size-functional-7: 24px;
+    --gl-heading-font-set-style-functional-7: normal;
+    --gl-heading-font-set-weight-functional-7: 400;
+    --gl-heading-font-set-letterspacing-functional-7: 2px;
+    --gl-heading-font-set-lineheight-functional-7: 28px;
+    --gl-heading-font-set-decoration-functional-7: none;
+    --gl-heading-font-set-case-functional-7: uppercase;
+    --gl-heading-font-set-family-standard-8: AdineuePRO;
+    --gl-heading-font-set-size-standard-8: 24px;
+    --gl-heading-font-set-style-standard-8: normal;
+    --gl-heading-font-set-weight-standard-8: 400;
+    --gl-heading-font-set-letterspacing-standard-8: 2px;
+    --gl-heading-font-set-lineheight-standard-8: 28px;
+    --gl-heading-font-set-decoration-standard-8: none;
+    --gl-heading-font-set-case-standard-8: uppercase;
+    --gl-heading-font-set-family-standard-9: AdineuePRO;
+    --gl-heading-font-set-size-standard-9: 24px;
+    --gl-heading-font-set-style-standard-9: normal;
+    --gl-heading-font-set-weight-standard-9: 700;
+    --gl-heading-font-set-letterspacing-standard-9: 2px;
+    --gl-heading-font-set-lineheight-standard-9: 28px;
+    --gl-heading-font-set-decoration-standard-9: none;
+    --gl-heading-font-set-case-standard-9: uppercase;
+    --gl-heading-font-set-family-expressive-10: AdihausDIN Cn;
+    --gl-heading-font-set-size-expressive-10: 24px;
+    --gl-heading-font-set-style-expressive-10: italic;
+    --gl-heading-font-set-weight-expressive-10: 500;
+    --gl-heading-font-set-letterspacing-expressive-10: 2px;
+    --gl-heading-font-set-lineheight-expressive-10: 28px;
+    --gl-heading-font-set-decoration-expressive-10: none;
+    --gl-heading-font-set-case-expressive-10: uppercase;
+    --gl-heading-font-set-family-expressive-11: adineue PRO Cond;
+    --gl-heading-font-set-size-expressive-11: 24px;
+    --gl-heading-font-set-style-expressive-11: normal;
+    --gl-heading-font-set-weight-expressive-11: 700;
+    --gl-heading-font-set-letterspacing-expressive-11: 2px;
+    --gl-heading-font-set-lineheight-expressive-11: 28px;
+    --gl-heading-font-set-decoration-expressive-11: none;
+    --gl-heading-font-set-case-expressive-11: uppercase;
+    --gl-heading-font-set-family-functional-12: AdihausDIN;
+    --gl-heading-font-set-size-functional-12: 30px;
+    --gl-heading-font-set-style-functional-12: normal;
+    --gl-heading-font-set-weight-functional-12: 400;
+    --gl-heading-font-set-letterspacing-functional-12: 1.5px;
+    --gl-heading-font-set-lineheight-functional-12: 32px;
+    --gl-heading-font-set-decoration-functional-12: none;
+    --gl-heading-font-set-case-functional-12: uppercase;
+    --gl-heading-font-set-family-standard-13: AdineuePRO;
+    --gl-heading-font-set-size-standard-13: 30px;
+    --gl-heading-font-set-style-standard-13: normal;
+    --gl-heading-font-set-weight-standard-13: 400;
+    --gl-heading-font-set-letterspacing-standard-13: 1.5px;
+    --gl-heading-font-set-lineheight-standard-13: 32px;
+    --gl-heading-font-set-decoration-standard-13: none;
+    --gl-heading-font-set-case-standard-13: uppercase;
+    --gl-heading-font-set-family-standard-14: AdineuePRO;
+    --gl-heading-font-set-size-standard-14: 30px;
+    --gl-heading-font-set-style-standard-14: normal;
+    --gl-heading-font-set-weight-standard-14: 700;
+    --gl-heading-font-set-letterspacing-standard-14: 1.5px;
+    --gl-heading-font-set-lineheight-standard-14: 32px;
+    --gl-heading-font-set-decoration-standard-14: none;
+    --gl-heading-font-set-case-standard-14: uppercase;
+    --gl-heading-font-set-family-expressive-15: AdihausDIN Cn;
+    --gl-heading-font-set-size-expressive-15: 30px;
+    --gl-heading-font-set-style-expressive-15: italic;
+    --gl-heading-font-set-weight-expressive-15: 500;
+    --gl-heading-font-set-letterspacing-expressive-15: 1.5px;
+    --gl-heading-font-set-lineheight-expressive-15: 32px;
+    --gl-heading-font-set-decoration-expressive-15: none;
+    --gl-heading-font-set-case-expressive-15: uppercase;
+    --gl-heading-font-set-family-expressive-16: adineue PRO Cond;
+    --gl-heading-font-set-size-expressive-16: 30px;
+    --gl-heading-font-set-style-expressive-16: normal;
+    --gl-heading-font-set-weight-expressive-16: 700;
+    --gl-heading-font-set-letterspacing-expressive-16: 1.5px;
+    --gl-heading-font-set-lineheight-expressive-16: 32px;
+    --gl-heading-font-set-decoration-expressive-16: none;
+    --gl-heading-font-set-case-expressive-16: uppercase;
+    --gl-heading-font-set-family-functional-17: AdihausDIN;
+    --gl-heading-font-set-size-functional-17: 40px;
+    --gl-heading-font-set-style-functional-17: normal;
+    --gl-heading-font-set-weight-functional-17: 400;
+    --gl-heading-font-set-letterspacing-functional-17: 2px;
+    --gl-heading-font-set-lineheight-functional-17: 40px;
+    --gl-heading-font-set-decoration-functional-17: none;
+    --gl-heading-font-set-case-functional-17: uppercase;
+    --gl-heading-font-set-family-standard-18: AdineuePRO;
+    --gl-heading-font-set-size-standard-18: 40px;
+    --gl-heading-font-set-style-standard-18: normal;
+    --gl-heading-font-set-weight-standard-18: 400;
+    --gl-heading-font-set-letterspacing-standard-18: 2px;
+    --gl-heading-font-set-lineheight-standard-18: 40px;
+    --gl-heading-font-set-decoration-standard-18: none;
+    --gl-heading-font-set-case-standard-18: uppercase;
+    --gl-heading-font-set-family-standard-19: AdineuePRO;
+    --gl-heading-font-set-size-standard-19: 40px;
+    --gl-heading-font-set-style-standard-19: normal;
+    --gl-heading-font-set-weight-standard-19: 700;
+    --gl-heading-font-set-letterspacing-standard-19: 2px;
+    --gl-heading-font-set-lineheight-standard-19: 40px;
+    --gl-heading-font-set-decoration-standard-19: none;
+    --gl-heading-font-set-case-standard-19: uppercase;
+    --gl-heading-font-set-family-expressive-20: AdihausDIN Cn;
+    --gl-heading-font-set-size-expressive-20: 40px;
+    --gl-heading-font-set-style-expressive-20: italic;
+    --gl-heading-font-set-weight-expressive-20: 500;
+    --gl-heading-font-set-letterspacing-expressive-20: 2px;
+    --gl-heading-font-set-lineheight-expressive-20: 40px;
+    --gl-heading-font-set-decoration-expressive-20: none;
+    --gl-heading-font-set-case-expressive-20: uppercase;
+    --gl-heading-font-set-family-expressive-21: adineue PRO Cond;
+    --gl-heading-font-set-size-expressive-21: 40px;
+    --gl-heading-font-set-style-expressive-21: normal;
+    --gl-heading-font-set-weight-expressive-21: 700;
+    --gl-heading-font-set-letterspacing-expressive-21: 2px;
+    --gl-heading-font-set-lineheight-expressive-21: 40px;
+    --gl-heading-font-set-decoration-expressive-21: none;
+    --gl-heading-font-set-case-expressive-21: uppercase;
+    --gl-statement-font-set-family-standard-1: AdineuePRO;
+    --gl-statement-font-set-size-standard-1: 18px;
+    --gl-statement-font-set-style-standard-1: normal;
+    --gl-statement-font-set-weight-standard-1: 700;
+    --gl-statement-font-set-letterspacing-standard-1: 7px;
+    --gl-statement-font-set-lineheight-standard-1: 24px;
+    --gl-statement-font-set-decoration-standard-1: none;
+    --gl-statement-font-set-case-standard-1: uppercase;
+    --gl-statement-font-set-family-standard-2: AdineuePRO;
+    --gl-statement-font-set-size-standard-2: 18px;
+    --gl-statement-font-set-style-standard-2: normal;
+    --gl-statement-font-set-weight-standard-2: 400;
+    --gl-statement-font-set-letterspacing-standard-2: 7px;
+    --gl-statement-font-set-lineheight-standard-2: 24px;
+    --gl-statement-font-set-decoration-standard-2: none;
+    --gl-statement-font-set-case-standard-2: uppercase;
+    --gl-statement-font-set-family-functional-3: AdihausDIN;
+    --gl-statement-font-set-size-functional-3: 18px;
+    --gl-statement-font-set-style-functional-3: normal;
+    --gl-statement-font-set-weight-functional-3: 400;
+    --gl-statement-font-set-letterspacing-functional-3: 7px;
+    --gl-statement-font-set-lineheight-functional-3: 24px;
+    --gl-statement-font-set-decoration-functional-3: none;
+    --gl-statement-font-set-case-functional-3: uppercase;
+    --gl-statement-font-set-family-standard-4: AdineuePRO;
+    --gl-statement-font-set-size-standard-4: 36px;
+    --gl-statement-font-set-style-standard-4: normal;
+    --gl-statement-font-set-weight-standard-4: 700;
+    --gl-statement-font-set-letterspacing-standard-4: 7px;
+    --gl-statement-font-set-lineheight-standard-4: 44px;
+    --gl-statement-font-set-decoration-standard-4: none;
+    --gl-statement-font-set-case-standard-4: uppercase;
+    --gl-statement-font-set-family-standard-5: AdineuePRO;
+    --gl-statement-font-set-size-standard-5: 36px;
+    --gl-statement-font-set-style-standard-5: normal;
+    --gl-statement-font-set-weight-standard-5: 400;
+    --gl-statement-font-set-letterspacing-standard-5: 7px;
+    --gl-statement-font-set-lineheight-standard-5: 44px;
+    --gl-statement-font-set-decoration-standard-5: none;
+    --gl-statement-font-set-case-standard-5: uppercase;
+    --gl-statement-font-set-family-functional-6: AdihausDIN;
+    --gl-statement-font-set-size-functional-6: 36px;
+    --gl-statement-font-set-style-functional-6: normal;
+    --gl-statement-font-set-weight-functional-6: 700;
+    --gl-statement-font-set-letterspacing-functional-6: 7px;
+    --gl-statement-font-set-lineheight-functional-6: 44px;
+    --gl-statement-font-set-decoration-functional-6: none;
+    --gl-statement-font-set-case-functional-6: uppercase;
+    --gl-statement-font-set-family-functional-7: AdihausDIN;
+    --gl-statement-font-set-size-functional-7: 36px;
+    --gl-statement-font-set-style-functional-7: normal;
+    --gl-statement-font-set-weight-functional-7: 400;
+    --gl-statement-font-set-letterspacing-functional-7: 7px;
+    --gl-statement-font-set-lineheight-functional-7: 44px;
+    --gl-statement-font-set-decoration-functional-7: none;
+    --gl-statement-font-set-case-functional-7: uppercase;
+    --gl-statement-font-set-family-standard-8: AdineuePRO;
+    --gl-statement-font-set-size-standard-8: 42px;
+    --gl-statement-font-set-style-standard-8: normal;
+    --gl-statement-font-set-weight-standard-8: 700;
+    --gl-statement-font-set-letterspacing-standard-8: 9px;
+    --gl-statement-font-set-lineheight-standard-8: 50px;
+    --gl-statement-font-set-decoration-standard-8: none;
+    --gl-statement-font-set-case-standard-8: uppercase;
+    --gl-statement-font-set-family-standard-9: AdineuePRO;
+    --gl-statement-font-set-size-standard-9: 42px;
+    --gl-statement-font-set-style-standard-9: normal;
+    --gl-statement-font-set-weight-standard-9: 400;
+    --gl-statement-font-set-letterspacing-standard-9: 9px;
+    --gl-statement-font-set-lineheight-standard-9: 50px;
+    --gl-statement-font-set-decoration-standard-9: none;
+    --gl-statement-font-set-case-standard-9: uppercase;
+    --gl-statement-font-set-family-functional-10: AdihausDIN;
+    --gl-statement-font-set-size-functional-10: 42px;
+    --gl-statement-font-set-style-functional-10: normal;
+    --gl-statement-font-set-weight-functional-10: 700;
+    --gl-statement-font-set-letterspacing-functional-10: 9px;
+    --gl-statement-font-set-lineheight-functional-10: 50px;
+    --gl-statement-font-set-decoration-functional-10: none;
+    --gl-statement-font-set-case-functional-10: uppercase;
+    --gl-statement-font-set-family-functional-11: AdihausDIN;
+    --gl-statement-font-set-size-functional-11: 42px;
+    --gl-statement-font-set-style-functional-11: normal;
+    --gl-statement-font-set-weight-functional-11: 400;
+    --gl-statement-font-set-letterspacing-functional-11: 9px;
+    --gl-statement-font-set-lineheight-functional-11: 50px;
+    --gl-statement-font-set-decoration-functional-11: none;
+    --gl-statement-font-set-case-functional-11: uppercase;
+    --gl-tag-font-set-family-functional-1: AdihausDIN;
+    --gl-tag-font-set-size-functional-1: 12px;
+    --gl-tag-font-set-style-functional-1: normal;
+    --gl-tag-font-set-weight-functional-1: 700;
+    --gl-tag-font-set-letterspacing-functional-1: 2px;
+    --gl-tag-font-set-lineheight-functional-1: 16px;
+    --gl-tag-font-set-decoration-functional-1: none;
+    --gl-tag-font-set-case-functional-1: none;
+    --gl-tag-font-set-family-functional-2: AdihausDIN;
+    --gl-tag-font-set-size-functional-2: 12px;
+    --gl-tag-font-set-style-functional-2: normal;
+    --gl-tag-font-set-weight-functional-2: 400;
+    --gl-tag-font-set-letterspacing-functional-2: 2px;
+    --gl-tag-font-set-lineheight-functional-2: 16px;
+    --gl-tag-font-set-decoration-functional-2: none;
+    --gl-tag-font-set-case-functional-2: none;
+    --gl-tag-font-set-family-functional-3: AdihausDIN;
+    --gl-tag-font-set-size-functional-3: 12px;
+    --gl-tag-font-set-style-functional-3: italic;
+    --gl-tag-font-set-weight-functional-3: 500;
+    --gl-tag-font-set-letterspacing-functional-3: 2px;
+    --gl-tag-font-set-lineheight-functional-3: 16px;
+    --gl-tag-font-set-decoration-functional-3: none;
+    --gl-tag-font-set-case-functional-3: none;
+    --gl-app-heading-font-set-family-functional-1: AdihausDIN;
+    --gl-app-heading-font-set-size-functional-1: 24px;
+    --gl-app-heading-font-set-style-functional-1: italic;
+    --gl-app-heading-font-set-weight-functional-1: 500;
+    --gl-app-heading-font-set-letterspacing-functional-1: 0px;
+    --gl-app-heading-font-set-lineheight-functional-1: 28px;
+    --gl-app-heading-font-set-decoration-functional-1: none;
+    --gl-app-heading-font-set-case-functional-1: uppercase;
+    --gl-app-statement-font-set-family-standard-2: AdineuePRO;
+    --gl-app-statement-font-set-size-standard-2: 20px;
+    --gl-app-statement-font-set-style-standard-2: normal;
+    --gl-app-statement-font-set-weight-standard-2: 700;
+    --gl-app-statement-font-set-letterspacing-standard-2: 7px;
+    --gl-app-statement-font-set-lineheight-standard-2: 32px;
+    --gl-app-statement-font-set-decoration-standard-2: none;
+    --gl-app-statement-font-set-case-standard-2: uppercase;
+    --gl-badge-font-set-family-functional-1: AdihausDIN;
+    --gl-badge-font-set-size-functional-1: 14px;
+    --gl-badge-font-set-style-functional-1: italic;
+    --gl-badge-font-set-weight-functional-1: 400;
+    --gl-badge-font-set-letterspacing-functional-1: 0px;
+    --gl-badge-font-set-lineheight-functional-1: 20px;
+    --gl-badge-font-set-decoration-functional-1: none;
+    --gl-badge-font-set-case-functional-1: none;
+    --gl-button-font-set-family-functional-1: AdihausDIN;
+    --gl-button-font-set-size-functional-1: 14px;
+    --gl-button-font-set-style-functional-1: normal;
+    --gl-button-font-set-weight-functional-1: 700;
+    --gl-button-font-set-letterspacing-functional-1: 2px;
+    --gl-button-font-set-lineheight-functional-1: 20px;
+    --gl-button-font-set-decoration-functional-1: none;
+    --gl-button-font-set-case-functional-1: uppercase;
+    --gl-button-font-set-family-functional-2: AdihausDIN;
+    --gl-button-font-set-size-functional-2: 14px;
+    --gl-button-font-set-style-functional-2: normal;
+    --gl-button-font-set-weight-functional-2: 700;
+    --gl-button-font-set-letterspacing-functional-2: 2px;
+    --gl-button-font-set-lineheight-functional-2: 20px;
+    --gl-button-font-set-decoration-functional-2: underline;
+    --gl-button-font-set-case-functional-2: uppercase;
+    --gl-link-font-set-family-functional-1: AdihausDIN;
+    --gl-link-font-set-size-functional-1: 14px;
+    --gl-link-font-set-style-functional-1: normal;
+    --gl-link-font-set-weight-functional-1: 400;
+    --gl-link-font-set-letterspacing-functional-1: 0px;
+    --gl-link-font-set-lineheight-functional-1: 20px;
+    --gl-link-font-set-decoration-functional-1: underline;
+    --gl-link-font-set-case-functional-1: none;
+    --gl-link-font-set-family-functional-2: AdihausDIN;
+    --gl-link-font-set-size-functional-2: 16px;
+    --gl-link-font-set-style-functional-2: normal;
+    --gl-link-font-set-weight-functional-2: 400;
+    --gl-link-font-set-letterspacing-functional-2: 0px;
+    --gl-link-font-set-lineheight-functional-2: 22px;
+    --gl-link-font-set-decoration-functional-2: underline;
+    --gl-link-font-set-case-functional-2: none;
+    --gl-link-font-set-family-functional-3: AdihausDIN;
+    --gl-link-font-set-size-functional-3: 18px;
+    --gl-link-font-set-style-functional-3: normal;
+    --gl-link-font-set-weight-functional-3: 400;
+    --gl-link-font-set-letterspacing-functional-3: 0px;
+    --gl-link-font-set-lineheight-functional-3: 24px;
+    --gl-link-font-set-decoration-functional-3: underline;
+    --gl-link-font-set-case-functional-3: none;
+}
+:root {
+    --gl-spacing-0000: 0px;
+    --gl-spacing-0025: 2.5px;
+    --gl-spacing-0050: 5px;
+    --gl-spacing-0100: 10px;
+    --gl-spacing-0150: 15px;
+    --gl-spacing-0200: 20px;
+    --gl-spacing-0300: 30px;
+    --gl-spacing-0400: 40px;
+    --gl-spacing-0600: 60px;
+    --gl-spacing-0800: 80px;
+    --gl-spacing-1000: 100px;
+    --gl-spacing-1200: 120px;
+    --gl-spacing-1500: 150px;
+}
+:root {
+    --gl-web-shadow-textshadow-1: 1px 1px 0px rgba(255, 255, 255, 1);
+    --gl-web-shadow-textshadow-inverse-1: 1px 1px 0px rgba(0, 0, 0, 1);
+    --gl-app-shadow-textshadow-inverse-1: 3px 3px 0px rgba(0, 0, 0, 1);
+}
+:root {
+    --gl-motion-duration-none: 0.00s;
+    --gl-motion-duration: 0.30s;
+    --gl-motion-duration-slow: 0.70s;
+    --gl-motion-easing: cubic-bezier(0.3, 0, 0, 1);
+    --gl-motion-duration-all: 0.30s;
+    --gl-motion-easing-all: cubic-bezier(0.3, 0, 0, 1);
+    --gl-animation-motion-duration-loading: 0.70s;
+    --gl-motion-duration-transform: 0.30s;
+    --gl-motion-easing-transform: cubic-bezier(0.3, 0, 0, 1);
+    --gl-motion-duration-transform-press: 0.30s;
+    --gl-motion-easing-transform-press: cubic-bezier(0.3, 0, 0, 1);
+    --gl-motion-duration-textcolor: 0.30s;
+    --gl-motion-easing-textcolor: cubic-bezier(0.3, 0, 0, 1);
+    --gl-icon-motion-duration-color: 0.30s;
+    --gl-icon-motion-easing-color: cubic-bezier(0.3, 0, 0, 1);
+    --gl-motion-duration-backgroundcolor: 0.30s;
+    --gl-motion-easing-backgroundcolor: cubic-bezier(0.3, 0, 0, 1);
+    --gl-motion-duration-opacity: 0.30s;
+    --gl-motion-easing-opacity: cubic-bezier(0.3, 0, 0, 1);
+    --gl-motion-duration-bordercolor: 0.30s;
+    --gl-motion-easing-bordercolor: cubic-bezier(0.3, 0, 0, 1);
+}
+:root {
+    --gl-color-black: #000000;
+    --gl-color-white: #ffffff;
+    --gl-color-blue: #007bc6;
+    --gl-color-grey-100: #eceff1;
+    --gl-color-grey-400: #d3d7da;
+    --gl-color-grey-700: #767677;
+    --gl-color-red: #e32b2b;
+    --gl-color-orange: #d98916;
+    --gl-color-green: #00aa55;
+    --gl-color-adiclubblue: #0081c7;
+    --gl-color-offwhite: #f5f5e5;
+    --gl-color-tracekhaki: #a39582;
+    --gl-color-tracemaroon: #b56971;
+    --gl-color-ashgreen: #a7c1b9;
+    --gl-color-rawgrey: #6d8194;
+    --gl-color-legendink: #3a3e4f;
+    --gl-color-shockyellow: #ede734;
+    --gl-color-shockpink: #da1a7b;
+    --gl-color-brightblue: #0071ae;
+    --gl-color-hiresaqua: #00a2a2;
+    --gl-color-shocklime: #2ada71;
+    --gl-color-yeezyblack: #282c31;
+    --gl-color-yeezyoffwhite: #ecebdf;
+    --gl-color-looppink: #d92f4c;
+    --gl-color-loopdarkpink: #b6223c;
+    --gl-color-transparent: rgba(255, 255, 255, 0);
+    --gl-color-black-070: rgba(0, 0, 0, 0.7);
+    --gl-color-brand-p1: #000000;
+    --gl-color-brand-p2: #ffffff;
+    --gl-color-brand-p3: #007bc6;
+    --gl-color-membership-s1: #0081c7;
+    --gl-color-membership-s2: #a39582;
+    --gl-color-membership-s3: #a7c1b9;
+    --gl-color-membership-s4: #b56971;
+    --gl-color-membership-s5: #6d8194;
+    --gl-color-neutral-s1: #f5f5e5;
+    --gl-color-neutral-s2: #a39582;
+    --gl-color-neutral-s3: #b56971;
+    --gl-color-neutral-s4: #a7c1b9;
+    --gl-color-neutral-s5: #6d8194;
+    --gl-color-neutral-s6: #3a3e4f;
+    --gl-color-bright-s1: #ede734;
+    --gl-color-bright-s2: #e32b2b;
+    --gl-color-bright-s3: #da1a7b;
+    --gl-color-bright-s4: #0071ae;
+    --gl-color-bright-s5: #00a2a2;
+    --gl-color-bright-s6: #2ada71;
+    --gl-color-franchise-s1: #282c31;
+    --gl-color-franchise-s2: #ecebdf;
+    --gl-color-franchise-s3: #d92f4c;
+    --gl-color-franchise-s4: #b6223c;
+    --gl-color-background: #ffffff;
+    --gl-color-background-inverse: #000000;
+    --gl-color-background-alternative: #eceff1;
+    --gl-color-background-disabled: #767677;
+    --gl-color-background-membership: #0081c7;
+    --gl-color-background-membership-hover: #0081c7;
+    --gl-color-background-alternative-hover: #ffffff;
+    --gl-color-background-highlight: #ede734;
+    --gl-color-background-alternative-highlight: #2ada71;
+    --gl-color-sale-background: #e32b2b;
+    --gl-color-background-transparent: rgba(255, 255, 255, 0);
+    --gl-color-border-alternative-inverse: rgba(255, 255, 255, 0);
+    --gl-color-border-inverse: #000000;
+    --gl-color-border-alternative: #ffffff;
+    --gl-color-border-hover: #000000;
+    --gl-color-border-active: #000000;
+    --gl-color-border-alternative-active: #000000;
+    --gl-color-border-navigational: #d3d7da;
+    --gl-color-border-navigational-inverse: #ffffff;
+    --gl-color-border-navigational-hover: #767677;
+    --gl-color-border-functional: #767677;
+    --gl-color-border-disabled: #767677;
+    --gl-color-error-border: #e32b2b;
+    --gl-color-success-border: #00aa55;
+    --gl-color-border-membership: #0081c7;
+    --gl-color-border-membership-inverse: #0081c7;
+    --gl-color-border-membership-hover: #0081c7;
+    --gl-color-disabled: #767677;
+    --gl-color-error: #e32b2b;
+    --gl-color-icon: #000000;
+    --gl-icon-color-inverse: #ffffff;
+    --gl-icon-color-hover: #767677;
+    --gl-icon-color-error: #e32b2b;
+    --gl-icon-color-success: #00aa55;
+    --gl-color-success: #00aa55;
+    --gl-color-text: #000000;
+    --gl-color-text-alternative: #767677;
+    --gl-color-text-inverse: #ffffff;
+    --gl-color-text-disabled: #767677;
+    --gl-color-text-hover: #767677;
+    --gl-color-text-hover-alternative: #767677;
+    --gl-color-error-text: #e32b2b;
+    --gl-color-success-text: #00aa55;
+    --gl-color-text-membership: #0081c7;
+    --gl-color-sale-text: #e32b2b;
+    --gl-color-warning: #d98916;
+    --gl-overlay-color-background: rgba(0, 0, 0, 0.7);
+    --gl-placeholder-color-text: #767677;
+    --gl-button-background-hover: #000000;
+    --gl-button-color-border-primary-inverse: #ffffff;
+    --gl-button-color-border-primary: #000000;
+    --gl-button-color-border-secondary-inverse: #ffffff;
+    --gl-button-color-border-secondary: #000000;
+    --gl-button-color-border-secondary-hover: #000000;
+    --gl-button-color-border-secondary-hoverinverse: #ffffff;
+    --gl-callout-color-background: #eceff1;
+    --gl-callout-color-background-alternative: #f5f5e5;
+    --gl-callout-color-border-urgent: rgba(255, 255, 255, 0);
+    --gl-callout-color-background-veryurgent: #000000;
+    --gl-dropdown-color-background-hover: #eceff1;
+    --gl-label-color-text: #767677;
+    --gl-timer-color-background: rgba(255, 255, 255, 0);
+    --gl-timer-color-progress-background: #767677;
+    --gl-tooltip-color-background: #eceff1;
+    --gl-app-icon-color-deselected: #d3d7da;
+    --gl-app-color-text-deselected: #d3d7da;
+    --gl-app-color-text-deselected-inverse: #767677;
+    --gl-app-button-color-background: #000000;
+    --gl-app-button-color-background-inverse: #ffffff;
+    --gl-app-button-color-background-disabled: #d3d7da;
+    --gl-app-button-color-background-disabled-inverse: #767677;
+    --gl-app-button-color-border: #000000;
+    --gl-app-button-color-border-deselected: #d3d7da;
+    --gl-app-button-color-border-inverse: #ffffff;
+    --gl-app-button-color-border-deselected-inverse: #767677;
+    --gl-app-callout-color-background-inverse: #ffffff;
+    --gl-app-divider-color: #d3d7da;
+    --gl-app-divider-color-inverse: #767677;
+    --gl-app-badge-color-background: #ffffff;
+    --gl-app-badge-color-background-inverse: #000000;
+    --gl-app-badge-color-sale: #e32b2b;
+    --gl-app-badge-color-warning: #d98916;
+}
