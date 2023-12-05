@@ -30,7 +30,18 @@ class SearchByNameAndAddRandomFoundToCart:
             EC.presence_of_element_located((By.CLASS_NAME, 'product'))
         )
 
-        return self._browser.find_elements(By.CLASS_NAME, 'product')
+        products = self._browser.find_elements(By.CLASS_NAME, 'product')
+        products_flags = self._browser.find_elements(By.CLASS_NAME, 'product-flags')
+        assert len(products_flags) == len(products)
+
+        product_in_stock = []
+        for idx in range(len(products)):
+            if products_flags[idx].find_elements(By.CLASS_NAME, 'out_of_stock'):
+                continue
+
+            product_in_stock.append(products[idx])
+
+        return product_in_stock
 
     def _getRandomProduct(self, products):
         return random.choice(products)

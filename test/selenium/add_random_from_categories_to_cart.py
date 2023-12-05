@@ -8,7 +8,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-# TODO: add asserts?
 class AddRandomFromCategoriesToCart:
     def __init__(self, website_addr, browser, products_num, categories_num):
         self._website_addr = website_addr
@@ -16,8 +15,8 @@ class AddRandomFromCategoriesToCart:
         self._products_num = products_num
         self._categories_num = categories_num
 
-        self._categories_filters_addr = ['&q=Kategorie-Art', '&q=Kategorie-Produkty+powiązane']
-        num = random.randint(1, 7)  # After scrapper it should be (1,10) - art has only 7 products.
+        self._categories_filters_addr = ['&q=Kategorie-Mężczyźni&page=20', '&q=Kategorie-Kobiety&page=20']
+        num = random.randint(1, 10)
         self._num_products_from_categories = [num, 10 - num]
 
     def run(self):
@@ -40,7 +39,15 @@ class AddRandomFromCategoriesToCart:
         )
 
         products = self._browser.find_elements(By.CLASS_NAME, 'thumbnail')
-        product_links = [element.get_attribute("href") for element in products]
+        products_flags = self._browser.find_elements(By.CLASS_NAME, 'product-flags')
+        assert len(products_flags) == len(products)
+
+        product_links = []
+        for idx in range(len(products)):
+            if products_flags[idx].find_elements(By.CLASS_NAME, 'out_of_stock'):
+                continue
+
+            product_links.append(products[idx].get_attribute("href"))
 
         return random.sample(product_links, k=num)
 
