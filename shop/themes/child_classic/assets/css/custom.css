@@ -6,6 +6,43 @@ body{
     overflow-x: hidden !important;
 }
 
+#category #wrapper{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#category #main .col-md-6{
+    float: left;
+    width: 50%;
+}
+
+#new-products #wrapper{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#new-products #main .col-md-6{
+    float: left;
+    width: 50%;
+}
+
+#product #wrapper{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#product #main .col-md-6{
+    float: left;
+    width: 50%;
+}
+
+.featured-products{
+    width:50% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .carousel .carousel-inner {
     height: auto;
 }
