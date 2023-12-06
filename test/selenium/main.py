@@ -34,7 +34,7 @@ if __name__ == '__main__':
     delete_products_from_cart.run()
 
     # input("4c")
-
+	
     # 4d
     register_new_user = RegisterNewUser(website_addr+register, browser)
     register_new_user.run()
@@ -55,5 +55,4 @@ if __name__ == '__main__':
     elapsed_time = end_time - start_time
 
     print(f"Czas wykonania: {elapsed_time} sekundy")
-
 

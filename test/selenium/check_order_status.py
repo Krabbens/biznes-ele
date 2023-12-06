@@ -15,7 +15,6 @@ class CheckOrderStatusAndDownloadInvoice:
         self._go_to_history()
         self._go_to_order_details()
         self._download_invoice()
-
     def _go_to_account(self):
         WebDriverWait(self._browser, 10).until(
             EC.element_to_be_clickable((By.CLASS_NAME, 'account'))
