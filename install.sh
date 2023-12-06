@@ -1,5 +1,7 @@
 #!/bin/bash
 
+docker-compose up -d
+
 chmod -R 777 shop 
 
 chmod -R 777 dbdump
