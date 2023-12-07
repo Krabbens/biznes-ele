@@ -11,7 +11,6 @@ from multiprocessing import Pool
 
 import csv
 import urllib3
-import mariadb
 
 SHOP_URL = 'https://localhost'
 SHOP_KEY = 'AM1MGKFJZWIG6YM7UK6SF1V4B11RLFA5'
