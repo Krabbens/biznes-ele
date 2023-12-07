@@ -13,7 +13,7 @@ import urllib3
 
 
 SHOP_URL = 'https://localhost'
-SHOP_KEY = 'GTNNAAJMEXPJMEJ8KWG3D3HCHJHALHBZ'
+SHOP_KEY = '8BH9TRT89TMVM3LDJGDYFMPDRLHJTE6N'
 
 PrestaShopWebService._execute = _execute
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
