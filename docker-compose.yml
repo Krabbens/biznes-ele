@@ -12,6 +12,7 @@ services:
       - prestashop_network
     volumes:
       - ./dbdata:/var/lib/mysql
+      - ./dbdump:/var/lib/dbdump
     platform: linux/x86_64
 
   prestashop:
