@@ -1,6 +1,6 @@
-DELETE FROM ad_category_shop WHERE id > 2;
-DELETE FROM ad_category_lang WHERE id > 2;
-DELETE FROM ad_category WHERE id > 2;
+DELETE FROM ad_category_shop WHERE id_category > 2;
+DELETE FROM ad_category_lang WHERE id_category > 2;
+DELETE FROM ad_category WHERE id_category > 2;
 
 
 ALTER TABLE ad_category AUTO_INCREMENT=10;
