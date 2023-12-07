@@ -7172,11 +7172,16 @@ class ProductCore extends ObjectModel
      * @return int|string
      */
     public function getCoverWs()
-    {
-        $result = $this->getCover($this->id);
+{
+    $result = $this->getCover($this->id);
 
+    if (is_array($result) && isset($result['id_image'])) {
         return $result['id_image'];
+    } else {
+        return null;
     }
+}
+
 
     /**
      * Webservice setter : set virtual field id_default_image in category.
