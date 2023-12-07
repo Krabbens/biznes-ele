@@ -16,12 +16,6 @@ import mariadb
 SHOP_URL = 'https://localhost'
 SHOP_KEY = 'AM1MGKFJZWIG6YM7UK6SF1V4B11RLFA5'
 
-import subprocess
-
-script_name = "clear_db.sh"
-
-subprocess.run(["bash", script_name])
-print("Database cleared")
 
 PrestaShopWebService._execute = _execute
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
