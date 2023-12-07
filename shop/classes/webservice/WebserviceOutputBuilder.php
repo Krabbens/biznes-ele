@@ -710,24 +710,25 @@ class WebserviceOutputBuilderCore
         $output .= $this->setIndent($depth - 1) . $this->objectRender->renderNodeHeader($resource_name, [], $more_attr);
 
         foreach ($fields_assoc as $field_name => $field) {
-            if (!is_array($this->fieldsToDisplay) || in_array($field_name, $this->fieldsToDisplay[$assoc_name])) {
-                if ($field_name == 'id' && !isset($field['sqlId'])) {
-                    $field['sqlId'] = 'id';
-                    $field['value'] = $object_assoc['id'];
-                } elseif (!isset($field['sqlId'])) {
-                    $field['sqlId'] = $field_name;
-                    $field['value'] = $object_assoc[$field_name];
-                }
-                $field['entities_name'] = $assoc_name;
-                $field['entity_name'] = $resource_name;
-
-                if (null !== $this->schemaToDisplay) {
-                    $field['synopsis_details'] = $this->getSynopsisDetails($field);
-                }
-                $field['is_association'] = true;
-                $output .= $this->setIndent($depth - 1) . $this->objectRender->renderField($field);
-            }
+    if (!is_array($this->fieldsToDisplay) || in_array($field_name, $this->fieldsToDisplay[$assoc_name])) {
+        if ($field_name == 'id' && !isset($field['sqlId'])) {
+            $field['sqlId'] = 'id';
+            $field['value'] = isset($object_assoc['id']) ? $object_assoc['id'] : null;
+        } elseif (!isset($field['sqlId'])) {
+            $field['sqlId'] = $field_name;
+            $field['value'] = isset($object_assoc[$field_name]) ? $object_assoc[$field_name] : null;
         }
+        $field['entities_name'] = $assoc_name;
+        $field['entity_name'] = $resource_name;
+
+        if (null !== $this->schemaToDisplay) {
+            $field['synopsis_details'] = $this->getSynopsisDetails($field);
+        }
+        $field['is_association'] = true;
+        $output .= $this->setIndent($depth - 1) . $this->objectRender->renderField($field);
+    }
+}
+
         $output .= $this->setIndent($depth - 1) . $this->objectRender->renderNodeFooter($resource_name, []);
 
         return $output;
