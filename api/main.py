@@ -13,7 +13,7 @@ import csv
 import urllib3
 
 SHOP_URL = 'https://localhost'
-SHOP_KEY = 'AM1MGKFJZWIG6YM7UK6SF1V4B11RLFA5'
+SHOP_KEY = '8BH9TRT89TMVM3LDJGDYFMPDRLHJTE6N'
 
 
 PrestaShopWebService._execute = _execute
