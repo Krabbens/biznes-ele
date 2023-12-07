@@ -1,4 +1,5 @@
 import random
+import sys
 from prestapyt import PrestaShopWebServiceError
 from prestapyt import PrestaShopWebService
 from prestapyt import PrestaShopWebServiceDict
@@ -10,10 +11,17 @@ from multiprocessing import Pool
 
 import csv
 import urllib3
-
+import mariadb
 
 SHOP_URL = 'https://localhost'
-SHOP_KEY = 'GTNNAAJMEXPJMEJ8KWG3D3HCHJHALHBZ'
+SHOP_KEY = 'AM1MGKFJZWIG6YM7UK6SF1V4B11RLFA5'
+
+import subprocess
+
+script_name = "clear_db.sh"
+
+subprocess.run(["bash", script_name])
+print("Database cleared")
 
 PrestaShopWebService._execute = _execute
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -130,6 +138,41 @@ class PrestaHandler:
         new_image = self.api.add("/images/products/" + str(id), files=[("image", image_name, image_content)])
         Debug()(new_image["prestashop"]["image"]["id"])
 
+    def get_category_by_id(self, id):
+        category = self.api.search('categories', options={'filter[id]' : str(id)})
+        return len(category) != 0
+    
+    def update_category(self, category):
+        self.api.edit('categories', category)
+
+    def add_category(self, id, category):
+        if not id:
+            try:
+                self.api.add('categories', category)
+            except:
+                pass
+            return self.api.search('categories', options={'filter[name]' : category['category']['name']['language']['value']})[0]
+        if self.get_category_by_id(id):
+            _category = self.api.get('categories', id)
+            del _category['category']['level_depth']
+            del _category['category']['nb_products_recursive']
+            
+            Debug()("Category already exists", _category)
+            self.update_category(_category)
+        while not self.get_category_by_id(id):
+            try:
+                Debug()("Waiting for category to be added", id)
+                category['category']['active'] = str(0)
+                self.api.add('categories', category)
+            except:
+                pass
+        category = self.api.get('categories', id)
+        Debug()("Category added", category)
+        category['category']['active'] = str(1)
+        del category['category']['level_depth']
+        del category['category']['nb_products_recursive']
+        self.api.edit('categories', category)
+
 
 def process_product(product):
     handler = PrestaHandler()
@@ -194,7 +237,57 @@ def process_product(product):
 
 def main():
     data_handler = DataHandler()
+    handler = PrestaHandler()
 
+    # create categories
+    categories = {
+        (None, "Mężczyźni") : [(None, "Buty"), (None, "Odzież"), (None, "Akcesoria")],
+        (None, "Kobiety") : [(17, "Odzież"), (18, "Buty"), (19, "Akcesoria")],
+        (None, "Dzieci") : [(None, "Buty dla chłopców"), (None, "Buty dla dziewczynek"), (22, "Akcesoria")],
+        (None, "Sport") : [(None, "Buty biegowe"), (None, "Buty piłkarskie")]
+    }
+
+    categories_parent_ids = {}
+
+    for category in categories.keys():
+        categories_parent_ids[category[1]] = handler.add_category(category[0], {
+            "category" : {
+                "active" : str(1),
+                "id_parent" : str(2),
+                "link_rewrite" : {"language" : {
+                    "value" : '',
+                    "attrs" : {
+                        "id" : str(1)
+                    }}},
+                "name" : {"language" : {
+                    "value" : category[1],
+                    "attrs" : {
+                        "id" : str(1)
+                    }}}}
+        })
+
+    print(categories_parent_ids)
+
+    for category in categories.keys():
+        for subcategory in categories[category]:
+            handler.add_category(subcategory[0], {
+                "category" : {
+                    "id_parent" : str(categories_parent_ids[category[1]]),
+                    "active" : str(1),
+                    "link_rewrite" : {"language" : {
+                        "value" : '',
+                        "attrs" : {
+                            "id" : str(1)
+                        }}},
+                    "name" : {"language" : {
+                        "value" : subcategory[1],
+                        "attrs" : {
+                            "id" : str(1)
+                        }}}}
+            })
+
+    print(handler.get_category_by_id(18))
+    return
     with Pool(30) as p:
         p.map(process_product, data_handler.get_data())
         
