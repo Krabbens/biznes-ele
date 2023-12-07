@@ -280,7 +280,7 @@ def main():
             })
 
     print(handler.get_category_by_id(18))
-    return
+
     with Pool(30) as p:
         p.map(process_product, data_handler.get_data())
         
