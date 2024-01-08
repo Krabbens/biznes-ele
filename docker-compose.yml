@@ -1,8 +1,9 @@
+services:
   prestashop:
-    image: rizznes/be_188587:latest
+    image: krabbens/be_188587v2:latest
     user: root
     ports:
-      - 18858:443
+      - 18866:443
     deploy:
       restart_policy:
         condition: on-failure
