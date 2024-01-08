@@ -1,68 +1,33 @@
-version: '3'
-
-services:
-  mariadb:
-    container_name: adidas-mariadb-server
-    image: mariadb:10.5
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: adidas-mariadb
-    networks:
-      - prestashop_network
-    volumes:
-      - ./dbdata:/var/lib/mysql
-      - ./dbdump:/var/lib/dbdump
-    platform: linux/x86_64
-
   prestashop:
-    container_name: prestashop
-    image: prestashop/prestashop:1.7.8.10
-    restart: unless-stopped
-    depends_on:
-      - mariadb
+    image: rizznes/be_188587:latest
+    user: root
     ports:
-      - 8080:80
-      - 80:80
-      - 443:443
+      - 18858:443
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 2
+        window: 70s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
     environment:
-      DB_SERVER: adidas-mariadb-server
-      DB_NAME: adidas-mariadb
+      PS_INSTALL_AUTO: 1
+      DB_SERVER: db
       DB_USER: root
-      DB_PASSWD: admin
-      PS_INSTALL_AUTO: 0
-      PS_DOMAIN: localhost
-      PS_FOLDER_ADMIN: admin4444
-      PS_FOLDER_INSTALL: install4444
-    networks:
-      - prestashop_network
+      DB_NAME: BE_188587
+      DB_PASSWD: student
+      PS_COUNTRY: pl
+      PS_LANGUAGE: pl
     volumes:
-      - ./shop:/var/www/html
-    platform: linux/x86_64
-
-            
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
-    restart: unless-stopped
-    environment:
-      PMA_HOST: adidas-mariadb-server
-      PMA_PORT: 3306
-      PMA_USER: root
-      PMA_PASSWORD: admin
-    ports:
-      - "8081:80"
+      - BE_188587:/var/www/html
     networks:
-      - prestashop_network
-    platform: linux/x86_64
-
-        
-
+      - admin-mysql_default
+    entrypoint: /dbdump/import.sh
 networks:
-  prestashop_network:
-  
+  admin-mysql_default:
+    external: true
 volumes:
-  dbdata:
-  psdata:
-
-  
+  BE_188587:
