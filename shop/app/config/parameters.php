@@ -1,11 +1,11 @@
 <?php return array (
-  'parameters' => 
+  'parameters' =>
   array (
-    'database_host' => 'adidas-mariadb-server',
-    'database_port' => '',
-    'database_name' => 'adidas-mariadb',
+    'database_host' => 'db',
+    'database_port' => '3306',
+    'database_name' => 'BE_188587',
     'database_user' => 'root',
-    'database_password' => 'admin',
+    'database_password' => 'student',
     'database_prefix' => 'ad_',
     'database_engine' => 'InnoDB',
     'mailer_transport' => 'smtp',
