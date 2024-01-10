@@ -1,6 +1,23 @@
 services:
+  memcache:
+    container_name: memcached
+    image: memcached
+    user: 1000:1000
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 2
+        window: 140s
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+    networks:
+      - prestanet
+      
   prestashop:
-    image: krabbens/be_188587:latest
+    image: krabbens/be_188587v2:latest
     user: root
     ports:
       - 18866:443
@@ -25,9 +42,12 @@ services:
     volumes:
       - BE_188587:/var/www/html
     networks:
+      - prestanet
       - admin-mysql_default
-    entrypoint: /dbdump/import.sh
+    entrypoint: bash /dbdump/import.sh
+    
 networks:
+  prestanet:
   admin-mysql_default:
     external: true
 volumes:

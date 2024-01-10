@@ -1,6 +1,8 @@
 FROM prestashop/prestashop:1.7.8-apache
 
 COPY ./dbdump /dbdump
+COPY ./dbdump/import.sh /dbdump/import.sh
+RUN chmod +x /dbdump/import.sh
 
 RUN rm -rf /var/www/html/*
 

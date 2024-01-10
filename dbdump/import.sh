@@ -1,13 +1,11 @@
 #!/bin/bash
 
-#    ^zcie      ka do pliku default-ssl.conf w kontenerze
+echo "import start"
 CONFIG_PATH="/etc/apache2/sites-available/default-ssl.conf"
 
-# Nowe    ^{cie      ki do klucza i certyfikatu
 NEW_KEY_PATH="/var/www/html/ssl/localhost.key"
 NEW_CERT_PATH="/var/www/html/ssl/localhost.crt"
 
-# Zmie   ^d    ^{cie      ki w pliku default-ssl.conf
 sed -i "s|SSLCertificateKeyFile.*|SSLCertificateKeyFile $NEW_KEY_PATH|" $CONFIG_PATH
 sed -i "s|SSLCertificateFile.*|SSLCertificateFile $NEW_CERT_PATH|" $CONFIG_PATH
 a2enmod ssl
